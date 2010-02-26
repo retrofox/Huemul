@@ -1,0 +1,5 @@
+Formulario:
+  tipo_a:
+    #User:          admin
+    nombre:           Tipo A
+    descripcion:      Formulario Base.

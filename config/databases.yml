@@ -2,6 +2,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'sqlite:/tmp/sf_sandbox/data/sandbox.db'
+      dsn:      mysql:host=localhost;dbname=huemul
       username: root
-      password: null
+      password: alfilasesino

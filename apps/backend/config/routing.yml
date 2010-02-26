@@ -1,3 +1,21 @@
+visado:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Visado
+    module:               visados
+    prefix_path:          /visados
+    column:               id
+    with_wildcard_routes: true
+
+formulario:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Formulario
+    module:               formularios
+    prefix_path:          /formularios
+    column:               id
+    with_wildcard_routes: true
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

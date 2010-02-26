@@ -1,0 +1,4 @@
+CREATE TABLE formularios (id BIGINT AUTO_INCREMENT, user_id BIGINT UNSIGNED NOT NULL, nombre VARCHAR(100) NOT NULL, descripcion LONGTEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE formulario_visado (formulario_id BIGINT, visado_id BIGINT, PRIMARY KEY(formulario_id, visado_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE visados (id BIGINT AUTO_INCREMENT, user_id BIGINT UNSIGNED NOT NULL, group_id BIGINT UNSIGNED NOT NULL, titulo VARCHAR(100) NOT NULL, descripcion LONGTEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+ALTER TABLE formulario_visado ADD CONSTRAINT formulario_visado_formulario_id_formularios_id FOREIGN KEY (formulario_id) REFERENCES formularios(id);

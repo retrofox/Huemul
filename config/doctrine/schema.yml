@@ -1,0 +1,47 @@
+options:
+  collate: utf8_unicode_ci
+  charset: utf8
+attributes:
+  export: all
+
+
+# Formulario
+Formulario:
+  actAs:
+    - Timestampable
+  tableName:                    formularios
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true}
+    user_id:                    { type: integer, unsigned: true, notnull: true } # creator
+    nombre:                     { type: string(100), notnull: true }
+    descripcion:                { type: clob, notnull: true }
+  relations:
+    Visados:
+      class:      Visado
+      local:      formulario_id
+      foreign:    visado_id
+      refClass:   FormularioVisado
+
+# Visado
+Visado:
+  tableName:                    visados
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
+    user_id:                    { type: integer, unsigned: true, notnull: true }
+    group_id:                   { type: integer, unsigned: true, notnull: true }
+    titulo:                     { type: string(100), notnull: true }
+    descripcion:                { type: clob, notnull: true }
+  relations:
+    Formularios:
+      class:      Formulario
+      local:      visado_id
+      foreign:    formulario_id
+      refClass:   FormularioVisado
+
+# Formulario <-> Visados
+FormularioVisado:
+  columns:
+    formulario_id:              { type: integer, primary: true }
+    visado_id:                  { type: integer, primary: true }

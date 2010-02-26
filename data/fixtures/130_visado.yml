@@ -1,0 +1,232 @@
+Visado:
+  1a:
+    #Group:           catastro
+    titulo:             croquis de ubicacion
+    #User:            admin
+  1b:
+    #Group:           catastro
+    titulo:             datos catastrales
+    #User:            admin
+  1c:
+    #Group:           catastro
+    titulo:             medidas de la parcela
+    #User:            admin
+  1d:
+    #Group:           catastro
+    titulo:             superficie de la parcela
+    #User:            admin
+  1e:
+    #Group:           catastro
+    titulo:             distancia a esquina (encuentro de lineas municipales)
+    #User:            admin
+  1f:
+    #Group:           catastro
+    titulo:             indicar el norte
+    #User:            admin
+  1g:
+    #Group:           catastro
+    titulo:             nombre, numero y ancho de calles
+    #User:            admin
+  1h:
+    #Group:           catastro
+    titulo:             silueta de superficie
+    #User:            admin
+  1i:
+    #Group:           catastro
+    titulo:             comprobante de propiedad
+    #User:            admin
+  1j:
+    #Group:           catastro
+    titulo:             ochava
+    #User:            admin
+  1k:
+    #Group:           catastro
+    titulo:             restricciones al dominio
+    #User:            admin
+  2a:
+    #Group:           desarrolloUrbano
+    titulo:             destino
+    #User:            admin
+  2b:
+    #Group:           desarrolloUrbano
+    titulo:             compatible SI - NO
+    #User:            admin
+  2c:
+    #Group:           desarrolloUrbano
+    titulo:             restricciones
+    #User:            admin
+  2d:
+    #Group:           desarrolloUrbano
+    titulo:             retiro de linea municipal
+    #User:            admin
+  2e:
+    #Group:           desarrolloUrbano
+    titulo:             estacionamientos
+    #User:            admin
+  2f:
+    #Group:           desarrolloUrbano
+    titulo:             limite de altura
+    #User:            admin
+  3a:
+    #Group:           obrasPrivadas
+    titulo:             caratula reglamentaria
+    #User:            admin
+
+  3b:
+    #Group:
+    titulo:           "planta general. - (escala: 1:50 en presentacion definitiva)"
+    #User:            admin
+
+  3b-1:
+    #Group:           obrasPrivadas
+    titulo:             niveles
+    #User:            admin
+  3b-2:
+    #Group:           obrasPrivadas
+    titulo:             cotas
+    #User:            admin
+  3b-3:
+    #Group:           obrasPrivadas
+    titulo:             L.M. - E.M.
+    #User:            admin
+  3b-4:
+    #Group:           obrasPrivadas
+    titulo:             tanque de reserva - proyeccion y capacidad - separacion de E.M.
+    #User:            admin
+  3b-5:
+    #Group:           obrasPrivadas
+    titulo:             designacion y numeracion de locales
+    #User:            admin
+  3b-6:
+    #Group:           obrasPrivadas
+    titulo:             indicacion de cortes
+    #User:            admin
+  3b-7:
+    #Group:           obrasPrivadas
+    titulo:             patios
+    #User:            admin
+  3b-8:
+    #Group:           obrasPrivadas
+    titulo:             cerco tipo de altura
+    #User:            admin
+  3b-9:
+    #Group:           obrasPrivadas
+    titulo:             vereda
+    #User:            admin
+  3b-10:
+    #Group:           obrasPrivadas
+    titulo:             desagüe cloacal primario
+    #User:            admin
+  3b-11:
+    #Group:           obrasPrivadas
+    titulo:             desagües pluviales
+    #User:            admin
+  3b-12:
+    #Group:           obrasPrivadas
+    titulo:             planta de techos
+    #User:            admin
+  3b-13:
+    #Group:           obrasPrivadas
+    titulo:             ochava regalmentaria
+    #User:            admin
+  3c:
+    #Group:           obrasPrivadas
+    titulo:             cortes (transversal y longitudinal)
+    #User:            admin
+  3c-1:
+    #Group:           obrasPrivadas
+    titulo:             alturas
+    #User:            admin
+  3c-2:
+    #Group:           obrasPrivadas
+    titulo:             espesor de entrepisos
+    #User:            admin
+  3c-3:
+    #Group:           obrasPrivadas
+    titulo:             niveles
+    #User:            admin
+  3c-4:
+    #Group:           obrasPrivadas
+    titulo:             carpinterias
+    #User:            admin
+  3c-5:
+    #Group:           obrasPrivadas
+    titulo:             materiales de cubierta
+    #User:            admin
+  3c-6:
+    #Group:           obrasPrivadas
+    titulo:             cielorrasos
+    #User:            admin
+  3c-7:
+    #Group:           obrasPrivadas
+    titulo:             pisos y contrapisos
+    #User:            admin
+  3d:
+    #Group:           obrasPrivadas
+    titulo:             fachadas
+    #User:            admin
+  3d-1:
+    #Group:           obrasPrivadas
+    titulo:             materiales de terminacion de muros
+    #User:            admin
+  3d-2:
+    #Group:           obrasPrivadas
+    titulo:             carpinterias
+    #User:            admin
+  3d-3:
+    #Group:           obrasPrivadas
+    titulo:             matriales terminacion cubiertas             
+    #User:            admin
+  3d-4:
+    #Group:           obrasPrivadas
+    titulo:             tipo y altura de cerco lateral y de frente
+    #User:            admin
+  3e:
+    #Group:           obrasPrivadas
+    titulo:             planilla de iluminacion y ventilacion
+    #User:            admin
+  3f:
+    #Group:           obrasPrivadas
+    titulo:             grafismo de obra
+    #User:            admin
+  3f-1:
+    #Group:           obrasPrivadas
+    titulo:             a demoler (linea de trazos, muros llenos en amarrilo)
+    #User:            admin
+  3f-2:
+    #Group:           obrasPrivadas
+    titulo:             a construir (linea continua, muros llenos en rojo)
+    #User:            admin
+  3f-3:
+    #Group:           obrasPrivadas
+    titulo:             a empadronar (muros sin llenar)
+    #User:            admin
+  3f-4:
+    #Group:           obrasPrivadas
+    titulo:             con antecedentes municipales (rayado oblicuo)
+    #User:            admin
+  3f-5:
+    #Group:           obrasPrivadas
+    titulo:             con antecedentes municipales sin construir (rayado oblicuo y muros llenos en rojo)
+    #User:            admin
+  3g:
+    #Group:           obrasPrivadas
+    titulo:             "en balance de superficies indicar ..."
+    descripcion:        "en balance de superficies indicar desglosado segun categorias: A) Viviendas-locales comerciales. B)depositos. C) Piscina o instalaciones libres de parte cubierta...y"
+    #User:            admin
+  3g-1:
+    #Group:           obrasPrivadas
+    titulo:             proyecto y/o instalacion contra incendio probado por cuerpo de bomberos
+    #User:            admin
+  3g-2:
+    #Group:           obrasPrivadas
+    titulo:             factibilidad de servicio Eléctrico - gas - agua - cloacas
+    #User:            admin
+  3g-3:
+    #Group:           obrasPrivadas
+    titulo:             detalle de escalera - escalera 1:25 plantas y cortes
+    #User:            admin
+  3g-4:
+    #Group:           obrasPrivadas
+    titulo:             informe técnico resolución 841/01
+    #User:            admin
