@@ -1,0 +1,74 @@
+sfGuardUser:
+  sgu_admin:
+    username:       admin
+    password:       admin
+    is_super_admin: true
+
+  damian:
+    username:                 damian
+    password:                 123456
+    is_super_admin:           true
+    Profile:
+      nombre:                   Roberto Damian
+      apellido:                 Suarez
+      fdn:                      07/18/1977
+      documento_tipo:           dni
+      documento_numero:         26144030
+      telefono:                 0299 4778030
+      celular:
+      email:                   damian.suarez@xifox.net
+      domicilio:                Don Bosco 869
+      nacionalidad:             Argentina
+
+
+  alex:
+    username:                 alex
+    password:                 pobrepaco
+    is_super_admin:           false
+    Profile:
+      nombre:                   Alex Claudio Andres
+      apellido:                 Melo
+      fdn:                      10/10/88
+      documento_tipo:           dni
+      documento_numero:         40123123
+      telefono:                 0299 4790580
+      celular:                  299155155155
+      email:                    alex.melo@xifox.net
+      domicilio:                belgrano 365
+      nacionalidad:             Argentina
+
+  claudia:
+    username:                 clau
+    password:                 123456
+    is_super_admin:           false
+
+
+sfGuardPermission:
+  sgp_admin:
+    name:           admin
+    description:    Administrator permission
+
+sfGuardGroup:
+  sgg_admin:
+    name:           admin
+    description:    Administrator group
+
+  catastro:
+    name:                     Departamento de Catastro
+
+  desarrolloUrbano:
+    name:                     Departamento de Desarrollo Urbano
+
+  obrasPrivadas:
+    name:                     Departamento de Obras Privadas
+
+
+sfGuardGroupPermission:
+  sggp_admin:
+    sfGuardGroup:       sgg_admin
+    sfGuardPermission:  sgp_admin
+
+sfGuardUserGroup:
+  sgug_admin:
+    sfGuardGroup:       sgg_admin
+    sfGuardUser:        sgu_admin

@@ -12,4 +12,11 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  public function __toString() {
+    return $this->Profile->nombre;
+  }
+
+  public function getUserName() {
+    return (isset($this->Profile->nombre)) ? $this->Profile->nombre : $this->getUserName();
+  }
 }

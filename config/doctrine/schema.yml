@@ -5,6 +5,67 @@ attributes:
   export: all
 
 
+Profesion:
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true}
+    nombre:                     { type: string(100), notnull: true }
+    descripcion:                { type: clob, notnull: true }
+
+Provincia:
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true}
+    nombre:                     { type: string(100), notnull: true }
+
+Localidad:
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true}
+    nombre:                     { type: string(100), notnull: true }
+
+
+Profile:
+  columns:
+    sf_guard_user_id:           integer(4)
+    profesion_id:               { type: integer, unsigned: true, notnull: true }
+    nombre:                     { type: string(100), notnull: true }
+    apellido:                   { type: string(100), notnull: true }
+    fdn:                        { type: date }
+    documento_tipo:             { type: enum, values: [ dni, le ], default: dni }
+    documento_numero:           { type: string(12) }
+    telefono:                   { type: string(40), notnull: true }
+    celular:                    { type: string(400), notnull: true }
+    email:                      { type: string(60), notnull: true }
+    domicilio:                  { type: string(100), notnull: true }
+    #geo_localidad_id:    ~
+    nacionalidad:               { type: string(50), notnull: true }
+    fotografia:                 { type: string(100), notnull: true }
+
+  relations:
+    User:
+      class:            sfGuardUser
+      foreignType:      one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Formulario
 Formulario:
   actAs:
@@ -12,7 +73,7 @@ Formulario:
   tableName:                    formularios
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
-    user_id:                    { type: integer, unsigned: true, notnull: true } # creator
+    user_id:                    { type: integer, unsigned: true, notnull: true }
     nombre:                     { type: string(100), notnull: true }
     descripcion:                { type: clob, notnull: true }
   relations:
