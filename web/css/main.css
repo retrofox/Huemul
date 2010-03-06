@@ -1,0 +1,32 @@
+body {
+  background-color: #eee;
+  font-size: 14px;
+}
+
+/* Layout */
+#wrapper {
+  padding: 5px;
+}
+
+#header {
+
+}
+
+#board {
+  
+}
+
+/* Menu */
+nav.menu {
+  font-size: 14px;
+}
+
+
+/* Tablas */
+#sf_admin_content table tr th{
+  font-size: 12px;
+}
+
+#sf_admin_content table tr th a {
+  padding: 1px 5px;
+}

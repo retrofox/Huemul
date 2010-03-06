@@ -1,0 +1,130 @@
+/* Menus */
+/* el menú es una lista */
+nav.menu > ul {
+  background: #999 url('menu/gradient.png') repeat-x 0 -110px;
+  line-height: 100%;
+  margin: 0;
+  padding: 7px 6px 0;
+  border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+}
+nav.menu > ul li { /* cada item de esa lista */
+          float: left;
+          list-style: none;
+          margin: 0 5px;
+          padding: 0 0 8px;
+          position: relative;
+}
+
+/* las definiciones del Nivel Principal */
+nav.menu > ul a {
+  color: #DDD;
+  display: block;
+  font-weight: bold;
+  margin: 0;
+  padding:  8px 20px;
+  text-decoration: none;
+  -webkit-border-radius: 1.6em;
+  -moz-border-radius: 1.6em;
+  text-shadow: 0 1px 1px rgba(0,0,0, .3);
+}
+nav.menu > ul a:hover {
+  background: #000;
+  color: #FFF;
+}
+
+/* efecto hover en el Nivel Principal */
+nav.menu > ul .current a, nav.menu > ul li:hover > a {
+  background: #ddd url('menu/gradient.png') repeat-x 0 -40px;
+  color: #444;
+  border-top: solid 1px #F8F8F8;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+  box-shadow: 0 1px 1px rgba(0,0,0, .2);
+  text-shadow: 0 1px 0 rgba(255,255,255, 1);
+}
+
+/* los subniveles */
+nav.menu > ul ul li:hover a, nav.menu > ul li:hover li a {
+  background: none;
+  border: none;
+  color: #333;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+nav.menu > ul ul a:hover {
+  background: #08B url('menu/gradient.png') repeat-x 0 -100px !important;
+  color: #fff !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0, .1);
+}
+
+/* el efecto de desplegar */
+nav.menu > ul li:hover > ul {
+  display: block;
+}
+
+/* las definiciones de los submenues */
+nav.menu > ul ul {
+  background: #DDD url('menu/gradient.png') repeat-x 0 0;
+  border: solid 1px #B4B4B4;
+  display: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 35px;
+  width: 185px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+  box-shadow: 0 1px 3px rgba(0,0,0, .3);
+}
+nav.menu > ul ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+nav.menu > ul ul a {
+  font-weight: normal;
+  text-shadow: 0 1px 0 #FFF;
+}
+
+/* las definiciones de los submenues internos */
+nav.menu > ul ul ul {
+  left: 181px;
+  top: -3px;
+}
+
+/* bordes redondeados del primer y  último item */
+nav.menu > ul ul li:first-child > a {
+  -webkit-border-top-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius-topright: 9px;
+}
+nav.menu > ul ul li:last-child > a {
+  -webkit-border-bottom-left-radius: 9px;
+  -moz-border-radius-bottomleft: 9px;
+  -webkit-border-bottom-right-radius: 9px;
+  -moz-border-radius-bottomright: 9px;
+}
+
+/* definiciones generales */
+nav.menu > ul:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+nav.menu > ul { display: inline-block; }
+html[xmlns] nav.menu > ul { display: block; }
+* html nav.menu > ul { height: 1%; }

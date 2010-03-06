@@ -1,20 +1,23 @@
 generator:
-  class: sfDoctrineGenerator
+  class:                        sfDoctrineGenerator
   param:
-    model_class:           Formulario
-    theme:                 admin
-    non_verbose_templates: true
-    with_show:             false
-    singular:              ~
-    plural:                ~
-    route_prefix:          formulario
-    with_doctrine_route:   true
-    actions_base_class:    sfActions
+    model_class:                Formulario
+    theme:                      mooDoo.2
+    non_verbose_templates:      true
+    with_show:                  false
+    singular:                   ~
+    plural:                     ~
+    route_prefix:               formulario
+    with_doctrine_route:        true
+    actions_base_class:         sfActions
 
     config:
       actions: ~
       fields:  ~
-      list:    ~
+
+      list:
+        display:                [ nombre, descripcion ]
+
       filter:  ~
       form:    ~
       edit:    ~

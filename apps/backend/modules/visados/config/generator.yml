@@ -1,20 +1,21 @@
 generator:
-  class: sfDoctrineGenerator
+  class:                        sfDoctrineGenerator
   param:
-    model_class:           Visado
-    theme:                 admin
-    non_verbose_templates: true
-    with_show:             false
-    singular:              ~
-    plural:                ~
-    route_prefix:          visado
-    with_doctrine_route:   true
-    actions_base_class:    sfActions
+    model_class:                Visado
+    theme:                      mooDoo.2
+    non_verbose_templates:      true
+    with_show:                  false
+    singular:                   ~
+    plural:                     ~
+    route_prefix:               visado
+    with_doctrine_route:        true
+    actions_base_class:         sfActions
 
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        display:                [ user_id, group_id, titulo ]
       filter:  ~
       form:    ~
       edit:    ~

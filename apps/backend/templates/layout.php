@@ -9,6 +9,19 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+
+    <div id="wrapper">
+
+      <section id="header">
+        <?php include_partial('global/menu') ?>
+      </section>
+
+
+      <section id="board">
+        <?php echo $sf_content ?>
+      </section>
+
+    </div>
+    
   </body>
 </html>
