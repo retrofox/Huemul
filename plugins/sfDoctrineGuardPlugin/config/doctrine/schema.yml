@@ -98,6 +98,13 @@ sfGuardUser:
       refClass: sfGuardUserPermission
       foreignAlias: Users
 
+    procedures:
+      class: Procedure
+      local: user_id
+      foreign: procedure_id
+      refClass: UserProcedure
+      foreignAlias: Users
+
 sfGuardUserPermission:
   options:
     symfony:

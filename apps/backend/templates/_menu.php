@@ -2,15 +2,13 @@
   <ul>
     <li class="current"><a href="#">Inicio</a></li>
     <li>
-      <a href="#">Tramites</a>
+      <a href="#"><?php echo __('Procedures'); ?></a>
       <ul>
         <li>
-          <a href="#">Recientes</a>
+          <a href="#"><?php echo __('list'); ?></a>
           <ul>
-            <li><a href="#">Sub Menu 1.1.1</a></li>
-            <li><a href="#">Sub Menu 1.1.2</a></li>
-            <li><a href="#">Sub Menu 1.1.3</a></li>
-            <li><a href="#">Sub Menu 1.1.4</a></li>
+            <li><?php echo link_to(__('In process'), 'procedures/index') ?></li>
+            <li><?php echo link_to(__('Finish'), 'procedures/index') ?></li>
           </ul>
         </li>
         <li>
@@ -24,13 +22,31 @@
       </ul>
     </li>
     <li>
-      <a href="#">Configuración</a>
+      <a href="#"><?php echo __('Configuration'); ?></a>
       <ul>
         <li>
-          <a href="#"><?php echo __('Formularios'); ?></a>
+          <a href="#"><?php echo __('Users'); ?></a>
           <ul>
-            <li><?php echo link_to('Listado', 'formularios/index') ?></li>
-            <li><?php echo link_to('Puntos de Visado', 'visados/index') ?></li>
+            <li><?php echo link_to(__('List'), 'users/index') ?></li>
+            <li><?php echo link_to(__('Groups'), 'groups/index') ?></li>
+            <li><?php echo link_to(__('Permissions'), 'permissions/index') ?></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="#"><?php echo __('Forms'); ?></a>
+          <ul>
+            <li><?php echo link_to(__('List'), 'formus/index') ?></li>
+            <li><?php echo link_to(__('New form'), 'formus/new') ?></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><?php echo __('Items'); ?></a>
+          <ul>
+            <li>
+              <li><?php echo link_to(__('List'), 'items/index') ?></li>
+              <li><?php echo link_to(__('Types States'), 'revision_states/index') ?></li>
+            </li>
           </ul>
         </li>
       </ul>

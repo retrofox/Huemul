@@ -1,0 +1,15 @@
+Profession:
+  profesion_agrimensor:
+    name:   							Agrimensor
+
+  profesion_ingeniero:
+    name:   							Ingeniero
+
+  profesion_arquitecto:
+    name:   							Arquitecto
+
+  profesion_mmo:
+    name:   							Maestro Mayor de Obras
+
+  profesion_tec:
+    name:   							Tecnico en Construcciones

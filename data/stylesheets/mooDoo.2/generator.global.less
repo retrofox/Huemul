@@ -1,0 +1,69 @@
+@import "../commons/common";
+@import "../commons/buttons";
+
+
+#sf_admin_container {
+  #sf_admin_bar {
+    padding: 2px;
+    position: relative;
+
+    nav.menu {
+      a {
+        .button-tack(#EEE, #66bb44, #449944);
+        :hover    {.button-tack-hover(#FFF, #7c5, #5a5);}
+        :active   {.button-tack-active;}
+      }
+    }
+
+    div.sf_admin_filter {
+      display: none;
+      z-index: 200;
+      .box-1-shadow(#EEE, 5px, 1px, 1px, 10px, rgba(100, 100, 100, 0.2));
+
+      background-color: rgba(240,250,255, 0.6);
+
+      padding: 5px;
+      font-size: 11px;
+      position: absolute;
+      left: 20px; top: 20px;
+
+      input[type="submit"]          {.button-tack(#EEE, #66bb44, #449944);}
+      input[type="submit"]:hover    {.button-tack-hover(#FFF, #7c5, #5a5);}
+      input[type="submit"]:active   {.button-tack-active;}
+
+      a          {.button-tack(#EEE, #6A6, #696);}
+      a:hover    {.button-tack-hover(#FFF, #6C6, #6A6);}
+      a:active   {.button-tack-active;}
+    }
+  }
+
+  /* error */
+  .error, .notice {
+    border: 1px solid #C99;
+    background-color: #FDD;
+    .border-radius;
+    padding: 5px 10px;
+    color: @error;
+    margin: 10px;
+  }
+
+  .notice {
+    border-color:#9C9;
+    background-color: #DFD;
+    color: #040;
+  }
+
+  ul.error_list {
+    color: #a00;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      .box-1-error;
+      text-shadow: none;
+      display: inline-block;
+    }
+  }
+  /* end error */
+}

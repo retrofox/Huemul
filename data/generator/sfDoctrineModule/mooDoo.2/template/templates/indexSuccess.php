@@ -14,6 +14,10 @@
 
 <?php if ($this->configuration->hasFilterForm()): ?>
   <div id="sf_admin_bar">
+    <nav class="menu">
+      <a class="opt_filter">[?php echo __('Filter'); ?]</a>
+    </nav>
+
     [?php include_partial('<?php echo $this->getModuleName() ?>/filters', array('form' => $filters, 'configuration' => $configuration)) ?]
   </div>
 <?php endif; ?>

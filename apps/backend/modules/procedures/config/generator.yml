@@ -1,0 +1,28 @@
+generator:
+  class:                          sfDoctrineGenerator
+  param:
+    model_class:                  Procedure
+    theme:                        mooDoo.2
+    non_verbose_templates:        true
+    with_show:                    false
+    singular:                     ~
+    plural:                       ~
+    route_prefix:                 procedure
+    with_doctrine_route:          true
+    actions_base_class:           sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+
+      list:
+        display:                    [ formu, number, dossier, is_finished, created_at ]
+        object_actions:
+          _revisions:               ~
+          _delete:                  ~
+          _edit:                    ~
+
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,232 @@
+Item:
+  1a:
+    Group:                     catastro
+    title:                    croquis de ubicacion
+    #sfGuardUser:             admin
+  1b:
+    Group:                    catastro
+    title:                    datos catastrales
+    #sfGuardUser:             admin
+  1c:
+    Group:                    catastro
+    title:                    medidas de la parcela
+    #sfGuardUser:             admin
+  1d:
+    Group:                    catastro
+    title:                    superficie de la parcela
+    #sfGuardUser:             admin
+  1e:
+    Group:                    catastro
+    title:                    distancia a esquina (encuentro de lineas municipales)
+    #sfGuardUser:             admin
+  1f:
+    Group:                    catastro
+    title:                    indicar el norte
+    #sfGuardUser:             admin
+  1g:
+    Group:                    catastro
+    title:                    nombre, numero y ancho de calles
+    #sfGuardUser:             admin
+  1h:
+    Group:                    catastro
+    title:                    silueta de superficie
+    #sfGuardUser:             admin
+  1i:
+    Group:                    catastro
+    title:                    comprobante de propiedad
+    #sfGuardUser:             admin
+  1j:
+    Group:                    catastro
+    title:                    ochava
+    #sfGuardUser:             admin
+  1k:
+    Group:                    catastro
+    title:                    restricciones al dominio
+    #sfGuardUser:             admin
+  2a:
+    Group:                    desarrolloUrbano
+    title:                    destino
+    #sfGuardUser:             admin
+  2b:
+    Group:                    desarrolloUrbano
+    title:                    compatible SI - NO
+    #sfGuardUser:             admin
+  2c:
+    Group:                    desarrolloUrbano
+    title:                    restricciones
+    #sfGuardUser:             admin
+  2d:
+    Group:                    desarrolloUrbano
+    title:                    retiro de linea municipal
+    #sfGuardUser:             admin
+  2e:
+    Group:                    desarrolloUrbano
+    title:                    estacionamientos
+    #sfGuardUser:             admin
+  2f:
+    Group:                    desarrolloUrbano
+    title:                    limite de altura
+    #sfGuardUser:             admin
+  3a:
+    Group:                    obrasPrivadas
+    title:                    caratula reglamentaria
+    #sfGuardUser:             admin
+
+  3b:
+    Group:                    obrasPrivadas
+    title:                    "planta general. - (escala: 1:50 en presentacion definitiva)"
+    #sfGuardUser:             admin
+
+  3b-1:
+    Group:                    obrasPrivadas
+    title:                    niveles
+    #sfGuardUser:             admin
+  3b-2:
+    Group:                    obrasPrivadas
+    title:                    cotas
+    #sfGuardUser:             admin
+  3b-3:
+    Group:                    obrasPrivadas
+    title:                    L.M. - E.M.
+    #sfGuardUser:             admin
+  3b-4:
+    Group:                    obrasPrivadas
+    title:                    tanque de reserva - proyeccion y capacidad - separacion de E.M.
+    #sfGuardUser:             admin
+  3b-5:
+    Group:                    obrasPrivadas
+    title:                    designacion y numeracion de locales
+    #sfGuardUser:             admin
+  3b-6:
+    Group:                    obrasPrivadas
+    title:                    indicacion de cortes
+    #sfGuardUser:             admin
+  3b-7:
+    Group:                    obrasPrivadas
+    title:                    patios
+    #sfGuardUser:             admin
+  3b-8:
+    Group:                    obrasPrivadas
+    title:                    cerco tipo de altura
+    #sfGuardUser:             admin
+  3b-9:
+    Group:                    obrasPrivadas
+    title:                    vereda
+    #sfGuardUser:             admin
+  3b-10:
+    Group:                    obrasPrivadas
+    title:                    desagüe cloacal primario
+    #sfGuardUser:             admin
+  3b-11:
+    Group:                    obrasPrivadas
+    title:                    desagües pluviales
+    #sfGuardUser:             admin
+  3b-12:
+    Group:                    obrasPrivadas
+    title:                    planta de techos
+    #sfGuardUser:             admin
+  3b-13:
+    Group:                    obrasPrivadas
+    title:                    ochava regalmentaria
+    #sfGuardUser:             admin
+  3c:
+    Group:                    obrasPrivadas
+    title:                    cortes (transversal y longitudinal)
+    #sfGuardUser:             admin
+  3c-1:
+    Group:                    obrasPrivadas
+    title:                    alturas
+    #sfGuardUser:             admin
+  3c-2:
+    Group:                    obrasPrivadas
+    title:                    espesor de entrepisos
+    #sfGuardUser:             admin
+  3c-3:
+    Group:                    obrasPrivadas
+    title:                    niveles
+    #sfGuardUser:             admin
+  3c-4:
+    Group:                    obrasPrivadas
+    title:                    carpinterias
+    #sfGuardUser:             admin
+  3c-5:
+    Group:                    obrasPrivadas
+    title:                    materiales de cubierta
+    #sfGuardUser:             admin
+  3c-6:
+    Group:                    obrasPrivadas
+    title:                    cielorrasos
+    #sfGuardUser:             admin
+  3c-7:
+    Group:                    obrasPrivadas
+    title:                    pisos y contrapisos
+    #sfGuardUser:             admin
+  3d:
+    Group:                    obrasPrivadas
+    title:                    fachadas
+    #sfGuardUser:             admin
+  3d-1:
+    Group:                    obrasPrivadas
+    title:                    materiales de terminacion de muros
+    #sfGuardUser:             admin
+  3d-2:
+    Group:                    obrasPrivadas
+    title:                    carpinterias
+    #sfGuardUser:             admin
+  3d-3:
+    Group:                    obrasPrivadas
+    title:                    matriales terminacion cubiertas
+    #sfGuardUser:             admin
+  3d-4:
+    Group:                    obrasPrivadas
+    title:                    tipo y altura de cerco lateral y de frente
+    #sfGuardUser:             admin
+  3e:
+    Group:                    obrasPrivadas
+    title:                    planilla de iluminacion y ventilacion
+    #sfGuardUser:             admin
+  3f:
+    Group:                    obrasPrivadas
+    title:                    grafismo de obra
+    #sfGuardUser:             admin
+  3f-1:
+    Group:                    obrasPrivadas
+    title:                    a demoler (linea de trazos, muros llenos en amarrilo)
+    #sfGuardUser:             admin
+  3f-2:
+    Group:                    obrasPrivadas
+    title:                    a construir (linea continua, muros llenos en rojo)
+    #sfGuardUser:             admin
+  3f-3:
+    Group:                    obrasPrivadas
+    title:                    a empadronar (muros sin llenar)
+    #sfGuardUser:             admin
+  3f-4:
+    Group:                    obrasPrivadas
+    title:                    con antecedentes municipales (rayado oblicuo)
+    #sfGuardUser:             admin
+  3f-5:
+    Group:                    obrasPrivadas
+    title:                    con antecedentes municipales sin construir (rayado oblicuo y muros llenos en rojo)
+    #sfGuardUser:             admin
+  3g:
+    Group:                    obrasPrivadas
+    title:                    "en balance de superficies indicar ..."
+    description:        "en balance de superficies indicar desglosado segun categorias: A) Viviendas-locales comerciales. B)depositos. C) Piscina o instalaciones libres de parte cubierta...y"
+    #sfGuardUser:             admin
+  3g-1:
+    Group:                    obrasPrivadas
+    title:                    proyecto y/o instalacion contra incendio probado por cuerpo de bomberos
+    #sfGuardUser:             admin
+  3g-2:
+    Group:                    obrasPrivadas
+    title:                    factibilidad de servicio Eléctrico - gas - agua - cloacas
+    #sfGuardUser:             admin
+  3g-3:
+    Group:                    obrasPrivadas
+    title:                    detalle de escalera - escalera 1:25 plantas y cortes
+    #sfGuardUser:             admin
+  3g-4:
+    Group:                    obrasPrivadas
+    title:                    informe técnico resolución 841/01
+    #sfGuardUser:             admin

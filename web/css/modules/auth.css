@@ -1,0 +1,283 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+.simple-box {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box > h2 {
+  background: #e1e1e1;
+  padding: 10px 20px;
+  color: #3a3a3a;
+  margin-top: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 18px DINPro;
+  font-weight: 100;
+}
+.simple-box-small {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box-small > h2 {
+  background: #e1e1e1;
+  padding: 5px 10px;
+  color: #3a3a3a;
+  margin: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 14px DINPro;
+  font-weight: 100;
+}
+.box-black-bar {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+}
+.box-black-bar h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.box-black-bar + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+span.badge {
+  background: #3a3a3a url('/images/bg/badge-highlight.png') no-repeat top center;
+  font: 14px "Helvetica";
+  color: #ffffff;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 7px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-width: 26px;
+}
+.ipod-list li {
+  display: inline-block;
+  cursor: pointer;
+  background: #ffffff;
+  width: 8px;
+  margin-right: 5px;
+  height: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #3a3a3a;
+}
+.ipod-list li.current { background-color: #333333; }
+#module-auth { background: url('/images/bg/login-clouds.png') no-repeat top center, url('/images/bg/pattern.png'); }
+#module-auth > * {
+  width: 900px;
+  margin: auto;
+}
+#module-auth > footer .wrap {
+  width: 900px;
+  margin: auto;
+}
+#module-auth > div > section {
+  background: none;
+  padding: 0;
+  overflow: visible;
+}
+#module-auth > header {
+  border: 0;
+  -webkit-box-shadow: none;
+  background: none;
+}
+#module-auth > header #connection-status { top: 18px; }
+#module-auth > header #date-weather { right: 20px; }
+#module-auth > footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0;
+}
+#module-auth > footer .wrap { padding: 0; }
+#auth { margin-top: 20px; }
+#login-board, #login-form {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-height: 340px !important;
+  margin-top: 5px;
+}
+#login-board {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  width: 65%;
+  float: left;
+}
+#login-board h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+#login-board + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+#login-board h3 {
+  background: #c3210d;
+  display: inline-block;
+  font: oblique 30px "Brush Script MT";
+  padding: 5px 30px 5px 25px;
+  margin-left: -15px;
+  color: #ffffff;
+}
+#login-board .term {
+  display: inline-block;
+  font: 18px "DINPro";
+  font-weight: 100;
+  color: #999999;
+  padding: 0 10px;
+}
+#login-board #announcements-triangle {
+  border-color: transparent #620607 transparent transparent;
+  border-style: solid;
+  border-width: 15px;
+  height: 0px;
+  width: 0;
+  position: relative;
+  left: -30px;
+  top: -45px;
+  z-index: -1;
+}
+#login-board .announcements {
+  margin-top: -30px;
+  padding: 0 20px;
+}
+#login-board .announcements article h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font: 24px "DINPro";
+  font-weight: 100;
+  color: #343434;
+}
+#login-board .announcements article p {
+  font: 18px "DINPro";
+  font-weight: 100;
+  color: #6b6b6b;
+}
+#login-form {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  width: 33%;
+  float: right;
+  font-size: 12px;
+  font: 14px "DINPro";
+}
+#login-form h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+#login-form + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+#login-form form > p {
+  background: #ffffff;
+  padding: 5px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#login-form form { padding: 0 25px; }
+#login-form form label {
+  display: block;
+  margin-bottom: 5px;
+}
+#login-form form input[type=text] {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#login-form form input[type=password] {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#login-form form .submit {
+  background: transparent;
+  text-align: right;
+}

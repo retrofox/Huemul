@@ -9,16 +9,16 @@ sfGuardUser:
     password:                 123456
     is_super_admin:           true
     Profile:
-      nombre:                   Roberto Damian
-      apellido:                 Suarez
-      fdn:                      07/18/1977
-      documento_tipo:           dni
-      documento_numero:         26144030
-      telefono:                 0299 4778030
-      celular:
+      first_name:               Roberto Damian
+      last_name:                Suarez
+      birth_date:               07/18/1977
+      documment_type:           dni
+      documment:         26144030
+      phone:                 0299 4778030
+      movil:
       email:                   damian.suarez@xifox.net
-      domicilio:                Don Bosco 869
-      nacionalidad:             Argentina
+      addres:                Don Bosco 869
+      country:             Argentina
 
 
   alex:
@@ -26,16 +26,16 @@ sfGuardUser:
     password:                 pobrepaco
     is_super_admin:           false
     Profile:
-      nombre:                   Alex Claudio Andres
-      apellido:                 Melo
-      fdn:                      10/10/88
-      documento_tipo:           dni
-      documento_numero:         40123123
-      telefono:                 0299 4790580
-      celular:                  299155155155
+      first_name:               Alex Claudio Andres
+      last_name:             Melo
+      birth_date:           10/10/88
+      documment_type:    dni
+      documment:         40123123
+      phone:                 0299 4790580
+      movil:                  299155155155
       email:                    alex.melo@xifox.net
-      domicilio:                belgrano 365
-      nacionalidad:             Argentina
+      addres:                belgrano 365
+      country:             Argentina
 
   claudia:
     username:                 clau
@@ -50,8 +50,8 @@ sfGuardPermission:
 
 sfGuardGroup:
   sgg_admin:
-    name:           admin
-    description:    Administrator group
+    name:                     admin
+    description:              Administrator group
 
   catastro:
     name:                     Departamento de Catastro

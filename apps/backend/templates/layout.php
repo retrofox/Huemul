@@ -14,6 +14,7 @@
 
       <section id="header">
         <?php include_partial('global/menu') ?>
+        <?php include_partial('global/mini-panel') ?>
       </section>
 
 

@@ -1,0 +1,1 @@
+<a href="<?php echo url_for('sfGuardAuth/signin') ?>"> Ingreso de usuarios registrados </a>

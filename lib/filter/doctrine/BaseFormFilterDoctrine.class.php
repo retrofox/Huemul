@@ -3,9 +3,9 @@
 /**
  * Project filter form base class.
  *
- * @package    sf_sandbox
+ * @package    Huemul
  * @subpackage filter
- * @author     Your name here
+ * @author     Damian Suarez
  * @version    SVN: $Id: sfDoctrineFormFilterBaseTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 abstract class BaseFormFilterDoctrine extends sfFormFilterDoctrine

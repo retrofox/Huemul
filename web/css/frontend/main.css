@@ -1,0 +1,260 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before {
+  content: '';
+  content: none;
+}
+blockquote:after {
+  content: '';
+  content: none;
+}
+q:before {
+  content: '';
+  content: none;
+}
+q:after {
+  content: '';
+  content: none;
+}
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: #868686;
+  font: normal 62.5% Arial, sans-serif;
+}
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.4em; }
+div#wrapper {
+  background: #868686 url('../../images/fnd-body.png') repeat-y center;
+  padding: 0 15px;
+  width: 970px;
+  margin: 0 auto;
+}
+div#header {
+  background-color: black;
+  color: white;
+  padding: 0px;
+}
+div#header img { margin: 0 15px; }
+div#header h2 {
+  background-color: silver;
+  color: #565656;
+  padding: 5px 15px;
+  float: left;
+  width: 455px;
+  line-height: 20px;
+}
+div#header h3 {
+  background-color: silver;
+  color: #565656;
+  padding: 5px 15px;
+  float: left;
+  width: 455px;
+  line-height: 20px;
+}
+div#header h3 { text-align: right; }
+div#header #menu {
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  clear: both;
+}
+div#header #menu ul li {
+  float: left;
+  line-height: 25px;
+  margin: 0px;
+}
+div#header #menu ul li a {
+  font-size: 1.2em;
+  color: #e0e0e0;
+  text-decoration: none;
+  border-right: 1px solid #e0e0e0;
+  padding: 0 15px;
+}
+div#header #menu ul li a:hover { color: #b3b3b3; }
+div#content {
+  background-color: #ffffff;
+  padding: 15px;
+}
+div#footer {
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+}
+div#footer p { text-align: right; }
+div#footer p a.xifox {
+  color: #00c600;
+  font-weight: bold;
+  text-decoration: none;
+}
+div#footer p a.xifox:hover { color: #ffffff; }
+div#wrapper_footer {
+  background: #868686 url('../../images/fnd-footer.png') no-repeat center;
+  height: 23px;
+  padding: 0 15px;
+  width: 970px;
+  margin: 0 auto;
+}
+ul.options {
+  display: block;
+  height: 15px;
+  margin: 10px;
+}
+ul.options li {
+  float: left;
+  padding: 0 10px;
+  border-right: 1px dotted #ff6600;
+}
+ul.options li.last { border-right: none; }
+ul.options li a {
+  border-bottom: 1px dotted #ff6600;
+  color: #ff6600;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul.options li input {
+  border-bottom: 1px dotted #ff6600;
+  color: #ff6600;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul.options li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #ff6600;
+}
+.error {
+  color: #ff0000;
+  font-weight: bold;
+  background-color: #ffdddd;
+}
+.ok {
+  color: #009900;
+  font-weight: bold;
+  background-color: #ddffdd;
+}
+.warning {
+  color: #440000;
+  background-color: #ffff88;
+}
+.visado_estado_inicial { color: #444444; }
+table {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-left: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  color: #333333;
+  margin: 0 auto;
+}
+table.mensaje { width: 90%; }
+table caption {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #cccccc;
+  color: #666666;
+}
+table a {
+  text-decoration: none;
+  border-bottom: 1px dotted #ff6600;
+  color: #ff6600;
+  font-weight: bold;
+}
+table a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #ff6600;
+}
+table tr.blanco {
+  background: #cccccc;
+  border: none;
+}
+table tr th {
+  padding: 5px 20px;
+  font-size: 1.1em;
+}
+table tr th a {
+  color: #336699;
+  border-bottom: 1px dotted #336699;
+}
+table tr th a:hover {
+  color: #ffffff;
+  background: #336699;
+}
+table thead tr th {
+  text-transform: uppercase;
+  background: #e2e2e2;
+}
+table tfoot tr th {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+}
+table tfoot tr td {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+}
+table tfoot tr th { width: 20%; }
+table tfoot a { margin: 0 10px; }
+table td {
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  line-height: 1.8em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+table th {
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  line-height: 1.8em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+table tr.odd { background: #efefef; }
+tbody tr:hover {
+  background-color: #e1e1e1;
+  color: #333333;
+}
+th.colorear {
+  background-color: #e1e1e1;
+  color: #333333;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+a.con_mensaje, a.sin_mensaje, a.no_mensaje {
+  background: transparent url('../../images/user.png') no-repeat left top;
+  line-height: 16px;
+  padding: 0 0 0 18px;
+  border: none;
+}
+a.con_mensaje { background: transparent url('../../images/user_comment.png') no-repeat left top; }
+a.sin_mensaje:hover { background: transparent url('../../images/user_h.png') no-repeat left top; }
+a.con_mensaje:hover { background: transparent url('../../images/user_comment_h.png') no-repeat left top; }
+a.no_mensaje { background: transparent url('../../images/user-byn.png') no-repeat left top; }

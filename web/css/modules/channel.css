@@ -1,0 +1,485 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+.simple-box {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box > h2 {
+  background: #e1e1e1;
+  padding: 10px 20px;
+  color: #3a3a3a;
+  margin-top: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 18px DINPro;
+  font-weight: 100;
+}
+.simple-box-small {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box-small > h2 {
+  background: #e1e1e1;
+  padding: 5px 10px;
+  color: #3a3a3a;
+  margin: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 14px DINPro;
+  font-weight: 100;
+}
+.box-black-bar {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+}
+.box-black-bar h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.box-black-bar + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+span.badge {
+  background: #3a3a3a url('/images/bg/badge-highlight.png') no-repeat top center;
+  font: 14px "Helvetica";
+  color: #ffffff;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 7px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-width: 26px;
+}
+.ipod-list li {
+  display: inline-block;
+  cursor: pointer;
+  background: #ffffff;
+  width: 8px;
+  margin-right: 5px;
+  height: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #3a3a3a;
+}
+.ipod-list li.current { background-color: #333333; }
+.days-box {
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font: 14px Helvetica;
+  line-height: 28px;
+  vertical-align: middle;
+}
+.days-box span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 5px;
+}
+#channel #main > header {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#channel #main > header > div.title {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-height: 54px;
+}
+#channel #main > header > div.title p { margin: 0; }
+#channel #main > header > div.milestones {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-height: 54px;
+}
+#channel #main > header > div.milestones p { margin: 0; }
+#channel #main > header > div.title {
+  float: left;
+  width: 69%;
+  background: #3a3a3a;
+}
+#channel #main > header > div.title h1 {
+  display: inline-block;
+  color: #ffffff;
+  float: left;
+  font: bold 24px Helvetica;
+  padding-left: 10px;
+  margin: 0;
+  padding-top: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  max-width: 71%;
+}
+#channel #main > header > div.title h1:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+#channel #main > header > div.title p.created {
+  display: inline-block;
+  display: none;
+  font: 14px Helvetica;
+  color: #cdcccc;
+}
+#channel #main > header > div.title p.created span { color: #ffffff; }
+#channel #main > header > div.title p.updates {
+  background: #646464;
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font: 14px Helvetica;
+  line-height: 28px;
+  vertical-align: middle;
+  float: right;
+}
+#channel #main > header > div.title p.updates span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 5px;
+}
+#channel #main > header > div.milestones {
+  right: 6px;
+  width: 28.5%;
+  padding-bottom: 0;
+  background: #e9e9e9;
+  position: absolute;
+  height: 30px;
+  z-index: 4;
+  overflow: hidden;
+}
+#channel #main > header > div.milestones p.days {
+  background: #ee8e1d;
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font: 14px Helvetica;
+  line-height: 28px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#channel #main > header > div.milestones p.days span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 5px;
+}
+#channel #main > header > div.milestones .milestone { margin-bottom: 5px; }
+#channel #main > header > div.milestones h2 {
+  display: inline-block;
+  color: #8a8989;
+  font: bold 18px Helvetica;
+  margin: 0;
+  line-height: 28px;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  max-width: 52%;
+}
+#channel #main > header > div.milestones h2:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+#channel #main > header > div.milestones .milestone:first-child h2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  max-width: 47%;
+}
+#channel #main > header > div.milestones .milestone:first-child h2:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+#channel #main > header > div.milestones .button-open {
+  position: absolute;
+  background: url('/images/img/milestones-dropdown-arrow.png') no-repeat;
+  width: 31px;
+  height: 31px;
+  right: 5px;
+  top: 12px;
+  text-indent: -5000px;
+}
+#channel #main > header > .milestones.open { height: auto; }
+#channel #main > nav.timeline { padding-top: 30px; }
+#channel #main > nav.timeline .map {
+  background: #d9ec98;
+  padding: 20px 15px;
+  height: 62px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-border-top-left-radius: 30px;
+  -webkit-border-bottom-left-radius: 30px;
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  position: relative;
+}
+#channel #main > nav.timeline .map .play-button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  text-indent: -5000px;
+  display: inline-block;
+  background: #a3c533 url('/images/img/timeline-play-button.png') no-repeat 11px 9px;
+}
+#channel #main > nav.timeline .map .line {
+  border-top: 1px solid #bed474;
+  border-bottom: 1px solid #e5f5b0;
+  height: 0px;
+  margin-left: 35px;
+  margin-top: 11px;
+}
+#channel #main > nav.timeline .map .grabber {
+  background: url('/images/img/grabber-paper-icon.png') no-repeat center 17px, url('/images/bg/grabber.png') no-repeat;
+  width: 60px;
+  height: 99px;
+  position: absolute;
+  top: -28px;
+  left: 55px;
+  cursor: move;
+}
+#channel #main > nav.timeline .sessions { padding-left: 60px; }
+#channel #main > nav.timeline .sessions > li {
+  display: inline-block;
+  background: url('/images/img/timeline-session-bullet.png') no-repeat right center;
+  padding-right: 15px;
+  height: 58px;
+  position: relative;
+}
+#channel #main > nav.timeline .sessions > li > a {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 58px;
+  background: #dbdbdb url('/images/bg/timeline-icon-highlight.png') repeat-x top;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}
+#channel #main > nav.timeline .sessions > li > a > span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  bottom: 3px;
+  color: #444444;
+}
+#channel #main > nav.timeline .sessions > li .icon-stopwatch {
+  position: absolute;
+  left: 9px;
+  top: 3px;
+}
+#channel #main > nav.timeline .sessions > li.tween > a {
+  background-color: #f881ff;
+  border-color: #f881ff;
+}
+#channel #main > nav.timeline .sessions > li.edit .icon {
+  width: 100%;
+  height: 41px;
+  margin-top: 3px;
+}
+#channel #main > nav.timeline .sessions > li.comment .icon {
+  width: 100%;
+  height: 41px;
+  margin-top: 3px;
+}
+#channel #main > nav.timeline .sessions > li.comment.edit .icon {
+  width: 100%;
+  height: 41px;
+  margin-top: 3px;
+}
+#channel #main > nav.timeline .sessions > li.edit .icon { background: url('/images/img/timeline-icon-pencil.png') no-repeat center; }
+#channel #main > nav.timeline .sessions > li.comment .icon { background: url('/images/img/timeline-icon-chat.png') no-repeat center; }
+#channel #main > nav.timeline .sessions > li.comment.edit .icon { background: url('/images/img/timeline-icon-blended.png') no-repeat center; }
+#channel #main > nav.timeline .sessions > li:last-child { background: none; }
+#channel #main #edit > .application {
+  margin: 30px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 70%;
+}
+#channel #main #application_document .users-online {
+  padding: 5px;
+  height: 32px;
+  background: #cccccc;
+}
+#channel #main #application_document .users-online img {
+  width: 32px;
+  height: 32px;
+}
+#channel #main #application_document .edit-area .toolbar {
+  height: 29px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#e5e5e5));
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 4px;
+  -webkit-user-select: none;
+}
+#channel #main #application_document .edit-area .toolbar ul { margin: 0; }
+#channel #main #application_document .edit-area .toolbar ul li {
+  padding: 3px 6px;
+  display: inline-block;
+  font-size: 11px;
+  border: 1px solid transparent;
+  min-width: 8px;
+  text-align: center;
+  cursor: default;
+}
+#channel #main #application_document .edit-area .toolbar ul li:hover {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #729bd1;
+}
+#channel #main #application_document .edit-area .toolbar ul li.selected {
+  border: 1px solid #729bd1;
+  background: #dde1eb;
+}
+#channel #main #application_document .edit-area .textarea {
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  font-size: 12px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+}
+#channel #main #application_document .edit-area .textarea ul { margin-left: 20px; }
+#channel #main #application_document .edit-area .textarea ul li { list-style-type: disc; }
+#channel #main #application_document .edit-area .textarea:focus:focus { outline: 0; }
+.icon-stopwatch {
+  width: 29px;
+  height: 41px;
+  background: url('/images/img/timeline-icon.png');
+  display: inline-block;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-top: 12px;
+  vertical-align: middle;
+}
+.icon-stopwatch .hand {
+  background: url('/images/img/timeline-icon-second-hand.png') no-repeat;
+  width: 3px;
+  height: 20px;
+  display: inline-block;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: stopwatch;
+  -webkit-animation-iteration-count: infinite;
+}

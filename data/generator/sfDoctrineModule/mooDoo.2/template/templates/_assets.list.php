@@ -1,1 +1,1 @@
-[?php use_stylesheet('<?php echo '/mooDoo.2/css/generator.list.css' ?>', 'first') ?]
+[?php use_stylesheet('<?php echo '/css/mooDoo.2/generator.list.css' ?>', 'first') ?]

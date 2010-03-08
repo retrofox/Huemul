@@ -27,6 +27,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'       => new sfWidgetFormDateTime(),
       'groups_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'permissions_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
+      'procedures_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Procedure')),
     ));
 
     $this->setValidators(array(
@@ -42,6 +43,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'       => new sfValidatorDateTime(),
       'groups_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'permissions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
+      'procedures_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Procedure', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -76,12 +78,18 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $this->setDefault('permissions_list', $this->object->permissions->getPrimaryKeys());
     }
 
+    if (isset($this->widgetSchema['procedures_list']))
+    {
+      $this->setDefault('procedures_list', $this->object->procedures->getPrimaryKeys());
+    }
+
   }
 
   protected function doSave($con = null)
   {
     $this->savegroupsList($con);
     $this->savepermissionsList($con);
+    $this->saveproceduresList($con);
 
     parent::doSave($con);
   }
@@ -159,6 +167,44 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('permissions', array_values($link));
+    }
+  }
+
+  public function saveproceduresList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['procedures_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->procedures->getPrimaryKeys();
+    $values = $this->getValue('procedures_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('procedures', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('procedures', array_values($link));
     }
   }
 

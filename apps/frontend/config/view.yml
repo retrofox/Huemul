@@ -6,13 +6,13 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
+    title:        Huemul
     #description:  symfony project
     #keywords:     symfony, project
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [ frontend/main.css ]
 
   javascripts:    []
 

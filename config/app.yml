@@ -1,0 +1,3 @@
+all:
+  sf_less_php_plugin:
+    use_lessc:    true

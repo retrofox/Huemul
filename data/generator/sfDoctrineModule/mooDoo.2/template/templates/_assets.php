@@ -7,8 +7,8 @@
 [?php use_javascript('<?php echo '/mooDoo.2/js/admin.generator.class.js' ?>', 'first') ?]
 [?php use_javascript('<?php echo '/mooDoo.2/js/admin.generator.js' ?>', 'first') ?]
 
-[?php use_stylesheet('<?php echo '/mooDoo.2/css/generator.global.css' ?>', 'first') ?]
-[?php use_stylesheet('<?php echo '/mooDoo.2/css/generator.default.css' ?>', 'first') ?]
+[?php use_stylesheet('<?php echo '/css/mooDoo.2/generator.global.css' ?>', 'first') ?]
+[?php use_stylesheet('<?php echo '/css/mooDoo.2/generator.default.css' ?>', 'first') ?]
 
 <?php
 /*

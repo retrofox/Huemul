@@ -42,3 +42,8 @@ all:
 
     secure_module:          sfGuardAuth
     secure_action:          secure
+
+  i18n: true
+  default_culture: es_AR
+
+  standard_helpers: [Partial, Cache, I18N]

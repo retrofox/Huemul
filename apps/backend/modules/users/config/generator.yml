@@ -1,0 +1,30 @@
+generator:
+  class:                          sfDoctrineGenerator
+  param:
+    model_class:                  sfGuardUser
+    theme:                        mooDoo.2
+    non_verbose_templates:        true
+    with_show:                    false
+    singular:                     ~
+    plural:                       ~
+    route_prefix:                 sf_guard_user
+    with_doctrine_route:          true
+    actions_base_class:           sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+
+      list:
+        display:                      [ username, complete_name, is_active, is_super_admin, last_login ]
+
+      filter:  ~
+      form:
+        class:                        sfGuardUserAdminForm
+        display:
+          "Dates":                    [ username, password, password_again ]
+          "Profile":                  [ Profile ]
+          "Permissions and groups":   [ is_active, is_super_admin, groups_list, permissions_list ]
+
+      edit:    ~
+      new:     ~

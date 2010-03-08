@@ -1,0 +1,349 @@
+@import "../commons/common";
+/*@import "../commons/module";*/
+
+.days-box {  
+  color: #fff;
+  display: inline-block;
+  .border-radius;
+  padding: 7px 10px;
+  .border-radius;
+  font: 14px Helvetica;
+  line-height: 28px;
+  vertical-align: middle;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 25px;
+    padding-right: 5px;
+  }
+}
+
+#channel {
+  
+  #main {
+    /* Header */
+    > header {
+      overflow: hidden;
+      margin-bottom: 10px;
+    
+      > div.title, > div.milestones {
+        .border-radius;
+        padding: 5px;
+        .box-sizing;
+        min-height: 54px;      
+       
+        p {
+          margin: 0;
+        }
+      }
+    
+      > div.title {
+        float: left;
+        width: 69%;
+        background: #3a3a3a;
+      
+        h1 {
+          display: inline-block;
+          color: #fff;
+          float: left;
+          font: bold 24px Helvetica;
+          padding-left: 10px;
+          margin: 0;        
+          padding-top: 8px;
+          .ellipsis;
+          max-width: 71%; 
+        }
+      
+        p.created {
+          display: inline-block;
+          display: none;
+          font: 14px Helvetica;
+          color: #cdcccc;
+        
+          span {
+            color: #fff;
+          }
+        }
+      
+        p.updates {
+          background: #646464;
+          .days-box;
+          float: right;
+        }
+      
+      }
+    
+      > div.milestones {
+        right: 6px;
+        width: 28.5%;
+        padding-bottom: 0;
+        background: #e9e9e9;
+        position: absolute;
+        height: 30px;
+        z-index: 4;
+        overflow: hidden;
+      
+        p.days { 
+          background: #ee8e1d;
+          .days-box;
+          margin-right: 10px;
+        }
+        
+        .milestone {
+          margin-bottom: 5px;
+        }
+        
+        h2 {
+          display: inline-block;
+          color: #8a8989;
+          font: bold 18px Helvetica;
+          margin: 0;
+          line-height: 28px;
+          vertical-align: middle;
+          .ellipsis; 
+          max-width: 52%;
+        }
+              
+        .milestone:first-child h2 {
+          .ellipsis; 
+          max-width: 47%;
+        }
+      
+        .button-open {
+          position: absolute;
+          background: url('/images/img/milestones-dropdown-arrow.png') no-repeat;
+          width: 31px;
+          height: 31px;
+          right: 5px;
+          top: 12px;
+          text-indent: -5000px;
+        }
+      }
+
+      > .milestones.open {
+        height: auto;
+      }
+
+    }
+  
+    /* Timeline */
+    > nav.timeline {
+      padding-top: 30px;
+    
+      /* Green map (drag area) */
+      .map {
+        background: #d9ec98;
+        padding: 20px 15px;
+        height: 62px;
+        .box-sizing;
+        -webkit-border-top-left-radius: 30px;
+        -webkit-border-bottom-left-radius: 30px;      
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        position: relative;
+      
+        .play-button {
+          .box-sizing;
+          .border-radius(15px);
+          height: 30px;
+          width: 30px;
+          position: absolute;
+          left: 10px;
+          top: 16px;
+          text-indent: -5000px;
+          display: inline-block;
+          background: #a3c533 url('/images/img/timeline-play-button.png') no-repeat 11px 9px;
+        }
+      
+        .line {
+          border-top: 1px solid #bed474;
+          border-bottom: 1px solid #e5f5b0;
+          height: 0px;
+          margin-left: 35px;
+          margin-top: 11px;
+        }
+      
+        .grabber {
+          background: url('/images/img/grabber-paper-icon.png') no-repeat center 17px, url('/images/bg/grabber.png') no-repeat;
+          width: 60px;
+          height: 99px;
+          position: absolute;
+          top: -28px;
+          left: 55px;
+          cursor: move;
+        }
+      }
+    
+      /* Session icons */
+      .sessions {
+        padding-left: 60px;
+      
+        > li {
+          display: inline-block;
+          background: url('/images/img/timeline-session-bullet.png') no-repeat right center;
+          padding-right: 15px;
+          height: 58px;
+          position: relative;
+        
+          > a {
+            display: inline-block;
+            position: relative;
+            width: 46px;
+            height: 58px;
+            background: #DBDBDB url('/images/bg/timeline-icon-highlight.png') repeat-x top;
+            .border-radius;
+            border: 1px solid #DBDBDB; 
+          
+            > span {
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              font-size: 10px;
+              bottom: 3px;
+              color: #444;
+            }
+          }
+        
+          .icon-stopwatch {
+            position: absolute;
+            left: 9px;
+            top: 3px;
+          }
+        }
+      
+        > li.tween > a {
+          background-color: #f881ff;
+          border-color: #f881ff;
+        }
+      
+        > li.edit .icon, > li.comment .icon, > li.comment.edit .icon {
+          width: 100%;
+          height: 41px;
+          margin-top: 3px;
+        }
+            
+        > li.edit .icon {
+          background: url('/images/img/timeline-icon-pencil.png') no-repeat center;
+        }
+      
+        > li.comment .icon {
+          background: url('/images/img/timeline-icon-chat.png') no-repeat center;
+        }
+      
+        > li.comment.edit .icon {
+          background: url('/images/img/timeline-icon-blended.png') no-repeat center;        
+        }
+      
+        > li:last-child {
+          background: none;
+        }
+      }
+    }
+  
+    /* Edit area */
+    #edit {
+    
+      > .application {
+        margin: 30px 0;
+        .box-sizing;
+        width: 70%;
+      }
+    
+    }
+  
+    /* @todo move into separate .less */
+    #application_document {
+    
+      .users-online {
+        padding: 5px;
+        height: 32px;
+        background: #ccc;
+        
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    
+      .edit-area {
+      
+        .toolbar {
+          height: 29px;
+          background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#e5e5e5));
+          .box-sizing;
+          padding: 4px;
+          -webkit-user-select: none;
+        
+          ul {
+            margin: 0;
+          
+            li {
+              padding: 3px 6px;
+              display: inline-block;
+              font-size: 11px;
+              border: 1px solid transparent;
+              min-width: 8px;
+              text-align: center;
+              cursor: default;
+            }
+          
+            li:hover {
+              .border-radius(2px);
+              border: 1px solid #729bd1;
+            }
+          
+            li.selected {            
+              border: 1px solid #729bd1;
+              background: #dde1eb;
+            }
+          }
+        }
+      
+        .textarea {
+          border: 1px solid #ccc;
+          padding: 5px 10px;
+          font-size: 12px;
+          -webkit-border-bottom-right-radius: 5px;
+          -webkit-border-bottom-left-radius: 5px;
+        
+          ul {
+            margin-left: 20px;
+            li { list-style-type: disc; }
+          }
+        }
+      
+        .textarea:focus {
+          :focus {
+            outline: 0;
+          }
+        }
+      
+      }
+    
+    }
+  }
+  
+}
+
+.icon-stopwatch {
+  width: 29px;
+  height: 41px;
+  background: url('/images/img/timeline-icon.png');
+  display: inline-block;
+  text-align: center;
+  .box-sizing;
+  padding-top: 12px;
+  vertical-align: middle;
+  
+  .hand {
+    background: url('/images/img/timeline-icon-second-hand.png') no-repeat;
+    width: 3px;
+    height: 20px;
+    display: inline-block;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: stopwatch;
+    -webkit-animation-iteration-count: infinite;
+  }
+}

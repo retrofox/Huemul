@@ -1,7 +1,7 @@
-<td>
+<td class="object_actions">
   <div class="object_actions_container">
-    <span class="label_action">actions</span>
-    <ul class="object_actions">
+    <span class="label_action">[?php echo __('actions'); ?]</span>
+    <ul>
       <?php foreach ($this->configuration->getValue('list.object_actions') as $name => $params): ?>
         <?php if ('_delete' == $name): ?>
           <?php echo $this->addCredentialCondition('[?php echo $helper->linkToDelete($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>

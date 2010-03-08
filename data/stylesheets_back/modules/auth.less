@@ -1,0 +1,141 @@
+@import "../commons/common.less";
+
+#module-auth {
+	> *, > footer .wrap {
+		width: 900px;
+		margin: auto;
+	}
+	
+  > div > section {
+	  background: none;
+	  padding: 0;
+	  overflow: visible; 
+	}
+	
+	> header {
+	  border: 0;
+	  -webkit-box-shadow: none;
+	  background: none;
+	  
+	  #connection-status {	    
+      top: 18px;
+    }
+	  
+	  #date-weather {
+	    right: 20px;
+	  }
+  }
+	
+	> footer {
+	  position: absolute;
+  	bottom: 0;  	
+    margin-top: 0;
+  	.wrap {
+  	  padding: 0;
+  	}
+	}
+	
+	background: url('/images/bg/login-clouds.png') no-repeat top center, url('/images/bg/pattern.png');
+}
+
+#auth {
+	margin-top: 20px;
+}
+
+#login-board, #login-form {
+	.box-sizing;
+	min-height: 340px !important;
+	margin-top: 5px;
+}
+
+#login-board {
+	.box-black-bar;   
+
+	width: 65%;
+	float: left;
+	
+	h3 {
+		background: #C3210D;
+		display: inline-block;
+		font: oblique 30px "Brush Script MT";
+		padding: 5px 30px 5px 25px; 
+		margin-left: -15px;
+		color: #fff;
+	}
+	
+	.term {
+		display: inline-block;
+		font: 18px "DINPro";
+		font-weight: 100;
+		color: #999;
+		padding: 0 10px;
+	}
+	
+	#announcements-triangle {
+  	border-color: transparent #620607 transparent transparent;
+  	border-style: solid;
+  	border-width: 15px;
+  	height: 0px;
+  	width: 0;
+  	position: relative;
+  	left: -30px;
+  	top: -45px;
+  	z-index: -1; /* displayed under bubble */
+	}
+	
+	.announcements {
+	  margin-top: -30px;
+		padding: 0 20px;
+		
+		article {
+			h4 {
+				margin-top: 0;
+				margin-bottom: 10px; 
+				font: 24px "DINPro";
+				font-weight: 100;
+				color: #343434;
+			}
+			
+			p {
+				font: 18px "DINPro";
+				font-weight: 100;
+				color: #6b6b6b;
+			}
+		}
+	}
+}
+
+#login-form {
+	.box-black-bar;
+
+	width: 33%;
+	float: right;	
+	font-size: 12px;	
+	
+	font: 14px "DINPro";
+
+  form > p {
+  	background: #fff;
+  	padding: 5px 0;
+    .border-radius(5px);
+  }
+
+  form {
+		padding: 0 25px;
+
+    label {
+      display: block;
+    	margin-bottom: 5px;
+    }
+
+  	input[type=text], input[type=password] {
+  	  width: 100%;
+  	  .box-sizing;
+  	}
+  	
+  	.submit {
+  	  background: transparent;
+  	  text-align: right;
+  	}
+  }
+}

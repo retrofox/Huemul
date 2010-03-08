@@ -1,32 +1,156 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+.simple-box {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box > h2 {
+  background: #e1e1e1;
+  padding: 10px 20px;
+  color: #3a3a3a;
+  margin-top: 0;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  font: 18px DINPro;
+  font-weight: 100;
+}
+.simple-box-small {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box-small > h2 {
+  background: #e1e1e1;
+  padding: 5px 10px;
+  color: #3a3a3a;
+  margin: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 14px DINPro;
+  font-weight: 100;
+}
+.box-black-bar {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+}
+.box-black-bar h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.box-black-bar + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+span.badge {
+  background: #3a3a3a url('/images/bg/badge-highlight.png') no-repeat top center;
+  font: 14px "Helvetica";
+  color: #ffffff;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 7px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-width: 26px;
+}
+.ipod-list li {
+  display: inline-block;
+  cursor: pointer;
+  background: #ffffff;
+  width: 8px;
+  margin-right: 5px;
+  height: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #3a3a3a;
+}
+.ipod-list li.current { background-color: #333333; }
 body {
-  background-color: #eee;
+  background-color: #eeeeee;
   font-size: 14px;
 }
-
-/* Layout */
-#wrapper {
-  padding: 5px;
-}
-
-#header {
-
-}
-
-#board {
-  
-}
-
-/* Menu */
-nav.menu {
-  font-size: 14px;
-}
-
-
-/* Tablas */
-#sf_admin_content table tr th{
+body #wrapper { padding: 5px; }
+body #header nav.menu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 50px;
+  display: inline-block;
+  vertical-align: top;
   font-size: 12px;
 }
-
-#sf_admin_content table tr th a {
-  padding: 1px 5px;
+body #header section.mini-panel {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
 }
+body #header nav.menu { width: 80%; }
+body #header section.mini-panel {
+  margin-left: 1%;
+  width: 17%;
+  padding: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #cccccc;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#eeeeee));
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(100, 100, 100, 0.2);
+  -moz-box-shadow: 2px 2px 6px rgba(100, 100, 100, 0.2);
+  -webkit-box-shadow: 2px 2px 6px rgba(100, 100, 100, 0.2);
+}
+#sf_admin_content table tr th { font-size: 12px; }
+#sf_admin_content table tr th a { padding: 1px 5px; }

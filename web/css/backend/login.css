@@ -1,0 +1,586 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+.simple-box {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box > h2 {
+  background: #e1e1e1;
+  padding: 10px 20px;
+  color: #3a3a3a;
+  margin-top: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 18px DINPro;
+  font-weight: 100;
+}
+.simple-box-small {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box-small > h2 {
+  background: #e1e1e1;
+  padding: 5px 10px;
+  color: #3a3a3a;
+  margin: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 14px DINPro;
+  font-weight: 100;
+}
+.box-black-bar {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+}
+.box-black-bar h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.box-black-bar + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+span.badge {
+  background: #3a3a3a url('/images/bg/badge-highlight.png') no-repeat top center;
+  font: 14px "Helvetica";
+  color: #ffffff;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 7px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-width: 26px;
+}
+.ipod-list li {
+  display: inline-block;
+  cursor: pointer;
+  background: #ffffff;
+  width: 8px;
+  margin-right: 5px;
+  height: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #3a3a3a;
+}
+.ipod-list li.current { background-color: #333333; }
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  overflow: visible;
+  text-overflow: visible;
+  -o-text-overflow: visible;
+  -icab-text-overflow: visible;
+  -khtml-text-overflow: visible;
+  -moz-text-overflow: visible;
+  -webkit-text-overflow: visible;
+}
+.simple-box {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box > h2 {
+  background: #e1e1e1;
+  padding: 10px 20px;
+  color: #3a3a3a;
+  margin-top: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 18px DINPro;
+  font-weight: 100;
+}
+.simple-box-small {
+  border: 1px solid #e1e1e1;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.simple-box-small > h2 {
+  background: #e1e1e1;
+  padding: 5px 10px;
+  color: #3a3a3a;
+  margin: 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  font: 14px DINPro;
+  font-weight: 100;
+}
+.box-black-bar {
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.12) 0px 0px 10px inset;
+}
+.box-black-bar h2 {
+  color: #ffffff;
+  background: url('/images/bg/bar-black-big.png') repeat-x;
+  height: 47px;
+  line-height: 61px;
+  vertical-align: middle;
+  padding: 7px 25px;
+  margin: 0;
+  font: 100 35px DINPro;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
+.box-black-bar + .load-mask {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+span.badge {
+  background: #3a3a3a url('/images/bg/badge-highlight.png') no-repeat top center;
+  font: 14px "Helvetica";
+  color: #ffffff;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 7px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-width: 26px;
+}
+.ipod-list li {
+  display: inline-block;
+  cursor: pointer;
+  background: #ffffff;
+  width: 8px;
+  margin-right: 5px;
+  height: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #3a3a3a;
+}
+.ipod-list li.current { background-color: #333333; }
+.button-base-active, .button-tack-active {
+  border-style: inset;
+  left: 1px;
+  top: 1px;
+}
+.button-golux_v1 {
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  width: 130px;
+  height: 30px;
+  line-height: 28px;
+  color: #6c6c6c;
+  text-shadow: -1px -1px 1px #ffffff;
+  display: inline-block;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid rgba(180, 180, 180, 0.2);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3f3f3), to(#ffffff), color-stop(0, #f3f3f3), color-stop(0.9, #f8f8f8));
+  box-shadow: 0 1px 1px rgba(100, 100, 100, 0.7);
+  -moz-box-shadow: 0 1px 1px rgba(100, 100, 100, 0.7);
+  -webkit-box-shadow: 0 1px 1px rgba(100, 100, 100, 0.7);
+  vertical-align: middle;
+  text-decoration: none;
+}
+:focus { outline: 0; }
+body.login {
+  background: #d7f2f9 url('/images/backend/login/bg_gradient.gif') repeat-x left top;
+  font: normal 62.5% DINPro, 'Lucida Grande', verdana, sans-serif;
+  color: #343434;
+}
+div.light {
+  background: transparent url('/images/backend/login/bg_background-highlight.png') no-repeat left top;
+  width: 787px;
+  height: 532px;
+  margin: 0 auto;
+}
+body.login #login {
+  background: transparent url('/images/backend/login/rose_login.png') no-repeat 100px top;
+  width: 455px;
+  height: 408px;
+  padding-left: 100px;
+  margin: -415px auto 0;
+  position: relative;
+}
+body.login #login #login_error {
+  margin: 5px;
+  left: 300px;
+  top: 60px;
+  position: absolute;
+}
+body.login #login #login_error ul { list-style: none; }
+body.login #login #login_error ul li {
+  min-width: 100px;
+  text-align: center;
+  padding: 2px 5px;
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgba(255, 50, 50, 0.8);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  line-heigh: 14px;
+  font-size: 14px;
+}
+body.login #login .block {
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  width: 310px;
+  height: 205px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(230, 230, 230, 0.9);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  z-index: 100;
+}
+body.login form#loginform {
+  width: 320px;
+  padding: 90px 10px 10px;
+  position: relative;
+}
+body.login form#loginform > div {
+  margin: 5px 10px;
+  position: relative;
+}
+body.login form#loginform > div ul.error_list {
+  position: absolute;
+  left: 250px;
+  top: 10px;
+}
+body.login form#loginform > div ul.error_list li {
+  min-width: 100px;
+  text-align: center;
+  padding: 1px 4px;
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgba(255, 50, 50, 0.8);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  line-heigh: 12px;
+  font-size: 11px;
+}
+body.login form#loginform p#school {
+  padding: 5px 0;
+  height: 75px;
+}
+body.login form#loginform input[type=text] {
+  margin: 5px 4px 12px;
+  border: 1px solid #c3c3c3;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 6px #aaaaaa;
+  -moz-box-shadow: 0 0 6px #aaaaaa;
+  padding: 5px 10px;
+  width: 268px;
+  height: 32px;
+  line-height: 26px;
+}
+body.login form#loginform input[type=password] {
+  margin: 5px 4px 12px;
+  border: 1px solid #c3c3c3;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 6px #aaaaaa;
+  -moz-box-shadow: 0 0 6px #aaaaaa;
+  padding: 5px 10px;
+  width: 268px;
+  height: 32px;
+  line-height: 26px;
+}
+body.login form#loginform input#login_school_id {
+  color: #666666;
+  height: 20px;
+  line-height: 14px;
+  font-size: 16px;
+}
+body.login form#loginform body.login form#loginform label { font-size: 12px; }
+body.login form#loginform body.login form#loginformschool label { font-size: 12px; }
+body.login form#loginform p.submit { text-align: center; }
+body.login form#loginform input[type=submit] {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66dd66), to(#44aa44));
+  display: inline-block;
+  padding: 1px 8px 2px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border: 0;
+  position: relative;
+  border: 1px outset rgba(200, 200, 200, 0.5);
+  margin: 0 2px;
+  font-size: 14px;
+}
+body.login form#loginform input[type=submit]:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#77cc55), to(#55aa55));
+}
+body.login form#loginform input[type=submit]:active {
+  border-style: inset;
+  left: 1px;
+  top: 1px;
+}
+body.login form#loginformschool {
+  width: 320px;
+  padding: 90px 10px 10px;
+  position: relative;
+}
+body.login form#loginformschool > div {
+  margin: 5px 10px;
+  position: relative;
+}
+body.login form#loginformschool > div ul.error_list {
+  position: absolute;
+  left: 250px;
+  top: 10px;
+}
+body.login form#loginformschool > div ul.error_list li {
+  min-width: 100px;
+  text-align: center;
+  padding: 1px 4px;
+  display: inline-block;
+  color: #ffffff;
+  background-color: rgba(255, 50, 50, 0.8);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  line-heigh: 12px;
+  font-size: 11px;
+}
+body.login form#loginformschool p#school {
+  padding: 5px 0;
+  height: 75px;
+}
+body.login form#loginformschool input[type=text] {
+  margin: 5px 4px 12px;
+  border: 1px solid #c3c3c3;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 6px #aaaaaa;
+  -moz-box-shadow: 0 0 6px #aaaaaa;
+  padding: 5px 10px;
+  width: 268px;
+  height: 32px;
+  line-height: 26px;
+}
+body.login form#loginformschool input[type=password] {
+  margin: 5px 4px 12px;
+  border: 1px solid #c3c3c3;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 6px #aaaaaa;
+  -moz-box-shadow: 0 0 6px #aaaaaa;
+  padding: 5px 10px;
+  width: 268px;
+  height: 32px;
+  line-height: 26px;
+}
+body.login form#loginformschool input#login_school_id {
+  color: #666666;
+  height: 20px;
+  line-height: 14px;
+  font-size: 16px;
+}
+body.login form#loginformschool body.login form#loginform label { font-size: 12px; }
+body.login form#loginformschool body.login form#loginformschool label { font-size: 12px; }
+body.login form#loginformschool p.submit { text-align: center; }
+body.login form#loginformschool input[type=submit] {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#66dd66), to(#44aa44));
+  display: inline-block;
+  padding: 1px 8px 2px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border: 0;
+  position: relative;
+  border: 1px outset rgba(200, 200, 200, 0.5);
+  margin: 0 2px;
+  font-size: 14px;
+}
+body.login form#loginformschool input[type=submit]:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#77cc55), to(#55aa55));
+}
+body.login form#loginformschool input[type=submit]:active {
+  border-style: inset;
+  left: 1px;
+  top: 1px;
+}
+body.login form#loginform { padding: 10px; }
+body > footer {
+  margin-top: 15px;
+  height: 45px;
+  padding-top: 8px;
+  font: 14px "DINPro";
+  background: rgba(42, 42, 43, 0.7);
+  color: #a4a4a4;
+  font-weight: bold;
+  width: 100% !important;
+}
+body > footer .wrap { padding: 0 20px; }
+body > footer div.rosepad {
+  width: 30%;
+  float: left;
+  height: 45px;
+  padding-left: 50px;
+  vertical-align: middle;
+  line-height: 35px;
+  background: url('/images/img/logo-simple-small.png') no-repeat left top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body > footer div.rosepad a.rosepad {
+  font-family: "Trajan Pro";
+  color: #a4a4a4;
+}
+body > footer div.rosepad a.rosepad:hover { color: #ffffff; }
+body > footer .school {
+  width: 70%;
+  float: right;
+  height: 45px;
+}
+body > footer .school p {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+  text-align: right;
+}
+.autocomplete-container {
+  z-index: 200;
+  position: absolute;
+  border: 1px solid #a3a3a3;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 11px;
+  box-shadow: 0 0 10px #666666;
+  -moz-box-shadow: 0 0 10px #666666;
+  -webkit-box-shadow: 0 0 10px #666666;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font: 14px "Lucida Grande";
+}
+.autocomplete-container p {
+  margin: 0;
+  padding: 5px;
+}
+.autocomplete-container .autocomplete-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.autocomplete-container .autocomplete-list li {
+  background-color: transparent;
+  border-bottom: 1px solid #dddddd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
+  margin: 0px;
+  padding: 5px 12px;
+}
+.autocomplete-container .autocomplete-list li .autocomplete-highlight {
+  background: #444444;
+  color: white;
+  font-style: normal;
+}
+.autocomplete-container .autocomplete-list li.autocomplete-item-focus {
+  background-color: #3668d9;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 64%, from(#6e81f5), to(#3e52f2));
+  border-color: #3342e8;
+  color: white;
+  text-shadow: #122042 0px 1px 2px;
+}
+.autocomplete-container .autocomplete-list li.autocomplete-item-focus .autocomplete-highlight {
+  background: #253f7a;
+  color: white;
+}

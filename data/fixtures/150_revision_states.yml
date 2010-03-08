@@ -1,0 +1,32 @@
+RevisionState:
+  state_1:
+    title:          Inicial
+    description:    "Estado Inicial y único de un trámite. Se asigna automáticamente por le Responsable cuando el trámite se ha iniciado."
+
+  state_2:
+    title:          Aprobado
+    description:    Estado Final y único de un trámite. Se asgina por un usuario Administrador cuando el trámita finalmente ha sido aprobado.
+
+  state_3:
+    title:          Anulado
+    description:
+
+  state_4:
+    title:          Autorizado
+    description:
+
+  state_5:
+    title:          A Revisar
+    description:		Estado pendiente a revisar por parte de la administración de Obras Privadas.
+
+  state_6:
+    title: 					Visado
+    description:    Estado visado por parte del Administrador.
+    
+  state_7:
+    title:          Corregido
+    description:		Estado creado por el Responsable en respuesta al estado de Visado.
+
+  state_8:
+    title:          En Proceso
+    description:		Este estado se produce en una revision cuando aún se encuentra en proceso de Visado.

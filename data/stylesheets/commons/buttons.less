@@ -1,0 +1,82 @@
+@import "common";
+
+/***********
+ * Buttons *
+ ***********/
+/* Customs Styles */
+@btn-ok-color: #eee;
+
+.button-base(@color: @btn-ok-color, @bgcolor-from: #66bb44, @bgcolor-to: #449944) {
+  @bgcolor: @bgcolor-from;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@bgcolor-from), to(@bgcolor-to));
+  display: inline-block;
+  padding: 1px 8px 2px;
+  color: @color;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  .border-radius(4px);
+  .text-shadow(0, -1px, 1px, rgba(0, 0, 0, 0.25));
+  border: 0;
+  position: relative;
+}
+
+.button-base-hover(@color: @btn-ok-color, @bgcolor-from: #7c5, @bgcolor-to: #5a5) {
+  cursor: pointer;
+  color: @color;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@bgcolor-from), to(@bgcolor-to));
+}
+
+.button-base-active {
+  border-style: inset;
+  left: 1px; top: 1px;
+}
+
+.button(@color: #eee) {
+  .button-base(@color);
+}
+
+/* Button Shadow */
+.button-shadow(@color: #eee, @bgcolor-from: #ffaebf, @bgcolor-to: #449944) {
+  .button-base(@color, @bgcolor-from, @bgcolor-to);
+  .box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.5));
+}
+
+/* Button Tack */
+.button-tack(@color: #eee, @bgcolor-from: #ffaebf, @bgcolor-to: #ee99aa) {
+  .button-base(@color, @bgcolor-from, @bgcolor-to);
+  border: 1px outset rgba(200, 200, 200, 0.5);
+}
+
+.button-tack-hover(@color: #EEE, @bgcolor-from: #3dbecf, @bgcolor-to: #2daebf) {
+  .button-base-hover(@color, @bgcolor-from, @bgcolor-to);
+}
+
+.button-tack-active {
+  .button-base-active;
+}
+
+
+/* New Buttons */
+.button-golux_v1 {
+
+  font-size: 13px;
+
+  font-style: italic;
+  text-align: center;
+
+  width: 130px; 
+  height: 30px; 
+  line-height: .button-golux_v1['height'] - 2;
+
+  color: #6c6c6c;
+  text-shadow: -1px -1px 1px #fff;
+  display: inline-block;
+
+  .border-radius(8px);
+  border: 1px solid rgba(180, 180, 180, 0.2);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3f3f3), to(#fff), color-stop(0, #f3f3f3), color-stop(0.9, #f8f8f8));
+  .box-shadow(0, 1px, 1px, rgba(100,100,100, 0.7));
+  vertical-align: middle;
+  text-decoration: none;
+}

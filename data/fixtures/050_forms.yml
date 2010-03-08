@@ -1,0 +1,5 @@
+Formu:
+  form_a:
+    #User:            admin
+    name:             Type A
+    description:      Formulario Base.

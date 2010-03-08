@@ -12,6 +12,7 @@
  * @property Doctrine_Collection $permissions
  * @property Doctrine_Collection $sfGuardGroupPermission
  * @property Doctrine_Collection $sfGuardUserGroup
+ * @property Doctrine_Collection $Items
  * 
  * @method integer             getId()                     Returns the current record's "id" value
  * @method string              getName()                   Returns the current record's "name" value
@@ -20,6 +21,7 @@
  * @method Doctrine_Collection getPermissions()            Returns the current record's "permissions" collection
  * @method Doctrine_Collection getSfGuardGroupPermission() Returns the current record's "sfGuardGroupPermission" collection
  * @method Doctrine_Collection getSfGuardUserGroup()       Returns the current record's "sfGuardUserGroup" collection
+ * @method Doctrine_Collection getItems()                  Returns the current record's "Items" collection
  * @method sfGuardGroup        setId()                     Sets the current record's "id" value
  * @method sfGuardGroup        setName()                   Sets the current record's "name" value
  * @method sfGuardGroup        setDescription()            Sets the current record's "description" value
@@ -27,6 +29,7 @@
  * @method sfGuardGroup        setPermissions()            Sets the current record's "permissions" collection
  * @method sfGuardGroup        setSfGuardGroupPermission() Sets the current record's "sfGuardGroupPermission" collection
  * @method sfGuardGroup        setSfGuardUserGroup()       Sets the current record's "sfGuardUserGroup" collection
+ * @method sfGuardGroup        setItems()                  Sets the current record's "Items" collection
  * 
  * @package    Huemul
  * @subpackage model
@@ -73,6 +76,10 @@ abstract class BasesfGuardGroup extends sfDoctrineRecord
              'foreign' => 'group_id'));
 
         $this->hasMany('sfGuardUserGroup', array(
+             'local' => 'id',
+             'foreign' => 'group_id'));
+
+        $this->hasMany('Item as Items', array(
              'local' => 'id',
              'foreign' => 'group_id'));
 

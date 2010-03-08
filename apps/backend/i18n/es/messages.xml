@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2010-03-08T01:57:46Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>Logout</source>
+        <target>Salir</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Procedures</source>
+        <target>Trámites</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>list</source>
+        <target>listado</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>In process</source>
+        <target>En proceso</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Finish</source>
+        <target>Final</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Configuration</source>
+        <target>Configuración</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Users</source>
+        <target>Usuarios</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>List</source>
+        <target>Listado</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Groups</source>
+        <target>Grupos</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Permissions</source>
+        <target>Permisos</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Forms</source>
+        <target>Formularios</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>New form</source>
+        <target>Nuevo Formulario</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Items</source>
+        <target>Items</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Login</source>
+        <target>Ingresar</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>sign in</source>
+        <target>Autenticar</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Forgot your password?</source>
+        <target>Olvido su contraseña ?</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>You don't have the required permission to access this page.</source>
+        <target>Usted no tiene permisos para ingresar a esta página.</target>
+      </trans-unit>
+
+      <trans-unit id="18">
+        <source>Name</source>
+        <target>Nombre</target>
+      </trans-unit>
+
+      <trans-unit id="19">
+        <source>Description</source>
+        <target>Descripción</target>
+      </trans-unit>
+
+      <trans-unit id="20">
+        <source>Created at</source>
+        <target>Creado en</target>
+      </trans-unit>
+      
+      <trans-unit id="21">
+        <source>actions</source>
+        <target>acciones</target>
+      </trans-unit>
+      
+      <trans-unit id="22">
+        <source>Group</source>
+        <target>Grupo</target>
+      </trans-unit>
+      
+      <trans-unit id="23">
+        <source>Title</source>
+        <target>Título</target>
+      </trans-unit>
+
+      <trans-unit id="24">
+        <source>Items list</source>
+        <target>Listado de Items</target>
+      </trans-unit>
+
+      <trans-unit id="25">
+        <source>Back to list</source>
+        <target>Volver al listado</target>
+      </trans-unit>
+      
+      <trans-unit id="26">
+        <source>Dossier</source>
+        <target>Expediente</target>
+      </trans-unit>
+
+      <trans-unit id="27">
+        <source>Number</source>
+        <target>Número</target>
+      </trans-unit>
+
+      <trans-unit id="28">
+        <source>Cadastral data</source>
+        <target>Dato Catastral</target>
+      </trans-unit>
+
+      <trans-unit id="29">
+        <source>Updated at</source>
+        <target>Actualizado en</target>
+      </trans-unit>
+
+      <trans-unit id="30">
+        <source>Revisions</source>
+        <target>Revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="31">
+        <source>Procedure</source>
+        <target>Trámite</target>
+      </trans-unit>
+
+      <trans-unit id="32">
+        <source>Stated</source>
+        <target>Estado</target>
+      </trans-unit>
+
+      <trans-unit id="33">
+        <source>Back to procedures</source>
+        <target>Volver a trámites</target>
+      </trans-unit>
+
+      <trans-unit id="34">
+        <source>Is finished</source>
+        <target>Finalizado</target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

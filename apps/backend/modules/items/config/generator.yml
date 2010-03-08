@@ -1,0 +1,26 @@
+generator:
+  class:                          sfDoctrineGenerator
+  param:
+    model_class:                  Item
+    theme:                        mooDoo.2
+    non_verbose_templates:        true
+    with_show:                    false
+    singular:                     ~
+    plural:                       ~
+    route_prefix:                 item
+    with_doctrine_route:          true
+    actions_base_class:           sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+
+      list:
+        display:                  [ group, title ]
+
+      filter:  ~
+      form:
+        display:                  [ title, group_id, description, formus_list ]
+
+      edit:    ~
+      new:     ~

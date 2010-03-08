@@ -110,7 +110,7 @@ AdminGenerator.List = new Class({
 
   objectActions: function () {
     
-    this.elems.list.obj_actions = this.elems.list.container.getElements('ul.object_actions');
+    this.elems.list.obj_actions = this.elems.list.container.getElements('ul');
 
     this.elems.list.obj_actions.each(function (object_action) {
       var container = object_action.getParent();

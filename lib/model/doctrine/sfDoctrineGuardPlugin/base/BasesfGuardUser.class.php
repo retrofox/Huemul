@@ -15,10 +15,14 @@
  * @property timestamp $last_login
  * @property Doctrine_Collection $groups
  * @property Doctrine_Collection $permissions
+ * @property Doctrine_Collection $procedures
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property Profile $Profile
+ * @property Doctrine_Collection $Formu
+ * @property Doctrine_Collection $UserProcedure
+ * @property Doctrine_Collection $Revision
  * 
  * @method integer             getId()                    Returns the current record's "id" value
  * @method string              getUsername()              Returns the current record's "username" value
@@ -30,10 +34,14 @@
  * @method timestamp           getLastLogin()             Returns the current record's "last_login" value
  * @method Doctrine_Collection getGroups()                Returns the current record's "groups" collection
  * @method Doctrine_Collection getPermissions()           Returns the current record's "permissions" collection
+ * @method Doctrine_Collection getProcedures()            Returns the current record's "procedures" collection
  * @method Doctrine_Collection getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
  * @method Doctrine_Collection getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey  getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method Profile             getProfile()               Returns the current record's "Profile" value
+ * @method Doctrine_Collection getFormu()                 Returns the current record's "Formu" collection
+ * @method Doctrine_Collection getUserProcedure()         Returns the current record's "UserProcedure" collection
+ * @method Doctrine_Collection getRevision()              Returns the current record's "Revision" collection
  * @method sfGuardUser         setId()                    Sets the current record's "id" value
  * @method sfGuardUser         setUsername()              Sets the current record's "username" value
  * @method sfGuardUser         setAlgorithm()             Sets the current record's "algorithm" value
@@ -44,10 +52,14 @@
  * @method sfGuardUser         setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser         setGroups()                Sets the current record's "groups" collection
  * @method sfGuardUser         setPermissions()           Sets the current record's "permissions" collection
+ * @method sfGuardUser         setProcedures()            Sets the current record's "procedures" collection
  * @method sfGuardUser         setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser         setProfile()               Sets the current record's "Profile" value
+ * @method sfGuardUser         setFormu()                 Sets the current record's "Formu" collection
+ * @method sfGuardUser         setUserProcedure()         Sets the current record's "UserProcedure" collection
+ * @method sfGuardUser         setRevision()              Sets the current record's "Revision" collection
  * 
  * @package    Huemul
  * @subpackage model
@@ -119,6 +131,11 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'permission_id'));
 
+        $this->hasMany('Procedure as procedures', array(
+             'refClass' => 'UserProcedure',
+             'local' => 'user_id',
+             'foreign' => 'procedure_id'));
+
         $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',
              'foreign' => 'user_id'));
@@ -134,6 +151,18 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasOne('Profile', array(
              'local' => 'id',
              'foreign' => 'sf_guard_user_id'));
+
+        $this->hasMany('Formu', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('UserProcedure', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Revision', array(
+             'local' => 'id',
+             'foreign' => 'creator_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

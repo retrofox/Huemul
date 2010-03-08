@@ -1,0 +1,175 @@
+@import "../../../commons/common";
+@import "../../../commons/buttons";
+
+#sf_admin_container {
+  a {
+    :hover {
+      color: #025;
+      text-decoration: underline;
+    }
+  }
+
+  padding: 10px;
+  background-color: rgba(220, 230, 220, 0.8);
+
+  .border-radius();
+  .box-shadow(2px, 1px, 8px, rgba(100, 100, 100, 0.3));
+
+  h1 {
+    .box-1(#EEE, 8px, #E5E5E5, 2px);
+    text-transform: uppercase;
+    .text-shadow(2px, 1px, 0, #fff);
+    font-size: 16px;
+    margin-left: 20px;
+    color: #06A;
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 5px;
+  }
+
+  .error, .notice {
+    border: 1px solid #C99;
+    background-color: #FDD;
+    .border-radius;
+    padding: 5px 10px;
+    color: @error;
+    margin: 10px;
+  }
+
+  .notice {
+    border-color:#9C9;
+    background-color: #DFD;
+    color: #040;
+  }
+
+  #sf_admin_bar {
+    padding: 2px;
+    position: relative;
+
+    nav.menu {
+      a {
+        .button-tack(#EEE, #66bb44, #449944);
+        :hover    {.button-tack-hover(#FFF, #7c5, #5a5);}
+        :active   {.button-tack-active;}
+      }
+    }
+
+    div.sf_admin_filter {
+      display: none;
+      z-index: 200;
+      .box-1-shadow(#EEE, 5px, 1px, 1px, 10px, rgba(100, 100, 100, 0.2));
+      
+      background-color: rgba(240,250,255, 0.6);
+      
+      padding: 5px;
+      font-size: 11px;
+      position: absolute;
+      left: 20px; top: 20px;
+
+      input[type="submit"]          {.button-tack(#EEE, #66bb44, #449944);}
+      input[type="submit"]:hover    {.button-tack-hover(#FFF, #7c5, #5a5);}
+      input[type="submit"]:active   {.button-tack-active;}
+
+      a          {.button-tack(#EEE, #6A6, #696);}
+      a:hover    {.button-tack-hover(#FFF, #6C6, #6A6);}
+      a:active   {.button-tack-active;}
+    }
+  }
+
+  .steps {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 5px;
+
+    h2 {
+      .circle-shadow(40px, 40px);
+    }
+  }
+
+  
+  #sf_admin_content {
+    font-size: 14px;
+
+    /* Styles primarily to form EDIT */
+    .sf_admin_form {
+      width: 100%;
+
+      h2 {
+        .text-shadow;
+        margin: 0 0 5px 0; padding: 0;
+        color: rgba(50, 60, 90, 0.8);
+      }
+
+      fieldset {
+        .box-1(#EEE, 8px);
+        margin-bottom: 5px;
+        position: relative;
+      }
+    }
+
+    /* Actions */
+    ul.sf_admin_actions, ul.sf_admin_td_actions {
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    ul.sf_admin_td_actions {
+      margin: 0; padding: 0;
+      li {
+        a {
+          font-size: 9px;
+          .border-radius(4px);
+          padding: 2px 5px;
+          background-color: #4Ac;
+          color: #FFF;
+        }
+        a:hover {
+          background-color: #4DF;
+          color: #234;
+        }
+      }
+    }
+
+    .sf_admin_batch_actions_choice {
+      -webkit-border-radius: 6px;
+      padding: 1px 3px;
+      background-color: #f2f2f2;
+    }
+
+    ul.sf_admin_actions {
+      li {
+        input         {.button-tack(#EEE, #66bb44, #449944);}
+        input:hover   {.button-tack-hover(#FFF, #7c5, #5a5);}
+        input:active  {.button-tack-active;}
+
+        a             {.button-tack(#EEE, #2daebf, #1d9eaf);}
+        a:hover       {.button-tack-hover(#FFF, #3dbecf, #2daebf);}
+        a:active      {.button-tack-active;}
+      }
+
+      li.sf_admin_action_delete {
+        a             { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F22), to(#C00));}
+        a:hover       { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F44), to(#E33));}
+      }
+    }
+  }
+
+      .error { color: @error_form; }
+
+      ul.error_list {
+        color: @error_form;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          .box-1-error;
+          text-shadow: none;
+          display: inline-block;
+        }
+      }
+}

@@ -1,0 +1,29 @@
+generator:
+  class:                          sfDoctrineGenerator
+  param:
+    model_class:                  Revision
+    theme:                        mooDoo.2
+    non_verbose_templates:        true
+    with_show:                    false
+    singular:                     ~
+    plural:                       ~
+    route_prefix:                 revision
+    with_doctrine_route:          true
+    actions_base_class:           sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+
+      list:
+        fields:
+          revision_state_id:          { label: State }
+        display:                      [ number, procedure, state, creator, block, created_at ]
+
+        actions:
+          back_to_procedures:         ~
+
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

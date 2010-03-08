@@ -5,104 +5,159 @@ attributes:
   export: all
 
 
-Profesion:
+Profession:
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
-    nombre:                     { type: string(100), notnull: true }
-    descripcion:                { type: clob, notnull: true }
+    name:                       { type: string(100), notnull: true }
+    description:                { type: clob, notnull: true }
 
-Provincia:
+Province:
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
-    nombre:                     { type: string(100), notnull: true }
+    name:                       { type: string(100), notnull: true }
 
-Localidad:
+Location:
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
-    nombre:                     { type: string(100), notnull: true }
+    name:                       { type: string(100), notnull: true }
 
 
 Profile:
   columns:
     sf_guard_user_id:           integer(4)
-    profesion_id:               { type: integer, unsigned: true, notnull: true }
-    nombre:                     { type: string(100), notnull: true }
-    apellido:                   { type: string(100), notnull: true }
-    fdn:                        { type: date }
-    documento_tipo:             { type: enum, values: [ dni, le ], default: dni }
-    documento_numero:           { type: string(12) }
-    telefono:                   { type: string(40), notnull: true }
-    celular:                    { type: string(400), notnull: true }
-    email:                      { type: string(60), notnull: true }
-    domicilio:                  { type: string(100), notnull: true }
+    first_name:                 { type: string(100), notnull: true }
+    last_name:                  { type: string(100), notnull: true }
+    profesion_id:               { type: integer }
+    birth_date:                 { type: date }
+    documment_type:             { type: enum, values: [ dni, le ], default: dni }
+    documment:                  { type: string(12) }
+    phone:                      { type: string(40) }
+    movil:                      { type: string(40) }
+    email:                      { type: string(60) }
+    addres:                     { type: string(100) }
     #geo_localidad_id:    ~
-    nacionalidad:               { type: string(50), notnull: true }
-    fotografia:                 { type: string(100), notnull: true }
+    country:                    { type: string(50) }
+    mugshot:                    { type: string(100) }
 
   relations:
     User:
       class:            sfGuardUser
       foreignType:      one
 
+    Profession:                 { foreignAlias: Users, local: profesion_id, foreign: id, class: Profession }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Formulario
-Formulario:
+# Formuulario
+Formu:
   actAs:
     - Timestampable
-  tableName:                    formularios
+  tableName:                    formu
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
-    user_id:                    { type: integer, unsigned: true, notnull: true }
-    nombre:                     { type: string(100), notnull: true }
-    descripcion:                { type: clob, notnull: true }
+    user_id:                    integer(4)
+    name:                       { type: string(100), notnull: true }
+    description:                { type: clob, notnull: true }
   relations:
-    Visados:
-      class:      Visado
-      local:      formulario_id
-      foreign:    visado_id
-      refClass:   FormularioVisado
+    Items:
+      class:      Item
+      local:      form_id
+      foreign:    item_id
+      refClass:   ItemFormu
+
+    Author:                      { local: user_id, foreign: id, class: sfGuardUser }
 
 # Visado
-Visado:
-  tableName:                    visados
+Item:
+  tableName:                    item
   actAs:
     - Timestampable
   columns:
     id:                         { type: integer, primary: true, autoincrement: true }
-    user_id:                    { type: integer, unsigned: true, notnull: true }
-    group_id:                   { type: integer, unsigned: true, notnull: true }
-    titulo:                     { type: string(100), notnull: true }
-    descripcion:                { type: clob, notnull: true }
+    group_id:                   integer(4)
+    title:                      { type: string(100), notnull: true }
+    description:                { type: clob, notnull: true }
   relations:
-    Formularios:
-      class:      Formulario
-      local:      visado_id
-      foreign:    formulario_id
-      refClass:   FormularioVisado
+    Formus:                     { class: Formu, local: item_id, foreign: form_id, refClass: ItemFormu }
+    Group:                      { foreignAlias: Items, local: group_id, foreign: id, class: sfGuardGroup }
 
-# Formulario <-> Visados
-FormularioVisado:
+# Formuulario <-> Visados
+ItemFormu:
   columns:
-    formulario_id:              { type: integer, primary: true }
-    visado_id:                  { type: integer, primary: true }
+    form_id:                    { type: integer, primary: true }
+    item_id:                    { type: integer, primary: true }
+
+
+
+
+
+CadastralData:
+  tableName:                    cadastral_data
+  actAs:
+    - Timestampable
+  columns:
+    id:                   { type: integer, primary: true, autoincrement: true }
+    circunscripcion:      { type: string(10), notnull: true }
+    seccion:              { type: string(10) }
+    tipo:                 { type: enum, values: [ manzana, quinta, chacra ] }
+    tipo_numero:          { type: string(10) }
+    partida_nro:          { type: string(10) }
+    parcela:              { type: string(10) }
+    uf:                   { type: string(10) }
+  relations:
+    Procedure:            { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
+
+
+Procedure:
+  tableName:                    _procedure
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
+    cadastral_data_id:          { type: integer }
+    formu_id:                   { type: integer }
+    number:                     { type: string(50), notnull: true }
+    dossier:                    { type: string(255) }
+    is_finished:                { type: boolean, default: false }
+
+  relations:
+    Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
+    CadastralData:              { foreignAlias: Procedures, local: cadastral_data_id, foreign: id, class: CadastralData, foreignType: one }
+    Users:                      { class: sfGuardUser, local: procedure_id, foreign: user_id, refClass: UserProcedure, foreignAlias: Procedures }
+
+UserProcedure:
+  columns:
+    user_id:                    { type: integer(4), primary: true }
+    procedure_id:               { type: integer, primary: true }
+  relations:
+    sfGuardUser:                { local: user_id, onDelete: CASCADE }
+    Procedure:                  { local: procedure_id, onDelete: CASCADE }
+
+
+Revision:
+  tableName:                    revision
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
+    number:                     { type: integer }
+    parent_id:                  { type: integer }
+    procedure_id:               { type: integer }
+    revision_state_id:          { type: integer(2) }
+    creator_id:                 { type: integer(4) }
+    block:                      { type: boolean, default: false }
+
+  relations:
+    Creator:                    { local: creator_id, class: sfGuardUser }
+    Procedure:                  { local: procedure_id, foreignAlias: Revisions }
+    State:                      { local: revision_state_id, class: RevisionState }
+
+
+RevisionState:
+  tableName:                    revision_state
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer(2), primary: true, autoincrement: true }
+    title:                      { type: string(50), notnull: true }
+    description:                { type: string(255) }

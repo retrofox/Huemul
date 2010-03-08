@@ -1,0 +1,93 @@
+@import "../commons/common";
+
+.calendar(@fsize: 18px) {
+  position: relative;
+
+  nav {
+    .calendar-control_previous {
+      position: absolute;
+      left: 0;
+    }
+    .calendar-control_next {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  p.title {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td, th {
+      text-align: center;
+    }
+
+    thead {
+      th {
+        background: #f2f2f2;
+      }
+    }
+    
+    tbody {
+      tr {
+        height: 50px;
+        /*background-color: #fafafa;*/
+        :hover {
+          background-color: #ecfaff;
+        }
+      }
+      td {
+        font-weight: bold;
+        font-size: @fsize;
+        color: #444;
+        /*border: 1px solid #ddd;*/
+
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
+
+        border-right: 1px solid #dfdfdf;
+        border-bottom: 1px solid #ddd;
+
+        /*background: -webkit-gradient(radial, 0 0, 0, 0 0, 100, from(#f8f8f8), to(#fff));*/
+        background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#fafafa), to(#fff));
+        :nth-child(6) {
+          background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#f2f2f2), to(#f5f5f5));
+          /*background-color: #fbfbfb;*/
+          color: #444;
+        }
+        :nth-child(7) {
+          background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#e0e0e0), to(#eaeaea));
+          /*background-color: #f4f4f4;*/
+          color: #888;
+        }
+        :hover {
+          background-color: #c0ecff;
+          color: #007ee4;
+          cursor: pointer;
+        }
+      }
+
+      td.notInMonth {
+        cursor: default;
+        background-color: #f0f0f0;
+        color: #BBB
+      }
+
+      td.active {
+        background: #0AF;
+        color: #FFF;
+        border-color: #08B;
+      }
+
+      td.today {
+        background: #AFA;
+        color: #040;
+        font-weight: bold;
+      }
+    }
+  }
+}
