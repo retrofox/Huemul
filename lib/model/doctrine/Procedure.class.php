@@ -16,20 +16,42 @@ class Procedure extends BaseProcedure
     return 'In process';
   }
 
-  public function getCurrentRevision() {
-    $q = Doctrine_Query::create()
-      ->from('Revision r')
-      ->leftJoin('r.State s')
-      ->where('r.procedure_id = ?', $this->get('id'))
-      ->orderBy('r.number Desc');
+  public function addControlRevision() {
+    $singleton = sfContext::getInstance();
+    $last_revision = $this->getLastRevision();
 
-    return $q->fetchOne();
+    if($last_revision->getRevisionStateId() == 5) {
+      $new_control_revision = new Revision();
+      
+      //$new_control_revision->setNumber($last_revision->getNumber() + 1);
+      $new_control_revision->setProcedureId($this->get('id'));
+      $new_control_revision->setRevisionStateId(8);
+      $new_control_revision->setBlock(false);
+      $new_control_revision->setCreatorId($singleton->getUser()->getGuardUser()->getId());
+
+      $new_control_revision->save();
+
+      // add revision items
+      $items = Doctrine::getTable('Item')
+        ->createQuery('a')
+        ->execute();
+
+      foreach ($items as $item) {
+        $rev = new RevisionItem();
+        $rev->setRevisionId($new_control_revision->get('id'));
+        $rev->setItemId($item->get('id'));
+        $rev->setState('nc');
+        $rev->save();
+      }
+    }
   }
 
   public function save(Doctrine_Connection $conn = null) {
-    if ($this->isNew())
+    $is_new = $this->isNew();
+    $procedure = parent::Save ($conn);
+
+    if ($is_new)
     {
-      $procedure = parent::Save ($conn);
 
       /*
       $dc=DatoCatastralPeer::retrieveByPK($this->getDatoCatastralId());
@@ -70,5 +92,72 @@ class Procedure extends BaseProcedure
     return parent::save($con);
     */
     }
+  }
+
+
+  /* revisiones */
+
+
+  public function getLastRevision() {
+    $q = Doctrine_Query::create()
+      ->from('Revision r')
+      ->leftJoin('r.State s')
+      ->where('r.procedure_id = ?', $this->get('id'))
+      ->orderBy('r.number Desc');
+
+    return $q->fetchOne();
+  }
+
+  public function getNextNumber() {
+    return $this->get('number') + 1;
+  }
+
+  public function getNextRevisionState() {
+
+    $current = $this->getLastRevision();
+
+    switch ($current->getRevisionStateId()) {
+      case 1:
+        $state = Doctrine::getTable('RevisionState')->find(5);
+      break;
+
+      case 5:
+        $state = Doctrine::getTable('RevisionState')->find(5);
+      break;
+
+      default:
+      break;
+    }
+
+    return $state;
+  }
+
+  /* override the parent method ***/
+  public function getRevisions ($base_query = NULL, $hydrate_method = Doctrine_Core::HYDRATE_RECORD) {
+
+    $q = Doctrine_Query::create()
+        ->from('Revision r')
+        ->where('r.procedure_id = ?', $this->get('id'))
+        ->orderBy('r.number Desc');
+
+    return $q->execute(array(), $hydrate_method);
+  }
+
+  public function getCreator() {
+    if($this->getFirstRevision()) return $this->getFirstRevision()->getCreator();
+  }
+
+  public function getFirstRevision() {
+    $q = Doctrine_Query::create()
+      ->from('Revision r')
+      ->where('r.procedure_id = ?', $this->get('id'))
+      ->orderBy('r.number Asc');
+
+    return $q->fetchOne();
+  }
+
+  /* para adin generator */
+  public function getState() {
+    if($this->getLastRevision()) return $this->getLastRevision()->getState();
   }
 }

@@ -1,24 +1,5 @@
 /* This CSS is autocompiled by LESS parser. Don't edit it manually. */
 
-.ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  -icab-text-overflow: ellipsis;
-  -khtml-text-overflow: ellipsis;
-  -moz-text-overflow: ellipsis;
-  -webkit-text-overflow: ellipsis;
-}
-.ellipsis:hover {
-  overflow: visible;
-  text-overflow: visible;
-  -o-text-overflow: visible;
-  -icab-text-overflow: visible;
-  -khtml-text-overflow: visible;
-  -moz-text-overflow: visible;
-  -webkit-text-overflow: visible;
-}
 .simple-box {
   border: 1px solid #e1e1e1;
   padding-bottom: 10px;
@@ -31,10 +12,11 @@
   padding: 10px 20px;
   color: #3a3a3a;
   margin-top: 0;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
   font: 18px DINPro;
-  font-weight: 100;
+  font-weight: 100px;
 }
 .simple-box-small {
   border: 1px solid #e1e1e1;

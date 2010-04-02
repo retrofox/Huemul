@@ -1,0 +1,36 @@
+*:focus {
+  outline: 0;
+  outline: none;
+}
+
+/* CSS3 rules */
+.box-shadow(@h: 1px, @v: 1px, @blur: 2px, @color: rgba(0, 0, 0, 0.5)) {
+  box-shadow: @h @v @blur @color;
+  -moz-box-shadow: @h @v @blur @color;
+  -webkit-box-shadow: @h @v @blur @color;
+}
+
+.border-radius(@radius: 8px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.text-shadow(@h: 1px, @v: 1px, @blur: 1px, @color: rgba(0, 0, 0, 0.2)) {
+  text-shadow: @h @v @blur @color;
+}
+
+.box-sizing(@mode: border-box){
+  -moz-box-sizing: @mode;
+  -webkit-box-sizing: @mode;
+}
+
+.background-size(@params: 48px 48px) {
+  -webkit-background-size: @params;
+  -moz-background-size: @params;
+}
+
+/* Backgorunds */
+.background_gradient_linear(@x1: left, @y1: top, @x2: left, @y2: bottom, @from: #ccc, @to: #aaa) {
+  background: -webkit-gradient(linear, @x1 @y1, @x2 @y2, from(@from), to(@to));
+}

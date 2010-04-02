@@ -12,34 +12,16 @@
   </head>
   <body>
     <div id='wrapper'>
-      <div id='header'>
-        <?php echo image_tag('i_top_logo.jpg') ?>
+      <?php include_partial('global/header') ?>
 
-        <h2>Sistema Huemul: Obras Privadas</h2>
-        <h3>Dirección de Desarrollo urbano y catastro</h3>
-        <?php if ($sf_user->isAuthenticated()):?>
-        <div id="menu">
-          <ul>
-            <li><?php echo link_to(__('Procedures'), '@homepage')?> </li>
-            <li><?php echo link_to(__('Profile'), 'profile/edit')?> </li>
-            <li><?php echo link_to(__('Logout'), '@sf_guard_signout')?> </li>
-          </ul>
-        </div>
-        <?php else: ?>
-        <div id="menu">
-          <ul>
-            <li><?php echo link_to('Entrar', '@sf_guard_signin')?></li>
-          </ul>
-        </div>
-        <?php endif; ?>
+      <div id="container">
+        <section id="content">
+          <?php echo $sf_content ?>
+        </section>
       </div>
-      <div id='content'>
-        <?php echo $sf_content ?>
-      </div>
-      <div id='footer'>
-        <p>Desarrollado por <a href="http://www.xifox.net" target="_blank" class="xifox">XiFOX.net</a></p>
-      </div>
+
+      <?php include_partial('global/footer') ?>
+
     </div>
-    <div id="wrapper_footer"></div>
   </body>
 </html>

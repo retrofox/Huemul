@@ -1,0 +1,51 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+ {
+  overflow: auto;
+  display: block;
+}
+*:focus {
+  outline: 0;
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 17px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+::-webkit-scrollbar-button:vertical:end {
+  background: url(/images/interface/scroller2.png) no-repeat -11px 0px;
+  width: 11px;
+  height: 14px;
+}
+::-webkit-scrollbar-button:vertical:start {
+  background: url(/images/interface/scroller2.png) no-repeat 0px 0px;
+  width: 11px;
+  height: 14px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  padding: 5px;
+  border: 1px solid #a1a0a0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#dfdede), to(#d1d0d0));
+}
+::-webkit-scrollbar-track-piece:vertical:start {
+  background-image: url(/images/interface/scroller2.png);
+  background-repeat: repeat-y;
+  background-position: -22px 0px;
+}
+::-webkit-scrollbar-track-piece:vertical:end {
+  background-image: url(/images/interface/scroller2.png);
+  background-repeat: repeat-y;
+  background-position: -22px 0px;
+}
+::-webkit-scrollbar-button:start:decrement { display: block; }
+::-webkit-scrollbar-button:end:increment { display: block; }
+::-webkit-scrollbar-button:start:increment { display: none; }
+::-webkit-scrollbar-button:end:decrement { display: none; }

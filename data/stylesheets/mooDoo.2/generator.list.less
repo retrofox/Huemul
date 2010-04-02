@@ -1,5 +1,5 @@
-@import "../commons/common";
-@import "../commons/buttons";
+@import "../_commons/common";
+@import "../_commons/interface.elements";
 
 
 /* Filas del listado */
@@ -74,7 +74,7 @@
               position: absolute;
               right: 5px; top: 0px;
 
-              .box-shadow(2px, 2px, 5px, #aaa);
+              .box-shadow(2px, 2px, 5px, rgba(0, 0, 0, 0.3));
 
 
               z-index: 100;
@@ -180,25 +180,19 @@ ul.sf_admin_actions {
 
     display: inline-block;
 
-    input         {.button-tack(#EEE, #66bb44, #449944);}
-    input:hover   {.button-tack-hover(#FFF, #7c5, #5a5);}
-    input:active  {.button-tack-active;}
-
-    a             {.button-tack(#EEE, #2daebf, #1d9eaf);}
-    a:hover       {.button-tack-hover(#FFF, #3dbecf, #2daebf);}
-    a:active      {.button-tack-active;}
+    a {
+      .link-button;
+    }
+    input {
+      .input;
+    }
   }
 
   > li.sf_admin_action_delete {
-    a             { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F22), to(#C00));}
-    a:hover       { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F44), to(#E33));}
+  
   }
 
-  input, a {
-    height: 20px; line-height: 20px;
-    padding: 3px 10px; margin: 0;
-    display: inline-block;
-  }
+  
 }
 
 .sf_admin_batch_actions_choice {

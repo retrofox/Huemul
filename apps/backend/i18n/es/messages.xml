@@ -87,17 +87,17 @@
         <source>Created at</source>
         <target>Creado en</target>
       </trans-unit>
-      
+
       <trans-unit id="21">
         <source>actions</source>
         <target>acciones</target>
       </trans-unit>
-      
+
       <trans-unit id="22">
         <source>Group</source>
         <target>Grupo</target>
       </trans-unit>
-      
+
       <trans-unit id="23">
         <source>Title</source>
         <target>Título</target>
@@ -112,7 +112,7 @@
         <source>Back to list</source>
         <target>Volver al listado</target>
       </trans-unit>
-      
+
       <trans-unit id="26">
         <source>Dossier</source>
         <target>Expediente</target>
@@ -157,7 +157,129 @@
         <source>Is finished</source>
         <target>Finalizado</target>
       </trans-unit>
+
+      <trans-unit id="36">
+        <source>Types States</source>
+        <target>Tipos de Estado</target>
+      </trans-unit>
+
+      <trans-unit id="37">
+        <source>The username and/or password is invalid.</source>
+        <target>El nombre ed usuario y/o la contraseña es incorrecto</target>
+      </trans-unit>
+
+      <trans-unit id="38">
+        <source>Required.</source>
+        <target>Requerido.</target>
+      </trans-unit>
+
+      <trans-unit id="39">
+        <source>Username</source>
+        <target>Nombre de Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="40">
+        <source>Password</source>
+        <target>Contraseña</target>
+      </trans-unit>
+
+      <trans-unit id="41">
+        <source>Remember</source>
+        <target>Recordar</target>
+      </trans-unit>
+
+      <trans-unit id="42">
+        <source>Invalid mime type (%mime_type%).</source>
+        <target>Tipo de Archivo inválido (%mime_type%).</target>
+      </trans-unit>
+
+      <trans-unit id="43">
+        <source>empty</source>
+        <target>vacío</target>
+      </trans-unit>
+
+      <trans-unit id="44">
+        <source>Choose File</source>
+        <target>Selecciona Archivo</target>
+      </trans-unit>
+
+      <trans-unit id="42">
+        <source>Creator</source>
+        <target>Creador</target>
+      </trans-unit>
+
+      <trans-unit id="43">
+        <source>State</source>
+        <target>Estado</target>
+      </trans-unit>
       
+      <trans-unit id="44">
+        <source>Show procedure</source>
+        <target>Ver trámite</target>
+      </trans-unit>
+
+      <trans-unit id="45">
+        <source>Create control revision</source>
+        <target>Crear revision de control</target>
+      </trans-unit>
+
+      <trans-unit id="46">
+        <source>Items List</source>
+        <target>Listado de Items</target>
+      </trans-unit>
+
+      <trans-unit id="47">
+        <source>Control</source>
+        <target>Controlar</target>
+      </trans-unit>
+
+      <trans-unit id="48">
+        <source>Pending</source>
+        <target>Pendiente</target>
+      </trans-unit>
+
+      <trans-unit id="49">
+        <source>Save</source>
+        <target>Guardar</target>
+      </trans-unit>
+
+      <trans-unit id="50">
+        <source>Close</source>
+        <target>Cerrar</target>
+      </trans-unit>
+      
+      <trans-unit id="51">
+        <source>Revision number</source>
+        <target>Número de revisión</target>
+      </trans-unit>
+
+      <trans-unit id="52">
+        <source>Parent revision</source>
+        <target>Revisión Padre</target>
+      </trans-unit>
+
+      <trans-unit id="53">
+        <source>Block</source>
+        <target>Bloqueado</target>
+      </trans-unit>
+
+      <trans-unit id="54">
+        <source>Revision is blocked</source>
+        <target>Revisión está bloqueada</target>
+      </trans-unit>
+
+      <trans-unit id="55">
+        <source>go to revisions</source>
+        <target>ir a las revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="56">
+        <source>Show</source>
+        <target>Mostrar</target>
+      </trans-unit>
+      
+      
+
     </body>
   </file>
 </xliff>

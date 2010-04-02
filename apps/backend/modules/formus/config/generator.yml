@@ -14,7 +14,10 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+
+      list:
+        #title:                    { label: Form }
+
       filter:  ~
       form:    ~
       edit:    ~

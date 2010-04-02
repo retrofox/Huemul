@@ -15,6 +15,7 @@ class ProcedureFullForm extends ProcedureForm
     unset(
       $this['created_at'],
       $this['updated_at'],
+      $this['revisions_count'],
       $this['dossier'],
       $this['is_finished'],
       $this['cadastral_data_id'],

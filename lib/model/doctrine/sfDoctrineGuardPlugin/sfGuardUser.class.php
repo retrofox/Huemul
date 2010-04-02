@@ -12,6 +12,10 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  public function __toString() {
+    return $this->getCompleteName();
+  }
+
   public function getCompleteName() {
     return $this->getProfile()->get('first_name').' '.$this->getProfile()->get('last_name');
   }

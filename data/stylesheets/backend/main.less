@@ -1,0 +1,53 @@
+@import "../_commons/common";
+@import "../menu/default";
+
+body {
+  background-color: #eee;
+  font-size: 14px;
+  font: normal 62.5% sans-serif;
+
+  /* Layout */
+  #wrapper {
+    padding: 5px;
+  }
+
+  #header {
+    nav.menu, section.mini-panel {
+      .box-sizing;
+      height: 50px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px;
+    }
+    /* Menu */
+    nav.menu {
+      width: 80%;
+
+    }
+
+    section.mini-panel {
+      margin-left: 1%;
+      width: 17%;
+      padding: 5px;
+      .border-radius(6px);
+      background-color: #fff;
+      .box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  #board {
+
+  }
+
+
+}
+ 
+
+/* Tablas */
+#sf_admin_content table tr th{
+  font-size: 12px;
+}
+
+#sf_admin_content table tr th a {
+  padding: 1px 5px;
+}

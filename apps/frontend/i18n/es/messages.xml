@@ -87,7 +87,133 @@
         <target>Estado Actual</target>
       </trans-unit>
 
+      <trans-unit id="20">
+        <source>Actions</source>
+        <target>Acciones</target>
+      </trans-unit>
 
+      <trans-unit id="21">
+        <source>Procedure Detail</source>
+        <target>Detalle de Trámite</target>
+      </trans-unit>
+
+      <trans-unit id="22">
+        <source>State</source>
+        <target>Estado</target>
+      </trans-unit>
+
+      <trans-unit id="23">
+        <source>Type</source>
+        <target>Tipo</target>
+      </trans-unit>
+
+      <trans-unit id="24">
+        <source>Date</source>
+        <target>Fecha</target>
+      </trans-unit>
+
+      <trans-unit id="25">
+        <source>Add new procedure</source>
+        <target>Agregar nuevo trámite</target>
+      </trans-unit>
+
+      <trans-unit id="26">
+        <source>Add new revision</source>
+        <target>Agregar nueva revisión</target>
+      </trans-unit>
+
+      <trans-unit id="27">
+        <source>Revision state</source>
+        <target>Estado de Revisión</target>
+      </trans-unit>
+
+      <trans-unit id="28">
+        <source>Current state</source>
+        <target>Estado actual</target>
+      </trans-unit>
+
+      <trans-unit id="29">
+        <source>Created at</source>
+        <target>Creado en</target>
+      </trans-unit>
+
+      <trans-unit id="30">
+        <source>Back to procedure</source>
+        <target>Volver al trámite</target>
+      </trans-unit>
+
+      <trans-unit id="31">
+        <source>Revision State</source>
+        <target>Estado de Revisión</target>
+      </trans-unit>
+
+      <trans-unit id="32">
+        <source>description</source>
+        <target>descripción</target>
+      </trans-unit>
+
+      <trans-unit id="33">
+        <source>Save</source>
+        <target>Guardar</target>
+      </trans-unit>
+
+      <trans-unit id="34">
+        <source>Detail</source>
+        <target>Detalle</target>
+      </trans-unit>
+
+      <trans-unit id="35">
+        <source>Attach</source>
+        <target>Adjunto</target>
+      </trans-unit>
+
+      <trans-unit id="36">
+        <source>Types States</source>
+        <target>Tipos de Estado</target>
+      </trans-unit>
+
+      <trans-unit id="37">
+        <source>Required.</source>
+        <target>Requerido.</target>
+      </trans-unit>
     </body>
   </file>
+
+  <trans-unit id="38">
+    <source>Invalid mime type (%mime_type%).</source>
+    <target>Tipo de Archivo inválido (%mime_type%).</target>
+  </trans-unit>
+
+  <trans-unit id="39">
+    <source>empty</source>
+    <target>vacío</target>
+  </trans-unit>
+
+  <trans-unit id="40">
+    <source>Choose File</source>
+    <target>Seleccione Archivo</target>
+  </trans-unit>
+
+  <trans-unit id="41">
+    <source>"%value%" is not an integer.</source>
+    <target>"%value%" no es un valor entero.</target>
+  </trans-unit>
+
+  <trans-unit id="42">
+    <source>Creator</source>
+    <target>Creador</target>
+  </trans-unit>
+  <trans-unit id="43">
+    <source>Form type</source>
+    <target>Tipo de Formulario</target>
+  </trans-unit>
+
+  <trans-unit id="44">
+    <source>Revisions List</source>
+    <target>Listado de Revisiones</target>
+  </trans-unit>
+  
+  
+
+
 </xliff>

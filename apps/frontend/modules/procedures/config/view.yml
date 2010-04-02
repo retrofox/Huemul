@@ -1,0 +1,6 @@
+all:
+  stylesheets:      [ frontend/procedure.css ]
+  layout:           layout_2col
+
+newSuccess:
+  layout:           layout

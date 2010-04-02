@@ -1,0 +1,110 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+.tip { margin: 0 0 -20px -20px; }
+.tip .content {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 13px;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  padding: 10px;
+  font-family: Helvetica, Arial;
+  color: #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+}
+.tip .content p {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.tip .content ul {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.tip .content ol {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.tip .content h1 {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.tip .content nav { text-align: right; }
+.tip .footer {
+  background: url('/images/bg/tooltip-nipple.png') no-repeat 20px top, url('/images/bg/tooltip-nipple_shadow.png') no-repeat 20px -4px;
+  height: 20px;
+}
+.tip button {
+  font-weight: normal;
+  font-size: 12px;
+  display: inline-block;
+  background-image: none;
+  color: #d9ec98;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  height: 20px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #444444;
+  min-width: 100px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454545), to(#2a2a2a));
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.tip button:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2a2a2a), to(#454545));
+}
+.tip button:active { top: 1; }
+.tip-dropdown {
+  background: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 11px;
+  color: #333333;
+  margin-top: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.tip-dropdown ul { margin: 0; }
+.tip-dropdown ul li:first-child a {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+.tip-dropdown ul li:last-child a {
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+}
+.tip-dropdown ul li a {
+  display: block;
+  padding: 5px 10px;
+}
+.tip-dropdown ul li a:hover {
+  background: #cccccc;
+  color: #ffffff;
+}
+.tip_inside {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.tip_inside .tip {
+  display: none;
+  position: absolute;
+}
+.tip_inside:hover .tip { display: block; }

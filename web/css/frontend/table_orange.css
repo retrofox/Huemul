@@ -1,0 +1,102 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+table {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-left: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  color: #333333;
+  margin: 0 auto;
+}
+table.mensaje { width: 90%; }
+table caption {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #cccccc;
+  color: #666666;
+}
+table a {
+  text-decoration: none;
+  border-bottom: 1px dotted #ff6600;
+  color: #ff6600;
+  font-weight: bold;
+}
+table a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #ff6600;
+}
+table tr.blanco {
+  background: #cccccc;
+  border: none;
+}
+table tr th {
+  padding: 5px 20px;
+  font-size: 1.1em;
+}
+table tr th a {
+  color: #336699;
+  border-bottom: 1px dotted #336699;
+}
+table tr th a:hover {
+  color: #ffffff;
+  background: #336699;
+}
+table thead tr th {
+  text-transform: uppercase;
+  background: #e2e2e2;
+}
+table tfoot tr th {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+}
+table tfoot tr td {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+}
+table tfoot tr th { width: 20%; }
+table tfoot a { margin: 0 10px; }
+table td {
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  vertical-align: top;
+}
+table th {
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  vertical-align: top;
+}
+table tr.odd { background: #efefef; }
+tbody tr:hover {
+  background-color: #e1e1e1;
+  color: #333333;
+}
+th.colorear {
+  background-color: #e1e1e1;
+  color: #333333;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+a.con_mensaje, a.sin_mensaje, a.no_mensaje {
+  background: transparent url('../../images/user.png') no-repeat left top;
+  line-height: 16px;
+  padding: 0 0 0 18px;
+  border: none;
+}
+a.con_mensaje { background: transparent url('../../images/user_comment.png') no-repeat left top; }
+a.sin_mensaje:hover { background: transparent url('../../images/user_h.png') no-repeat left top; }
+a.con_mensaje:hover { background: transparent url('../../images/user_comment_h.png') no-repeat left top; }
+a.no_mensaje { background: transparent url('../../images/user-byn.png') no-repeat left top; }

@@ -12,5 +12,23 @@ class RevisionForm extends BaseRevisionForm
 {
   public function configure()
   {
+    unset(
+      $this['created_at'],
+      $this['updated_at'],
+      $this['number'],
+      $this['parent_id'],
+      $this['revision_state_id'],
+      $this['creator_id'],
+      $this['block']
+    );
+
+    $this->widgetSchema['file'] = new sfWidgetFormInputFile();
+    $this->validatorSchema['file'] = new sfValidatorFile(array(
+      'required' => false,
+      'path' => sfConfig::get('sf_upload_dir').'/revisions',
+      'mime_types' => 'web_images'
+    ));
+
+    $this->widgetSchema['procedure_id'] = new sfWidgetFormInputHidden();
   }
 }

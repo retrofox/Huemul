@@ -1,0 +1,72 @@
+@import "../__commons/clear";
+@import "../__commons/common";
+@import "../__commons/interface.elements";
+
+body {
+  background: #ccc url(/images/pattern.png) repeat left top !important;
+}
+
+#board {
+  h1  {
+    color: #236;
+    .text-shadow(0, 1px, 0px, #fff);
+    margin: 10px;
+  }
+
+  .content {
+    width: 600px;
+    background-color: #cfcaca;
+    border: 2px solid #c5c0c0;
+    .border-radius;
+    padding: 10px;
+
+    ul {
+      list-style: none;
+      .border-radius(8px);
+
+      li {
+        padding: 5px 10px;
+        .box-sizing;
+        border-left: 1px solid #eee;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #c0c0c0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      li:nth-child(odd) {
+        background-color: #d2e2da;
+      }
+
+      li:nth-child(even) {
+        background-color: #d0e2e5;
+      }
+
+      li:first-child {
+        .border-radius(8px 8px 0 0);
+      }
+
+      li:last-child {
+        .border-radius(0 0 8px 8px);
+      }
+    }
+
+    /* actions */
+    .edit_actions {
+      .box-sizing;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.2);
+      .border-radius;
+      a {
+        .link-button;
+      }
+
+    }
+  }
+}
+
+ul.error_list {
+  color: #f00;
+  font-size: 12px;
+}

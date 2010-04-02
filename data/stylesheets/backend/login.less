@@ -1,26 +1,85 @@
-@import "commons/common";
-@import "commons/clear";
+@import "../__commons/common";
+@import "../__commons/clear";
+@import "../__commons/interface.boxs";
+@import "../__commons/interface.elements";
 
 body {
   background-color: #eee;
   font-size: 14px;
 
   /* Layout */
-  #wrapper {
+  div#wrapper {
     padding: 5px;
     width: 1000px; margin: 0 auto;
   }
 
   #login {
+
+    input[type=text], input[type=email], input[type=password] {
+      width: 100px;
+    }
+
     .box-sizing;
-    .simple-box;
+    .simple-dialog;
 
     width: 300px; height: 300px;
     margin: 200px auto 0;
+    
+    form {
+      padding: 5px;
+      font-size: 12px;
 
-    background-color: #ddd;
-    padding: 10px;
+      position: relative;
+      text-align: center;
+      
+      input[type=submit] {
+        display: block;
+        margin: 0 auto;
+      }
+
+      table{
+        width: 100%;
+        margin-bottom: 30px;
+
+        tr {
+          th {
+            .box-sizing;
+            padding: 0 5px 5px 0;
+            text-align: right;
+
+            label {
+              font-size: 12px;
+            }
+          }
+        }
+
+        td {
+          padding: 0 5px;
+
+          ul.error_list {
+            color: #f00;
+            position: absolute;
+            right: -260px;
+            width: 300px;
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            .border-radius;
+            padding: 5px;
+          }
+        }
+
+      }
+
+      a {
+        display: block; margin: 20px auto 0;
+        color: #A04;
+        .text-shadow;
+        text-decoration: none;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
-
 }
- 

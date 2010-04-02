@@ -1,2 +1,4 @@
 all:
-  stylesheets:      [ backend/login.css ]
+  stylesheets:
+    - -*
+    - frontend/login.css

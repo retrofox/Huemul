@@ -1,0 +1,127 @@
+@import "../_commons/common";
+
+/* Menus */
+/* el menú es una lista */
+nav.menu {
+  > ul {
+    .background_gradient_linear();
+
+    /*background-color: rgba(200, 130, 255, 0.8);*/
+    line-height: 100%;
+    margin: 0;
+    padding: 7px 6px 0;
+
+    border: 1px solid #ccc;
+    .border-radius();
+  }
+}
+
+nav.menu > ul li { /* cada item de esa lista */
+  float: left;
+  list-style: none;
+  margin: 0 5px;
+  padding: 0 0 8px;
+  position: relative;
+}
+
+/* las definiciones del Nivel Principal */
+nav.menu > ul a {
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  margin: 0;
+  padding:  8px 20px;
+  text-decoration: none;
+  .background_gradient_linear(left, top, left, bottom, #b0b0b0, #c0c0c0);
+
+  .border-radius(4px);
+  .text-shadow(0, 1px, 1px, rgba(0,0,0, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* efecto hover en el Nivel Principal */
+nav.menu > ul .current a, nav.menu > ul li:hover > a {
+  .background_gradient_linear(left, top, left, bottom, #fff, #ccc);
+  color: #46A;
+  border-top: solid 1px #F8F8F8;
+  .box-shadow(0, 1px, 1px, rgba(0,0,0, 0.2));
+  .text-shadow(0, 1px, 0, rgba(255,255,255, 1));
+}
+
+/* los subniveles */
+nav.menu > ul ul li:hover a, nav.menu > ul li:hover li a {
+  background: none;
+  border: none;
+  color: #333;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+nav.menu > ul ul a:hover {
+  background-color: #08B !important;
+  color: #fff !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  .text-shadow(0, 1px, 1px, rgba(0,0,0, 0.7));
+}
+
+/* el efecto de desplegar */
+nav.menu > ul li:hover > ul {
+  display: block;
+}
+
+/* las definiciones de los submenues */
+nav.menu > ul ul {
+  background-color: #DDD;
+  border: solid 1px #B4B4B4;
+  display: none;
+  left: 0; top: 30px;
+  margin: 0; padding: 0;
+  position: absolute;
+  z-index: 300;
+
+  width: 185px;
+  .border-radius(6px);
+  .box-shadow(3px, 3px, 5px, rgba(0,0,0, 0.3));
+}
+nav.menu > ul ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+nav.menu > ul ul a {
+  font-weight: normal;
+  .text-shadow(0, 1px, 0, #FFF);
+}
+
+/* las definiciones de los submenues internos */
+nav.menu > ul ul ul {
+  left: 181px;
+  top: -3px;
+}
+
+/* bordes redondeados del primer y  último item */
+nav.menu > ul ul li:first-child > a {
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+}
+nav.menu > ul ul li:last-child > a {
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+
+/* definiciones generales */
+nav.menu > ul:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+nav.menu > ul { display: inline-block; }
+html[xmlns] nav.menu > ul { display: block; }
+* html nav.menu > ul { height: 1%; }

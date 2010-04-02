@@ -1,0 +1,113 @@
+@import "common";
+
+.tip {
+	margin: 0 0 -20px -20px;
+	
+	.content {
+	  background: rgba(0,0,0,0.8);
+    .border-radius(13px);
+		padding: 10px;
+		font-family: Helvetica, Arial;
+		color: #fff;
+    .box-shadow(0,3px,5px,rgba(0,0,0,0.3));
+		
+		font-size: 12px;
+		
+		p,ul,ol,h1 {
+			display: block;
+			margin: 0 0 5px 0;
+		}
+		
+		nav {
+			text-align: right;
+		}
+	}
+	
+	.footer {
+	  background: url('/images/bg/tooltip-nipple.png') no-repeat 20px top,
+                url('/images/bg/tooltip-nipple_shadow.png') no-repeat 20px -4px;
+	  height: 20px;
+	}
+
+  button {
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-block;
+    background-image: none;
+    color: #d9ec98;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;  /* hack */
+    height: 20px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0 10px;
+    border: 1px solid #444;
+    min-width: 100px;
+    .box-sizing;
+    .border-radius(8px);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#454545), to(#2a2a2a));
+    .box-shadow(0, 3px, 3px, rgba(0,0,0,0.3));
+
+    :hover{
+      cursor: pointer;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2a2a2a), to(#454545));
+    }
+
+    :active {
+      top: 1;
+    }
+
+  }
+}
+
+
+
+.tip-dropdown {
+  background: #fff;
+  border: 1px solid #999;
+	.border-radius(5px);
+	font-size: 11px;
+	color: #333;
+	margin-top: 5px;
+  .box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.1));
+  
+  ul {
+    margin: 0;
+    
+    li:first-child a {
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+    }
+    
+    li:last-child a {
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+    }
+    
+    li a {
+      display: block;
+      padding: 5px 10px;
+      
+      :hover {
+        background: #ccc;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.tip_inside {
+  position: relative;
+  display: inline-block;
+  padding: 0; margin: 0;
+
+  .tip {
+    display: none;
+    position: absolute;
+  }
+
+  :hover .tip {
+    display: block;
+  }
+
+}

@@ -1,0 +1,50 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+#items-container .col-left {
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+}
+#items-container .col-left table { margin-bottom: 40px; }
+#items-container .col-left table th.title {
+  font-size: 14px;
+  height: 20px;
+}
+#items-container .col-left tfoot tr th { text-aling: center; }
+#items-container .col-left tbody tr td:first-child { width: 90%; }
+#items-container .col-left tbody tr td input[type="radio"].opt-nc:checked { background-position: -60px -20px; }
+#items-container .col-left tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
+#items-container .col-right {
+  font-size: 14px;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
+}
+#items-container .col-right .closed {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: #aa0066;
+  color: #ffffff;
+  padding: 2px 10px;
+}
+#items-container .col-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#items-container .col-right ul li a {
+  font-weight: bold;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 2px 10px;
+  color: #ffffff;
+  background-color: #0066aa;
+}
+#items-container .col-right ul li a:hover { background-color: #0088bb; }

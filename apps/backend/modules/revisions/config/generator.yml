@@ -18,10 +18,16 @@ generator:
       list:
         fields:
           revision_state_id:          { label: State }
-        display:                      [ number, procedure, state, creator, block, created_at ]
+        display:                      [ number, procedure, _state, creator, block, created_at ]
 
         actions:
           back_to_procedures:         ~
+
+        object_actions:
+          _edit:                      ~
+          _delete:                    ~
+          show_procedure:             ~
+
 
       filter:  ~
       form:    ~

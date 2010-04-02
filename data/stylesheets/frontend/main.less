@@ -1,61 +1,15 @@
-/* v1.0 | 20080212 */
+@import "../_commons/clear";
+@import "../_commons/common";
+@import "../_commons/interface.elements";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-	text-decoration: none;
-}
-del {
-	text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/****endreset******/
 
 body{
   background-color: #868686 ;
-  font: normal 62.5% Arial, sans-serif
+  font: normal 62.5% sans-serif;
+  overflow-x: hidden;
+	background: url('/images/bg/pattern.png');
+  min-height: 100%;
+	width: 100%;
 }
 
 h1{font-size:1.8em}
@@ -64,26 +18,80 @@ h2{font-size:1.6em}
 
 h3{font-size:1.4em}
 
-/*table tr td, table tr th{
-  padding:5px;
-  border: 1px solid black;
-}*/
 
 /*****Lay out******/
 div#wrapper{
-  background: #868686 url('../../images/fnd-body.png') repeat-y center;
-  padding: 0 15px;
-  width: 970px;
+  background: #868686 url('/images/pattern.png') repeat;
+  padding: 0;
   margin: 0 auto;
+
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+
+  div#header{
+    background-color:black;
+    .border-radius(8px 8px 0 0);
+    color:white;
+    padding: 0px;
+    height: 130px;
+
+    img{
+      margin: 0 15px;
+    }
+  }
+
+  nav#menu {
+    .box-sizing;
+    background-color: #013;
+    ul {
+      li {
+        a {
+          font-size: 12px;
+          color: #FFF;
+          padding: 1px 5px;
+          margin: 0 5px;
+          text-decoration: none;
+          background-color: #013;
+
+          :hover {
+            background-color: #08A;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    bottom: 0;
+    position: absolute;
+    margin-top: 15px;
+    padding: 5px;
+
+    font: 10px Helvetica;
+    background: rgba(42,42,43,0.7);
+    color: #a4a4a4;
+    width: 100% !important;
+
+    p {
+      text-align: right;
+      margin: 0 30px;
+
+      a.xifox {
+        color:#0A0;
+        text-decoration:none;
+        :hover{
+          color:#FFF;
+        }
+      }
+    }
+  }
 }
-div#header{
-  background-color:black;
-  color:white;
-  padding: 0px;
-}
-div#header img{
-  margin: 0 15px;
-}
+
+
 div#header h2, div#header h3{
   background-color:silver;
   color: #565656;
@@ -103,81 +111,108 @@ div#header #menu{
 }
 
 div#header #menu ul li{
-float:left;
-line-height: 25px;
-margin: 0px;
+  float:left;
+  line-height: 25px;
+  margin: 0px;
 
 }
-div#header #menu ul li a{
-  font-size: 1.2em;
-  color:#E0E0E0;
-  text-decoration:none;
-  border-right: 1px solid #E0E0E0;
-  padding: 0 15px
-}
-div#header #menu ul li a:hover{
-  color: #b3b3b3;
-}
-div#content{
+
+
+
+div#container {
+  @import "table_orange";
   background-color:#FFF;
-  padding: 15px;
+  height: auto;
+  margin: 10px auto 40px;
+  width: 1000px;
+  .border-radius;
+  .box-shadow(0, 2px, 5px, rgba(0,0,0, 0.3));
+
+
+  > section {
+    .box-sizing;
+    display: inline-block;
+    padding: 5px;
+    vertical-align: top;
+    margin: 0;
+
+    h1 {
+      display: inline-block;
+    }
+  }
+ 
+  section#sidebar{
+    background-color:#EEE;
+    width: 25%;
+    height: 100%;
+
+    section.menu_sidebar {
+      nav {
+        ul {
+          li {
+            a {
+              font-size: 12px;
+              line-height: 20px;
+              display: block;
+
+
+              color: #08A;
+              padding: 1px 5px;
+              margin: 2px 0;
+              text-decoration: none;
+              .border-radius(4px);
+              
+              :hover {
+                background-color: #08A;
+                color: #FFF;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    h1, h2, h3, h4 {
+      color: #025;
+    }
+  }
+
+  section#content{
+    width: 73%;
+    min-height: 600px;
+  }
 }
- div#footer{
-  
-  background-color:black;
 
-   color: white;
+ul.options{
+  display: block;
+  height:15px;
+  margin: 10px
+}
+ul.options li{
+  float: left;
+  padding: 0 10px;
+  border-right:1px dotted #FF6600;
+}
+ul.options li.last{
+  border-right: none;
+}
+ul.options li a, ul.options li input {
+  /*
+  border-bottom:1px dotted #FF6600;
+  color:#FF6600;
+  font-size:1.2em;
+  font-weight:bold;
+  text-decoration:none;
+  */
 
-   padding: 5px 15px;
-
- }
- div#footer p{
-   text-align: right
- }
-  div#footer p a.xifox{
-   color:#00C600;
-   font-weight:bold;
-   text-decoration:none;
- }
-   div#footer p a.xifox:hover{
-   color:#FFF;
- }
- div#wrapper_footer{
-   background: #868686 url('../../images/fnd-footer.png') no-repeat center;
-   height:23px;
-   padding: 0 15px;
-   width: 970px;
-   margin: 0 auto;
-
- }
- ul.options{
-   display: block;
-   height:15px;
-   margin: 10px
- }
- ul.options li{
-   float: left;
-   padding: 0 10px;
-   border-right:1px dotted #FF6600;
- }
- ul.options li.last{
-   border-right: none;
- }
- ul.options li a, ul.options li input {
-    border-bottom:1px dotted #FF6600;
-    color:#FF6600;
-    font-size:1.2em;
-    font-weight:bold;
-    text-decoration:none;
-
- }
- ul.options li a:hover {
+}
+ul.options li a:hover {
   text-decoration: none;
   color: #fff;
   background: #f60;
 }
 
- .error {
+.error {
   color: #F00;
   font-weight: bold;
   background-color: #FDD;
@@ -194,146 +229,31 @@ div#content{
 .warning {
   color: #400;
   background-color: #FF8;
- /* padding: 0 5px;*/
+  /* padding: 0 5px;*/
 }
 
- /* Distintos estados de un visado en una revision */
- .visado_estado_inicial {
-   color: #444;
- }
+/* Distintos estados de un visado en una revision */
+.state_1, .state_2, .state_3, .state_4, .state_5, .state_6, .state_7, .state_8 {
+  color: #0A0;
+  background-color: #efe;
+  .text-shadow(0px, 1px, 0, #fff);
+}
+
+.state_5 {
+  color: #AA0;
+  background-color: #ffe;
+}
 
 
 
 
-/*orange in the sky*/
-/*
-  project: CSS - table design
-  type: stylesheet
-  description: golden style
-  edited: 14.09.2005, Michael Horn
-*/
-/*
---------------------------------------------------------------------------------
-What:	"Oranges in the sky" Styles(Table data design)
-Who:	Krasimir Makaveev(krasi [at] makaveev [dot] com)
-When:	15.09.2005(created)
---------------------------------------------------------------------------------
-*/
-
-table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	border-collapse: collapse;
-	border-left: 1px solid #ccc;
-	border-top: 1px solid #ccc;
-	color: #333;
-        margin: 0 auto;
-}
-table.mensaje{
-  width: 90%;
-}
-table caption {
-	font-size: 1.4em;
-	font-weight: bold;
-	/*letter-spacing: -1px;*/
-	margin-bottom: 10px;
-	padding: 5px;
-	background: #efefef;
-	border: 1px solid #ccc;
-	color: #666;
-}
-
-table a {
-	text-decoration: none;
-	border-bottom: 1px dotted #f60;
-	color: #f60;
-	font-weight: bold;
-}
-
-table a:hover {
-	text-decoration: none;
-	color: #fff;
-	background: #f60;
-}
-table tr.blanco{
-  background: #ccc;
-  border: none;
-}
-table tr th{
-  padding: 5px 20px;
-  font-size:1.1em;
-}
-table tr th a {
-	color: #369;
-	border-bottom: 1px dotted #369;
-}
-
-table tr th a:hover {
-	color: #fff;
-	background: #369;
-}
-
-table thead tr th {
-	text-transform: uppercase;
-	background: #e2e2e2;
-        
-}
-
-table tfoot tr th, table tfoot tr td {
-	text-transform: uppercase;
-	color: #000;
-	font-weight: bold;
-}
-
-table tfoot tr th {
-	width: 20%;
-}
-
-table tfoot a{
-   margin: 0 10px;
-	/*width: 80%;*/
-}
-
-table td, table th {
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	padding: 5px;
-	line-height: 1.8em;
-	font-size: 0.8em;
-	vertical-align: top;
-	/*width: 14%; ver que hacemos con el ancho*/
-}
-
-table tr.odd  {
-	background: #efefef;
-}
-tbody tr:hover {
-	background-color: #E1E1E1;
-	color: #333
-}
-th.colorear {
-  background-color: #E1E1E1;
-	color: #333
-}
-form{
-  width: 50%;
-  margin: 0 auto;
-}
-
-a.con_mensaje, a.sin_mensaje, a.no_mensaje{
-  background: transparent url('../../images/user.png') no-repeat left top;
-  line-height: 16px;
-  padding: 0 0 0 18px;
-  border:none;
-}
-a.con_mensaje{
-  background: transparent url('../../images/user_comment.png') no-repeat left top;
-}
-a.sin_mensaje:hover{
-  background: transparent url('../../images/user_h.png') no-repeat left top;
-}
-a.con_mensaje:hover{
-  background: transparent url('../../images/user_comment_h.png') no-repeat left top;
-}
-a.no_mensaje{
-  background: transparent url('../../images/user-byn.png') no-repeat left top;
+ul.error_list {
+  li {
+    font-size: 0.8em;
+    padding: 1px 5px;
+    .border-radius(4px);
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #F00;
+    .text-shadow(0, 1px, 1px, #888);
+  }
 }

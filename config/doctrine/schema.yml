@@ -59,13 +59,8 @@ Formu:
     name:                       { type: string(100), notnull: true }
     description:                { type: clob, notnull: true }
   relations:
-    Items:
-      class:      Item
-      local:      form_id
-      foreign:    item_id
-      refClass:   ItemFormu
-
-    Author:                      { local: user_id, foreign: id, class: sfGuardUser }
+    Items:                      { class: Item, local: form_id, foreign: item_id, refClass: ItemFormu }
+    Author:                     { local: user_id, foreign: id, class: sfGuardUser }
 
 # Visado
 Item:
@@ -80,15 +75,13 @@ Item:
   relations:
     Formus:                     { class: Formu, local: item_id, foreign: form_id, refClass: ItemFormu }
     Group:                      { foreignAlias: Items, local: group_id, foreign: id, class: sfGuardGroup }
+    Revisions:                  { class: Revision, local: item_id, foreign: revission_id, refClass: RevisionItem }
 
 # Formuulario <-> Visados
 ItemFormu:
   columns:
     form_id:                    { type: integer, primary: true }
     item_id:                    { type: integer, primary: true }
-
-
-
 
 
 CadastralData:
@@ -119,6 +112,7 @@ Procedure:
     number:                     { type: string(50), notnull: true }
     dossier:                    { type: string(255) }
     is_finished:                { type: boolean, default: false }
+    revisions_count:            { type: integer }
 
   relations:
     Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
@@ -146,11 +140,14 @@ Revision:
     revision_state_id:          { type: integer(2) }
     creator_id:                 { type: integer(4) }
     block:                      { type: boolean, default: false }
+    description:                { type: clob, notnull: true }
+    file:                       { type: string(255) }
 
   relations:
     Creator:                    { local: creator_id, class: sfGuardUser }
     Procedure:                  { local: procedure_id, foreignAlias: Revisions }
     State:                      { local: revision_state_id, class: RevisionState }
+    Items:                      { class: Item, local: revision_id, foreign: item_id, refClass: RevisionItem }
 
 
 RevisionState:
@@ -161,3 +158,18 @@ RevisionState:
     id:                         { type: integer(2), primary: true, autoincrement: true }
     title:                      { type: string(50), notnull: true }
     description:                { type: string(255) }
+
+# revision <-> item
+RevisionItem:
+  columns:
+    item_id:                    { type: integer }
+    revision_id:                { type: integer }
+    state:                      { type: enum, values: [ ok, error, nc ], default: nc }
+
+  relations:
+    Item:                       { local: item_id, onDelete: CASCADE }
+    Revision:                   { local: revision_id, onDelete: CASCADE }
+  indexes:
+    myIndexs:
+      fields:                   [ item_id, revision_id ]
+      type:                     unique

@@ -1,0 +1,38 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+.simple-box {
+  background-color: #eeffff;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.simple-dialog {
+  background-color: #eeffff;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.simple-dialog h2 {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  background-color: #000000;
+  border-radius: 12px 12px 0 0;
+  -moz-border-radius: 12px 12px 0 0;
+  -webkit-border-radius: 12px 12px 0 0;
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #aaaaaa;
+  -webkit-box-shadow: 0 1px 0 #ffffff;
+}

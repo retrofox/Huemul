@@ -1,0 +1,92 @@
+@import "../_commons/common";
+
+  overflow: auto;
+  display: block;
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 17px;
+  /*background-color: rgba(0, 0, 0, 0.1);*/
+  .border-radius(5px);
+}
+
+::-webkit-scrollbar-button:vertical:end {
+  background: url(/images/interface/scroller2.png) no-repeat -11px 0px ;
+  width: 11px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background: url(/images/interface/scroller2.png) no-repeat 0px 0px;
+  width: 11px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+  /*
+  background: url(/images/interface/scroller-left-arrow.png) no-repeat;
+  width: 17px;
+  height: 17px;
+  */
+}
+
+::-webkit-scrollbar-button:horizontal:end {
+  /*
+  background: url(/images/interface/scroller-right-arrow.png) no-repeat;
+  width: 11px;
+  height: 17px;
+  */
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  /*-webkit-border-image: url(/images/interface/scroller-vertical-knob.png) 8 0 8 0 / 8px 0 8px 0 stretch repeat;*/
+  /*-webkit-border-image: url(/images/interface/scroller-vertical-knob.png)  8 0 8 0 stretch repeat;*/
+
+  /*border-width: 3px 11px;*/
+  /*-webkit-border-image: url(/images/interface/scroller-vertical-knob_mt.png) 3 0 3 0 stretch repeat;*/
+  padding: 5px;
+  border: 1px solid #a1a0a0;
+  .border-radius(5px);
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#dfdede), to(#d1d0d0));
+  /*.box-shadow(-5px, 0, 5px, rgba(0, 0, 0, 0.4));*/
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  /*-webkit-border-image: url(/images/interface/scroller-horizontal-knob.png) 7 9 7 9 / 7px 9px 7px 9px stretch repeat;*/
+  /*-webkit-border-image: url(/images/interface/scroller-horizontal-knob.png) 7 9 7 9 stretch repeat;*/
+}
+
+::-webkit-scrollbar-track-piece:vertical:start {
+  background-image: url(/images/interface/scroller2.png);
+  background-repeat: repeat-y;
+  background-position: -22px 0px;
+}
+
+::-webkit-scrollbar-track-piece:vertical:end {
+  background-image: url(/images/interface/scroller2.png);
+  background-repeat: repeat-y;
+  background-position: -22px 0px;
+}
+
+::-webkit-scrollbar-track-piece:horizontal:end {
+  /*background-image: url(/images/interface/scroller-right-arrow-track.png), url(/images/interface/scroller-horizontal-track.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: bottom right, 0 0;*/
+}
+
+::-webkit-scrollbar-track-piece:horizontal:start {
+  /*background-image: url(/images/interface/scroller-left-arrow-track.png), url(/images/interface/scroller-horizontal-track.png);
+  background-repeat: no-repeat, repeat-x;*/
+}
+
+/* Turn on single button up on top, and down on bottom */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+/* Turn off the down area up on top, and up area on bottom */
+::-webkit-scrollbar-button:start:increment,
+::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}

@@ -11,14 +11,6 @@
             <li><?php echo link_to(__('Finish'), 'procedures/index') ?></li>
           </ul>
         </li>
-        <li>
-          <a href="#">Revisiones</a>
-          <ul>
-            <li><a href="#">Sub Menu 1.2.1</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Sub Menu 1.3</a></li>
-        <li><a href="#">Sub Menu 1.4</a></li>
       </ul>
     </li>
     <li>

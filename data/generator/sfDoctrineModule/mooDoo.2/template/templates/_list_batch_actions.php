@@ -1,6 +1,6 @@
 <?php if ($listActions = $this->configuration->getValue('list.batch_actions')): ?>
 <li class="sf_admin_batch_actions_choice">
-  <select name="batch_action">
+  <select name="batch_action" class="widget">
     <option value="">[?php echo __('Choose an action', array(), 'sf_admin') ?]</option>
 <?php foreach ((array) $listActions as $action => $params): ?>
     <?php echo $this->addCredentialCondition('<option value="'.$action.'">[?php echo __(\''.$params['label'].'\', array(), \'sf_admin\') ?]</option>', $params) ?>

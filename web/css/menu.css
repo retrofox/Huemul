@@ -1,23 +1,18 @@
 /* This CSS is autocompiled by LESS parser. Don't edit it manually. */
 
-.ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  -icab-text-overflow: ellipsis;
-  -khtml-text-overflow: ellipsis;
-  -moz-text-overflow: ellipsis;
-  -webkit-text-overflow: ellipsis;
-}
-.ellipsis:hover {
-  overflow: visible;
-  text-overflow: visible;
-  -o-text-overflow: visible;
-  -icab-text-overflow: visible;
-  -khtml-text-overflow: visible;
-  -moz-text-overflow: visible;
-  -webkit-text-overflow: visible;
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+input[type=text], input[type=password], select {
+  border: 1px solid #99aabb;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 1px 4px;
+  margin: 1px;
 }
 .simple-box {
   border: 1px solid #e1e1e1;
@@ -35,7 +30,7 @@
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-radius: 8px 8px 0 0;
   font: 18px DINPro;
-  font-weight: 100;
+  font-weight: 100px;
 }
 .simple-box-small {
   border: 1px solid #e1e1e1;
@@ -142,14 +137,14 @@ nav.menu > ul a {
   padding: 8px 20px;
   text-decoration: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(#c0c0c0));
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 nav.menu > ul .current a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
-  color: #446688;
+  color: #4466aa;
   border-top: solid 1px #f8f8f8;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -158,7 +153,7 @@ nav.menu > ul .current a {
 }
 nav.menu > ul li:hover > a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
-  color: #446688;
+  color: #4466aa;
   border-top: solid 1px #f8f8f8;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -192,15 +187,15 @@ nav.menu > ul ul {
   border: solid 1px #b4b4b4;
   display: none;
   left: 0;
+  top: 30px;
   margin: 0;
   padding: 0;
   position: absolute;
   z-index: 300;
-  top: 35px;
   width: 185px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
@@ -219,16 +214,14 @@ nav.menu > ul ul ul {
   top: -3px;
 }
 nav.menu > ul ul li:first-child > a {
-  -webkit-border-top-left-radius: 9px;
-  -moz-border-radius-topleft: 9px;
-  -webkit-border-top-right-radius: 9px;
-  -moz-border-radius-topright: 9px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
 }
 nav.menu > ul ul li:last-child > a {
-  -webkit-border-bottom-left-radius: 9px;
-  -moz-border-radius-bottomleft: 9px;
-  -webkit-border-bottom-right-radius: 9px;
-  -moz-border-radius-bottomright: 9px;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
 }
 nav.menu > ul:after {
   clear: both;
