@@ -43,16 +43,20 @@ class Revision extends BaseRevision
       $singleton = sfContext::getInstance();
       $this->setCreatorId($singleton->getUser()->getGuardUser()->getId());
 
-      
-      
-      if($this->getPrevious()) {
+      $previous_rev = $this->getPrevious();
+      if($previous_rev) {
 
-        $this->setNumber($this->getPrevious()->getNumber() + 1);
+        $this->setNumber($previous_rev->getNumber() + 1);
         
-        $state = $this->getPrevious()->getRevisionStateId();
+        $state = $previous_rev->getRevisionStateId();
 
-        // seteamos el estado de la revision avtual en funcion del estado de la revision anterior
+        // seteamos el estado de la revision actual en funcion del estado de la revision anterior
         if($state == 1) $this->setRevisionStateId(5);
+        elseif($state == 7) $this->setRevisionStateId(5);
+
+        // block previous revision
+        $previous_rev->setBlock(true);
+        $previous_rev->save();
       }
 
       // revisions count

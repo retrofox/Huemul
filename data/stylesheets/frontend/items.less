@@ -1,0 +1,52 @@
+@import "../_commons/common";
+#items-container {
+  table {
+    width: 100%;
+    margin-bottom: 40px !important;
+    th.title {
+      font-size: 14px;
+      height: 20px;
+    }
+  
+
+    tfoot {
+      tr {
+        th {
+          text-aling: center;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-size: 10px !important;
+          a {
+            color: #026;
+            border: 0;
+          }
+          a.comment {
+            display: block;
+            background: transparent url('/images/user_comment.png') no-repeat;
+            width: 16px;
+            height: 16px;
+            text-decoration: none;
+            border: 0;
+          }
+        }
+        td.comment {
+          background-color: #AFA;
+        }
+        
+        td:first-child {
+          width: 88%;
+        }
+
+        td:last-child {
+          width: 12%;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

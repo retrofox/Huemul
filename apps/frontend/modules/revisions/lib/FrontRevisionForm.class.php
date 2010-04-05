@@ -36,6 +36,12 @@ class FrontRevisionForm extends BaseRevisionForm
       )
     ));
 
+    $this->widgetSchema['description'] = new sfWidgetFormTextareaTinyMCE(array(
+      'width' => 400,
+      'height' => 250,
+      'config' => 'theme : "simple", theme_advanced_disable: "anchor,image,cleanup,help, charmap, visualaid, removeformat, code, styleselect"'
+    ));
+
 
     $this->widgetSchema['procedure_id'] = new sfWidgetFormInputHidden();
   }

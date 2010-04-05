@@ -3,12 +3,16 @@
 
 body {
   background-color: #eee;
-  font-size: 14px;
+  font-size: 18px;
   font: normal 62.5% sans-serif;
 
   /* Layout */
   #wrapper {
     padding: 5px;
+  }
+
+  p {
+    font-size: 1.4em;
   }
 
   #header {
@@ -50,4 +54,37 @@ body {
 
 #sf_admin_content table tr th a {
   padding: 1px 5px;
+}
+
+
+
+/* Distintos estados de un visado en una revision */
+.state_1, .state_2, .state_3, .state_4, .state_5, .state_6, .state_7, .state_8 {
+  display: block;
+  color: #555;
+  background-color: #ddd;
+  padding: 1px 5px;
+  border: 1px solid #ccc;
+  .border-radius(4px);
+}
+
+/* a recisar */
+.state_5 {
+  font-weight: bold;
+  color: #A00;
+  background-color: #ffA;
+}
+
+/* corregido */
+.state_7 {
+  color: #FFF;
+  border: 1px solid #4A4;
+  background-color: #5B5;
+}
+
+
+/* en proceso */
+.state_8 {
+  color: #A60;
+  background-color: #fda;
 }

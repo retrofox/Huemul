@@ -121,6 +121,7 @@ div#header #menu ul li{
 
 div#container {
   @import "table_orange";
+
   background-color:#FFF;
   height: auto;
   margin: 10px auto 40px;
@@ -140,25 +141,90 @@ div#container {
       display: inline-block;
     }
   }
+
+  div.tip {
+    h2 {
+      font-size: 16px;
+    }
+
+    font: normal 14px/20px Helvetica;
+    border: 2px solid #aa8;
+    background-color: #ffe;
+    color: #A26;
+    margin-top: 5px;
+    padding: 5px;
+    .border-radius;
+  }
+
+  .info {
+    font: normal 12px/20px Helvetica;
+    border: 1px solid #Abb;
+    background-color: #ffa;
+    margin: 10px 0;
+    .border-radius;
+
+    p {
+      color: #304 !important;
+      padding: 1px 5px !important;
+      margin: 0;
+    }
+  }
  
   section#sidebar{
     background-color:#EEE;
     width: 25%;
-    height: 100%;
+    min-height: 600px;
+    .border-radius(0 0 0 8px);
+    border-right: 1px solid #bbb;
+    .box-shadow(-1px, 0, 0, #fff);
 
     section.menu_sidebar {
+      table {
+        tbody {
+          tr {
+            background-color: #fff;
+            td {
+
+            }
+
+            td:first-child {
+              background-color: #eee;
+              
+            }
+
+            td:last-child {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
       nav {
+        margin: 10px 0 ;
+        border: 1px solid #08d;
+        background-color: #cef;
+        .border-radius(6px);
+        
         ul {
+          padding: 0;
           li {
+            h2 {
+              margin: 0;
+              text-align: center;
+              padding: 2px 0;
+              .border-radius(4px 4px 0 0);
+              font: normal normal normal 12px sans-serif;
+              color: #fff;
+              background-color: #08d;
+            }
             a {
               font-size: 12px;
               line-height: 20px;
               display: block;
 
-
               color: #08A;
               padding: 1px 5px;
-              margin: 2px 0;
+              margin: 2px 0 0;
               text-decoration: none;
               .border-radius(4px);
               
@@ -180,6 +246,18 @@ div#container {
   section#content{
     width: 73%;
     min-height: 600px;
+
+    .head {
+      h1 {
+        color: #604;
+      }
+      p {
+        color: #48A;
+        padding: 5px 0;
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -226,7 +304,7 @@ ul.options li a:hover {
   /*padding: 0 5px;*/
 }
 
-.warning {
+.nc {
   color: #400;
   background-color: #FF8;
   /* padding: 0 5px;*/
@@ -239,11 +317,24 @@ ul.options li a:hover {
   .text-shadow(0px, 1px, 0, #fff);
 }
 
+/* a recisar */
 .state_5 {
   color: #AA0;
   background-color: #ffe;
 }
 
+/* corregido */
+.state_7 {
+  color: #026;
+  background-color: #aef;
+}
+
+
+/* en proceso */
+.state_8 {
+  color: #A60;
+  background-color: #fda;
+}
 
 
 

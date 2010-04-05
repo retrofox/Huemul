@@ -1,0 +1,139 @@
+@import "../_commons/common";
+#item {
+
+  form#msg-form {
+    width: 100%;
+  }
+
+  section.col-left, section.col-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%
+  }
+
+  section.col-left    { width: 30% }
+  section.col-right   {
+    width: 65%;
+      .comments {
+        tr:nth-child(odd) {
+          background-color: #fef;
+        }
+        tr:nth-child(even) {
+          background-color: #ffe;
+        }
+      }
+    }
+
+    table.mceLayout {
+      border: 0 !important;
+      margin: 0 !important;
+      
+      tbody{
+        tr {
+          td {
+            border: 0 !important;
+            width: 20px;
+          }
+          td.mceToolbar {
+            border: 0 !important;
+            padding: 0 !important;
+            table.mceToolbar {
+              border: 0 !important;
+              margin: 5px !important;
+              td {
+                padding: 0 !important;
+                a {
+                  border: 0;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+  table {
+    width: 100%;
+    margin-bottom: 40px !important;
+    th.title {
+      font-size: 14px;
+      height: 20px;
+    }
+  
+
+    tfoot {
+      tr {
+        th {
+          text-aling: center;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+
+        td {
+          font-size: 10px;
+
+          h3, h4 {
+            color: #825;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            margin: 0;
+          }
+
+          h4 {
+            color: #645;
+          }
+
+          .comment {
+            font-size: 12px;
+            color: #04A;
+            margin: 0;
+          }
+          .comment-date {
+            color: #555;
+            margin: 0;
+          }
+
+          a.comment {
+            display: block;
+            background: transparent url('/images/user_comment.png') no-repeat;
+            width: 16px;
+            height: 16px;
+            text-decoration: none;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#form-msg {
+  width: 500px;
+  background-color: #ddd;
+  .border-radius(8px);
+  border: 1px solid #bbb;
+  padding: 0;
+  h2 {
+    margin: 0;
+    text-align: center;
+    background-color: #bbb;
+    .border-radius(8px 8px 0 0);
+    color: #444;
+    padding: 5px 0;
+
+    .text-shadow(0, 1px, 0, #fff);
+  }
+
+  h3 {
+    margin: 0 0 5px 0;
+  }
+
+  .msg-container {
+    padding: 10px;
+  }
+}

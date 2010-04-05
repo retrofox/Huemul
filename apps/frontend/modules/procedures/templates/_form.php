@@ -6,7 +6,7 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table>
+<table class="orange">
     <caption><?php echo __('New Procedure') ?></caption>
     <tbody>
       <?php echo $form ?>

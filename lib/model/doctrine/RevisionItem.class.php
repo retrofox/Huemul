@@ -10,6 +10,24 @@
  * @author     Damian Suarez
  * @version    SVN: $Id: Builder.php 7200 2010-02-21 09:37:37Z beberlei $
  */
-class RevisionItem extends BaseRevisionItem
-{
+class RevisionItem extends BaseRevisionItem {
+
+  public $states = array(
+    'ok' => 'Aceptado',
+    'error' => 'Rechazado',
+    'nc' => 'Sin Controlar'
+  );
+
+
+  public function getComunication() {
+    $q = Doctrine_Query::create()
+      ->from('ComunicationItem ci')
+      ->where('ci.revision_item_id = ?', $this->get('id'));
+
+    return $q->execute();
+  }
+
+  public function getStateComplete() {
+    return $this->states[$this->getState()];
+  }
 }

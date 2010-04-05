@@ -10,7 +10,8 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins(
       'sfDoctrinePlugin',
       'sfDoctrineGuardPlugin',
-      'sfLessPhpPlugin'
+      'sfLessPhpPlugin',
+      'sfFormExtraPlugin'
     );
   }
 }

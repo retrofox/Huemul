@@ -213,7 +213,65 @@
     <target>Listado de Revisiones</target>
   </trans-unit>
   
+  <trans-unit id="45">
+    <source>Action</source>
+    <target>Acción</target>
+  </trans-unit>
+
+  <trans-unit id="46">
+    <source>show</source>
+    <target>mostrar</target>
+  </trans-unit>
+
+  <trans-unit id="47">
+    <source>Items List</source>
+    <target>Listado de Items</target>
+  </trans-unit>
   
+  <trans-unit id="48">
+    <source>Show revisions</source>
+    <target>Mostrar revisiones</target>
+  </trans-unit>
+  
+  <trans-unit id="49">
+    <source>Items detail</source>
+    <target>Detalle de Item</target>
+  </trans-unit>
 
+  <trans-unit id="50">
+    <source>Show revision</source>
+    <target>Mostrar Revision</target>
+  </trans-unit>
 
+  <trans-unit id="51">
+    <source>Add message</source>
+    <target>Agregar mensaje</target>
+  </trans-unit>
+
+  <trans-unit id="52">
+    <source>No messages</source>
+    <target>Sin mensajes</target>
+  </trans-unit>
+
+  <trans-unit id="53">
+    <source>All revisions</source>
+    <target>Todas las revisiones</target>
+  </trans-unit>
+
+  <trans-unit id="54">
+    <source>OPTIONS</source>
+    <target>OPCIONES</target>
+  </trans-unit>
+
+  <trans-unit id="55">
+    <source>Revision Form</source>
+    <target>Formulario de Revisión</target>
+  </trans-unit>
+
+  <trans-unit id="56">
+    <source>Messages</source>
+    <target>Mensajes</target>
+  </trans-unit>
+
+  
 </xliff>

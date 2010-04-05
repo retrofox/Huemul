@@ -277,7 +277,96 @@
         <source>Show</source>
         <target>Mostrar</target>
       </trans-unit>
+
+      <trans-unit id="57">
+        <source>Add message</source>
+        <target>Agregar mensaje</target>
+      </trans-unit>
+
+      <trans-unit id="58">
+        <source>Items detail</source>
+        <target>Detalle de item</target>
+      </trans-unit>
+
+      <trans-unit id="59">
+        <source>Procedure number</source>
+        <target>Nùmero de trámite</target>
+      </trans-unit>
+
+      <trans-unit id="60">
+        <source>The two passwords must be the same.</source>
+        <target>Los dos passwords deben ser iguales.</target>
+      </trans-unit>
+
+      <trans-unit id="61">
+        <source>Messages</source>
+        <target>Mensajes</target>
+      </trans-unit>
       
+      <trans-unit id="62">
+        <source>go to revision</source>
+        <target>ir a revisión</target>
+      </trans-unit>
+
+      <trans-unit id="63">
+        <source>Revisions List</source>
+        <target>Listado de Revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="64">
+        <source>Procedures List</source>
+        <target>Listado de trámites</target>
+      </trans-unit>
+
+      <trans-unit id="65">
+        <source>Procedure Detail</source>
+        <target>Detalle de Trámite</target>
+      </trans-unit>
+
+      <trans-unit id="66">
+        <source>Suggestions</source>
+        <target>Sugerencias</target>
+      </trans-unit>
+
+      <trans-unit id="67">
+        <source>Detail</source>
+        <target>Detalle</target>
+      </trans-unit>
+
+      <trans-unit id="68">
+        <source>Options</source>
+        <target>Opciones</target>
+      </trans-unit>
+
+      <trans-unit id="69">
+        <source>yes</source>
+        <target>sí</target>
+      </trans-unit>
+
+      <trans-unit id="70">
+        <source>blocked</source>
+        <target>bloqueado</target>
+      </trans-unit>
+
+      <trans-unit id="71">
+        <source>unlocked</source>
+        <target>desbloqueado</target>
+      </trans-unit>
+      
+      <trans-unit id="72">
+        <source>Download</source>
+        <target>Descargar</target>
+      </trans-unit>
+
+      <trans-unit id="73">
+        <source>Close revision</source>
+        <target>Cerrar revisión</target>
+      </trans-unit>
+
+      <trans-unit id="74">
+        <source>go to procedure</source>
+        <target>ir a trámite</target>
+      </trans-unit>
       
 
     </body>

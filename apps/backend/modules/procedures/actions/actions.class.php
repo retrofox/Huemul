@@ -13,7 +13,13 @@ require_once dirname(__FILE__).'/../lib/proceduresGeneratorHelper.class.php';
  */
 class proceduresActions extends autoProceduresActions
 {
-  public function executeList_revisions(sfWebRequest $request) {
-    return $this->redirect('revisions/index?revision_filters[procedure_id]='.$request->getParameter('id'));
+  /**
+   * action Show
+   *
+   * @author Damian Suarez
+   */
+  public function executeShow(sfWebRequest $request) {
+    $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
+    
   }
 }

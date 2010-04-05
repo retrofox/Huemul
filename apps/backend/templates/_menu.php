@@ -5,11 +5,8 @@
       <a href="#"><?php echo __('Procedures'); ?></a>
       <ul>
         <li>
-          <a href="#"><?php echo __('list'); ?></a>
-          <ul>
-            <li><?php echo link_to(__('In process'), 'procedures/index') ?></li>
-            <li><?php echo link_to(__('Finish'), 'procedures/index') ?></li>
-          </ul>
+          <?php echo link_to(__('List'), 'procedures/index') ?>
+          <?php echo link_to(__('Revisions'), 'revisions/index') ?>
         </li>
       </ul>
     </li>

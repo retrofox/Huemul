@@ -22,9 +22,10 @@ class revisionsActions extends autoRevisionsActions {
     $revision = Doctrine::getTable('Revision')->find($request->getParameter('revision_id'));
     $procedure = $revision->getProcedure();
 
-    $procedure->addControlRevision();
+    
+    $new_revision = $procedure->addControlRevision($revision->get('id'));
 
-    return $this->redirect('procedures/index');
+    return $this->redirect('revisions/control?id='.$new_revision->get('id'));
   }
 
   /**
@@ -43,7 +44,7 @@ class revisionsActions extends autoRevisionsActions {
         foreach ($params as $key => $value) {
 
           if($value != 'nc') {
-            $this->revision_item = RevisionItemTable::retrieveByRevisionAndItem($rev->get('id'), $key);
+            $rev_item = RevisionItemTable::retrieveByRevisionAndItem($this->revision->get('id'), $key);
             $rev_item->setState($value);
             $rev_item->save();
           }
@@ -71,5 +72,43 @@ class revisionsActions extends autoRevisionsActions {
     $this->revision->save();
 
     return $this->redirect('revisions/control?id='.$this->revision->get('id'));
+  }
+
+/**
+   * action Item
+   *
+   * @author Damian Suarez
+   */
+  public function executeItem(sfWebRequest $request) {
+    $this->revItem = Doctrine::getTable('RevisionItem')->find($request->getParameter('id'));
+
+    $msg = new ComunicationItem();
+    $msg->setRevisionItemId($this->revItem->get('id'));
+
+    $this->form = new ComunicationItemForm($msg);
+
+  }
+
+  public function executeCommentCreate(sfWebRequest $request) {
+    $params = $request->getParameter('comunication_item');
+
+    $this->forward404Unless($request->isMethod(sfRequest::POST));
+    $this->revItem = Doctrine::getTable('RevisionItem')->find($params['revision_item_id']);
+
+    $this->form = new ComunicationItemForm();
+
+    $this->processCommentForm($request, $this->form);
+
+    $this->setTemplate('item');
+  }
+
+
+  protected function processCommentForm(sfWebRequest $request, sfForm $form) {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid()) {
+      $msg = $form->save();
+
+      $this->redirect('revisions/item?id='.$msg->getRevisionItemId());
+    }
   }
 }

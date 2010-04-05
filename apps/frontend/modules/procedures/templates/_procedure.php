@@ -1,6 +1,6 @@
 <?php use_helper('I18N') ?>
 <section>
-  <table>
+  <table class="orange">
     <thead>
       <tr>
         <th colspan="2">
@@ -21,7 +21,7 @@
 
       <tr>
         <td><?php echo __('Current state'); ?></td>
-        <td><?php echo $procedure->getLastRevision()->getState() ?></td>
+        <td class="state_<?php echo $procedure->getLastRevision()->getRevisionStateId() ?>"><?php echo $procedure->getLastRevision()->getState() ?></td>
       </tr>
 
       <tr>

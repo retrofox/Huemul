@@ -1,0 +1,103 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+#item form#msg-form { width: 100%; }
+#item section.col-left {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+#item section.col-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+#item section.col-left { width: 30%; }
+#item section.col-right { width: 65%; }
+#item section.col-right .comments tr:nth-child(odd) { background-color: #ffeeff; }
+#item section.col-right .comments tr:nth-child(even) { background-color: #ffffee; }
+#item table.mceLayout {
+  border: 0 !important;
+  margin: 0 !important;
+}
+#item table.mceLayout tbody tr td {
+  border: 0 !important;
+  width: 20px;
+}
+#item table.mceLayout tbody tr td.mceToolbar {
+  border: 0 !important;
+  padding: 0 !important;
+}
+#item table.mceLayout tbody tr td.mceToolbar table.mceToolbar {
+  border: 0 !important;
+  margin: 5px !important;
+}
+#item table.mceLayout tbody tr td.mceToolbar table.mceToolbar td { padding: 0 !important; }
+#item table.mceLayout tbody tr td.mceToolbar table.mceToolbar td a { border: 0; }
+#item table {
+  width: 100%;
+  margin-bottom: 40px !important;
+}
+#item table th.title {
+  font-size: 14px;
+  height: 20px;
+}
+#item table tfoot tr th { text-aling: center; }
+#item table tbody tr td { font-size: 10px; }
+#item table tbody tr td h3 {
+  color: #882255;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  margin: 0;
+}
+#item table tbody tr td h4 {
+  color: #882255;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  margin: 0;
+}
+#item table tbody tr td h4 { color: #664455; }
+#item table tbody tr td .comment {
+  font-size: 12px;
+  color: #0044aa;
+  margin: 0;
+}
+#item table tbody tr td .comment-date {
+  color: #555555;
+  margin: 0;
+}
+#item table tbody tr td a.comment {
+  display: block;
+  background: transparent url('/images/user_comment.png') no-repeat;
+  width: 16px;
+  height: 16px;
+  text-decoration: none;
+  border: 0;
+}
+#form-msg {
+  width: 500px;
+  background-color: #dddddd;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  padding: 0;
+}
+#form-msg h2 {
+  margin: 0;
+  text-align: center;
+  background-color: #bbbbbb;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  color: #444444;
+  padding: 5px 0;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#form-msg h3 { margin: 0 0 5px 0; }
+#form-msg .msg-container { padding: 10px; }

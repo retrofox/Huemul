@@ -48,10 +48,18 @@ sfGuardPermission:
     name:           admin
     description:    Administrator permission
 
+  user:
+    name:           User
+    description:    User permission
+
 sfGuardGroup:
   sgg_admin:
     name:                     admin
     description:              Administrator group
+
+  users:
+    name:                     Usuario común
+    description:              Los usuarios de la aplicación son los profesionales que utilizan esta herramienta para poder realizar los trámites.
 
   catastro:
     name:                     Departamento de Catastro
@@ -68,7 +76,16 @@ sfGuardGroupPermission:
     sfGuardGroup:       sgg_admin
     sfGuardPermission:  sgp_admin
 
+  user:
+    sfGuardGroup:       users
+    sfGuardPermission:  user
+
+
 sfGuardUserGroup:
   sgug_admin:
     sfGuardGroup:       sgg_admin
     sfGuardUser:        sgu_admin
+
+  users_damian:
+    sfGuardGroup:       users
+    sfGuardUser:        damian

@@ -6,7 +6,13 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table>
+<table class="orange">
+
+  <thead>
+    <tr>
+      <th colspan="2" class="title"><?php echo __('Revision Form') ?></th>
+    </tr>
+  </thead>
     <tfoot>
       <tr>
         <td colspan="2">
@@ -17,16 +23,6 @@
     </tfoot>
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
-      <tr>
-        <th><?php echo __('Number'); ?></th>
-        <td><strong><?php echo $procedure->getNextNumber(); ?></strong></td>
-      </tr>
-      
-      <tr>
-        <th><?php echo __('Revision State'); ?></th>
-        <td><?php echo $procedure->getNextRevisionState() ?></td>
-      </tr>
-
       <tr>
         <th><?php echo $form['description']->renderLabel() ?></th>
         <td>

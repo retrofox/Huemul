@@ -5,7 +5,7 @@
   outline: none;
 }
 #items-container .col-left {
-  width: 60%;
+  width: 70%;
   display: inline-block;
   vertical-align: top;
 }
@@ -19,12 +19,67 @@
 #items-container .col-left tbody tr td input[type="radio"].opt-nc:checked { background-position: -60px -20px; }
 #items-container .col-left tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
 #items-container .col-right {
-  font-size: 14px;
-  width: 30%;
+  width: 24%;
   display: inline-block;
   vertical-align: top;
   padding-left: 20px;
 }
+#items-container .col-right .board {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: #dddddd;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  margin-left: 2%;
+}
+#items-container .col-right .board h1 {
+  color: #444444;
+  margin: 0;
+  padding: 1px 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#items-container .col-right .board p { font: normal normal normal 14px/18px Helvetica; }
+#items-container .col-right .board .options {
+  padding: 0 0 10px 0;
+  background-color: #eeeeee;
+  margin: 20px 0;
+}
+#items-container .col-right .board .suggestions {
+  padding: 0 0 10px 0;
+  background-color: #eeeeee;
+  margin: 20px 0;
+}
+#items-container .col-right .board .suggestions {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5px;
+}
+#items-container .col-right .board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#items-container .col-right .board ul li {
+  height: 20px;
+  font: normal normal normal 14px/20px sans-serif;
+}
+#items-container .col-right .board ul li a {
+  display: block;
+  background-color: #0088dd;
+  color: #ffffff;
+  padding: 0 10px;
+  margin: 2px;
+}
+#items-container .col-right .board ul li a:hover { background-color: #00aaff; }
 #items-container .col-right .closed {
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -33,18 +88,3 @@
   color: #ffffff;
   padding: 2px 10px;
 }
-#items-container .col-right ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#items-container .col-right ul li a {
-  font-weight: bold;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  padding: 2px 10px;
-  color: #ffffff;
-  background-color: #0066aa;
-}
-#items-container .col-right ul li a:hover { background-color: #0088bb; }

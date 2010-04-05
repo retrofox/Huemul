@@ -1,0 +1,139 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+.head h1 { color: #001155; }
+.col-left, .col-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.col-left table tbody tr td { border-bottom: 1px solid #aaaaaa; }
+.col-left table tbody tr td .blk-revision {
+  min-height: 120px;
+  position: relative;
+}
+.col-left table tbody tr td .blk-revision h2 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.col-left table tbody tr td .blk-revision h3 {
+  margin: 0 20px;
+  padding: 0;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+.col-left table tbody tr td .blk-revision .sidebar-right {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+}
+.col-left table tbody tr td .blk-revision .sidebar-right > div { margin: 5px 0; }
+.col-left table tbody tr td .blk-revision .sidebar-right .actions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li { margin: 1px 0; }
+.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li a {
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  background-color: #ffffff;
+  padding: 0 4px;
+}
+.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li a:hover {
+  background-color: #0088bb;
+  color: #ffffff;
+  border-color: #0066aa;
+}
+.col-left table tbody tr td .blk-revision .description {
+  background-color: #ffffff;
+  margin: 5px 110px 5px 5px;
+  min-height: 50px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.col-left table tbody tr td .blk-revision .description p {
+  margin: 2px;
+  padding: 2px;
+  font-size: 14px;
+  color: #002255;
+}
+.col-right { width: 35%; }
+.board {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: #dddddd;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  margin-left: 2%;
+}
+.board h1 {
+  color: #444444;
+  margin: 0;
+  padding: 1px 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.board p { font: normal normal normal 14px/18px Helvetica; }
+.board .options {
+  padding: 0 0 10px 0;
+  background-color: #eeeeee;
+  margin: 20px 0;
+}
+.board .suggestions {
+  padding: 0 0 10px 0;
+  background-color: #eeeeee;
+  margin: 20px 0;
+}
+.board .suggestions {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5px;
+}
+.board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.board ul li {
+  height: 20px;
+  font: normal normal normal 14px/20px sans-serif;
+}
+.board ul li a {
+  display: block;
+  background-color: #0088dd;
+  color: #ffffff;
+  padding: 0 10px;
+}
+.board ul li a:hover { background-color: #00aaff; }

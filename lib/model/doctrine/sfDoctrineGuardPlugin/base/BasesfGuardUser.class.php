@@ -23,6 +23,7 @@
  * @property Doctrine_Collection $Formu
  * @property Doctrine_Collection $UserProcedure
  * @property Doctrine_Collection $Revision
+ * @property Doctrine_Collection $ComunicationItem
  * 
  * @method integer             getId()                    Returns the current record's "id" value
  * @method string              getUsername()              Returns the current record's "username" value
@@ -42,6 +43,7 @@
  * @method Doctrine_Collection getFormu()                 Returns the current record's "Formu" collection
  * @method Doctrine_Collection getUserProcedure()         Returns the current record's "UserProcedure" collection
  * @method Doctrine_Collection getRevision()              Returns the current record's "Revision" collection
+ * @method Doctrine_Collection getComunicationItem()      Returns the current record's "ComunicationItem" collection
  * @method sfGuardUser         setId()                    Sets the current record's "id" value
  * @method sfGuardUser         setUsername()              Sets the current record's "username" value
  * @method sfGuardUser         setAlgorithm()             Sets the current record's "algorithm" value
@@ -60,6 +62,7 @@
  * @method sfGuardUser         setFormu()                 Sets the current record's "Formu" collection
  * @method sfGuardUser         setUserProcedure()         Sets the current record's "UserProcedure" collection
  * @method sfGuardUser         setRevision()              Sets the current record's "Revision" collection
+ * @method sfGuardUser         setComunicationItem()      Sets the current record's "ComunicationItem" collection
  * 
  * @package    Huemul
  * @subpackage model
@@ -163,6 +166,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasMany('Revision', array(
              'local' => 'id',
              'foreign' => 'creator_id'));
+
+        $this->hasMany('ComunicationItem', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

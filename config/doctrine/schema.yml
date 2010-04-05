@@ -162,6 +162,7 @@ RevisionState:
 # revision <-> item
 RevisionItem:
   columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
     item_id:                    { type: integer }
     revision_id:                { type: integer }
     state:                      { type: enum, values: [ ok, error, nc ], default: nc }
@@ -169,7 +170,22 @@ RevisionItem:
   relations:
     Item:                       { local: item_id, onDelete: CASCADE }
     Revision:                   { local: revision_id, onDelete: CASCADE }
+    
   indexes:
     myIndexs:
       fields:                   [ item_id, revision_id ]
       type:                     unique
+
+ComunicationItem:
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
+    revision_item_id:           { type: integer }
+    author_id:                  { type: integer(4) }
+    subject:                    { type: string(255) }
+    message:                    { type: clob }
+  relations:
+    Author:                     { local: author_id, class: sfGuardUser }
+    RevisionItem:               { local: revision_item_id, foreignAlias: RevisionItem }
+
