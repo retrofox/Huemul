@@ -20,6 +20,5 @@ class proceduresActions extends autoProceduresActions
    */
   public function executeShow(sfWebRequest $request) {
     $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
-    
   }
 }
