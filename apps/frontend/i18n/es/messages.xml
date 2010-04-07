@@ -273,5 +273,9 @@
     <target>Mensajes</target>
   </trans-unit>
 
+  <trans-unit id="57">
+    <source>Controller</source>
+    <target>Controlador</target>
+  </trans-unit>
   
 </xliff>

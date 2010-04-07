@@ -15,6 +15,10 @@ use_stylesheet('backend/items.css');
       <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
 
       <?php foreach ($rev_itemsGroup as $group) : ?>
+
+      <?php $grupo = $group[0]->getItem()->getGroup()->getName(); ?>
+
+      <?php if($sf_user->getGuardUser()->hasGroup($grupo)) : ?>
       <table>
         <thead>
           <tr>
@@ -53,6 +57,8 @@ use_stylesheet('backend/items.css');
         </tbody>
       </table>
 
+      <?php endif; ?>
+
       <?php endforeach; ?>
 
 
@@ -61,6 +67,7 @@ use_stylesheet('backend/items.css');
 
     <section class="col-right">
       <div class="board">
+        
         <section>
           <p><?php echo __('Revision number') ?>: <strong><?php echo $revision->getNumber() ?></strong></p>
           <p><?php echo __('Parent revision') ?>: <strong><?php echo $revision->getParentId() ?></strong></p>
@@ -69,8 +76,11 @@ use_stylesheet('backend/items.css');
           <h1><?php echo __('Options'); ?></h1>
 
           <ul>
-            <li><?php echo link_to(__('go to revisions'), 'revisions/index?revision_filters[procedure_id]='.$revision->getProcedureId()) ?></li>
             <li><?php echo link_to(__('go to procedure'), 'procedures/show?id='.$revision->getProcedureId()) ?></li>
+            <?php if($revision->getBlock()) : ?>
+            <li><?php echo link_to('Crear nueva revisión', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
+            <?php endif; ?>
+            
             <?php if(!$revision->getBlock()) : ?>
             <li><?php echo link_to(__('Close revision'), 'revisions/close?id='.$revision->get('id')) ?></li>
             <?php endif; ?>
@@ -79,19 +89,15 @@ use_stylesheet('backend/items.css');
 
 
         <?php if($revision->getBlock()) : ?>
-            <p class="closed"><?php echo __('Revision is blocked') ?></p>
-          <?php else : ?>
-          <input type="submit" value="<?php echo __('Save') ?>" />
-          <?php endif; ?>
-          
+        <p class="closed"><?php echo __('Revision is blocked') ?></p>
+        <div>Esta revisión ha sido bloqueada e informada al responsable del trámite. Usted puede crear una nueva revisión de control si lo cree necesario; por ejemplo, si hay ítems que todavía no hayan sido controlados.</div>
+
+        <?php else : ?>
+        <input type="submit" value="<?php echo __('Save') ?>" />
+        <?php endif; ?>
       </div>
 
 
-
-          
-
-
-          
     </section>
   </form>
 </div>

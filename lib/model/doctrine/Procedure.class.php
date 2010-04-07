@@ -20,7 +20,7 @@ class Procedure extends BaseProcedure {
     $singleton = sfContext::getInstance();
     $last_revision = $this->getLastRevision();
 
-    if($last_revision->getRevisionStateId() == 5) {
+    //if($last_revision->getRevisionStateId() == 5) {
 
       // Agregamo nueva revision de control
       $new_control_revision = new Revision();
@@ -64,7 +64,7 @@ class Procedure extends BaseProcedure {
       }
 
       return $new_control_revision;
-    }
+    //}
   }
 
   public function save(Doctrine_Connection $conn = null) {

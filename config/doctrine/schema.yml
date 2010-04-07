@@ -165,11 +165,12 @@ RevisionItem:
     id:                         { type: integer, primary: true, autoincrement: true }
     item_id:                    { type: integer }
     revision_id:                { type: integer }
+    user_id:                    integer(4)
     state:                      { type: enum, values: [ ok, error, nc ], default: nc }
-
   relations:
     Item:                       { local: item_id, onDelete: CASCADE }
     Revision:                   { local: revision_id, onDelete: CASCADE }
+    UserController:             { local: user_id, foreign: id, class: sfGuardUser }
     
   indexes:
     myIndexs:

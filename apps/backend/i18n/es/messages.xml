@@ -368,6 +368,21 @@
         <target>ir a trámite</target>
       </trans-unit>
       
+      <trans-unit id="75">
+        <source>User</source>
+        <target>Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="76">
+        <source>View</source>
+        <target>Ver</target>
+      </trans-unit>
+
+      <trans-unit id="77">
+        <source>Controller</source>
+        <target>Controlador</target>
+      </trans-unit>
+      
 
     </body>
   </file>
