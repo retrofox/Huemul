@@ -13,6 +13,7 @@
 class Formu extends BaseFormu
 {
   public function __toString() {
-    return $this->getName();
+    $name = $this->get('name');
+    return (isset($name)) ? $name : 'No definido !';
   }
 }

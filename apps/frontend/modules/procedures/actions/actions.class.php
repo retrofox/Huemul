@@ -18,10 +18,8 @@ class proceduresActions extends sfActions
       ->from('Procedure p')
       ->leftJoin('p.UserProcedure up')
       ->where('up.user_id = ?', $this->getUser()->getGuardUser()->get('id'));
-//      ->where('up.user_id = 2');
 
      $this->procedures = $q->execute();
-
   }
 
   public function executeNew(sfWebRequest $request)
