@@ -4,4 +4,6 @@ lib/form/doctrine/base/*
 lib/model/doctrine/base/*
 log/*
 _basurero/*
-web/uploads/revisions/
+web/uploads/revisions/*
+web/css/*
+config/databases.yml
