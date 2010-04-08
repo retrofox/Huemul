@@ -12,7 +12,8 @@ class profileActions extends sfActions
 {
   public function executeEdit(sfWebRequest $request)
   {
-    $user_id = $this->getUser()->getGuardUser()->getProfile()->getId();
+    //$user_id = $this->getUser()->getGuardUser()->getProfile()->getId();
+    $user_id = $this->getUser()->getGuardUser()->getId();
     $this->forward404Unless($profile = Doctrine::getTable('Profile')->find(array($user_id)), sprintf('Object profile does not exist (%s).', $user_id));
     $this->form = new ProfileForm($profile);
   }
