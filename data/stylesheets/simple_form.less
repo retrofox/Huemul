@@ -1,0 +1,59 @@
+@import "_commons/common";
+
+h1 {
+  margin: 10px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+
+    th.title {
+      font-size: 14px;
+      height: 20px;
+    }
+
+    tfoot {
+      tr {
+        th {
+          text-aling: center;
+        }
+        td {
+          background-color: #ccc;
+          input {
+            display: block !important;
+            margin: 5px auto !important;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: 32px;
+
+        th {
+          padding-right: 5px;
+          text-align: right;
+          background-color: #e6e6e6;
+        }
+
+        td {
+          padding-left: 5px;
+          font-size: 10px;
+          background-color: #e5f2f2;
+        }
+      }
+
+      tr:nth-child(odd) {
+        th {
+          background-color: #eee;
+        }
+
+        td {
+          background-color: #eafafa;
+        }
+      }
+    }
+  }

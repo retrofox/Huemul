@@ -176,126 +176,179 @@
         <source>Required.</source>
         <target>Requerido.</target>
       </trans-unit>
+
+      <trans-unit id="38">
+        <source>Invalid mime type (%mime_type%).</source>
+        <target>Tipo de Archivo inválido (%mime_type%).</target>
+      </trans-unit>
+
+      <trans-unit id="39">
+        <source>empty</source>
+        <target>vacío</target>
+      </trans-unit>
+
+      <trans-unit id="40">
+        <source>Choose File</source>
+        <target>Seleccione Archivo</target>
+      </trans-unit>
+
+      <trans-unit id="41">
+        <source>"%value%" is not an integer.</source>
+        <target>"%value%" no es un valor entero.</target>
+      </trans-unit>
+
+      <trans-unit id="42">
+        <source>Creator</source>
+        <target>Creador</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Form type</source>
+        <target>Tipo de Formulario</target>
+      </trans-unit>
+
+      <trans-unit id="44">
+        <source>Revisions List</source>
+        <target>Listado de Revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="45">
+        <source>Action</source>
+        <target>Acción</target>
+      </trans-unit>
+
+      <trans-unit id="46">
+        <source>show</source>
+        <target>mostrar</target>
+      </trans-unit>
+
+      <trans-unit id="47">
+        <source>Items List</source>
+        <target>Listado de Items</target>
+      </trans-unit>
+
+      <trans-unit id="48">
+        <source>Show revisions</source>
+        <target>Mostrar revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="49">
+        <source>Items detail</source>
+        <target>Detalle de Item</target>
+      </trans-unit>
+
+      <trans-unit id="50">
+        <source>Show revision</source>
+        <target>Mostrar Revision</target>
+      </trans-unit>
+
+      <trans-unit id="51">
+        <source>Add message</source>
+        <target>Agregar mensaje</target>
+      </trans-unit>
+
+      <trans-unit id="52">
+        <source>No messages</source>
+        <target>Sin mensajes</target>
+      </trans-unit>
+
+      <trans-unit id="53">
+        <source>All revisions</source>
+        <target>Todas las revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="54">
+        <source>OPTIONS</source>
+        <target>OPCIONES</target>
+      </trans-unit>
+
+      <trans-unit id="55">
+        <source>Revision Form</source>
+        <target>Formulario de Revisión</target>
+      </trans-unit>
+
+      <trans-unit id="56">
+        <source>Messages</source>
+        <target>Mensajes</target>
+      </trans-unit>
+
+      <trans-unit id="57">
+        <source>Controller</source>
+        <target>Controlador</target>
+      </trans-unit>
+
+      <trans-unit id="58">
+        <source>Account</source>
+        <target>Cuenta</target>
+      </trans-unit>
+
+      <trans-unit id="59">
+        <source>Username</source>
+        <target>Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="60">
+        <source>Password</source>
+        <target>Contraseña</target>
+      </trans-unit>
+
+      <trans-unit id="61">
+        <source>Password again</source>
+        <target>Contraseña nuevamente</target>
+      </trans-unit>
+
+      <trans-unit id="62">
+        <source>First name</source>
+        <target>Nombre</target>
+      </trans-unit>
+
+      <trans-unit id="63">
+        <source>Last name</source>
+        <target>Apellido</target>
+      </trans-unit>
+
+      <trans-unit id="64">
+        <source>Profesion</source>
+        <target>Profesión</target>
+      </trans-unit>
+
+      <trans-unit id="65">
+        <source>Birth date</source>
+        <target>Fecha de nacimiento</target>
+      </trans-unit>
+
+      <trans-unit id="66">
+        <source>Document type</source>
+        <target>Tipo de documento</target>
+      </trans-unit>
+
+      <trans-unit id="67">
+        <source>Phone</source>
+        <target>Teléfono</target>
+      </trans-unit>
+
+      <trans-unit id="68">
+        <source>Movil</source>
+        <target>Celular</target>
+      </trans-unit>
+
+      <trans-unit id="69">
+        <source>Addres</source>
+        <target>Dirección</target>
+      </trans-unit>
+
+      <trans-unit id="70">
+        <source>Country</source>
+        <target>País</target>
+      </trans-unit>
+      
+      <trans-unit id="71">
+        <source>Mugshot</source>
+        <target>Foto Carnet</target>
+      </trans-unit>
+      
+
+
     </body>
   </file>
 
-  <trans-unit id="38">
-    <source>Invalid mime type (%mime_type%).</source>
-    <target>Tipo de Archivo inválido (%mime_type%).</target>
-  </trans-unit>
-
-  <trans-unit id="39">
-    <source>empty</source>
-    <target>vacío</target>
-  </trans-unit>
-
-  <trans-unit id="40">
-    <source>Choose File</source>
-    <target>Seleccione Archivo</target>
-  </trans-unit>
-
-  <trans-unit id="41">
-    <source>"%value%" is not an integer.</source>
-    <target>"%value%" no es un valor entero.</target>
-  </trans-unit>
-
-  <trans-unit id="42">
-    <source>Creator</source>
-    <target>Creador</target>
-  </trans-unit>
-  <trans-unit id="43">
-    <source>Form type</source>
-    <target>Tipo de Formulario</target>
-  </trans-unit>
-
-  <trans-unit id="44">
-    <source>Revisions List</source>
-    <target>Listado de Revisiones</target>
-  </trans-unit>
-  
-  <trans-unit id="45">
-    <source>Action</source>
-    <target>Acción</target>
-  </trans-unit>
-
-  <trans-unit id="46">
-    <source>show</source>
-    <target>mostrar</target>
-  </trans-unit>
-
-  <trans-unit id="47">
-    <source>Items List</source>
-    <target>Listado de Items</target>
-  </trans-unit>
-  
-  <trans-unit id="48">
-    <source>Show revisions</source>
-    <target>Mostrar revisiones</target>
-  </trans-unit>
-  
-  <trans-unit id="49">
-    <source>Items detail</source>
-    <target>Detalle de Item</target>
-  </trans-unit>
-
-  <trans-unit id="50">
-    <source>Show revision</source>
-    <target>Mostrar Revision</target>
-  </trans-unit>
-
-  <trans-unit id="51">
-    <source>Add message</source>
-    <target>Agregar mensaje</target>
-  </trans-unit>
-
-  <trans-unit id="52">
-    <source>No messages</source>
-    <target>Sin mensajes</target>
-  </trans-unit>
-
-  <trans-unit id="53">
-    <source>All revisions</source>
-    <target>Todas las revisiones</target>
-  </trans-unit>
-
-  <trans-unit id="54">
-    <source>OPTIONS</source>
-    <target>OPCIONES</target>
-  </trans-unit>
-
-  <trans-unit id="55">
-    <source>Revision Form</source>
-    <target>Formulario de Revisión</target>
-  </trans-unit>
-
-  <trans-unit id="56">
-    <source>Messages</source>
-    <target>Mensajes</target>
-  </trans-unit>
-
-  <trans-unit id="57">
-    <source>Controller</source>
-    <target>Controlador</target>
-  </trans-unit>
-
-  <trans-unit id="58">
-    <source>Account</source>
-    <target>Cuenta</target>
-  </trans-unit>
-
-  <trans-unit id="59">
-    <source>Username</source>
-    <target>Usuario</target>
-  </trans-unit>
-
-  <trans-unit id="60">
-    <source>Password</source>
-    <target>Contraseña</target>
-  </trans-unit>
-
-  <trans-unit id="61">
-    <source>Password again</source>
-    <target>Contraseña nuevamente</target>
-  </trans-unit>
-  
 </xliff>
