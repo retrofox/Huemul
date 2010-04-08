@@ -277,5 +277,25 @@
     <source>Controller</source>
     <target>Controlador</target>
   </trans-unit>
+
+  <trans-unit id="58">
+    <source>Account</source>
+    <target>Cuenta</target>
+  </trans-unit>
+
+  <trans-unit id="59">
+    <source>Username</source>
+    <target>Usuario</target>
+  </trans-unit>
+
+  <trans-unit id="60">
+    <source>Password</source>
+    <target>Contraseña</target>
+  </trans-unit>
+
+  <trans-unit id="61">
+    <source>Password again</source>
+    <target>Contraseña nuevamente</target>
+  </trans-unit>
   
 </xliff>
