@@ -14,7 +14,7 @@ default:
 
   stylesheets:    [ backend/main.css ]
 
-  javascripts:    []
+  javascripts:    [html5.js]
 
   has_layout:     true
   layout:         layout

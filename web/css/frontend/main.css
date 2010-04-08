@@ -1,9 +1,5 @@
 /* This CSS is autocompiled by LESS parser. Don't edit it manually. */
 
-/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-
-/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -12,10 +8,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-}
-
-section, nav {
-  display: block;
 }
 body { line-height: 1; }
 ol, ul { list-style: none; }
@@ -59,8 +51,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -76,8 +68,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -103,8 +95,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -133,8 +125,8 @@ input[type=button] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -159,8 +151,8 @@ button {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -185,8 +177,8 @@ input[type=submit] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -211,8 +203,8 @@ input[type=submit]:hover { background: -webkit-gradient(linear, 0% 0%, 0% 100%, 
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -389,10 +381,11 @@ body {
   background-color: #868686;
   font: normal 62.5% sans-serif;
   overflow-x: hidden;
-  background: url('/images/bg/pattern.png');
+  background: url('/images/pattern.png');
   min-height: 100%;
   width: 100%;
 }
+section, nav { display: block; }
 h1 { font-size: 1.8em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }

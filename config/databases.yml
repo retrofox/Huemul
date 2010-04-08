@@ -3,11 +3,11 @@ doctrine:
   param:
     dsn: 'mysql:host=localhost;dbname=huemul'
     username: root
-    password: servt08
+    password: alfilasesino
 all:
   doctrine:
     class: sfDoctrineDatabase
     param:
       dsn: 'mysql:host=localhost;dbname=huemul'
       username: root
-      password: servt08
+      password: alfilasesino
