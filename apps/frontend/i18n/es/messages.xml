@@ -345,8 +345,27 @@
         <source>Mugshot</source>
         <target>Foto Carnet</target>
       </trans-unit>
-      
 
+      <trans-unit id="72">
+        <source>Edit account</source>
+        <target>Editar cuenta</target>
+      </trans-unit>
+
+      <trans-unit id="73">
+        <source>Edit profile</source>
+        <target>Editar perfil</target>
+      </trans-unit>
+
+      <trans-unit id="74">
+        <source>The two passwords must be the same.</source>
+        <target>Los dos passwords deben ser iguales.</target>
+      </trans-unit>
+
+
+      <trans-unit id="75">
+        <source>The username and/or password is invalid.</source>
+        <target>El nombre de usuario y/o la contraseña es incorrecto</target>
+      </trans-unit>
 
     </body>
   </file>

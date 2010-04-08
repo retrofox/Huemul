@@ -10,6 +10,7 @@
     <tfoot>
       <tr>
         <td colspan="2">
+          <?php echo $form->renderHiddenFields(false) ?>
           <input type="submit" value="<?php echo __('Save'); ?>" />
         </td>
       </tr>
@@ -17,10 +18,9 @@
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
-        <th><?php echo __($form['username']->renderLabel()) ?></th>
+        <th><label><?php echo __('Username') ?></label></th>
         <td>
-          <?php echo $form['username']->renderError() ?>
-          <?php echo $form['username'] ?>
+          <h3><?php echo $form->getObject()->get('username') ?></h3>
         </td>
       </tr>
 
