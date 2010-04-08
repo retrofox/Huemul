@@ -1,3 +1,5 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -396,7 +398,7 @@ div#wrapper {
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 div#wrapper div#header {
   background-color: black;
@@ -419,12 +421,12 @@ div#wrapper div#header nav#menu {
 }
 div#wrapper div#header nav#menu div.user {
   height: 25px;
+  line-height: 25px;
   width: 300px;
   position: absolute;
   right: 20px;
   top: 0;
   text-align: right;
-  line-height: 25px;
 }
 div#wrapper div#header nav#menu ul li {
   float: left;

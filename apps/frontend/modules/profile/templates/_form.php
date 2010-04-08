@@ -40,6 +40,13 @@
         </td>
       </tr>
       <tr>
+        <th><?php echo __($form['registration']->renderLabel()) ?></th>
+        <td>
+          <?php echo $form['registration']->renderError() ?>
+          <?php echo $form['registration'] ?>
+        </td>
+      </tr>
+      <tr>
         <th><?php echo __($form['birth_date']->renderLabel()) ?></th>
         <td>
           <?php echo $form['birth_date']->renderError() ?>

@@ -28,6 +28,7 @@ Profile:
     first_name:                 { type: string(100), notnull: true }
     last_name:                  { type: string(100), notnull: true }
     profesion_id:               { type: integer }
+    registration:               { type: string(40) }
     birth_date:                 { type: date }
     documment_type:             { type: enum, values: [ dni, le ], default: dni }
     documment:                  { type: string(12) }

@@ -367,6 +367,11 @@
         <target>El nombre de usuario y/o la contraseña es incorrecto</target>
       </trans-unit>
 
+      <trans-unit id="76">
+        <source>Registration</source>
+        <target>Matrícula</target>
+      </trans-unit>
+
     </body>
   </file>
 
