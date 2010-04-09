@@ -38,7 +38,8 @@
       <td class="state_<?php echo $procedure->getLastRevision()->getRevisionStateId() ?>"><?php include_partial('procedures/state', array('revision' => $procedure->getLastRevision())) ?></td>
       <td><?php echo format_date($procedure->getCreatedAt(), 'f') ?></td>
       <td>
-        <?php echo link_to(__('Detail'), 'procedures/show?procedure_id='.$procedure->get('id')) ?>
+        <?php echo link_to(__('Revisions'), 'procedures/show?procedure_id='.$procedure->get('id')) ?> | 
+        <?php echo link_to(__('Edit'), 'procedures/edit?id='.$procedure->get('id')) ?>
       </td>
     </tr>
     <?php endforeach; ?>

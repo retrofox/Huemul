@@ -372,6 +372,17 @@
         <target>Matrícula</target>
       </trans-unit>
 
+      <trans-unit id="77">
+        <source>Revisions</source>
+        <target>Revisiones</target>
+      </trans-unit>
+
+      <trans-unit id="78">
+        <source>Edit</source>
+        <target>Editar</target>
+      </trans-unit>
+      
+
     </body>
   </file>
 

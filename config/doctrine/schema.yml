@@ -141,7 +141,7 @@ Revision:
     revision_state_id:          { type: integer(2) }
     creator_id:                 { type: integer(4) }
     block:                      { type: boolean, default: false }
-    description:                { type: clob, notnull: true }
+    description:                { type: clob }
     file:                       { type: string(255) }
 
   relations:
