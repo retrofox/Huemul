@@ -9,7 +9,10 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
+  
+
   </head>
+
   <body>
     <div id='wrapper'>
 

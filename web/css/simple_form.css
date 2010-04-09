@@ -1,0 +1,35 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+h1 { margin: 10px; }
+table {
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  border-collapse: collapse;
+}
+table th.title {
+  font-size: 14px;
+  height: 20px;
+}
+table tfoot tr th { text-aling: center; }
+table tfoot tr td { background-color: #cccccc; }
+table tfoot tr td input {
+  display: block !important;
+  margin: 5px auto !important;
+}
+table tbody tr { height: 32px; }
+table tbody tr th {
+  padding-right: 5px;
+  text-align: right;
+  background-color: #e6e6e6;
+}
+table tbody tr td {
+  padding-left: 5px;
+  font-size: 10px;
+  background-color: #e5f2f2;
+}
+table tbody tr:nth-child(odd) th { background-color: #eeeeee; }
+table tbody tr:nth-child(odd) td { background-color: #eafafa; }

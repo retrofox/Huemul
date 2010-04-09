@@ -10,7 +10,6 @@
     <caption><?php echo __('New Procedure') ?></caption>
     <tbody>
       <?php echo $form ?>
-
     </tbody>
     <tfoot>
       <tr>

@@ -18,7 +18,7 @@ generator:
       list:
         fields:
           revisions_count:          { label: R }
-        display:                    [ formu, creator, revisions_count, _state, number, dossier, is_finished, created_at ]
+        display:                    [ formu, cadastral_data, partida, creator, revisions_count, _state, dossier, is_finished, _created_at ]
         object_actions:
           _detail:                  ~
           _delete:                  ~

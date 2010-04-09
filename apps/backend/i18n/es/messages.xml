@@ -165,7 +165,7 @@
 
       <trans-unit id="37">
         <source>The username and/or password is invalid.</source>
-        <target>El nombre ed usuario y/o la contraseña es incorrecto</target>
+        <target>El nombre de usuario y/o la contraseña es incorrecto</target>
       </trans-unit>
 
       <trans-unit id="38">
@@ -382,8 +382,12 @@
         <source>Controller</source>
         <target>Controlador</target>
       </trans-unit>
-      
 
+      <trans-unit id="78">
+        <source>New</source>
+        <target>Nuevo</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

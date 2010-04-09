@@ -14,5 +14,10 @@
       <li><?php echo link_to('Entrar', '@sf_guard_signin')?></li>
     <?php endif; ?>
     </ul>
+
+    <div class="user">
+      <?php echo $sf_user->getGuardUser() ?>
+      
+    </div>
   </nav>
 </div>

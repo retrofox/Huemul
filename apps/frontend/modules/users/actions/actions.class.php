@@ -10,52 +10,22 @@
  */
 class usersActions extends sfActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->redirect('users/edit?id='.$request->getParameter('id'));
-  }
-
-  public function executeNew(sfWebRequest $request)
-  {
-    $this->form = new sfGuardUserForm();
-  }
-
-  public function executeCreate(sfWebRequest $request)
-  {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
-
-    $this->form = new sfGuardUserForm();
-
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
-  }
-
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
-    $this->form = new sfGuardUserForm($sf_guard_user);
+    $user_id = $this->getUser()->getGuardUser()->get('id');
+    $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find($user_id), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
+    $this->form = new accountForm($sf_guard_user);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
-    $this->form = new sfGuardUserForm($sf_guard_user);
+    $this->form = new accountForm($sf_guard_user);
 
     $this->processForm($request, $this->form);
 
     $this->setTemplate('edit');
-  }
-
-  public function executeDelete(sfWebRequest $request)
-  {
-    $request->checkCSRFProtection();
-
-    $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
-    $sf_guard_user->delete();
-
-    $this->redirect('users/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)

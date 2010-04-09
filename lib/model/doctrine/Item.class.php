@@ -12,4 +12,16 @@
  */
 class Item extends BaseItem
 {
+  public function getGroupAcronym() {
+    $words = explode(' ', $this->getGroup());
+    $acronym = '';
+
+    foreach ($words as $word) {
+      if(strlen($word) > 2) {
+        $acronym = $acronym.strtoupper(substr($word, 0, 1)).'. ';
+      }
+    }
+
+    return $acronym;
+  }
 }

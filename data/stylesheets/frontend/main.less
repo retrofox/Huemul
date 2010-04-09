@@ -1,4 +1,4 @@
-import "../_commons/clear";
+@import "../_commons/clear";
 @import "../_commons/common";
 @import "../_commons/interface.elements";
 
@@ -7,7 +7,7 @@ body{
   background-color: #868686 ;
   font: normal 62.5% sans-serif;
   overflow-x: hidden;
-  background: url('/images/bg/pattern.png');
+  background: url('/images/pattern.png');
   min-height: 100%;
   width: 100%;
 }
@@ -23,7 +23,8 @@ h2{font-size:1.6em}
 h3{font-size:1.4em}
 
 
-/*****Lay out******/
+/*****Layout******/
+
 div#wrapper{
   background: #868686 url('/images/pattern.png') repeat;
   padding: 0;
@@ -34,9 +35,10 @@ div#wrapper{
   position: absolute;
   left: 0;
   top: 0;
+  font-size: 1.2em;
 
 
-  div#header{
+  div#header {
     background-color:black;
     .border-radius(8px 8px 0 0);
     color:white;
@@ -46,28 +48,51 @@ div#wrapper{
     img{
       margin: 0 15px;
     }
-  }
+    
+    nav#menu {
+      .box-sizing;
+      background-color: #013;
+      height: 25px;
+      width:100%;
+      clear:both;
+      position: relative;
+      
+      div.user {
+        height: 25px;
+        line-height: 25px;
+        width: 300px;
+        position: absolute;
+        right: 20px;
+        top: 0;
 
-  nav#menu {
-    .box-sizing;
-    background-color: #013;
-    ul {
-      li {
-        a {
-          font-size: 12px;
-          color: #FFF;
-          padding: 1px 5px;
-          margin: 0 5px;
-          text-decoration: none;
-          background-color: #013;
+        text-align: right;
+      }
 
-          :hover {
-            background-color: #08A;
+      ul {
+        li {
+          float:left;
+          margin: 0px;
+
+          a {
+            line-height: 25px;
+            font-size: 12px;
+            color: #FFF;
+            padding: 1px 15px;
+            margin: 0 3px;
+            text-decoration: none;
+            background-color: #026;
+            .border-radius(4px);
+            :hover {
+              .text-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.6));
+              background-color: #08A;
+            }
           }
         }
       }
     }
   }
+
+  
 
   #footer {
     bottom: 0;
@@ -107,20 +132,6 @@ div#header h2, div#header h3{
 div#header h3{
   text-align:right;
 }
-div#header #menu{
-  background-color:black;
-  height: 25px;
-  width:100%;
-  clear:both;
-}
-
-div#header #menu ul li{
-  float:left;
-  line-height: 25px;
-  margin: 0px;
-
-}
-
 
 
 div#container {

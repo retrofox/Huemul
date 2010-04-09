@@ -15,6 +15,10 @@ class Procedure extends BaseProcedure {
     return 'In process';
   }
 
+  public function getPartida() {
+    return $this->getCadastralData()->getPartidaNro();
+  }
+
   public function addControlRevision($parent_id) {
 
     $singleton = sfContext::getInstance();
