@@ -14,7 +14,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        display:                  [ title, description ]
       filter:  ~
       form:    ~
       edit:    ~

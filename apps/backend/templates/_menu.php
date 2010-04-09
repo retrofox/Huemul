@@ -34,6 +34,7 @@
           <ul>
             <li>
               <li><?php echo link_to(__('List'), 'items/index') ?></li>
+              <li><?php echo link_to(__('New'), 'items/new') ?></li>
               <li><?php echo link_to(__('Types States'), 'revision_states/index') ?></li>
             </li>
           </ul>

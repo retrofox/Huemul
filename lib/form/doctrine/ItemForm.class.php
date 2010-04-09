@@ -12,6 +12,11 @@ class ItemForm extends BaseItemForm
 {
   public function configure()
   {
-    unset($this['created_at'], $this['updated_at']);
+    unset(
+      $this['created_at'],
+      $this['updated_at'],
+      $this['revisions_list'],
+      $this['revision_list']
+    );
   }
 }

@@ -382,8 +382,12 @@
         <source>Controller</source>
         <target>Controlador</target>
       </trans-unit>
-      
 
+      <trans-unit id="78">
+        <source>New</source>
+        <target>Nuevo</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>
