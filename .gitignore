@@ -5,5 +5,6 @@ lib/model/doctrine/base/*
 log/*
 _basurero/*
 web/uploads/revisions/*
+web/uploads/mugshots/*
 web/css/*
 config/databases.yml

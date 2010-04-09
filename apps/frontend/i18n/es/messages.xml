@@ -381,6 +381,12 @@
         <source>Edit</source>
         <target>Editar</target>
       </trans-unit>
+
+      <trans-unit id="79">
+        <source>Change password</source>
+        <target>Cambiar contraseña</target>
+      </trans-unit>
+
       
 
     </body>

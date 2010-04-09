@@ -23,6 +23,11 @@ Location:
 
 
 Profile:
+  actAs:
+    - Timestampable
+    - Geographical
+    JCroppable:
+      images: [ mugshot ]
   columns:
     sf_guard_user_id:           integer(4)
     first_name:                 { type: string(100), notnull: true }
@@ -38,7 +43,6 @@ Profile:
     addres:                     { type: string(100) }
     #geo_localidad_id:    ~
     country:                    { type: string(50) }
-    mugshot:                    { type: string(100) }
 
   relations:
     User:

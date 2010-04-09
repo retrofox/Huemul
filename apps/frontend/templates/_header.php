@@ -9,7 +9,6 @@
     <?php if ($sf_user->isAuthenticated()):?>
       <li><?php echo link_to(__('Procedures'), '@homepage')?> </li>
       <li><?php echo link_to(__('Profile'), 'profile/edit')?> </li>
-      <li><?php echo link_to(__('Account'), 'users/edit')?> </li>
       <li><?php echo link_to(__('Logout'), '@sf_guard_signout')?> </li>
     <?php else: ?>
       <li><?php echo link_to('Entrar', '@sf_guard_signin')?></li>
@@ -18,6 +17,7 @@
 
     <div class="user">
       <?php echo $sf_user->getGuardUser() ?>
+      
     </div>
   </nav>
 </div>

@@ -101,14 +101,7 @@
           <?php echo $form['country']->renderError() ?>
           <?php echo $form['country'] ?>
         </td>
-      </tr>
-      <tr>
-        <th><?php echo __($form['mugshot']->renderLabel()) ?></th>
-        <td>
-          <?php echo $form['mugshot']->renderError() ?>
-          <?php echo $form['mugshot'] ?>
-        </td>
-      </tr>
+      </tr>      
     </tbody>
   </table>
 </form>
