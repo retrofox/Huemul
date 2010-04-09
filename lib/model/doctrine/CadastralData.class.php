@@ -12,4 +12,8 @@
  */
 class CadastralData extends BaseCadastralData
 {
+
+  public function __toString() {
+    return $this->getCircunscripcion().' - '.$this->getSeccion().' - '.$this->getTipo().' - '.$this->getTipoNumero().' - '.$this->getParcela();
+  }
 }

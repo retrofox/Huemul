@@ -387,6 +387,15 @@
         <target>Cambiar contraseña</target>
       </trans-unit>
 
+      <trans-unit id="80">
+        <source>Choose File</source>
+        <target>Elegir Archivo</target>
+      </trans-unit>
+
+      <trans-unit id="81">
+        <source>remove the current file</source>
+        <target>borra el archivo actual</target>
+      </trans-unit>
       
 
     </body>

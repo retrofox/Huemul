@@ -114,7 +114,7 @@ Procedure:
     id:                         { type: integer, primary: true, autoincrement: true }
     cadastral_data_id:          { type: integer }
     formu_id:                   { type: integer }
-    number:                     { type: string(50), notnull: true }
+    #number:                     { type: string(50), notnull: true }
     dossier:                    { type: string(255) }
     is_finished:                { type: boolean, default: false }
     revisions_count:            { type: integer }
