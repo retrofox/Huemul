@@ -387,6 +387,12 @@
         <source>New</source>
         <target>Nuevo</target>
       </trans-unit>
+
+      <trans-unit id="79">
+        <source>Professional</source>
+        <target>Profesional</target>
+      </trans-unit>
+
       
     </body>
   </file>

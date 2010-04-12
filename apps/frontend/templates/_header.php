@@ -17,7 +17,6 @@
 
     <div class="user">
       <?php echo $sf_user->getGuardUser() ?>
-      
     </div>
   </nav>
 </div>

@@ -102,7 +102,6 @@ class revisionsActions extends autoRevisionsActions {
     $this->setTemplate('item');
   }
 
-
   protected function processCommentForm(sfWebRequest $request, sfForm $form) {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid()) {
@@ -110,5 +109,14 @@ class revisionsActions extends autoRevisionsActions {
 
       $this->redirect('revisions/item?id='.$msg->getRevisionItemId());
     }
+  }
+
+  /**
+   * action Observe
+   *
+   * @author Damian Suarez
+   */
+  public function executeObserve(sfWebRequest $request) {
+
   }
 }

@@ -12,7 +12,7 @@ class proceduresActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-
+    $this->getUser()->setCulture('es');
 
     $q = Doctrine_Query::create()
       ->from('Procedure p')

@@ -16,10 +16,11 @@ all:
           mugshot:
             ratio:      1
             sizes:
-              medium:    { width: 256 }
-              thumb:    { width: 128 }
-              main:     { width: 512 }
-              small:    { width: 64 }
+              medium:     { width: 256 }
+              thumb:      { width: 128 }
+              main:       { width: 512 }
+              small:      { width: 64 }
+              tiny:       { width: 32 }
 
   sf_less_php_plugin:
     use_lessc:    true
