@@ -1,5 +1,6 @@
 CREATE TABLE cadastral_data (id BIGINT AUTO_INCREMENT, circunscripcion VARCHAR(10) NOT NULL, seccion VARCHAR(10) NOT NULL, tipo VARCHAR(255) NOT NULL, tipo_numero VARCHAR(10) NOT NULL, partida_nro VARCHAR(10), parcela VARCHAR(10) NOT NULL, uf VARCHAR(10), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE comunication_item (id BIGINT AUTO_INCREMENT, revision_item_id BIGINT, author_id INT, subject VARCHAR(255), message LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX author_id_idx (author_id), INDEX revision_item_id_idx (revision_item_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE comunication_revision (id BIGINT AUTO_INCREMENT, revision_id BIGINT, author_id INT, subject VARCHAR(255), message LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX author_id_idx (author_id), INDEX revision_id_idx (revision_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE formu (id BIGINT AUTO_INCREMENT, user_id INT, name VARCHAR(100) NOT NULL, description LONGTEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE item (id BIGINT AUTO_INCREMENT, group_id INT, title VARCHAR(100) NOT NULL, description LONGTEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX group_id_idx (group_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
 CREATE TABLE item_formu (form_id BIGINT, item_id BIGINT, PRIMARY KEY(form_id, item_id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
@@ -21,6 +22,8 @@ CREATE TABLE sf_guard_user_group (user_id INT, group_id INT, created_at DATETIME
 CREATE TABLE sf_guard_user_permission (user_id INT, permission_id INT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, permission_id)) ENGINE = INNODB;
 ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_revision_item_id_revision_item_id FOREIGN KEY (revision_item_id) REFERENCES revision_item(id);
 ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
+ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_revision_id_revision_id FOREIGN KEY (revision_id) REFERENCES revision(id);
+ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
 ALTER TABLE formu ADD CONSTRAINT formu_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE item ADD CONSTRAINT item_group_id_sf_guard_group_id FOREIGN KEY (group_id) REFERENCES sf_guard_group(id);
 ALTER TABLE item_formu ADD CONSTRAINT item_formu_item_id_item_id FOREIGN KEY (item_id) REFERENCES item(id);
@@ -30,7 +33,7 @@ ALTER TABLE _procedure ADD CONSTRAINT _procedure_cadastral_data_id_cadastral_dat
 ALTER TABLE profile ADD CONSTRAINT profile_sf_guard_user_id_sf_guard_user_id FOREIGN KEY (sf_guard_user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE profile ADD CONSTRAINT profile_profesion_id_profession_id FOREIGN KEY (profesion_id) REFERENCES profession(id);
 ALTER TABLE revision ADD CONSTRAINT revision_revision_state_id_revision_state_id FOREIGN KEY (revision_state_id) REFERENCES revision_state(id);
-ALTER TABLE revision ADD CONSTRAINT revision_procedure_id__procedure_id FOREIGN KEY (procedure_id) REFERENCES _procedure(id);
+ALTER TABLE revision ADD CONSTRAINT revision_procedure_id__procedure_id FOREIGN KEY (procedure_id) REFERENCES _procedure(id) ON DELETE CASCADE;
 ALTER TABLE revision ADD CONSTRAINT revision_creator_id_sf_guard_user_id FOREIGN KEY (creator_id) REFERENCES sf_guard_user(id);
 ALTER TABLE revision_item ADD CONSTRAINT revision_item_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE revision_item ADD CONSTRAINT revision_item_revision_id_revision_id FOREIGN KEY (revision_id) REFERENCES revision(id) ON DELETE CASCADE;

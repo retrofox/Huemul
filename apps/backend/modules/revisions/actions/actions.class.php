@@ -117,6 +117,35 @@ class revisionsActions extends autoRevisionsActions {
    * @author Damian Suarez
    */
   public function executeObserve(sfWebRequest $request) {
+    $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
+    $this->procedure = $this->revision->getProcedure();
 
+    $comunicationRevision = new ComunicationRevision();
+    $comunicationRevision->setRevisionId($request->getParameter('id'));
+
+    $this->form = new ComunicationRevisionForm($comunicationRevision);
+  }
+
+  public function executeRevisionCommentCreate(sfWebRequest $request) {
+    $this->forward404Unless($request->isMethod(sfRequest::POST));
+
+    $this->form = new ComunicationRevisionForm();
+
+    $this->processRevisionCommentForm($request, $this->form);
+
+    $this->setTemplate('observe');
+  }
+
+  protected function processRevisionCommentForm(sfWebRequest $request, sfForm $form) {
+    $params = $request->getParameter('comunication_revision');
+
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid()) {
+      $msg = $form->save();
+      $msg->setAuthorId($this->getUser()->getGuardUser()->getId());
+      $msg->save();
+
+      $this->redirect('revisions/observe?id='.$msg->getRevisionId());
+    }
   }
 }

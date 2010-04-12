@@ -25,6 +25,7 @@
  * @property Doctrine_Collection $Revision
  * @property Doctrine_Collection $RevisionItem
  * @property Doctrine_Collection $ComunicationItem
+ * @property Doctrine_Collection $ComunicationRevision
  * 
  * @method integer             getId()                    Returns the current record's "id" value
  * @method string              getUsername()              Returns the current record's "username" value
@@ -46,6 +47,7 @@
  * @method Doctrine_Collection getRevision()              Returns the current record's "Revision" collection
  * @method Doctrine_Collection getRevisionItem()          Returns the current record's "RevisionItem" collection
  * @method Doctrine_Collection getComunicationItem()      Returns the current record's "ComunicationItem" collection
+ * @method Doctrine_Collection getComunicationRevision()  Returns the current record's "ComunicationRevision" collection
  * @method sfGuardUser         setId()                    Sets the current record's "id" value
  * @method sfGuardUser         setUsername()              Sets the current record's "username" value
  * @method sfGuardUser         setAlgorithm()             Sets the current record's "algorithm" value
@@ -66,6 +68,7 @@
  * @method sfGuardUser         setRevision()              Sets the current record's "Revision" collection
  * @method sfGuardUser         setRevisionItem()          Sets the current record's "RevisionItem" collection
  * @method sfGuardUser         setComunicationItem()      Sets the current record's "ComunicationItem" collection
+ * @method sfGuardUser         setComunicationRevision()  Sets the current record's "ComunicationRevision" collection
  * 
  * @package    Huemul
  * @subpackage model
@@ -175,6 +178,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasMany('ComunicationItem', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('ComunicationRevision', array(
              'local' => 'id',
              'foreign' => 'author_id'));
 

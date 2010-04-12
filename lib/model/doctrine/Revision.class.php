@@ -74,4 +74,12 @@ class Revision extends BaseRevision
     $procedure->setRevisionsCount($procedure->getRevisions()->count());
     $procedure->save();
   }
+
+    public function getComunication() {
+    $q = Doctrine_Query::create()
+      ->from('ComunicationRevision cr')
+      ->where('cr.revision_id = ?', $this->get('id'));
+
+    return $q->execute();
+  }
 }

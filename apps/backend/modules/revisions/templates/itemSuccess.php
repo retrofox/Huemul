@@ -104,7 +104,6 @@
       <section id="form-msg">
         <h2><?php echo __('Add message') ?></h2>
 
-
         <div>
           <h3>Asunto</h3>
           <?php echo $form['subject']->renderError() ?>
@@ -124,7 +123,6 @@
 
 
     </form>
-
 
   </section>
 

@@ -1,0 +1,770 @@
+UserProcedure:
+  UserProcedure_2_1:
+    sfGuardUser: sfGuardUser_2
+    Procedure: Procedure_1
+Item:
+  Item_1:
+    Group: sfGuardGroup_3
+    title: 'croquis de ubicacion'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_2:
+    Group: sfGuardGroup_3
+    title: 'datos catastrales'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_3:
+    Group: sfGuardGroup_3
+    title: 'medidas de la parcela'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_4:
+    Group: sfGuardGroup_3
+    title: 'superficie de la parcela'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_5:
+    Group: sfGuardGroup_3
+    title: 'distancia a esquina (encuentro de lineas municipales)'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_6:
+    Group: sfGuardGroup_3
+    title: 'indicar el norte'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_7:
+    Group: sfGuardGroup_3
+    title: 'nombre, numero y ancho de calles'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_8:
+    Group: sfGuardGroup_3
+    title: 'silueta de superficie'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_9:
+    Group: sfGuardGroup_3
+    title: 'comprobante de propiedad'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_10:
+    Group: sfGuardGroup_3
+    title: ochava
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_11:
+    Group: sfGuardGroup_3
+    title: 'restricciones al dominio'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_12:
+    Group: sfGuardGroup_4
+    title: destino
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_13:
+    Group: sfGuardGroup_4
+    title: 'compatible SI - NO'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_14:
+    Group: sfGuardGroup_4
+    title: restricciones
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_15:
+    Group: sfGuardGroup_4
+    title: 'retiro de linea municipal'
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_16:
+    Group: sfGuardGroup_4
+    title: estacionamientos
+    description: ''
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+  Item_17:
+    Group: sfGuardGroup_4
+    title: 'limite de altura'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_18:
+    Group: sfGuardGroup_5
+    title: 'caratula reglamentaria'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_19:
+    Group: sfGuardGroup_5
+    title: 'planta general. - (escala: 1:50 en presentacion definitiva)'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_20:
+    Group: sfGuardGroup_5
+    title: niveles
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_21:
+    Group: sfGuardGroup_5
+    title: cotas
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_22:
+    Group: sfGuardGroup_5
+    title: 'L.M. - E.M.'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_23:
+    Group: sfGuardGroup_5
+    title: 'tanque de reserva - proyeccion y capacidad - separacion de E.M.'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_24:
+    Group: sfGuardGroup_5
+    title: 'designacion y numeracion de locales'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_25:
+    Group: sfGuardGroup_5
+    title: 'indicacion de cortes'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_26:
+    Group: sfGuardGroup_5
+    title: patios
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_27:
+    Group: sfGuardGroup_5
+    title: 'cerco tipo de altura'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_28:
+    Group: sfGuardGroup_5
+    title: vereda
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_29:
+    Group: sfGuardGroup_5
+    title: 'desagüe cloacal primario'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_30:
+    Group: sfGuardGroup_5
+    title: 'desagües pluviales'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_31:
+    Group: sfGuardGroup_5
+    title: 'planta de techos'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_32:
+    Group: sfGuardGroup_5
+    title: 'ochava regalmentaria'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_33:
+    Group: sfGuardGroup_5
+    title: 'cortes (transversal y longitudinal)'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_34:
+    Group: sfGuardGroup_5
+    title: alturas
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_35:
+    Group: sfGuardGroup_5
+    title: 'espesor de entrepisos'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_36:
+    Group: sfGuardGroup_5
+    title: niveles
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_37:
+    Group: sfGuardGroup_5
+    title: carpinterias
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_38:
+    Group: sfGuardGroup_5
+    title: 'materiales de cubierta'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_39:
+    Group: sfGuardGroup_5
+    title: cielorrasos
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_40:
+    Group: sfGuardGroup_5
+    title: 'pisos y contrapisos'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_41:
+    Group: sfGuardGroup_5
+    title: fachadas
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_42:
+    Group: sfGuardGroup_5
+    title: 'materiales de terminacion de muros'
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_43:
+    Group: sfGuardGroup_5
+    title: carpinterias
+    description: ''
+    created_at: '2010-04-12 18:21:48'
+    updated_at: '2010-04-12 18:21:48'
+  Item_44:
+    Group: sfGuardGroup_5
+    title: 'matriales terminacion cubiertas'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_45:
+    Group: sfGuardGroup_5
+    title: 'tipo y altura de cerco lateral y de frente'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_46:
+    Group: sfGuardGroup_5
+    title: 'planilla de iluminacion y ventilacion'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_47:
+    Group: sfGuardGroup_5
+    title: 'grafismo de obra'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_48:
+    Group: sfGuardGroup_5
+    title: 'a demoler (linea de trazos, muros llenos en amarrilo)'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_49:
+    Group: sfGuardGroup_5
+    title: 'a construir (linea continua, muros llenos en rojo)'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_50:
+    Group: sfGuardGroup_5
+    title: 'a empadronar (muros sin llenar)'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_51:
+    Group: sfGuardGroup_5
+    title: 'con antecedentes municipales (rayado oblicuo)'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_52:
+    Group: sfGuardGroup_5
+    title: 'con antecedentes municipales sin construir (rayado oblicuo y muros llenos en rojo)'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_53:
+    Group: sfGuardGroup_5
+    title: 'en balance de superficies indicar ...'
+    description: 'en balance de superficies indicar desglosado segun categorias: A) Viviendas-locales comerciales. B)depositos. C) Piscina o instalaciones libres de parte cubierta...y'
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_54:
+    Group: sfGuardGroup_5
+    title: 'proyecto y/o instalacion contra incendio probado por cuerpo de bomberos'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_55:
+    Group: sfGuardGroup_5
+    title: 'factibilidad de servicio Eléctrico - gas - agua - cloacas'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_56:
+    Group: sfGuardGroup_5
+    title: 'detalle de escalera - escalera 1:25 plantas y cortes'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+  Item_57:
+    Group: sfGuardGroup_5
+    title: 'informe técnico resolución 841/01'
+    description: ''
+    created_at: '2010-04-12 18:21:49'
+    updated_at: '2010-04-12 18:21:49'
+ItemFormu:
+  ItemFormu_1_1:
+    form_id: '1'
+    Item: Item_1
+  ItemFormu_1_2:
+    form_id: '1'
+    Item: Item_2
+  ItemFormu_1_3:
+    form_id: '1'
+    Item: Item_3
+  ItemFormu_1_4:
+    form_id: '1'
+    Item: Item_4
+  ItemFormu_1_5:
+    form_id: '1'
+    Item: Item_5
+  ItemFormu_1_6:
+    form_id: '1'
+    Item: Item_6
+  ItemFormu_1_7:
+    form_id: '1'
+    Item: Item_7
+  ItemFormu_1_8:
+    form_id: '1'
+    Item: Item_8
+  ItemFormu_1_9:
+    form_id: '1'
+    Item: Item_9
+  ItemFormu_1_10:
+    form_id: '1'
+    Item: Item_10
+  ItemFormu_1_11:
+    form_id: '1'
+    Item: Item_11
+  ItemFormu_1_12:
+    form_id: '1'
+    Item: Item_12
+  ItemFormu_1_13:
+    form_id: '1'
+    Item: Item_13
+  ItemFormu_1_14:
+    form_id: '1'
+    Item: Item_14
+  ItemFormu_1_15:
+    form_id: '1'
+    Item: Item_15
+  ItemFormu_1_16:
+    form_id: '1'
+    Item: Item_16
+  ItemFormu_1_17:
+    form_id: '1'
+    Item: Item_17
+  ItemFormu_1_18:
+    form_id: '1'
+    Item: Item_18
+  ItemFormu_1_19:
+    form_id: '1'
+    Item: Item_19
+  ItemFormu_1_20:
+    form_id: '1'
+    Item: Item_20
+  ItemFormu_1_21:
+    form_id: '1'
+    Item: Item_21
+  ItemFormu_1_22:
+    form_id: '1'
+    Item: Item_22
+  ItemFormu_1_23:
+    form_id: '1'
+    Item: Item_23
+  ItemFormu_1_24:
+    form_id: '1'
+    Item: Item_24
+  ItemFormu_1_25:
+    form_id: '1'
+    Item: Item_25
+  ItemFormu_1_26:
+    form_id: '1'
+    Item: Item_26
+  ItemFormu_1_27:
+    form_id: '1'
+    Item: Item_27
+  ItemFormu_1_28:
+    form_id: '1'
+    Item: Item_28
+  ItemFormu_1_29:
+    form_id: '1'
+    Item: Item_29
+  ItemFormu_1_30:
+    form_id: '1'
+    Item: Item_30
+  ItemFormu_1_31:
+    form_id: '1'
+    Item: Item_31
+  ItemFormu_1_32:
+    form_id: '1'
+    Item: Item_32
+  ItemFormu_1_33:
+    form_id: '1'
+    Item: Item_33
+  ItemFormu_1_34:
+    form_id: '1'
+    Item: Item_34
+  ItemFormu_1_35:
+    form_id: '1'
+    Item: Item_35
+  ItemFormu_1_36:
+    form_id: '1'
+    Item: Item_36
+  ItemFormu_1_37:
+    form_id: '1'
+    Item: Item_37
+  ItemFormu_1_38:
+    form_id: '1'
+    Item: Item_38
+  ItemFormu_1_39:
+    form_id: '1'
+    Item: Item_39
+  ItemFormu_1_40:
+    form_id: '1'
+    Item: Item_40
+  ItemFormu_1_41:
+    form_id: '1'
+    Item: Item_41
+  ItemFormu_1_42:
+    form_id: '1'
+    Item: Item_42
+  ItemFormu_1_43:
+    form_id: '1'
+    Item: Item_43
+  ItemFormu_1_44:
+    form_id: '1'
+    Item: Item_44
+  ItemFormu_1_45:
+    form_id: '1'
+    Item: Item_45
+  ItemFormu_1_46:
+    form_id: '1'
+    Item: Item_46
+  ItemFormu_1_47:
+    form_id: '1'
+    Item: Item_47
+  ItemFormu_1_48:
+    form_id: '1'
+    Item: Item_48
+  ItemFormu_1_49:
+    form_id: '1'
+    Item: Item_49
+  ItemFormu_1_50:
+    form_id: '1'
+    Item: Item_50
+  ItemFormu_1_51:
+    form_id: '1'
+    Item: Item_51
+  ItemFormu_1_52:
+    form_id: '1'
+    Item: Item_52
+  ItemFormu_1_53:
+    form_id: '1'
+    Item: Item_53
+  ItemFormu_1_54:
+    form_id: '1'
+    Item: Item_54
+  ItemFormu_1_55:
+    form_id: '1'
+    Item: Item_55
+  ItemFormu_1_56:
+    form_id: '1'
+    Item: Item_56
+  ItemFormu_1_57:
+    form_id: '1'
+    Item: Item_57
+Revision:
+  Revision_1:
+    number: '0'
+    parent_id: null
+    Procedure: Procedure_1
+    State: RevisionState_1
+    Creator: sfGuardUser_2
+    block: true
+    description: null
+    file: null
+    created_at: '2010-04-12 18:24:58'
+    updated_at: '2010-04-12 18:24:58'
+  Revision_2:
+    number: '1'
+    parent_id: null
+    Procedure: Procedure_1
+    State: RevisionState_5
+    Creator: sfGuardUser_2
+    block: false
+    description: '<p>Aca va la nueva revisi&oacute;n</p>'
+    file: 85b71385bcbf22b3d62226e04d7feddc2362652e.png
+    created_at: '2010-04-12 18:25:20'
+    updated_at: '2010-04-12 18:25:20'
+CadastralData:
+  CadastralData_1:
+    circunscripcion: '14'
+    seccion: '25'
+    tipo: manzana
+    tipo_numero: '14'
+    partida_nro: '25'
+    parcela: '12'
+    uf: '14'
+    created_at: '2010-04-12 18:24:58'
+    updated_at: '2010-04-12 18:24:58'
+RevisionState:
+  RevisionState_1:
+    title: Inicial
+    description: 'Estado Inicial y único de un trámite. Se asigna automáticamente por le Responsable cuando el trámite se ha iniciado.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_2:
+    title: Aprobado
+    description: 'Estado Final y único de un trámite. Se asgina por un usuario Administrador cuando el trámita finalmente ha sido aprobado.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_3:
+    title: Anulado
+    description: null
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_4:
+    title: Autorizado
+    description: null
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_5:
+    title: 'A Revisar'
+    description: 'Estado pendiente a revisar por parte de la administración de Obras Privadas.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_6:
+    title: Visado
+    description: 'Estado visado por parte del Administrador.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_7:
+    title: Corregido
+    description: 'Estado creado por el Responsable en respuesta al estado de Visado.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  RevisionState_8:
+    title: 'En Proceso'
+    description: 'Este estado se produce en una revision cuando aún se encuentra en proceso de Visado.'
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+Profile:
+  Profile_1:
+    User: sfGuardUser_2
+    first_name: 'Roberto Damian'
+    last_name: Suarez
+    registration: null
+    birth_date: '0000-00-00'
+    documment_type: dni
+    documment: '26144030'
+    phone: '0299 4778030'
+    movil: null
+    email: damian.suarez@xifox.net
+    addres: 'Don Bosco 869'
+    country: Argentina
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+    latitude: null
+    longitude: null
+    mugshot: null
+    mugshot_x1: null
+    mugshot_y1: null
+    mugshot_x2: null
+    mugshot_y2: null
+  Profile_2:
+    User: sfGuardUser_3
+    first_name: 'Alex Claudio Andres'
+    last_name: Melo
+    registration: null
+    birth_date: '0000-00-00'
+    documment_type: dni
+    documment: '40123123'
+    phone: '0299 4790580'
+    movil: '299155155155'
+    email: alex.melo@xifox.net
+    addres: 'belgrano 365'
+    country: Argentina
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+    latitude: null
+    longitude: null
+    mugshot: null
+    mugshot_x1: null
+    mugshot_y1: null
+    mugshot_x2: null
+    mugshot_y2: null
+Formu:
+  Formu_1:
+    name: 'Type A'
+    description: 'Formulario Base.'
+    created_at: '2010-04-12 18:21:47'
+    updated_at: '2010-04-12 18:21:47'
+Procedure:
+  Procedure_1:
+    CadastralData: CadastralData_1
+    Formu: Formu_1
+    dossier: 'In process'
+    is_finished: false
+    revisions_count: '2'
+    created_at: '2010-04-12 18:24:58'
+    updated_at: '2010-04-12 18:25:20'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardPermission_2:
+    name: User
+    description: 'User permission'
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+sfGuardUser:
+  sfGuardUser_1:
+    username: admin
+    algorithm: sha1
+    salt: 2cf25a25a2fffd3a8db1144ce361b7a1
+    password: f4b9f894bc4b4e50da680c1b7e5feb59a23c9848
+    is_active: true
+    is_super_admin: true
+    last_login: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardUser_2:
+    username: damian
+    algorithm: sha1
+    salt: ad50af2b913f07b8c6c6f714c32f0247
+    password: 3ef9ec326d3eeed839763153c1299213ff2a4f5c
+    is_active: true
+    is_super_admin: true
+    last_login: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardUser_3:
+    username: alex
+    algorithm: sha1
+    salt: cb01766271bd6626716a78a394492593
+    password: 215bca8954dd076db0231ccffe6531a58fbedce0
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardUser_4:
+    username: clau
+    algorithm: sha1
+    salt: 58abbc899c88c13588ebccf856e1c5f5
+    password: be7d402f912deeb9cc5560c42abcb1406ab2a9f9
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    sfGuardGroup: sfGuardGroup_1
+    sfGuardPermission: sfGuardPermission_1
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  sfGuardGroupPermission_2_2:
+    sfGuardGroup: sfGuardGroup_2
+    sfGuardPermission: sfGuardPermission_2
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_1
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+  sfGuardUserGroup_2_2:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_2
+    created_at: '2010-04-12 18:21:51'
+    updated_at: '2010-04-12 18:21:51'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardGroup_2:
+    name: 'Usuario común'
+    description: 'Los usuarios de la aplicación son los profesionales que utilizan esta herramienta para poder realizar los trámites.'
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardGroup_3:
+    name: 'Departamento de Catastro'
+    description: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardGroup_4:
+    name: 'Departamento de Desarrollo Urbano'
+    description: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+  sfGuardGroup_5:
+    name: 'Departamento de Obras Privadas'
+    description: null
+    created_at: '2010-04-12 18:21:46'
+    updated_at: '2010-04-12 18:21:46'
+Profession:
+  Profession_1:
+    name: Agrimensor
+    description: ''
+  Profession_2:
+    name: Ingeniero
+    description: ''
+  Profession_3:
+    name: Arquitecto
+    description: ''
+  Profession_4:
+    name: 'Maestro Mayor de Obras'
+    description: ''
+  Profession_5:
+    name: 'Tecnico en Construcciones'
+    description: ''

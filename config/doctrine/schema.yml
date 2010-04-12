@@ -150,7 +150,7 @@ Revision:
 
   relations:
     Creator:                    { local: creator_id, class: sfGuardUser }
-    Procedure:                  { local: procedure_id, foreignAlias: Revisions }
+    Procedure:                  { local: procedure_id, foreignAlias: Revisions, onDelete: CASCADE }
     State:                      { local: revision_state_id, class: RevisionState }
     Items:                      { class: Item, local: revision_id, foreign: item_id, refClass: RevisionItem }
 
@@ -195,3 +195,15 @@ ComunicationItem:
     Author:                     { local: author_id, class: sfGuardUser }
     RevisionItem:               { local: revision_item_id, foreignAlias: RevisionItem }
 
+ComunicationRevision:
+  actAs:
+    - Timestampable
+  columns:
+    id:                         { type: integer, primary: true, autoincrement: true }
+    revision_id:                { type: integer }
+    author_id:                  { type: integer(4) }
+    subject:                    { type: string(255) }
+    message:                    { type: clob }
+  relations:
+    Author:                     { local: author_id, class: sfGuardUser }
+    Revision:                   { local: revision_id, foreignAlias: Revision }
