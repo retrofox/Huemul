@@ -30,7 +30,10 @@
   -moz-background-size: @params;
 }
 
-/* Backgorunds */
-.background_gradient_linear(@x1: left, @y1: top, @x2: left, @y2: bottom, @from: #ccc, @to: #aaa) {
+/* Backgrounds */
+.gradient-linear(@x1: left, @y1: top, @x2: left, @y2: bottom, @from: #fcc, @to: #aaa) {
+  background-color: @from;
   background: -webkit-gradient(linear, @x1 @y1, @x2 @y2, from(@from), to(@to));
+  background: -moz-linear-gradient(@x1 @y1, @from, @to )
+
 }
