@@ -30,4 +30,10 @@ class RevisionItem extends BaseRevisionItem {
   public function getStateComplete() {
     return $this->states[$this->getState()];
   }
+
+  public function save(Doctrine_Connection $conn = null) {
+    $singleton = sfContext::getInstance();
+    $this->setUserId($singleton->getUser()->getGuardUser()->getId());
+    parent::save($conn);
+  }
 }

@@ -12,9 +12,14 @@ class proceduresActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->procedures = Doctrine::getTable('Procedure')
-      ->createQuery('a')
-      ->execute();
+
+
+    $q = Doctrine_Query::create()
+      ->from('Procedure p')
+      ->leftJoin('p.UserProcedure up')
+      ->where('up.user_id = ?', $this->getUser()->getGuardUser()->get('id'));
+
+     $this->procedures = $q->execute();
   }
 
   public function executeNew(sfWebRequest $request)

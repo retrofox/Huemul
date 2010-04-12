@@ -1,3 +1,8 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+section, nav {
+  display: block;
+}
+
 *:focus {
   outline: 0;
   outline: none;
@@ -31,6 +36,7 @@ nav.menu > ul a {
   padding: 8px 20px;
   text-decoration: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(#c0c0c0));
+  background-color: #b0b0b0;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -38,6 +44,7 @@ nav.menu > ul a {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 nav.menu > ul .current a {
+  background-color: #cccccc;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
   color: #4466aa;
   border-top: solid 1px #f8f8f8;

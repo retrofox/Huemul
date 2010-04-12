@@ -49,6 +49,12 @@
           </td>
         </tr>
 
+        <tr>
+          <td><?php echo __('Controller') ?></td><td>
+            <?php echo $revItem->getUserController() ?>
+          </td>
+        </tr>
+
       </tbody>
     </table>
   </section>

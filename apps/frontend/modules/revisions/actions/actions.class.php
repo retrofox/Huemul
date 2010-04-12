@@ -64,6 +64,8 @@ class revisionsActions extends sfActions {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid()) {
       $revision = $form->save();
+      $revision->setRevisionStateId(5);
+      $revision->save();
 
       $this->redirect('procedures/show?procedure_id='.$revision->getProcedureId());
     }

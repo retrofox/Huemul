@@ -23,6 +23,6 @@ class FormuForm extends BaseFormuForm
       'model' => 'Item',
       'multiple' => 'true',
       'query' => $items
-      ));
+    ));
   }
 }

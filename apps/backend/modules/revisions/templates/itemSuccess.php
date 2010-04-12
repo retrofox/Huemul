@@ -41,8 +41,14 @@
         </tr>
 
         <tr>
-          <td><?php echo __('Creator') ?></td><td>
+          <td><?php echo __('User') ?></td><td>
             <?php echo $revItem->getRevision()->getProcedure()->getCreator() ?>
+          </td>
+        </tr>
+
+        <tr>
+          <td><?php echo __('Controller') ?></td><td>
+            <?php echo $revItem->getUserController() ?>
           </td>
         </tr>
 

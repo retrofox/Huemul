@@ -51,8 +51,8 @@ class Revision extends BaseRevision
         $state = $previous_rev->getRevisionStateId();
 
         // seteamos el estado de la revision actual en funcion del estado de la revision anterior
-        if($state == 1) $this->setRevisionStateId(5);
-        elseif($state == 7) $this->setRevisionStateId(5);
+        // if($state == 1) $this->setRevisionStateId(5);
+        // elseif($state == 7) $this->setRevisionStateId(5);
 
         // block previous revision
         $previous_rev->setBlock(true);

@@ -23,11 +23,17 @@ Location:
 
 
 Profile:
+  actAs:
+    - Timestampable
+    - Geographical
+    JCroppable:
+      images: [ mugshot ]
   columns:
     sf_guard_user_id:           integer(4)
     first_name:                 { type: string(100), notnull: true }
     last_name:                  { type: string(100), notnull: true }
     profesion_id:               { type: integer }
+    registration:               { type: string(40) }
     birth_date:                 { type: date }
     documment_type:             { type: enum, values: [ dni, le ], default: dni }
     documment:                  { type: string(12) }
@@ -37,7 +43,6 @@ Profile:
     addres:                     { type: string(100) }
     #geo_localidad_id:    ~
     country:                    { type: string(50) }
-    mugshot:                    { type: string(100) }
 
   relations:
     User:
@@ -91,11 +96,11 @@ CadastralData:
   columns:
     id:                   { type: integer, primary: true, autoincrement: true }
     circunscripcion:      { type: string(10), notnull: true }
-    seccion:              { type: string(10) }
-    tipo:                 { type: enum, values: [ manzana, quinta, chacra ] }
-    tipo_numero:          { type: string(10) }
+    seccion:              { type: string(10), notnull: true }
+    tipo:                 { type: enum, values: [ manzana, quinta, chacra ], notnull: true }
+    tipo_numero:          { type: string(10), notnull: true }
     partida_nro:          { type: string(10) }
-    parcela:              { type: string(10) }
+    parcela:              { type: string(10), notnull: true }
     uf:                   { type: string(10) }
   relations:
     Procedure:            { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
@@ -109,7 +114,7 @@ Procedure:
     id:                         { type: integer, primary: true, autoincrement: true }
     cadastral_data_id:          { type: integer }
     formu_id:                   { type: integer }
-    number:                     { type: string(50), notnull: true }
+    #number:                     { type: string(50), notnull: true }
     dossier:                    { type: string(255) }
     is_finished:                { type: boolean, default: false }
     revisions_count:            { type: integer }
@@ -140,7 +145,7 @@ Revision:
     revision_state_id:          { type: integer(2) }
     creator_id:                 { type: integer(4) }
     block:                      { type: boolean, default: false }
-    description:                { type: clob, notnull: true }
+    description:                { type: clob }
     file:                       { type: string(255) }
 
   relations:
@@ -165,11 +170,12 @@ RevisionItem:
     id:                         { type: integer, primary: true, autoincrement: true }
     item_id:                    { type: integer }
     revision_id:                { type: integer }
+    user_id:                    integer(4)
     state:                      { type: enum, values: [ ok, error, nc ], default: nc }
-
   relations:
     Item:                       { local: item_id, onDelete: CASCADE }
     Revision:                   { local: revision_id, onDelete: CASCADE }
+    UserController:             { local: user_id, foreign: id, class: sfGuardUser }
     
   indexes:
     myIndexs:

@@ -15,14 +15,18 @@ class Procedure extends BaseProcedure {
     return 'In process';
   }
 
+  public function getPartida() {
+    return $this->getCadastralData()->getPartidaNro();
+  }
+
   public function addControlRevision($parent_id) {
 
     $singleton = sfContext::getInstance();
     $last_revision = $this->getLastRevision();
 
-    if($last_revision->getRevisionStateId() == 5) {
+    //if($last_revision->getRevisionStateId() == 5) {
 
-      // Agregamo nueva revision de control
+      // Agregamos nueva revision de control
       $new_control_revision = new Revision();
 
       $new_control_revision->setProcedureId($this->get('id'));
@@ -64,7 +68,7 @@ class Procedure extends BaseProcedure {
       }
 
       return $new_control_revision;
-    }
+    //}
   }
 
   public function save(Doctrine_Connection $conn = null) {
@@ -90,16 +94,13 @@ class Procedure extends BaseProcedure {
       $revision->setBlock(true);	      // <- Bloqueamos la revision.
       $revision->setCreatorId($singleton->getUser()->getGuardUser()->getId());
       $revision->save();
-      /*
-      // Agregamos registro usuario_tramite
-      $usuarioTramite = new UsuarioTramite();
-      $usuarioTramite->setUserId($singleton->getUser()->getGuardUser()->getId());
-      $usuarioTramite->setTramiteId($objTramite);
-      $usuarioTramite->setDenominacion('Usuario principal');// <- Estado inicial
 
+   
+      // Agregamos registro usuario_tramite
+      $usuarioTramite = new UserProcedure();
+      $usuarioTramite->setUserId($singleton->getUser()->getGuardUser()->getId());
+      $usuarioTramite->setProcedureId($this->get('id'));
       $usuarioTramite->save();
- * 
-      */
     }
     else {
       /*

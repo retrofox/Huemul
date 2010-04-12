@@ -12,4 +12,7 @@
  */
 class Profile extends BaseProfile
 {
+  public function __toString() {
+    return $this->getFirstName().' '.$this->getLastName();
+  }
 }

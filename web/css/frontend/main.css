@@ -35,7 +35,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-section { display: block; }
+section, nav { display: block; }
 *:focus {
   outline: 0;
   outline: none;
@@ -51,8 +51,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -68,8 +68,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -95,8 +95,8 @@ section { display: block; }
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -125,8 +125,8 @@ input[type=button] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -151,8 +151,8 @@ button {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -177,8 +177,8 @@ input[type=submit] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -203,8 +203,8 @@ input[type=submit]:hover { background: -webkit-gradient(linear, 0% 0%, 0% 100%, 
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 34px;
-  line-height: 34px;
+  height: 24px;
+  line-height: 24px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -381,10 +381,11 @@ body {
   background-color: #868686;
   font: normal 62.5% sans-serif;
   overflow-x: hidden;
-  background: url('/images/bg/pattern.png');
+  background: url('/images/pattern.png');
   min-height: 100%;
   width: 100%;
 }
+section, nav { display: block; }
 h1 { font-size: 1.8em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }
@@ -397,6 +398,7 @@ div#wrapper {
   position: absolute;
   left: 0;
   top: 0;
+  font-size: 1.2em;
 }
 div#wrapper div#header {
   background-color: black;
@@ -408,20 +410,44 @@ div#wrapper div#header {
   height: 130px;
 }
 div#wrapper div#header img { margin: 0 15px; }
-div#wrapper nav#menu {
+div#wrapper div#header nav#menu {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background-color: #001133;
+  height: 25px;
+  width: 100%;
+  clear: both;
+  position: relative;
 }
-div#wrapper nav#menu ul li a {
+div#wrapper div#header nav#menu div.user {
+  height: 25px;
+  line-height: 25px;
+  width: 300px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  text-align: right;
+}
+div#wrapper div#header nav#menu ul li {
+  float: left;
+  margin: 0px;
+}
+div#wrapper div#header nav#menu ul li a {
+  line-height: 25px;
   font-size: 12px;
   color: #ffffff;
-  padding: 1px 5px;
-  margin: 0 5px;
+  padding: 1px 15px;
+  margin: 0 3px;
   text-decoration: none;
-  background-color: #001133;
+  background-color: #002266;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
-div#wrapper nav#menu ul li a:hover { background-color: #0088aa; }
+div#wrapper div#header nav#menu ul li a:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  background-color: #0088aa;
+}
 div#wrapper #footer {
   bottom: 0;
   position: absolute;
@@ -458,17 +484,6 @@ div#header h3 {
   line-height: 20px;
 }
 div#header h3 { text-align: right; }
-div#header #menu {
-  background-color: black;
-  height: 25px;
-  width: 100%;
-  clear: both;
-}
-div#header #menu ul li {
-  float: left;
-  line-height: 25px;
-  margin: 0px;
-}
 div#container {
   background-color: #ffffff;
   height: auto;

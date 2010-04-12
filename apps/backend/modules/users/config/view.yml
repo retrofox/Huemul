@@ -1,2 +1,9 @@
-all:
-  stylesheets:      [ backend/users.css ]
+#editSuccess:
+#  javascripts:
+#    - -*
+#    - JCrop/jquery.min.js
+#    - JCrop/jquery.Jcrop.min.js
+
+#  stylesheets:
+#    - jquery.Jcrop.css
+#    - backend/users.css

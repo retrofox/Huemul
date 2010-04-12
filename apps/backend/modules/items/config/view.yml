@@ -1,5 +1,0 @@
-all:
-  stylesheets:
-  - mooDoo.2/generator.global.css
-  - mooDoo.2/generator.default.css
-  - mooDoo.2/generator.list.css
