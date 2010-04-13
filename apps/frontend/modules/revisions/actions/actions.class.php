@@ -124,5 +124,47 @@ class revisionsActions extends sfActions {
       $this->redirect('revisions/item?id='.$msg->getRevisionItemId());
     }
   }
+
+  /**
+   * action Messages
+   *
+   * @author Damian Suarez
+   */
+  public function executeMessages(sfWebRequest $request) {
+    $this->revision = Doctrine::getTable('revision')->find($request->getParameter('id'));
+    $revisionMessage = new ComunicationRevision();
+    $revisionMessage->setRevisionId($this->revision->get('id'));
+
+    $this->form = new ComunicationRevisionForm($revisionMessage);
+  }
+
+
+  public function executeRevisionCommentCreate(sfWebRequest $request) {
+
+    $this->forward404Unless($request->isMethod(sfRequest::POST));
+    $params = $request->getParameter('comunication_revision');
+
+    $this->revision = Doctrine::getTable('Revision')->find($params['revision_id']);
+
+    $this->form = new ComunicationRevisionForm();
+
+    $this->processRevisionCommentForm($request, $this->form);
+
+    $this->setTemplate('messages');
+  }
+
+
+  protected function processRevisionCommentForm(sfWebRequest $request, sfForm $form) {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid()) {
+      $msg = $form->save();
+
+      $msg->setAuthorId($this->getUser()->getGuardUser()->get('id'));
+      $msg->save();
+
+      $this->redirect('revisions/messages?id='.$msg->getRevisionId());
+    }
+  }
+
 }
 

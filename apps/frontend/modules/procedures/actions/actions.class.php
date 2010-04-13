@@ -14,10 +14,12 @@ class proceduresActions extends sfActions
   {
     $this->getUser()->setCulture('es');
 
+    $user_id = $this->getUser()->getGuardUser()->get('id');
+
     $q = Doctrine_Query::create()
       ->from('Procedure p')
       ->leftJoin('p.UserProcedure up')
-      ->where('up.user_id = ?', $this->getUser()->getGuardUser()->get('id'));
+      ->where('up.user_id = ?', $user_id);
 
      $this->procedures = $q->execute();
   }

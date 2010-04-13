@@ -48,6 +48,7 @@ use_stylesheet('backend/items.css');
           <tr>
             <td><?php echo $item ?></td>
             <td><strong><?php echo link_to($count_msg, 'revisions/item?id='.$rev_item->getId()) ?></strong></td>
+
             <?php if($sf_user->getGuardUser()->hasGroup($grupo)) : ?>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'ok') echo 'checked' ?> class="opt-ok" type="radio" name="items[<?php echo $item->get('id') ?>]" value="ok" /></td>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'error') echo 'checked' ?> class="opt-error" type="radio" name="items[<?php echo $item->get('id') ?>]" value="error"/></td>

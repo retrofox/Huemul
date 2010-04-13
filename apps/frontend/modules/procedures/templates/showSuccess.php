@@ -54,6 +54,7 @@
       <th><?php echo __('Created at'); ?></th>
       <th><?php echo __('Attach'); ?></th>
       <th><?php echo __('Action'); ?></th>
+      <th><?php echo __('Messages'); ?></th>
     </tr>
   </thead>
   <tbody>
@@ -76,6 +77,9 @@
           <?php else : ?>
         &mdash;
           <?php endif; ?>
+      </td>
+      <td>
+        <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id')) ?>
       </td>
     </tr>
     <?php endforeach; ?>

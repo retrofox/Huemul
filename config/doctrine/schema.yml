@@ -189,8 +189,8 @@ ComunicationItem:
     id:                         { type: integer, primary: true, autoincrement: true }
     revision_item_id:           { type: integer }
     author_id:                  { type: integer(4) }
-    subject:                    { type: string(255) }
-    message:                    { type: clob }
+    subject:                    { type: string(255), notnull: true }
+    message:                    { type: clob, notnull: true }
   relations:
     Author:                     { local: author_id, class: sfGuardUser }
     RevisionItem:               { local: revision_item_id, foreignAlias: RevisionItem }
@@ -202,8 +202,8 @@ ComunicationRevision:
     id:                         { type: integer, primary: true, autoincrement: true }
     revision_id:                { type: integer }
     author_id:                  { type: integer(4) }
-    subject:                    { type: string(255) }
-    message:                    { type: clob }
+    subject:                    { type: string(255), notnull: true }
+    message:                    { type: clob, notnull: true }
   relations:
     Author:                     { local: author_id, class: sfGuardUser }
     Revision:                   { local: revision_id, foreignAlias: Revision }

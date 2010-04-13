@@ -49,7 +49,7 @@ use_stylesheet('frontend/item.css');
         <tr>
           <td>
             <strong><?php echo $msg ?></strong> | <?php echo $msg->getAuthor() ?><br />
-            <?php echo $msg->getRawValue()->getMessage() ?>
+              <?php echo $msg->getRawValue()->getMessage() ?>
           </td>
         </tr>
         <?php endforeach; ?>
@@ -86,6 +86,21 @@ use_stylesheet('frontend/item.css');
     </form>
     */ ?>
 
+    <div class="board">
+      <section class="options">
+        <h1><?php echo __('Options'); ?></h1>
+        <ul>
+          <?php if($state == 5) : ?>
+          <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
+          <?php elseif($state == 8) : ?>
+          <li><?php echo link_to('Controlar revisión', 'revisions/control?id='.$revision->getId()) ?></li>
+          <?php endif; ?>
+          <li><?php echo link_to('ir a trámite', 'procedures/show?id='.$revision->get('procedure_id')) ?></li>
+          <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
+        </ul>
+      </section>
+    </div>
+
     <h2>Agregar observación</h2>
     <form id="msg-form" action="<?php echo url_for('revisions/revisionComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
       <table>
@@ -96,8 +111,9 @@ use_stylesheet('frontend/item.css');
         <tr>
           <td colspan="2"><input type="submit" value="<?php echo __('Save'); ?>" /></td>
         </tr>
-        
+
       </table>
     </form>
+
   </section>
 </div>

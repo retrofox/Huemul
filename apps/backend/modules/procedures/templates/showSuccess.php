@@ -60,7 +60,6 @@ use_stylesheet('backend/procedure.css');
 
                     <?php if($state == 5) : ?>
                     <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
-                    <li><?php echo link_to('Observar revision', 'revisions/observe?id='.$revision->getId()) ?></li>
 
                     <?php elseif($state == 8) : ?>
 
@@ -70,12 +69,13 @@ use_stylesheet('backend/procedure.css');
                     <li><?php echo link_to(__('View'), 'revisions/control?id='.$revision->getId()) ?></li>
 
                     <?php endif; ?>
+                    <li><?php echo link_to('Observar ('.$revision->getComunication()->count().')', 'revisions/observe?id='.$revision->getId()) ?></li>
 
                   </ul>
                 </div>
                   <?php //endif; ?>
               </div>
-              <div class="description"><?php echo ($revision->getRawValue()->getDescription() != '' ? $revision->getRawValue()->getDescription() : '<p>Sin comentarios.</p>') ?></div>
+              <div class="description"><?php echo ($revision->getRawValue()->getDescription() != '' ? $revision->getRawValue()->getDescription() : '<p>Sin descripción.</p>') ?></div>
             </div>
           </td>
         </tr>
