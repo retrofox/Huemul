@@ -1,6 +1,6 @@
 <?php use_helper('I18N') ?>
 <form action="<?php echo url_for('sfGuardAuth/signin') ?>" method="post">
-  <table>
+  <table class="orange">
     <caption><?php echo __('Login'); ?></caption>
     <?php echo $form ?>
   

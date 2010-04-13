@@ -2,179 +2,36 @@
 @import "../_commons/clear";
 @import "../_commons/interface.boxs";
 @import "../_commons/interface.elements";
-
-
-body{
-  font: normal 62.5% Arial, sans-serif;
-  background-color: #eee;
-}
-
-/*****Lay out******/
-div#wrapper{
-  background-color: #868686;
-  .border-radius(6px);
-  .box-shadow;
-
-  padding: 5px;
-  width: 970px;
-  margin: 10px auto 0;
-
-  div#header{
-    .border-radius(6px 6px 0 0);
-    border-bottom: 1px solid #aaa;
-    background-color:black;
-    color: white;
-    padding: 0px;
-    height: 130px;
-
-    img{
-      margin: 0 15px;
-    }
-  }
-
-  nav#menu {
-    .box-sizing;
-    background-color: #013;
-    ul {
-      li {
-        a {
-          font-size: 12px;
-          color: #FFF;
-          padding: 1px 5px;
-          margin: 0 5px;
-          text-decoration: none;
-          background-color: #013;
-
-          :hover {
-            background-color: #08A;
-          }
-        }
-      }
-    }
-  }
-
-  #footer {
-    padding: 5px;
-    color: #444;
-    a {
-      color: #334;
-      :hover {
-        color: #004;
-      }
-    }
-  }
-}
-
-div#header h2, div#header h3{
-  background-color:silver;
-  color: #565656;
-  padding: 5px 15px;
-  float:left;
-  width: 455px;
-  line-height: 20px;
-}
-div#header h3{
-  text-align:right;
-}
-div#header #menu{
-  background-color:black;
-  height: 25px;
-  width:100%;
-  clear:both;
-}
-
-div#header #menu ul li{
-  float:left;
-  line-height: 25px;
-  margin: 0px;
-}
-
-
+@import "layout";
 
 div#container {
-  @import "table_orange";
-  background-color:#FFF;
-  .border-radius(0 0 6px 6px);
-
   > section {
-    .box-sizing;
-    display: inline-block;
-    padding: 5px;
-    vertical-align: top;
-    margin: 0;
-
-    h1 {
-      display: inline-block;
-    }
+  padding: 50px 0;
   }
-}
-  
-body {
 
-  #login {
-
-    input[type=text], input[type=email], input[type=password] {
-      width: 100px;
-    }
-
-    .box-sizing;
-    .simple-dialog;
-
-    width: 300px; height: 300px;
-    margin: 200px auto 0;
-
-    form {
-      padding: 5px;
-      font-size: 12px;
-
-      position: relative;
-      text-align: center;
-
-      input[type=submit] {
-        display: block;
-        margin: 0 auto;
-      }
-
-      table{
-        margin-bottom: 30px;
-
-        tr {
-          th {
-            .box-sizing;
-            padding: 0 5px 5px 0;
-            text-align: right;
-
-            label {
-              font-size: 12px;
-            }
+  table.orange {
+    caption{
+    .border-radius;
+     }
+     tbody {
+     > tr {
+      > td, > th {
+        border: none;
+        padding: 10px;
+        input[type=text], input[type=email], input[type=password] {
+          width: 200px;
+          .border-radius;
           }
         }
-
-        td {
-          padding: 0 5px;
-
-          ul.error_list {
-            color: #f00;
-            position: absolute;
-            right: -260px;
-            width: 300px;
-            background-color: rgba(255, 0, 0, 0.1);
-            border: 1px solid rgba(255, 0, 0, 0.4);
-            .border-radius;
-            padding: 5px;
-          }
-        }
-
       }
+     }
 
-      a {
-        display: block; margin: 20px auto 0;
-        color: #A04;
-        .text-shadow;
-        text-decoration: none;
-
-        :hover {
-          text-decoration: underline;
+    tfoot{
+       border: 1px solid #ccc;
+       
+       > tr {
+       > td, > th {
+        padding: 10px;
         }
       }
     }
