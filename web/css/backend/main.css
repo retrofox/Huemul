@@ -1,7 +1,4 @@
 /* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-section, nav {
-  display: block;
-}
 
 *:focus {
   outline: 0;
@@ -12,7 +9,9 @@ section, nav {
   outline: none;
 }
 nav.menu > ul {
-  background: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#aaaaaa));
+  background-color: #e2e2e2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#cacfcf));
+  background: -moz-linear-gradient(left top, #e2e2e2, #cacfcf);
   line-height: 100%;
   margin: 0;
   padding: 7px 6px 0;
@@ -35,8 +34,9 @@ nav.menu > ul a {
   margin: 0;
   padding: 8px 20px;
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(#c0c0c0));
   background-color: #b0b0b0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(#c0c0c0));
+  background: -moz-linear-gradient(left top, #b0b0b0, #c0c0c0);
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -44,8 +44,9 @@ nav.menu > ul a {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 nav.menu > ul .current a {
-  background-color: #cccccc;
+  background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
+  background: -moz-linear-gradient(left top, #ffffff, #cccccc);
   color: #4466aa;
   border-top: solid 1px #f8f8f8;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -54,7 +55,9 @@ nav.menu > ul .current a {
   text-shadow: 0 1px 0 #ffffff;
 }
 nav.menu > ul li:hover > a {
+  background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
+  background: -moz-linear-gradient(left top, #ffffff, #cccccc);
   color: #4466aa;
   border-top: solid 1px #f8f8f8;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -138,6 +141,7 @@ nav.menu > ul:after {
 nav.menu > ul { display: inline-block; }
 html[xmlns] nav.menu > ul { display: block; }
 * html nav.menu > ul { height: 1%; }
+section, nav { display: block; }
 body {
   background-color: #eeeeee;
   font-size: 18px;
@@ -186,6 +190,12 @@ body #header section.mini-panel {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
+.state_4 {
+  font-weight: bold;
+  border: 2px solid #009900;
+  color: #ffffff;
+  background-color: #00aa00;
+}
 .state_5 {
   font-weight: bold;
   color: #aa0000;
@@ -194,7 +204,7 @@ body #header section.mini-panel {
 .state_7 {
   color: #ffffff;
   border: 1px solid #44aa44;
-  background-color: #55bb55;
+  background-color: #22aa22;
 }
 .state_8 {
   color: #aa6600;

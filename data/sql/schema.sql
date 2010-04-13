@@ -20,10 +20,10 @@ CREATE TABLE sf_guard_remember_key (id INT AUTO_INCREMENT, user_id INT, remember
 CREATE TABLE sf_guard_user (id INT AUTO_INCREMENT, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active TINYINT(1) DEFAULT '1', is_super_admin TINYINT(1) DEFAULT '0', last_login DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX is_active_idx_idx (is_active), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_group (user_id INT, group_id INT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, group_id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_permission (user_id INT, permission_id INT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, permission_id)) ENGINE = INNODB;
-ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_revision_item_id_revision_item_id FOREIGN KEY (revision_item_id) REFERENCES revision_item(id);
-ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
-ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_revision_id_revision_id FOREIGN KEY (revision_id) REFERENCES revision(id);
-ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id);
+ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_revision_item_id_revision_item_id FOREIGN KEY (revision_item_id) REFERENCES revision_item(id) ON DELETE CASCADE;
+ALTER TABLE comunication_item ADD CONSTRAINT comunication_item_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
+ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_revision_id_revision_id FOREIGN KEY (revision_id) REFERENCES revision(id) ON DELETE CASCADE;
+ALTER TABLE comunication_revision ADD CONSTRAINT comunication_revision_author_id_sf_guard_user_id FOREIGN KEY (author_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE formu ADD CONSTRAINT formu_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE item ADD CONSTRAINT item_group_id_sf_guard_group_id FOREIGN KEY (group_id) REFERENCES sf_guard_group(id);
 ALTER TABLE item_formu ADD CONSTRAINT item_formu_item_id_item_id FOREIGN KEY (item_id) REFERENCES item(id);

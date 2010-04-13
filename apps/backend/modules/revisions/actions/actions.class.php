@@ -148,4 +148,32 @@ class revisionsActions extends autoRevisionsActions {
       $this->redirect('revisions/observe?id='.$msg->getRevisionId());
     }
   }
+
+  /**
+   * action Complete
+   *
+   * @author Damian Suarez
+   */
+  public function executeComplete(sfWebRequest $request) {
+    $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
+
+    $this->procedure = $this->revision->getProcedure();
+
+    // bloqueamos todas las revisiones
+    foreach ($this->procedure->getRevisions() as $revision) {
+      $revision->setBlock(true);
+      $revision->save();
+    }
+
+    // Creamos la ultima revision
+    $last_revision = new Revision();
+    $last_revision->setRevisionStateId(4);
+    $last_revision->setProcedureId($this->procedure->get('id'));
+    $last_revision->setCreatorId($this->getUser()->getGuardUser()->get('id'));
+    $last_revision->setBlock(true);
+    $last_revision->setParentId($this->revision->get('id'));
+    $last_revision->save();
+
+    $this->redirect('procedures/index?id='.$this->procedure->get('id'));
+  }
 }

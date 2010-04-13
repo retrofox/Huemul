@@ -706,6 +706,11 @@ ul.options li a:hover {
   background-color: #eeffee;
   text-shadow: 0px 1px 0 #ffffff;
 }
+.state_4 {
+  color: #008800;
+  background-color: #88ff88;
+  font-weight: bold;
+}
 .state_5 {
   color: #aaaa00;
   background-color: #ffffee;

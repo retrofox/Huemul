@@ -4,7 +4,7 @@
 /* el menú es una lista */
 nav.menu {
   > ul {
-    .background_gradient_linear();
+    .gradient-linear(left, top, left, bottom, #e2e2e2, #cacfcf);
 
     /*background-color: rgba(200, 130, 255, 0.8);*/
     line-height: 100%;
@@ -32,7 +32,7 @@ nav.menu > ul a {
   margin: 0;
   padding:  8px 20px;
   text-decoration: none;
-  .background_gradient_linear(left, top, left, bottom, #b0b0b0, #c0c0c0);
+  .gradient-linear(left, top, left, bottom, #b0b0b0, #c0c0c0);
 
   .border-radius(4px);
   .text-shadow(0, 1px, 1px, rgba(0,0,0, 0.3));
@@ -41,7 +41,7 @@ nav.menu > ul a {
 
 /* efecto hover en el Nivel Principal */
 nav.menu > ul .current a, nav.menu > ul li:hover > a {
-  .background_gradient_linear(left, top, left, bottom, #fff, #ccc);
+  .gradient-linear(left, top, left, bottom, #fff, #ccc);
   color: #46A;
   border-top: solid 1px #F8F8F8;
   .box-shadow(0, 1px, 1px, rgba(0,0,0, 0.2));

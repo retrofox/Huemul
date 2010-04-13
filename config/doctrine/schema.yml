@@ -192,8 +192,8 @@ ComunicationItem:
     subject:                    { type: string(255), notnull: true }
     message:                    { type: clob, notnull: true }
   relations:
-    Author:                     { local: author_id, class: sfGuardUser }
-    RevisionItem:               { local: revision_item_id, foreignAlias: RevisionItem }
+    Author:                     { local: author_id, class: sfGuardUser, onDelete: CASCADE }
+    RevisionItem:               { local: revision_item_id, foreignAlias: RevisionItem, onDelete: CASCADE }
 
 ComunicationRevision:
   actAs:
@@ -205,5 +205,5 @@ ComunicationRevision:
     subject:                    { type: string(255), notnull: true }
     message:                    { type: clob, notnull: true }
   relations:
-    Author:                     { local: author_id, class: sfGuardUser }
-    Revision:                   { local: revision_id, foreignAlias: Revision }
+    Author:                     { local: author_id, class: sfGuardUser, onDelete: CASCADE }
+    Revision:                   { local: revision_id, foreignAlias: Revision, onDelete: CASCADE }
