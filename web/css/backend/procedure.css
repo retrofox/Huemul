@@ -32,14 +32,19 @@
   -webkit-border-radius: 6px;
 }
 .col-left table tbody tr td .blk-revision h3 {
-  margin: 0 20px;
+  margin: 0 0 0 10px;
   padding: 0;
   display: inline-block;
   height: 30px;
   line-height: 30px;
 }
+.col-left table tbody tr td .blk-revision p.info {
+  margin: 0;
+  font-size: 12px;
+}
+.col-left table tbody tr td .blk-revision p.info .date { font-weight: bold; }
 .col-left table tbody tr td .blk-revision .sidebar-right {
-  width: 100px;
+  width: 150px;
   position: absolute;
   right: 0;
   top: 0;
@@ -68,7 +73,7 @@
 }
 .col-left table tbody tr td .blk-revision .description {
   background-color: #ffffff;
-  margin: 5px 110px 5px 5px;
+  margin: 5px 160px 0px 5px;
   min-height: 50px;
   border: 1px solid #dddddd;
   border-radius: 8px;

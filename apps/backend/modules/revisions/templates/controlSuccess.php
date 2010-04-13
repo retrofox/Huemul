@@ -16,7 +16,7 @@ use_stylesheet('backend/items.css');
 
       <?php foreach ($rev_itemsGroup as $group) : ?>
 
-      <?php $grupo = $group[0]->getItem()->getGroup()->getName(); ?>
+        <?php $grupo = $group[0]->getItem()->getGroup()->getName(); ?>
 
       <table>
         <thead>
@@ -49,15 +49,15 @@ use_stylesheet('backend/items.css');
             <td><?php echo $item ?></td>
             <td><strong><?php echo link_to($count_msg, 'revisions/item?id='.$rev_item->getId()) ?></strong></td>
 
-            <?php if($sf_user->getGuardUser()->hasGroup($grupo)) : ?>
+                <?php if($sf_user->getGuardUser()->hasGroup($grupo)) : ?>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'ok') echo 'checked' ?> class="opt-ok" type="radio" name="items[<?php echo $item->get('id') ?>]" value="ok" /></td>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'error') echo 'checked' ?> class="opt-error" type="radio" name="items[<?php echo $item->get('id') ?>]" value="error"/></td>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'nc') echo 'checked' ?> class="opt-nc" type="radio" name="items[<?php echo $item->get('id') ?>]" value="nc"/></td>
-            <?php else: ?>
+                <?php else: ?>
             <td><?php if($state == 'ok') echo '*' ?></td>
             <td><?php if($state == 'error') echo '*' ?></td>
             <td><?php if($state == 'nc') echo '*' ?></td>
-            <?php endif; ?>
+                <?php endif; ?>
           </tr>
             <?php endforeach; ?>
         </tbody>
@@ -72,7 +72,7 @@ use_stylesheet('backend/items.css');
 
     <section class="col-right">
       <div class="board">
-        
+
         <section>
           <p><?php echo __('Revision number') ?>: <strong><?php echo $revision->getNumber() ?></strong></p>
           <p><?php echo __('Parent revision') ?>: <strong><?php echo $revision->getParentId() ?></strong></p>
@@ -85,9 +85,13 @@ use_stylesheet('backend/items.css');
             <?php if($revision->getBlock()) : ?>
             <li><?php echo link_to('Crear nueva revisión', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
             <?php endif; ?>
-            
+
             <?php if(!$revision->getBlock()) : ?>
             <li><?php echo link_to(__('Close revision'), 'revisions/close?id='.$revision->get('id')) ?></li>
+            <?php else : ?>
+              <?php if($revision->getRevisionStateId() == 7) : ?>
+              <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
+              <?php endif; ?>
             <?php endif; ?>
           </ul>
         </section>

@@ -43,7 +43,7 @@ use_stylesheet('backend/procedure.css');
             <div class="blk-revision">
               <h2><?php echo $revision->getNumber() ?></h2>
               <h3><?php echo $revision->getCreator() ?></h3>
-              <p>
+              <p class="info">
                 <span class="date"><?php echo format_date($revision->getCreatedAt(), 'd') ?></span> | 
                 <span class="block"><?php echo __($revision->getBlock() ? 'blocked' : 'unlocked' )?></span>
               </p>
@@ -67,9 +67,9 @@ use_stylesheet('backend/procedure.css');
                     
                     <?php elseif($state == 7) : ?>
                     <li><?php echo link_to(__('View'), 'revisions/control?id='.$revision->getId()) ?></li>
-
+                    <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
                     <?php endif; ?>
-                    <li><?php echo link_to('Observar ('.$revision->getComunication()->count().')', 'revisions/observe?id='.$revision->getId()) ?></li>
+                    <li><?php echo link_to('Observar (<strong>'.$revision->getComunication()->count().'</strong>)', 'revisions/observe?id='.$revision->getId()) ?></li>
 
                   </ul>
                 </div>
