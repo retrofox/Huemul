@@ -72,7 +72,7 @@
       </td>
 
       <td>
-          <?php if($revision->getRevisionStateId() == 7) : ?>
+          <?php if($revision->getRevisionStateId() == 7 || $revision->getRevisionStateId() == 8) : ?>
             <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id')) ?>
           <?php else : ?>
         &mdash;

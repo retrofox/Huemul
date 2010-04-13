@@ -17,6 +17,18 @@ class sfGuardUserAdminForm extends BasesfGuardUserAdminForm
   {
     parent::configure();
 
+    $this->widgetSchema['groups_list'] = new sfWidgetFormDoctrineChoice(array(
+      'model' => 'sfGuardGroup',
+      'multiple' => 'true',
+      'expanded' => true
+    ));
+
+    $this->widgetSchema['permissions_list'] = new sfWidgetFormDoctrineChoice(array(
+      'model' => 'sfGuardPermission',
+      'multiple' => 'true',
+      'expanded' => true
+    ));
+
     $profileForm = new ProfileForm($this->object->Profile);
     unset($profileForm['id'], $profileForm['sf_guard_user_id']);
     $this->embedForm('Profile', $profileForm);
