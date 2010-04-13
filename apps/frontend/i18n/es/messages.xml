@@ -396,7 +396,11 @@
         <source>remove the current file</source>
         <target>borra el archivo actual</target>
       </trans-unit>
-      
+
+      <trans-unit id="82">
+        <source>Remember</source>
+        <target>Recordar</target>
+      </trans-unit>
 
     </body>
   </file>

@@ -12,9 +12,10 @@
   </head>
   <body>
     <div id='wrapper'>
-      <?php include_partial('global/header') ?>
+    
 
       <div id="container">
+         <?php include_partial('global/header') ?>
         <section id="content">
           <?php echo $sf_content ?>
         </section>

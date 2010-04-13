@@ -2,7 +2,7 @@
   <?php echo image_tag('i_top_logo.jpg') ?>
 
   <h2>Sistema Huemul: Obras Privadas</h2>
-  <h3>Dirección de Desarrollo urbano y catastro</h3>
+  <h4>Dirección de Desarrollo urbano y catastro</h4>
   
   <nav id="menu">
     <ul>
