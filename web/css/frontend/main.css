@@ -38,10 +38,6 @@ section, nav { display: block; }
   outline: 0;
   outline: none;
 }
-*:focus {
-  outline: 0;
-  outline: none;
-}
 input[type=button] {
   -khtml-appearance: none;
   font-size: 14px;
@@ -371,7 +367,6 @@ body {
   min-height: 100%;
   width: 100%;
 }
-section, nav { display: block; }
 h1 { font-size: 1.8em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }
