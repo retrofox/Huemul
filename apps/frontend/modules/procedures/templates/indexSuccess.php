@@ -23,6 +23,7 @@
 <table class="orange">
   <thead>
     <tr>
+      <th><?php echo __('Cadastral data'); ?></th>
       <th><?php echo __('Type'); ?></th>
       <th><?php echo __('Dossier'); ?></th>
       <th><?php echo __('State'); ?></th>
@@ -33,6 +34,7 @@
   <tbody>
     <?php foreach ($procedures as $procedure): ?>
     <tr>
+      <td><?php echo $procedure->getCadastralData() ?></td>
       <td><?php echo $procedure->getFormu() ?></td>
       <td><?php echo __($procedure->getDossier()) ?></td>
       <td class="state_<?php echo $procedure->getLastRevision()->getRevisionStateId() ?>"><?php include_partial('procedures/state', array('revision' => $procedure->getLastRevision())) ?></td>

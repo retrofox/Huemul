@@ -393,6 +393,87 @@
         <target>Profesional</target>
       </trans-unit>
 
+      <trans-unit id="80">
+        <source>Groups list</source>
+        <target>Listado de grupos</target>
+      </trans-unit>
+
+      <trans-unit id="81">
+        <source>Is active</source>
+        <target>Está activo</target>
+      </trans-unit>
+
+      <trans-unit id="82">
+        <source>Is super admin</source>
+        <target>Es super usuario</target>
+      </trans-unit>
+
+      <trans-unit id="83">
+        <source>Permissions list</source>
+        <target>Listado de permisos</target>
+      </trans-unit>
+
+      <trans-unit id="84">
+        <source>Permissions and groups</source>
+        <target>Grupos y permisos</target>
+      </trans-unit>
+
+      <trans-unit id="85">
+        <source>Profile</source>
+        <target>Perfil</target>
+      </trans-unit>
+
+      <trans-unit id="86">
+        <source>First name</source>
+        <target>Nombre</target>
+      </trans-unit>
+
+      <trans-unit id="87">
+        <source>Last name</source>
+        <target>Apellido</target>
+      </trans-unit>
+
+      <trans-unit id="88">
+        <source>Registration</source>
+        <target>Matrícula</target>
+      </trans-unit>
+
+      <trans-unit id="89">
+        <source>Birth date</source>
+        <target>Fecha de nacimiento</target>
+      </trans-unit>
+
+      <trans-unit id="90">
+        <source>Documment type</source>
+        <target>Tipo de documento</target>
+      </trans-unit>
+
+      <trans-unit id="91">
+        <source>Documment</source>
+        <target>Documento</target>
+      </trans-unit>
+
+      <trans-unit id="92">
+        <source>Phone</source>
+        <target>Teléfono</target>
+      </trans-unit>
+
+      <trans-unit id="93">
+        <source>Movil</source>
+        <target>Celular</target>
+      </trans-unit>
+
+      <trans-unit id="94">
+        <source>Addres</source>
+        <target>Dirección</target>
+      </trans-unit>
+
+      <trans-unit id="95">
+        <source>Country</source>
+        <target>País</target>
+      </trans-unit>
+      
+      
       
     </body>
   </file>

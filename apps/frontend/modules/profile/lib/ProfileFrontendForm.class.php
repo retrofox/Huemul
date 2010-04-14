@@ -22,5 +22,12 @@ class ProfileFrontendForm extends BaseProfileForm
       $this['mugshot_x2'],
       $this['mugshot_y2']
     );
+
+    $range  = range(date('Y'), date('Y')-100);
+    $years = array_combine($range,$range);
+
+    $this->widgetSchema['birth_date'] = new sfWidgetFormDate(array(
+      'years' => $years
+    ));
   }
 }

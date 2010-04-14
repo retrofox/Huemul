@@ -22,6 +22,7 @@ class FormuForm extends BaseFormuForm
     $this->widgetSchema['items_list'] = new sfWidgetFormDoctrineChoice(array(
       'model' => 'Item',
       'multiple' => 'true',
+      'expanded' => true,
       'query' => $items
     ));
   }

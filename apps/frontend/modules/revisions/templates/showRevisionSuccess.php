@@ -24,6 +24,11 @@ use_stylesheet('frontend/items.css');
     <h2>Aviso</h2>
     <p>Esta es una revisión de estado 'Corregido'. Usted debe <?php echo link_to('controlar ', 'revisions/showRevision?id='.$revision->get('id')) ?>los distintos ítems o requisitos del trámite para poder continuar con el proceso.<br />Muy posiblemente <?php echo link_to('deba crear', 'revisions/new?procedure_id='.$revision->getProcedureId()) ?> una nueva revisión en respuesta con las correcciones notadas.</p>
   </div>
+  <?php elseif($state == 8) : ?>
+  <div class="tip">
+    <h2>Aviso</h2>
+    <p>Esta es una revisión se encuentra en esta de 'Proceso'; lo cual implica que aún no se ha terminado su proceso de visado.</p>
+  </div>
   <?php endif; ?>
 
 </section>
@@ -31,7 +36,12 @@ use_stylesheet('frontend/items.css');
 <?php end_slot(); ?>
 
 <h1><?php echo __('Items List'); ?></h1>
-
+  <?php if($state == 8) : ?>
+  <div class="info">
+    <p><strong>Aviso</strong></p>
+    <p>Esta es una revisión se encuentra en esta de 'Proceso'; lo cual implica que aún no se ha terminado de controlar en su totalidad.</p>
+  </div>
+  <?php endif; ?>
 <div class="sf_admin_list" id="items-container">
 
   <section class="">
