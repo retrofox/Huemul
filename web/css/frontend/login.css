@@ -1,3 +1,5 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -6,6 +8,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-origin: padding-box;
+  -moz-background-origin: padding-box;
 }
 body { line-height: 1; }
 ol, ul { list-style: none; }
@@ -577,6 +585,10 @@ div#container table.orange caption {
   background: #efefef;
   border: 1px solid #cccccc;
   color: #666666;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 div#container table.orange a {
   text-decoration: none;
@@ -612,6 +624,7 @@ div#container table.orange > tfoot > tr > td {
   padding: 4px;
 }
 div#container table.orange > tfoot a { margin: 0 10px; }
+div#container table.orange > tbody { border: 1px solid #cccccc; }
 div#container table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;

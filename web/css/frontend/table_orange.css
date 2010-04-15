@@ -13,6 +13,7 @@ table.orange {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 table.orange .mensaje { width: 90%; }
 table.orange caption {
@@ -23,19 +24,21 @@ table.orange caption {
   background: #efefef;
   border: 1px solid #cccccc;
   color: #666666;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 table.orange a {
   text-decoration: none;
   color: #ff6600;
-  font-weight: bold;
 }
 table.orange a:hover { text-decoration: underline; }
 table.orange > thead > tr > th {
   text-transform: uppercase;
   background: #e2e2e2;
   font: normal bold normal 10px/18px Helvetica;
-  padding: 2px 5px;
-  text-shadow: 0 1px 0 #ffffff;
+  padding: 2px 20px;
 }
 table.orange > thead > tr > th.title {
   text-align: center;
@@ -57,15 +60,14 @@ table.orange > tfoot > tr > td {
   padding: 4px;
 }
 table.orange > tfoot a { margin: 0 10px; }
+table.orange > tbody { border: 1px solid #cccccc; }
 table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
 }
 table.orange > tbody > tr th {
-  padding: 5px 20px;
-  font-size: 1.1em;
-  background-color: #eeeeee;
-  color: #444444;
+  color: #336699;
+  font-weight: normal;
 }
 table.orange > tbody > tr th a {
   color: #336699;
