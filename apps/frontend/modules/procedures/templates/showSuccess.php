@@ -47,6 +47,7 @@
 </div>
 
 <table class="orange">
+  <caption><?php echo __('Revisions List'); ?></caption>
   <thead>
     <tr>
       <th><?php echo __('Number'); ?></th>

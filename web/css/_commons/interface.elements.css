@@ -18,6 +18,7 @@ input[type=button] {
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -51,6 +52,7 @@ button {
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -84,6 +86,7 @@ input[type=submit] {
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -117,6 +120,7 @@ input[type=submit]:hover {
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;

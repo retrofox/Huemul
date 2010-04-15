@@ -6,6 +6,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  -webkit-background-origin: padding-box;
+  -moz-background-origin: padding;
 }
 body { line-height: 1; }
 ol, ul { list-style: none; }
@@ -38,42 +44,46 @@ section, nav { display: block; }
   outline: 0;
   outline: none;
 }
-*:focus {
-  outline: 0;
-  outline: none;
-}
 input[type=button] {
   -khtml-appearance: none;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 input[type=button]:active { top: 1px; }
 input[type=button]:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 button {
   -khtml-appearance: none;
@@ -81,32 +91,40 @@ button {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 button:active { top: 1px; }
 button:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 input[type=submit] {
   -khtml-appearance: none;
@@ -114,32 +132,40 @@ input[type=submit] {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 input[type=submit]:active { top: 1px; }
 input[type=submit]:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 .input {
   -khtml-appearance: none;
@@ -147,32 +173,40 @@ input[type=submit]:hover {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 .input:active { top: 1px; }
 .input:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 input[type="checkbox"] {
   -khtml-appearance: none;
@@ -204,25 +238,31 @@ select.widget {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 3px 3px 3px 12px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   width: 250px;
   height: 25px;
   line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 select.widget:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .select_widget {
@@ -235,25 +275,31 @@ select.widget:hover {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 3px 3px 3px 12px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   width: 250px;
   height: 25px;
   line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .select_widget:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .widget_select-options_container {
@@ -261,15 +307,19 @@ select.widget:hover {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
   -moz-box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
   -webkit-box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
+  position: relative;
   border-top: 1px solid #ffffff;
   margin-right: 10px;
   margin-top: -5px;
   padding: 4px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   min-width: 120px;
   font-size: 14px;
   font-weight: bold;
@@ -296,17 +346,20 @@ select.widget:hover {
   background-color: #8cb14b;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
   cursor: pointer;
 }
 .widget_select-options_container > li.selected {
   background-color: #4b8cb1;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 input[type=text], input[type=email], input[type=password] {
   font-size: 14px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   width: 300px;
   height: 32px;
   line-height: 26px;
@@ -316,7 +369,9 @@ input[type=text], input[type=email], input[type=password] {
   box-shadow: 0px 1px 0px #ffffff;
   -moz-box-shadow: 0px 1px 0px #ffffff;
   -webkit-box-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 input[type=email] { min-width: 200px; }
 input.error {
@@ -327,6 +382,7 @@ label {
   display: inline-block;
   font: normal bold normal 14px/1.6em Helvetica;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 label:hover { cursor: pointer; }
 label.check {
@@ -352,6 +408,7 @@ form fieldset > section p.error {
   font: normal normal italic 14px/1.4em Helvetica;
   color: #a71000;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 form fieldset > section p.info {
   margin: 1px 0 !important;
@@ -371,7 +428,6 @@ body {
   min-height: 100%;
   width: 100%;
 }
-section, nav { display: block; }
 h1 { font-size: 1.8em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.4em; }
@@ -392,6 +448,8 @@ div#wrapper div#header {
   border-radius: 8px 8px 0 0;
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-radius: 8px 8px 0 0;
+  behavior: url(ie-css3.htc);
+  position: relative;
   color: white;
   padding: 0px;
   height: 130px;
@@ -400,6 +458,7 @@ div#wrapper div#header img { margin: 0 15px; }
 div#wrapper div#header nav#menu {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   background-color: #3f3f3f;
   height: 30px;
   width: 100%;
@@ -430,9 +489,11 @@ div#wrapper div#header nav#menu ul li a {
   text-decoration: none;
   border-right: 1px solid #000000;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  position: relative;
 }
 div#wrapper div#header nav#menu ul li a:hover {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  position: relative;
   background-color: #4f4f4f;
 }
 div#wrapper div#header h2 {
@@ -487,9 +548,12 @@ div#container {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 div#container *:focus {
   outline: 0;
@@ -504,6 +568,7 @@ div#container table.orange {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 div#container table.orange .mensaje { width: 90%; }
 div#container table.orange caption {
@@ -514,19 +579,21 @@ div#container table.orange caption {
   background: #efefef;
   border: 1px solid #cccccc;
   color: #666666;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 div#container table.orange a {
   text-decoration: none;
   color: #ff6600;
-  font-weight: bold;
 }
 div#container table.orange a:hover { text-decoration: underline; }
 div#container table.orange > thead > tr > th {
   text-transform: uppercase;
   background: #e2e2e2;
   font: normal bold normal 10px/18px Helvetica;
-  padding: 2px 5px;
-  text-shadow: 0 1px 0 #ffffff;
+  padding: 2px 20px;
 }
 div#container table.orange > thead > tr > th.title {
   text-align: center;
@@ -548,104 +615,14 @@ div#container table.orange > tfoot > tr > td {
   padding: 4px;
 }
 div#container table.orange > tfoot a { margin: 0 10px; }
+div#container table.orange > tbody { border: 1px solid #cccccc; }
 div#container table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
 }
 div#container table.orange > tbody > tr th {
-  padding: 5px 20px;
-  font-size: 1.1em;
-  background-color: #eeeeee;
-  color: #444444;
-}
-div#container table.orange > tbody > tr th a {
   color: #336699;
-  border-bottom: 1px dotted #336699;
-}
-div#container table.orange > tbody > tr th a:hover {
-  color: #ffffff;
-  background: #336699;
-}
-div#container table.orange > tbody > tr > td {
-  border: 1px solid #cccccc;
-  padding: 5px;
-  line-height: 1.8em;
-  font-size: 1.2em;
-  vertical-align: top;
-}
-div#container table.orange > tbody > tr > th {
-  border: 1px solid #cccccc;
-  padding: 5px;
-  line-height: 1.8em;
-  font-size: 1.2em;
-  vertical-align: top;
-}
-div#container *:focus {
-  outline: 0;
-  outline: none;
-}
-div#container table.orange {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #cccccc;
-  color: #333333;
-  margin: 0 auto;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-div#container table.orange .mensaje { width: 90%; }
-div#container table.orange caption {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 5px;
-  background: #efefef;
-  border: 1px solid #cccccc;
-  color: #666666;
-}
-div#container table.orange a {
-  text-decoration: none;
-  color: #ff6600;
-  font-weight: bold;
-}
-div#container table.orange a:hover { text-decoration: underline; }
-div#container table.orange > thead > tr > th {
-  text-transform: uppercase;
-  background: #e2e2e2;
-  font: normal bold normal 10px/18px Helvetica;
-  padding: 2px 5px;
-  text-shadow: 0 1px 0 #ffffff;
-}
-div#container table.orange > thead > tr > th.title {
-  text-align: center;
-  font: normal bold normal 16px/25px Helvetica;
-  color: #332222;
-}
-div#container table.orange > tfoot > tr > th {
-  text-transform: uppercase;
-  color: #000000;
-  font-weight: bold;
-  text-align: center;
-  padding: 4px;
-}
-div#container table.orange > tfoot > tr > td {
-  text-transform: uppercase;
-  color: #000000;
-  font-weight: bold;
-  text-align: center;
-  padding: 4px;
-}
-div#container table.orange > tfoot a { margin: 0 10px; }
-div#container table.orange > tbody tr.blanco {
-  background: #cccccc;
-  border: none;
-}
-div#container table.orange > tbody > tr th {
-  padding: 5px 20px;
-  font-size: 1.1em;
-  background-color: #eeeeee;
-  color: #444444;
+  font-weight: normal;
 }
 div#container table.orange > tbody > tr th a {
   color: #336699;
@@ -672,12 +649,14 @@ div#container table.orange > tbody > tr > th {
 div#container > section {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   display: inline-block;
-  padding: 5px;
+  padding: 20px 10px;
   vertical-align: top;
   margin: 0;
 }
 div#container > section h1 { display: inline-block; }
+div#container > section p.note { margin: 20px; }
 div#container div.tip {
   font: normal 14px/20px Helvetica;
   border: 2px solid #aaaa88;
@@ -688,6 +667,8 @@ div#container div.tip {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
 }
 div#container div.tip h2 { font-size: 16px; }
 div#container .info {
@@ -698,6 +679,8 @@ div#container .info {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
 }
 div#container .info p {
   color: #330044 !important;
@@ -711,49 +694,58 @@ div#container section#sidebar {
   border-radius: 0 0 0 8px;
   -moz-border-radius: 0 0 0 8px;
   -webkit-border-radius: 0 0 0 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   border-right: 1px solid #bbbbbb;
   box-shadow: -1px 0 0 #ffffff;
   -moz-box-shadow: -1px 0 0 #ffffff;
   -webkit-box-shadow: -1px 0 0 #ffffff;
+  position: relative;
 }
 div#container section#sidebar section.menu_sidebar table tbody tr { background-color: #ffffff; }
 div#container section#sidebar section.menu_sidebar table tbody tr td:first-child { background-color: #eeeeee; }
 div#container section#sidebar section.menu_sidebar table tbody tr td:last-child { font-weight: bold; }
 div#container section#sidebar section.menu_sidebar nav {
-  margin: 10px 0;
-  border: 1px solid #0088dd;
-  background-color: #cceeff;
+  margin: 0 0 10px 0;
+  border: 1px solid #336699;
+  background-color: #ddeeff;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
 }
 div#container section#sidebar section.menu_sidebar nav ul { padding: 0; }
 div#container section#sidebar section.menu_sidebar nav ul li h2 {
   margin: 0;
   text-align: center;
-  padding: 2px 0;
+  padding: 5px 0;
   border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
-  font: normal normal normal 12px sans-serif;
-  color: #ffffff;
-  background-color: #0088dd;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  font: normal normal bold 1.2em sans-serif;
+  color: #ddeeff;
+  background-color: #336699;
 }
 div#container section#sidebar section.menu_sidebar nav ul li a {
   font-size: 12px;
   line-height: 20px;
   display: block;
-  color: #0088aa;
-  padding: 1px 5px;
-  margin: 2px 0 0;
+  color: #336699;
+  padding: 5px 5px;
+  margin: 0;
   text-decoration: none;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  behavior: url(ie-css3.htc);
+  position: relative;
 }
 div#container section#sidebar section.menu_sidebar nav ul li a:hover {
-  background-color: #0088aa;
-  color: #ffffff;
+  background-color: #336699;
+  color: #ddeeff;
 }
 div#container section#sidebar h1 { color: #002255; }
 div#container section#sidebar h2 { color: #002255; }
@@ -804,6 +796,7 @@ ul.options li a:hover {
   color: #00aa00;
   background-color: #eeffee;
   text-shadow: 0px 1px 0 #ffffff;
+  position: relative;
 }
 .state_4 {
   color: #008800;
@@ -812,7 +805,7 @@ ul.options li a:hover {
 }
 .state_5 {
   color: #aaaa00;
-  background-color: #ffffee;
+  background-color: #ffffaa;
 }
 .state_7 {
   color: #002266;
@@ -828,7 +821,10 @@ ul.error_list li {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   background-color: rgba(255, 0, 0, 0.1);
   color: #ff0000;
   text-shadow: 0 1px 1px #888888;
+  position: relative;
 }
