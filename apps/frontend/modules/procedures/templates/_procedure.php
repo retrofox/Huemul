@@ -1,4 +1,5 @@
 <?php use_helper('I18N') ?>
+
 <section>
   <table class="orange">
     <thead>
@@ -13,6 +14,12 @@
         <td><?php echo __('Form type'); ?></td>
         <td><?php echo $procedure->getFormu() ?></td>
       </tr>
+
+      <?php foreach ($procedure->getItemsGroups() as $group) : ?>
+      <tr>
+        <td colspan="2"><?php echo $group->getGroup() ?>(<?php echo $group->count ?>)</td>
+      </tr>
+      <?php endforeach; ?>
 
       <tr>
         <td><?php echo __('Dossier'); ?></td>

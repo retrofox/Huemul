@@ -48,6 +48,7 @@ use_stylesheet('frontend/items.css');
 
     <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
     <?php foreach ($rev_itemsGroup as $group) : ?>
+
     <table class="orange">
       <thead>
         <tr>
@@ -55,9 +56,10 @@ use_stylesheet('frontend/items.css');
         </tr>
       </thead>
 
+
       <tfoot>
         <tr>
-          <th colspan="4"><?php echo count($group).' itmes' ?></th>
+          <th>Items | <?php echo $group[0]->getItem()->getGroup() ?> | <?php echo $group->count() ?> |</th>
         </tr>
       </tfoot>
       <tbody>

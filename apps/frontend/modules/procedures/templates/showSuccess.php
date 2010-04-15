@@ -54,7 +54,14 @@
       <th><?php echo __('Created at'); ?></th>
       <th><?php echo __('Attach'); ?></th>
       <th><?php echo __('Action'); ?></th>
-      <th><?php echo __('Messages'); ?></th>
+      <th><?php echo __('M'); ?></th>
+      <th colspan="<?php echo $procedure->getItemsGroups()->count() ?>">Items</th>
+    </tr>
+    <tr>
+      <th colspan="6"></th>
+      <?php foreach ($procedure->getItemsGroups() as $group) : ?>
+      <th><?php echo $group->getGroup()->getNameAcronym() ?></th>
+      <?php endforeach; ?>
     </tr>
   </thead>
   <tbody>
@@ -62,13 +69,13 @@
     <tr>
       <td><?php echo $revision->get('number') ?></td>
       <td class="state_<?php echo (!is_null($revision->getRevisionStateId()) ? $revision->getRevisionStateId() : 'empty')?>"><?php include_partial('procedures/state', array('revision' => $revision)) ?></td>
-      <td><?php echo format_date($revision->get('created_at'), 'f') ?></td>
+      <td><?php echo format_date($revision->get('created_at'), 'MM/dd/yy - hh:mm') ?></td>
       <td>
-        <?php if ($revision->getFile() != null) : ?>
+          <?php if ($revision->getFile() != null) : ?>
         <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file"><?php echo __('Download'); ?></a>
-        <?php else :  ?>
+          <?php else :  ?>
         &mdash;
-        <?php endif; ?>
+          <?php endif; ?>
       </td>
 
       <td>
@@ -79,9 +86,44 @@
           <?php endif; ?>
       </td>
       <td>
-        <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id')) ?>
+          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id')) ?>
       </td>
+
+      <?php if($revision->getItemsGroups()->count() > 0) : ?>
+        <?php foreach ($revision->getItemsGroups() as $itemGroup) : ?>
+      <td>
+        <table class="items_control">
+          <thead>
+            <tr>
+              <td>ok</td>
+              <td>er</td>
+              <td>sc</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><?php echo ($revision->getItemsGroupOK($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+              <td><?php echo ($revision->getItemsGroupError($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupError($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+              <td><?php echo ($revision->getItemsGroupSC($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </td>
+
+        <?php endforeach; ?>
+      <?php else: ?>
+      <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+      <?php endif; ?>
+
     </tr>
     <?php endforeach; ?>
   </tbody>
+
 </table>
+
+<br />
+<h4>Referencias</h4>
+<?php foreach ($procedure->getItemsGroups() as $group) : ?>
+<p><strong><?php echo $group->getGroup()->getNameAcronym() ?></strong>: <?php echo $group->getGroup() ?></p>
+<?php endforeach; ?>

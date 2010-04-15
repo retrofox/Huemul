@@ -94,16 +94,16 @@ CadastralData:
   actAs:
     - Timestampable
   columns:
-    id:                   { type: integer, primary: true, autoincrement: true }
-    circunscripcion:      { type: string(10), notnull: true }
-    seccion:              { type: string(10), notnull: true }
-    tipo:                 { type: enum, values: [ manzana, quinta, chacra ], notnull: true }
-    tipo_numero:          { type: string(10), notnull: true }
-    partida_nro:          { type: string(10) }
-    parcela:              { type: string(10), notnull: true }
-    uf:                   { type: string(10) }
+    id:                         { type: integer, primary: true, autoincrement: true }
+    circunscripcion:            { type: string(10), notnull: true }
+    seccion:                    { type: string(10), notnull: true }
+    tipo:                       { type: enum, values: [ manzana, quinta, chacra ], notnull: true }
+    tipo_numero:                { type: string(10), notnull: true }
+    partida_nro:                { type: string(10) }
+    parcela:                    { type: string(10), notnull: true }
+    uf:                         { type: string(10) }
   relations:
-    Procedure:            { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
+    Procedure:                  { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
 
 
 Procedure:
