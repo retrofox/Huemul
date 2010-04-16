@@ -19,7 +19,9 @@ generator:
         fields:
           creator:                  { label: Professional }
           revisions_count:          { label: R }
-        display:                    [ _mugshot, creator, formu, cadastral_data, partida, revisions_count, _state, dossier, is_finished, _created_at ]
+          mugshot:                  { label: Photo }
+
+        display:                    [ _mugshot, creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at ]
         object_actions:
           _detail:                  ~
           _delete:                  ~

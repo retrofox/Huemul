@@ -171,3 +171,37 @@
       }
     }
 }
+
+table.items_control {
+  width: 300px;
+  border-collapse: collapse;
+
+  margin: 10px;
+
+  tbody {
+    tr {
+      td {
+        padding: 0 1px;
+        text-align: center;
+        border: 1px solid #ccc;
+        font-weight: normal;
+        background-color: #eee;
+        :hover {
+          background-color: #eee;
+        }
+      }
+
+      td.ok     { color: #080; background-color: #efe}
+      td.error  { color: #800; background-color: #fee}
+      td.nc     { color: #444; background-color: #eee}
+
+      th {
+        background-color: #ddd;
+        border: 1px solid #ccc;
+        :hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}

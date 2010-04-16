@@ -12,12 +12,15 @@ use_stylesheet('backend/procedure.css');
   <p><?php echo __('Created at'); ?>: <strong><?php echo format_date($procedure->getCreatedAt(), 'f') ?></strong></p>
   <p>Formulario: <strong><?php echo $procedure->getFormu() ?></strong></p>
   <p>Cantidad total de Items: <strong><?php echo $procedure->getFormu()->getItems()->count() ?></strong></p>
+  <?php foreach ($procedure->getItemsGroups() as $group) : ?>
+  <p><?php echo $group->getGroup() ?>: <strong><?php echo $group->count ?></strong></p>
+
+  <?php endforeach; ?>
 </div>
 
 
 <?php
-//$revision = $procedure->getLastRevision();
-//$state = $revision->getRevisionStateId() ;
+
 ?>
 
 <div class="sf_admin_list" id="items-container">
@@ -47,28 +50,52 @@ use_stylesheet('backend/procedure.css');
                 <span class="date"><?php echo format_date($revision->getCreatedAt(), 'd') ?></span> | 
                 <span class="block"><?php echo __($revision->getBlock() ? 'blocked' : 'unlocked' )?></span>
               </p>
+
+                <?php if($revision->getGroups()->count() > 0) : ?>
+              <table class="items_control">
+                <tbody>
+                  <tr>
+                    <th colspan="4">Control de items</th>
+
+                  </tr>
+                  <tr>
+                    <th>Grupo</th>
+                    <th>ok</th>
+                    <th>er</th>
+                    <th>sc</th>
+                  </tr>
+                    <?php foreach ($revision->getGroups() as $itemGroup) : ?>
+                  <tr>
+                    <td><?php echo $itemGroup->getGroup()->getNameAcronym() ?></td>
+                    <td class="ok"><?php echo ($revision->getItemsGroupOK($itemGroup->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->get('group_id'))->count : 0 )?></td>
+                    <td class="error"><?php echo ($revision->getItemsGroupError($itemGroup->get('group_id')) ? $revision->getItemsGroupError($itemGroup->get('group_id'))->count : 0 )?></td>
+                    <td class="nc"><?php echo ($revision->getItemsGroupSC($itemGroup->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->get('group_id'))->count : 0 )?></td>
+                  </tr>
+                    <?php endforeach; ?>
+                </tbody>
+              </table>
+              <?php endif; ?>
+
               <div class="sidebar-right">
                 <div class="state_<?php echo $revision->getRevisionStateId() ?>"><?php echo $revision->getState() ?></div>
-                
-
                   <?php //if($procedure->getLastRevision()->get('id') == $revision->get('id')) : ?>
                 <div class="actions">
                   <ul>
-                    <?php if ($revision->getFile() != null) : ?>
+                      <?php if ($revision->getFile() != null) : ?>
                     <li><a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file"><?php echo __('Download'); ?></a></li>
-                    <?php endif; ?>
+                      <?php endif; ?>
 
-                    <?php if($state == 5) : ?>
+                      <?php if($state == 5) : ?>
                     <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
 
-                    <?php elseif($state == 8) : ?>
+                      <?php elseif($state == 8) : ?>
 
                     <li><?php echo link_to('Controlar', 'revisions/control?id='.$revision->getId()) ?></li>
-                    
-                    <?php elseif($state == 7) : ?>
+
+                      <?php elseif($state == 7) : ?>
                     <li><?php echo link_to(__('View'), 'revisions/control?id='.$revision->getId()) ?></li>
                     <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
-                    <?php endif; ?>
+                      <?php endif; ?>
                     <li><?php echo link_to('Observar (<strong>'.$revision->getComunication()->count().'</strong>)', 'revisions/observe?id='.$revision->getId()) ?></li>
 
                   </ul>

@@ -16,7 +16,7 @@ generator:
       fields:  ~
 
       list:
-        display:                  [ name, description, created_at ]
+        display:                  [ name, description ]
 
       filter:  ~
       form:    ~

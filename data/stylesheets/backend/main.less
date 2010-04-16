@@ -61,7 +61,6 @@ body {
 }
 
 
-
 /* Distintos estados de un visado en una revision */
 .state_1, .state_2, .state_3, .state_4, .state_5, .state_6, .state_7, .state_8 {
   display: block;
@@ -99,4 +98,41 @@ body {
 .state_8 {
   color: #A60;
   background-color: #fda;
+}
+
+
+
+
+table.items_control {
+  border-collapse: collapse;
+
+
+  tbody {
+    tr {
+      td {
+        padding: 0 1px;
+        text-align: center;
+        border: 1px solid #ccc;
+        width: 20px;
+        height: 20px;
+        background-color: #eee;
+        :hover {
+          background-color: #eee;
+        }
+      }
+
+      td.item_ok     { color: #080; background-color: #efe}
+      td.item_error  { color: #800; background-color: #fee}
+      td.item_nc     { color: #444; background-color: #eee}
+
+      th {
+        background-color: #ddd;
+        border: 1px solid #ccc;
+        font-weight: normal;
+        :hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
 }

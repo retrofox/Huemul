@@ -48,6 +48,7 @@ use_stylesheet('frontend/items.css');
 
     <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
     <?php foreach ($rev_itemsGroup as $group) : ?>
+
     <table class="orange">
       <thead>
         <tr>
@@ -55,9 +56,14 @@ use_stylesheet('frontend/items.css');
         </tr>
       </thead>
 
+
       <tfoot>
         <tr>
-          <th colspan="4"><?php echo count($group).' itmes' ?></th>
+          <th colspan="4">
+            | <span class="ok"> ok: <?php echo ($revision->getItemsGroupOK($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupOK($group[0]->getItem()->getGroupId())->count : 0) ?></span>
+            | <span class="error">error: <?php echo ($revision->getItemsGroupError($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupError($group[0]->getItem()->getGroupId())->count : 0) ?></span>
+            | <span class="nc">s/c: <?php echo ($revision->getItemsGroupSC($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupSC($group[0]->getItem()->getGroupId())->count : 0) ?></span>
+            | total: <?php echo $group->count() ?> |</th>
         </tr>
       </tfoot>
       <tbody>

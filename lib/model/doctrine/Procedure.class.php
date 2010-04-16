@@ -192,4 +192,15 @@ class Procedure extends BaseProcedure {
   public function getState() {
     if($this->getLastRevision()) return $this->getLastRevision()->getState();
   }
+
+  public function getItemsGroups() {
+    $q = Doctrine_Query::create()
+      ->select('Count(i.id) as count, *')
+      ->from('Item i')
+      ->leftJoin('i.Group g')
+      ->groupBy('g.id');
+
+    $request = $q->execute();
+    return $request;
+  }
 }
