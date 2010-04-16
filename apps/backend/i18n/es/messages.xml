@@ -473,8 +473,11 @@
         <target>País</target>
       </trans-unit>
       
-      
-      
+      <trans-unit id="96">
+        <source>Photo</source>
+        <target>Foto</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

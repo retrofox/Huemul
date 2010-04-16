@@ -95,6 +95,19 @@ class Revision extends BaseRevision {
     return $request;
   }
 
+  public function getGroups() {
+    $q = Doctrine_Query::create()
+            ->from('Item i')
+            ->leftJoin('i.RevisionItem ri')
+            ->leftJoin('i.Group g')
+            ->where('ri.revision_id = ?', $this->get('id'))
+            ->groupBy('i.group_id');
+
+    $request = $q->execute();
+
+    return $request;
+  }
+
 
   /*
    * nos devuelve la cantidad de items OK para un grupo determinado
