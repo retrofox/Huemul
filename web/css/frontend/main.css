@@ -380,7 +380,7 @@ input.error {
 }
 label {
   display: inline-block;
-  font: normal bold normal 14px/1.6em Helvetica;
+  font: normal normal normal 14px/1.6em Helvetica;
   text-shadow: 0px 1px 0px #ffffff;
   position: relative;
 }
@@ -565,6 +565,11 @@ div#container table.orange {
   border: 1px solid #cccccc;
   color: #333333;
   margin: 0 auto;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -582,6 +587,11 @@ div#container table.orange caption {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
   position: relative;
 }
 div#container table.orange a {
@@ -615,20 +625,29 @@ div#container table.orange > tfoot > tr > td {
   padding: 4px;
 }
 div#container table.orange > tfoot a { margin: 0 10px; }
-div#container table.orange > tbody { border: 1px solid #cccccc; }
+div#container table.orange > tbody {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  border: 1px solid #cccccc;
+}
 div#container table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
 }
-div#container table.orange > tbody > tr th {
+div#container table.orange > tbody > tr > th {
+  background-color: #eeeeee;
   color: #336699;
   font-weight: normal;
+  padding: 5px 10px;
 }
-div#container table.orange > tbody > tr th a {
+div#container table.orange > tbody > tr > th a {
   color: #336699;
   border-bottom: 1px dotted #336699;
 }
-div#container table.orange > tbody > tr th a:hover {
+div#container table.orange > tbody > tr > th a:hover {
   color: #ffffff;
   background: #336699;
 }

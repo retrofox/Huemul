@@ -21,7 +21,7 @@ table.orange {
   border: 1px solid #ccc;
   color: #333;
   margin: 0 auto;
-
+  .border-radius;
   .box-shadow(0, 3px, 8px, rgba(0, 0, 0, 0.4));
 
   .mensaje{
@@ -38,6 +38,7 @@ table.orange {
     border: 1px solid #ccc;
     color: #666;
      .box-shadow(0, 3px, 8px, rgba(0, 0, 0, 0.4));
+    .border-radius;
   }
 
   a {
@@ -90,16 +91,19 @@ table.orange {
 
   /*** tbody ***/
   > tbody {
-    border: 1px solid #ccc;
+    .border-radius;
+    /*border: 1px solid #ccc;*/
     tr.blanco {
       background: #ccc;
       border: none;
     }
 
     > tr {
-      th{
+      >th{
+        background-color:#EEEEEE;
         color: #369;
         font-weight: normal;
+        padding: 5px 10px;
         a {
           color: #369;
           border-bottom: 1px dotted #369;

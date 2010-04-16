@@ -5,9 +5,13 @@
 <form action="<?php echo url_for('procedures/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
-<?php endif; ?>
+<table class="orange">
+    <caption><?php echo __('Edit Procedure') ?></caption>
+<?php else: ?>
 <table class="orange">
     <caption><?php echo __('New Procedure') ?></caption>
+
+    <?php endif; ?>
     <tbody>
       <?php echo $form ?>
     </tbody>

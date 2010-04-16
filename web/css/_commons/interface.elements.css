@@ -10,12 +10,14 @@ input[type=button] {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
   cursor: pointer;
@@ -23,20 +25,25 @@ input[type=button] {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 input[type=button]:active { top: 1px; }
 input[type=button]:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 button {
   -khtml-appearance: none;
@@ -44,12 +51,14 @@ button {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
   cursor: pointer;
@@ -57,20 +66,25 @@ button {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 button:active { top: 1px; }
 button:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 input[type=submit] {
   -khtml-appearance: none;
@@ -78,12 +92,14 @@ input[type=submit] {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
   cursor: pointer;
@@ -91,20 +107,25 @@ input[type=submit] {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 input[type=submit]:active { top: 1px; }
 input[type=submit]:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 .input {
   -khtml-appearance: none;
@@ -112,12 +133,14 @@ input[type=submit]:hover {
   text-align: center;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   color: #454545;
   height: 25px;
   line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   vertical-align: middle;
   position: relative;
   cursor: pointer;
@@ -125,20 +148,25 @@ input[type=submit]:hover {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 0 32px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
 }
 .input:active { top: 1px; }
 .input:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
 }
 input[type="checkbox"] {
   -khtml-appearance: none;
@@ -170,25 +198,31 @@ select.widget {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 3px 3px 3px 12px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   width: 250px;
   height: 25px;
   line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 select.widget:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .select_widget {
@@ -201,25 +235,31 @@ select.widget:hover {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   padding: 3px 3px 3px 12px;
   border: 0;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  position: relative;
   width: 250px;
   height: 25px;
   line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   background-color: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
   background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .select_widget:hover {
   background-color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
   background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  position: relative;
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
 .widget_select-options_container {
@@ -227,15 +267,19 @@ select.widget:hover {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  behavior: url(ie-css3.htc);
+  position: relative;
   box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
   -moz-box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
   -webkit-box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.5);
+  position: relative;
   border-top: 1px solid #ffffff;
   margin-right: 10px;
   margin-top: -5px;
   padding: 4px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   min-width: 120px;
   font-size: 14px;
   font-weight: bold;
@@ -262,17 +306,20 @@ select.widget:hover {
   background-color: #8cb14b;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
   cursor: pointer;
 }
 .widget_select-options_container > li.selected {
   background-color: #4b8cb1;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 input[type=text], input[type=email], input[type=password] {
   font-size: 14px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
   width: 300px;
   height: 32px;
   line-height: 26px;
@@ -282,7 +329,9 @@ input[type=text], input[type=email], input[type=password] {
   box-shadow: 0px 1px 0px #ffffff;
   -moz-box-shadow: 0px 1px 0px #ffffff;
   -webkit-box-shadow: 0px 1px 0px #ffffff;
+  position: relative;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 input[type=email] { min-width: 200px; }
 input.error {
@@ -291,8 +340,9 @@ input.error {
 }
 label {
   display: inline-block;
-  font: normal bold normal 14px/1.6em Helvetica;
+  font: normal normal normal 14px/1.6em Helvetica;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 label:hover { cursor: pointer; }
 label.check {
@@ -318,6 +368,7 @@ form fieldset > section p.error {
   font: normal normal italic 14px/1.4em Helvetica;
   color: #a71000;
   text-shadow: 0px 1px 0px #ffffff;
+  position: relative;
 }
 form fieldset > section p.info {
   margin: 1px 0 !important;

@@ -401,7 +401,11 @@
         <source>Remember</source>
         <target>Recordar</target>
       </trans-unit>
-
+      
+      <trans-unit id="83">
+        <source>Edit Procedure</source>
+        <target>Editar Trámite</target>
+      </trans-unit>
     </body>
   </file>
 
