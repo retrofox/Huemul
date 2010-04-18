@@ -64,17 +64,17 @@ use_stylesheet('backend/procedure.css');
                     <th>er</th>
                     <th>sc</th>
                   </tr>
-                    <?php foreach ($revision->getGroups() as $itemGroup) : ?>
+                      <?php foreach ($revision->getGroups() as $itemGroup) : ?>
                   <tr>
                     <td><?php echo $itemGroup->getGroup()->getNameAcronym() ?></td>
                     <td class="ok"><?php echo ($revision->getItemsGroupOK($itemGroup->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->get('group_id'))->count : 0 )?></td>
                     <td class="error"><?php echo ($revision->getItemsGroupError($itemGroup->get('group_id')) ? $revision->getItemsGroupError($itemGroup->get('group_id'))->count : 0 )?></td>
                     <td class="nc"><?php echo ($revision->getItemsGroupSC($itemGroup->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->get('group_id'))->count : 0 )?></td>
                   </tr>
-                    <?php endforeach; ?>
+                      <?php endforeach; ?>
                 </tbody>
               </table>
-              <?php endif; ?>
+                <?php endif; ?>
 
               <div class="sidebar-right">
                 <div class="state_<?php echo $revision->getRevisionStateId() ?>"><?php echo $revision->getState() ?></div>
@@ -88,13 +88,19 @@ use_stylesheet('backend/procedure.css');
                       <?php if($state == 5) : ?>
                     <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
 
-                      <?php elseif($state == 8) : ?>
+                    <?php elseif($state == 4) : ?>
+                    <li><?php echo link_to('Generar documentación', 'revisions/generateDocumentation?id='.$revision->getId()) ?></li>
 
+                      <?php elseif($state == 8) : ?>
                     <li><?php echo link_to('Controlar', 'revisions/control?id='.$revision->getId()) ?></li>
 
                       <?php elseif($state == 7) : ?>
                     <li><?php echo link_to(__('View'), 'revisions/control?id='.$revision->getId()) ?></li>
+
+                        <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre') && $revision->isLastRevision()) : ?>
                     <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
+                        <?php endif; ?>
+  
                       <?php endif; ?>
                     <li><?php echo link_to('Observar (<strong>'.$revision->getComunication()->count().'</strong>)', 'revisions/observe?id='.$revision->getId()) ?></li>
 

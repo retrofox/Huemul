@@ -18,9 +18,13 @@ class revisionsActions extends sfActions {
   public function executeNew(sfWebRequest $request) {
     $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('procedure_id'));
 
-    $revision = new Revision();
-    $revision->setProcedureId($request->getParameter('procedure_id'));
-    $this->form = new FrontRevisionForm($revision);
+    $this->last_state = $this->procedure->getLastRevision()->getRevisionStateId();
+
+    if($this->last_state != 4) {
+      $revision = new Revision();
+      $revision->setProcedureId($request->getParameter('procedure_id'));
+      $this->form = new FrontRevisionForm($revision);
+    }
   }
 
   public function executeCreate(sfWebRequest $request) {
@@ -53,7 +57,6 @@ class revisionsActions extends sfActions {
 
   public function executeDelete(sfWebRequest $request) {
     $request->checkCSRFProtection();
-
     $this->forward404Unless($revision = Doctrine::getTable('Revision')->find(array($request->getParameter('id'))), sprintf('Object revision does not exist (%s).', $request->getParameter('id')));
     $revision->delete();
 

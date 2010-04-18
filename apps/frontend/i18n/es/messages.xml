@@ -402,6 +402,12 @@
         <target>Recordar</target>
       </trans-unit>
 
+      <trans-unit id="83">
+        <source>Download documentation</source>
+        <target>Descargar documentación</target>
+      </trans-unit>
+      
+
     </body>
   </file>
 

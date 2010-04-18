@@ -22,7 +22,7 @@ class revisionsActions extends autoRevisionsActions {
     $revision = Doctrine::getTable('Revision')->find($request->getParameter('revision_id'));
     $procedure = $revision->getProcedure();
 
-    
+
     $new_revision = $procedure->addControlRevision($revision->get('id'));
 
     return $this->redirect('revisions/control?id='.$new_revision->get('id'));
@@ -74,7 +74,7 @@ class revisionsActions extends autoRevisionsActions {
     return $this->redirect('revisions/control?id='.$this->revision->get('id'));
   }
 
-/**
+  /**
    * action Item
    *
    * @author Damian Suarez
@@ -155,25 +155,40 @@ class revisionsActions extends autoRevisionsActions {
    * @author Damian Suarez
    */
   public function executeComplete(sfWebRequest $request) {
-    $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
 
-    $this->procedure = $this->revision->getProcedure();
+    $user = $this->getUser()->getGuardUser();
 
-    // bloqueamos todas las revisiones
-    foreach ($this->procedure->getRevisions() as $revision) {
-      $revision->setBlock(true);
-      $revision->save();
+    if($user->hasPermission('Responsable de cierre')) {
+      $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
+
+      $this->procedure = $this->revision->getProcedure();
+
+      // bloqueamos todas las revisiones
+      foreach ($this->procedure->getRevisions() as $revision) {
+        $revision->setBlock(true);
+        $revision->save();
+      }
+
+      // Creamos la ultima revision
+      $last_revision = new Revision();
+      $last_revision->setRevisionStateId(4);
+      $last_revision->setProcedureId($this->procedure->get('id'));
+      $last_revision->setCreatorId($this->getUser()->getGuardUser()->get('id'));
+      $last_revision->setBlock(true);
+      $last_revision->setParentId($this->revision->get('id'));
+      $last_revision->save();
+
+      $this->redirect('procedures/index?id='.$this->procedure->get('id'));
     }
 
-    // Creamos la ultima revision
-    $last_revision = new Revision();
-    $last_revision->setRevisionStateId(4);
-    $last_revision->setProcedureId($this->procedure->get('id'));
-    $last_revision->setCreatorId($this->getUser()->getGuardUser()->get('id'));
-    $last_revision->setBlock(true);
-    $last_revision->setParentId($this->revision->get('id'));
-    $last_revision->save();
+  }
 
-    $this->redirect('procedures/index?id='.$this->procedure->get('id'));
+  /**
+   * action GenerateDocumentation
+   *
+   * @author Damian Suarez
+   */
+  public function executeGenerateDocumentation(sfWebRequest $request) {
+    die('aca fueste papa !');
   }
 }

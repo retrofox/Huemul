@@ -478,6 +478,11 @@
         <target>Foto</target>
       </trans-unit>
 
+      <trans-unit id="97">
+        <source>Last login</source>
+        <target>Último login</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

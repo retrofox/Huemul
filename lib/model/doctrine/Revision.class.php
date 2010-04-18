@@ -11,6 +11,12 @@
  * @version    SVN: $Id: Builder.php 7200 2010-02-21 09:37:37Z beberlei $
  */
 class Revision extends BaseRevision {
+  public function isLastRevision() {
+    // last revision
+    $last = $this->getProcedure()->getLastRevision();
+    return $last === $this ? true : false;
+  }
+
   public function setFilename() {
     if (!is_null($this->getFile())) {
       $ext = explode('.', $this->getFile());

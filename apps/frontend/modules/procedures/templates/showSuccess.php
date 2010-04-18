@@ -1,22 +1,39 @@
 <?php use_helper('I18N', 'Date') ?>
 
 <?php slot('sidebar') ?>
+<?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
+
+
 <section class="menu_sidebar">
   <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
+
+
   <nav>
+
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
+      <?php if($state!=4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
+      <?php else:  ?>
+      <li><?php echo link_to(__('Download documentation'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
+      <?php endif; ?>
     </ul>
   </nav>
 
 
-  <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
+
+  
   <?php if($state == 1) : ?>
   <div class="tip">
     <h2>Aviso</h2>
     <p>El estado de su revisión actual es <em><?php echo $procedure->getLastRevision()->getState() ?></em>. Es necesario <?php echo link_to('crear', 'revisions/new?procedure_id='.$procedure->get('id')) ?> una nueva revisión para finalizar esta primer etapa y así notificar finalmente este trámite al departamente de Obras Privadas.</p>
   </div>
+  <?php elseif($state == 4) : ?>
+  <div class="tip">
+    <h2>Aviso</h2>
+    <p>Este trámite ya ha sido autorizado. Puede descargar la documentación necesaria en esta sección.</p>
+  </div>
+
   <?php elseif($state == 5) : ?>
   <div class="tip">
     <h2>Aviso</h2>

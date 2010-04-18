@@ -1,5 +1,6 @@
 <?php use_helper('I18N') ?>
 <?php use_javascript('tiny_mce/tiny_mce.js') ?>
+<?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
 
 <?php slot('sidebar') ?>
 <section class="menu_sidebar">
@@ -9,16 +10,24 @@
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
       <li><?php echo link_to(__('All revisions'), 'procedures/show?procedure_id='.$procedure->get('id')) ?></li>
+      <?php if($state != 4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
+      <?php endif; ?>
     </ul>
   </nav>
 
-  <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
+  
   <?php if($state == 1) : ?>
   <div class="tip">
     <h2>Aviso</h2>
     <p>El estado de su revisión actual es <em><?php echo $procedure->getLastRevision()->getState() ?></em>. Es necesario <?php echo link_to('crear', 'revisions/new?procedure_id='.$procedure->get('id')) ?> una nueva revisión para finalizar esta primer etapa y así notificar finalmente este trámite al departamente de Obras Privadas.</p>
   </div>
+  <?php elseif($state == 4) : ?>
+  <div class="tip">
+    <h2>Aviso</h2>
+    <p>Este trámite ya ha sido autorizado. Puede descargar la documentación necesaria en esta sección.</p>
+  </div>
+
   <?php elseif($state == 5) : ?>
   <div class="tip">
     <h2>Aviso</h2>
@@ -44,6 +53,7 @@
 <?php end_slot(); ?>
 
 <div class="head">
+  <?php if($state!=4) :?>
   <h1><?php echo __('Add new revision'); ?></h1>
   <p>
     Usted debe crear una revisión cuando necesite enviar cambios en el proceso del trámite. Generalmente por cada revisión creada se suele adjuntar un archivo que contenga un plano, documento, etc.
@@ -65,6 +75,13 @@
   <?php endif; ?>
 
 </div>
-
-
 <?php include_partial('form', array('form' => $form, 'procedure' => $procedure)) ?>
+<?php else : ?>
+<div class="head">
+  <h1>Trámite finalizado</h1>
+  <p>Este trámite ya ha sido autorizado.
+</div>
+<?php endif; ?>
+
+
+
