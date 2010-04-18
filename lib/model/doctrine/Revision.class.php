@@ -120,7 +120,7 @@ class Revision extends BaseRevision {
             ->leftJoin('ri.Item i')
             ->where('ri.revision_id = ?', $this->get('id'))
             ->andWhere('ri.state = ?', 'ok')
-            ->andWhere('i.group_Id = ?', $group_id)
+            ->andWhere('i.group_id = ?', $group_id)
             ->groupBy('ri.state');
 
     $request = $q->fetchOne();
@@ -135,7 +135,7 @@ class Revision extends BaseRevision {
             ->leftJoin('ri.Item i')
             ->where('ri.revision_id = ?', $this->get('id'))
             ->andWhere('ri.state = ?', 'error')
-            ->andWhere('i.group_Id = ?', $group_id)
+            ->andWhere('i.group_id = ?', $group_id)
             ->groupBy('ri.state');
 
     $request = $q->fetchOne();
@@ -150,11 +150,45 @@ class Revision extends BaseRevision {
             ->leftJoin('ri.Item i')
             ->where('ri.revision_id = ?', $this->get('id'))
             ->andWhere('ri.state = ?', 'nc')
-            ->andWhere('i.group_Id = ?', $group_id)
+            ->andWhere('i.group_id = ?', $group_id)
             ->groupBy('ri.state');
 
     $request = $q->fetchOne();
 
     return $request;
   }
+
+  public function getGroupState($group_id) {
+    $q = Doctrine_Query::create()
+            ->select('Count(ri.id) as count, ri.state')
+            ->from('RevisionItem ri')
+            ->leftJoin('ri.Item i')
+            ->where('ri.revision_id = ?', $this->get('id'))
+            ->andWhere('i.group_id = ?', $group_id)
+            ->groupBy('ri.state');
+
+    $request = $q->execute();
+
+    $state_error = false;
+    $state_nc = false;
+    $state_ok = false;
+
+    foreach ($request as $value) {
+      if ($value->state == 'error') {
+        $state_error = true;
+      }
+
+      if ($value->state == 'nc') {
+        $state_nc = true;
+      }
+
+      if ($value->state == 'ok') {
+        $state_ok = true;
+      }
+    }
+
+
+    return ($state_error) ? 'error' : ($state_nc ? 'nc' : 'ok');
+  }
 }
+
