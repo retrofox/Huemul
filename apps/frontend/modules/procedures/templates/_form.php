@@ -19,7 +19,7 @@
       <tr>
         <td colspan="3">
           <a href="<?php echo url_for('procedures/index') ?>"><?php echo __('Cancel'); ?></a>
-          <input type="submit" value="Guardar" />
+          <input type="submit" value="GUARDAR" />
         </td>
       </tr>
     </tfoot>

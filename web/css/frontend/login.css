@@ -382,12 +382,7 @@ input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;
 }
-label {
-  display: inline-block;
-  font: normal normal normal 14px/1.6em Helvetica;
-  text-shadow: 0px 1px 0px #ffffff;
-  position: relative;
-}
+label { display: inline-block; }
 label:hover { cursor: pointer; }
 label.check {
   color: #454545;
@@ -572,11 +567,6 @@ div#container table.orange {
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   position: relative;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 div#container table.orange .mensaje { width: 90%; }
 div#container table.orange caption {
@@ -601,11 +591,12 @@ div#container table.orange a {
   color: #ff6600;
 }
 div#container table.orange a:hover { text-decoration: underline; }
+div#container table.orange > thead { border: 1px solid #cccccc; }
 div#container table.orange > thead > tr > th {
   text-transform: uppercase;
   background: #e2e2e2;
   font: normal bold normal 10px/18px Helvetica;
-  padding: 2px 20px;
+  padding: 2px 10px;
 }
 div#container table.orange > thead > tr > th.title {
   text-align: center;
@@ -628,13 +619,6 @@ div#container table.orange > tfoot > tr > td {
   padding: 4px;
 }
 div#container table.orange > tfoot a { margin: 0 10px; }
-div#container table.orange > tbody {
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
 div#container table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
@@ -715,6 +699,23 @@ div#container table.orange > tbody > tr > th input[type=password] {
   behavior: url(ie-css3.htc);
   position: relative;
 }
+div#container form table.orange {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  border: none;
+}
+div#container form table.orange > tbody {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+div#container form table.orange > tbody > tr > td { border: none; }
+div#container form table.orange > tbody > tr > th { border: none; }
 div#container > section { padding: 50px 0; }
 div#container table.orange tbody > tr > td {
   border: none;

@@ -338,12 +338,7 @@ input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;
 }
-label {
-  display: inline-block;
-  font: normal normal normal 14px/1.6em Helvetica;
-  text-shadow: 0px 1px 0px #ffffff;
-  position: relative;
-}
+label { display: inline-block; }
 label:hover { cursor: pointer; }
 label.check {
   color: #454545;
