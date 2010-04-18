@@ -401,6 +401,7 @@
         <source>Remember</source>
         <target>Recordar</target>
       </trans-unit>
+<<<<<<< HEAD:apps/frontend/i18n/es/messages.xml
 
       <trans-unit id="83">
         <source>Download documentation</source>
@@ -408,6 +409,13 @@
       </trans-unit>
       
 
+=======
+      
+      <trans-unit id="83">
+        <source>Edit Procedure</source>
+        <target>Editar Trámite</target>
+      </trans-unit>
+>>>>>>> 17f4498f1f3f654ac0f53b47f58726ad17c55040:apps/frontend/i18n/es/messages.xml
     </body>
   </file>
 

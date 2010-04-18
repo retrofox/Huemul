@@ -7,7 +7,6 @@
 table.orange {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border: 1px solid #cccccc;
   color: #333333;
   margin: 0 auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -22,11 +21,15 @@ table.orange caption {
   margin-bottom: 10px;
   padding: 5px;
   background: #efefef;
-  border: 1px solid #cccccc;
   color: #666666;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
   position: relative;
 }
 table.orange a {
@@ -34,17 +37,19 @@ table.orange a {
   color: #ff6600;
 }
 table.orange a:hover { text-decoration: underline; }
+table.orange > thead { border: 1px solid #cccccc; }
 table.orange > thead > tr > th {
   text-transform: uppercase;
   background: #e2e2e2;
   font: normal bold normal 10px/18px Helvetica;
-  padding: 2px 20px;
+  padding: 2px 10px;
 }
 table.orange > thead > tr > th.title {
   text-align: center;
   font: normal bold normal 16px/25px Helvetica;
   color: #332222;
 }
+table.orange > tfoot { border-top: 1px solid #cccccc; }
 table.orange > tfoot > tr > th {
   text-transform: uppercase;
   color: #000000;
@@ -60,20 +65,21 @@ table.orange > tfoot > tr > td {
   padding: 4px;
 }
 table.orange > tfoot a { margin: 0 10px; }
-table.orange > tbody { border: 1px solid #cccccc; }
 table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
 }
-table.orange > tbody > tr th {
+table.orange > tbody > tr > th {
+  background-color: #eeeeee;
   color: #336699;
   font-weight: normal;
+  padding: 5px 10px;
 }
-table.orange > tbody > tr th a {
+table.orange > tbody > tr > th a {
   color: #336699;
   border-bottom: 1px dotted #336699;
 }
-table.orange > tbody > tr th a:hover {
+table.orange > tbody > tr > th a:hover {
   color: #ffffff;
   background: #336699;
 }
@@ -84,6 +90,10 @@ table.orange > tbody > tr > td {
   font-size: 1.2em;
   vertical-align: top;
 }
+table.orange > tbody > tr > td input[type=text] { width: 200px; }
+table.orange > tbody > tr > td input[type=email] { width: 200px; }
+table.orange > tbody > tr > td input[type=password] { width: 200px; }
+table.orange > tbody > tr > td select { width: 200px; }
 table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
@@ -91,3 +101,24 @@ table.orange > tbody > tr > th {
   font-size: 1.2em;
   vertical-align: top;
 }
+table.orange > tbody > tr > th input[type=text] { width: 200px; }
+table.orange > tbody > tr > th input[type=email] { width: 200px; }
+table.orange > tbody > tr > th input[type=password] { width: 200px; }
+table.orange > tbody > tr > th select { width: 200px; }
+form table.orange {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  border: none;
+}
+form table.orange > tbody {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+form table.orange > tbody > tr > td { border: none; }
+form table.orange > tbody > tr > th { border: none; }

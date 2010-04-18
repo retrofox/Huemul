@@ -25,8 +25,10 @@ class ProcedureFullForm extends ProcedureForm
 
     $procedureForm = new CadastralDataForm($this->object->CadastralData);
 
-    unset($procedureForm['id'], $procedureForm['cadastral_data_id']);
+   // $procedureForm['procedure_formu_id']->renderLabel('Formulario');
 
+    unset($procedureForm['id'], $procedureForm['cadastral_data_id']);
+    $this->widgetSchema->setLabel('formu_id', 'Formulario');
     $this->embedForm('Procedure', $procedureForm);
 
   }
