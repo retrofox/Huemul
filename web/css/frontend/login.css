@@ -566,17 +566,16 @@ div#container *:focus {
 div#container table.orange {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border: 1px solid #cccccc;
   color: #333333;
   margin: 0 auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   behavior: url(ie-css3.htc);
-  position: relative;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 div#container table.orange .mensaje { width: 90%; }
@@ -586,7 +585,6 @@ div#container table.orange caption {
   margin-bottom: 10px;
   padding: 5px;
   background: #efefef;
-  border: 1px solid #cccccc;
   color: #666666;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -614,6 +612,7 @@ div#container table.orange > thead > tr > th.title {
   font: normal bold normal 16px/25px Helvetica;
   color: #332222;
 }
+div#container table.orange > tfoot { border-top: 1px solid #cccccc; }
 div#container table.orange > tfoot > tr > th {
   text-transform: uppercase;
   color: #000000;
@@ -661,6 +660,30 @@ div#container table.orange > tbody > tr > td {
   font-size: 1.2em;
   vertical-align: top;
 }
+div#container table.orange > tbody > tr > td input[type=text] {
+  width: 200px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+div#container table.orange > tbody > tr > td input[type=email] {
+  width: 200px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+div#container table.orange > tbody > tr > td input[type=password] {
+  width: 200px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
 div#container table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
@@ -668,71 +691,39 @@ div#container table.orange > tbody > tr > th {
   font-size: 1.2em;
   vertical-align: top;
 }
-div#container > section { padding: 50px 0; }
-div#container table.orange caption {
+div#container table.orange > tbody > tr > th input[type=text] {
+  width: 200px;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   behavior: url(ie-css3.htc);
   position: relative;
 }
+div#container table.orange > tbody > tr > th input[type=email] {
+  width: 200px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+div#container table.orange > tbody > tr > th input[type=password] {
+  width: 200px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
+div#container > section { padding: 50px 0; }
 div#container table.orange tbody > tr > td {
   border: none;
   padding: 10px;
-}
-div#container table.orange tbody > tr > td input[type=text] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-div#container table.orange tbody > tr > td input[type=email] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-div#container table.orange tbody > tr > td input[type=password] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 div#container table.orange tbody > tr > th {
   border: none;
   padding: 10px;
 }
-div#container table.orange tbody > tr > th input[type=text] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-div#container table.orange tbody > tr > th input[type=email] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-div#container table.orange tbody > tr > th input[type=password] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-div#container table.orange tfoot { border: 1px solid #cccccc; }
 div#container table.orange tfoot > tr > td { padding: 10px; }
 div#container table.orange tfoot > tr > th { padding: 10px; }
 div#container .error_list {
