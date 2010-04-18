@@ -29,6 +29,7 @@ input[type=button] {
   position: relative;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -70,6 +71,7 @@ button {
   position: relative;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -111,6 +113,7 @@ input[type=submit] {
   position: relative;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -152,6 +155,7 @@ input[type=submit]:hover {
   position: relative;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -188,8 +192,27 @@ input[type="radio"]:hover { cursor: pointer; }
 input[type="radio"]:checked { background-position: -20px 0px; }
 input[type="radio"] { background-position: 0 -20px; }
 input[type="radio"]:checked { background-position: -20px -20px; }
+select {
+  background-color: #ffffff;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+  color: #454545;
+  border: 1px solid #adadad;
+  margin: 2px 0;
+  padding: 3px 5px;
+  width: 250px;
+  height: 32px;
+  line-height: 32px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+}
 select.widget {
   -khtml-appearance: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
@@ -227,6 +250,7 @@ select.widget:hover {
 }
 .select_widget {
   -khtml-appearance: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
@@ -317,9 +341,11 @@ select.widget:hover {
 }
 input[type=text], input[type=email], input[type=password] {
   font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   position: relative;
+  color: #454545;
   width: 300px;
   height: 32px;
   line-height: 26px;

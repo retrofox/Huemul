@@ -90,30 +90,10 @@ table.orange > tbody > tr > td {
   font-size: 1.2em;
   vertical-align: top;
 }
-table.orange > tbody > tr > td input[type=text] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-table.orange > tbody > tr > td input[type=email] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-table.orange > tbody > tr > td input[type=password] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
+table.orange > tbody > tr > td input[type=text] { width: 200px; }
+table.orange > tbody > tr > td input[type=email] { width: 200px; }
+table.orange > tbody > tr > td input[type=password] { width: 200px; }
+table.orange > tbody > tr > td select { width: 200px; }
 table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
@@ -121,30 +101,10 @@ table.orange > tbody > tr > th {
   font-size: 1.2em;
   vertical-align: top;
 }
-table.orange > tbody > tr > th input[type=text] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-table.orange > tbody > tr > th input[type=email] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
-table.orange > tbody > tr > th input[type=password] {
-  width: 200px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
-}
+table.orange > tbody > tr > th input[type=text] { width: 200px; }
+table.orange > tbody > tr > th input[type=email] { width: 200px; }
+table.orange > tbody > tr > th input[type=password] { width: 200px; }
+table.orange > tbody > tr > th select { width: 200px; }
 form table.orange {
   border-radius: 8px;
   -moz-border-radius: 8px;
