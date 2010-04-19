@@ -400,6 +400,7 @@ input[type=text], input[type=email], input[type=password] {
   position: relative;
 }
 input[type=email] { min-width: 200px; }
+input[type="file"] { background-color: #ffffff; }
 input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;
@@ -648,7 +649,6 @@ div#container table.orange > tbody tr.blanco {
 div#container table.orange > tbody > tr > th {
   background-color: #eeeeee;
   color: #336699;
-  font-weight: normal;
   padding: 5px 10px;
 }
 div#container table.orange > tbody > tr > th a {
@@ -663,7 +663,6 @@ div#container table.orange > tbody > tr > td {
   border: 1px solid #cccccc;
   padding: 5px;
   line-height: 1.8em;
-  font-size: 1.2em;
   vertical-align: top;
 }
 div#container table.orange > tbody > tr > td input[type=text] { width: 200px; }
@@ -674,7 +673,6 @@ div#container table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
   line-height: 1.8em;
-  font-size: 1.2em;
   vertical-align: top;
 }
 div#container table.orange > tbody > tr > th input[type=text] { width: 200px; }
@@ -708,7 +706,12 @@ div#container > section {
   margin: 0;
 }
 div#container > section h1 { display: inline-block; }
-div#container > section p.note { margin: 20px; }
+div#container > section p.note {
+  margin: 20px 0;
+  color: #336699;
+  font-size: 12px;
+  padding: 5px 0;
+}
 div#container div.tip {
   font: normal 14px/20px Helvetica;
   border: 2px solid #aaaa88;
@@ -754,9 +757,50 @@ div#container section#sidebar {
   -webkit-box-shadow: -1px 0 0 #ffffff;
   position: relative;
 }
-div#container section#sidebar section.menu_sidebar table tbody tr { background-color: #ffffff; }
-div#container section#sidebar section.menu_sidebar table tbody tr td:first-child { background-color: #eeeeee; }
-div#container section#sidebar section.menu_sidebar table tbody tr td:last-child { font-weight: bold; }
+div#container section#sidebar section.menu_sidebar table {
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  border-collapse: separate;
+  border: 1px solid #60001b;
+}
+div#container section#sidebar section.menu_sidebar table caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  text-transform: uppercase;
+  background-color: #60001b;
+  color: #ffecdf;
+  margin: 0;
+  padding: 5px 1px;
+  line-height: 18px;
+  width: 100%;
+}
+div#container section#sidebar section.menu_sidebar table tbody > tr > td {
+  padding: 5px;
+  border-top: 1px solid #60001b;
+  color: #60001b;
+  font-size: 10px;
+  line-height: 20px;
+}
+div#container section#sidebar section.menu_sidebar table tbody > tr > th {
+  font-size: 10px;
+  background-color: #ffecdf;
+  color: #60001b;
+  padding: 5px;
+  border-top: 1px solid #60001b;
+  border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  -webkit-border-radius: 0 0 0 4px;
+  behavior: url(ie-css3.htc);
+  position: relative;
+}
 div#container section#sidebar section.menu_sidebar nav {
   margin: 0 0 10px 0;
   border: 1px solid #336699;

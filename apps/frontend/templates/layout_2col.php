@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
-  
+
 
   </head>
 
@@ -22,7 +22,15 @@
 
         <section id="sidebar">
           <?php if (!include_slot('sidebar')) : ?>
-          <h3>Slot</h3>
+          <section class="menu_sidebar">
+            <nav>
+              <ul>
+                <li><h2><?php echo __('OPTIONS') ?></h2></li>
+                <li><?php echo link_to(__('Add new procedure'), 'procedures/new') ?></li>
+                <li><?php echo link_to(__('Procedures List'), 'procedures/index') ?></li>
+              </ul>
+            </nav>
+          </section>
           <?php endif; ?>
         </section>
 
@@ -33,6 +41,6 @@
 
       <?php include_partial('global/footer') ?>
     </div>
-    
+
   </body>
 </html>

@@ -15,7 +15,10 @@ div#container {
       display: inline-block;
     }
     p.note{
-      margin: 20px;
+      margin: 20px 0;
+      color:#336699;
+      font-size:12px;
+      padding:5px 0;
     }
   }
 
@@ -57,21 +60,42 @@ div#container {
 
     section.menu_sidebar {
       table {
+          .border-radius(0 0 4px 4px);
+          border-collapse: separate;
+          border: 1px solid #60001B;
+       caption{
+        font-size:1.2em;
+        font-weight: bold;
+        .border-radius(4px 4px 0 0);
+        text-transform: uppercase;
+        background-color: #60001B;
+        color: #FFECDF;
+        margin:0;
+        padding: 5px 1px;
+        line-height:18px;
+        width:100%;
+        
+        }
         tbody {
-          tr {
-            background-color: #fff;
-            td {
+          >tr {
+         
+          >td {
+          padding: 5px;
+          border-top: 1px solid #60001B;
+          color:#60001B;
+          font-size:10px;
+          line-height:20px
 
             }
+          >th {
+            font-size:10px;
+            background-color: #FFECDF;
+            color:#60001B;
+            padding: 5px;
+            border-top: 1px solid #60001B;
+            .border-radius(0 0 0 4px);
+          }
 
-            td:first-child {
-              background-color: #eee;
-              
-            }
-
-            td:last-child {
-              font-weight: bold;
-            }
           }
         }
       }

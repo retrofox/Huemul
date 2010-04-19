@@ -3,8 +3,6 @@
 
 <?php slot('sidebar') ?>
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
-
   <nav>
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
@@ -12,7 +10,7 @@
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
     </ul>
   </nav>
-
+  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
   <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
   <?php if($state == 1) : ?>
   <div class="tip">
@@ -44,11 +42,7 @@
 <?php end_slot(); ?>
 
 <div class="head">
-  <h1><?php echo __('Add new revision'); ?></h1>
-  <p>
-    Usted debe crear una revisión cuando necesite enviar cambios en el proceso del trámite. Generalmente por cada revisión creada se suele adjuntar un archivo que contenga un plano, documento, etc.
-  </p>
-  <?php if($state == 1) : ?>
+   <?php if($state == 1) : ?>
   <div class="info">
     <p>El estado de su revisión actual es <em><?php echo $procedure->getLastRevision()->getState() ?></em>. Es necesario <?php echo link_to('crear', 'revisions/new?procedure_id='.$procedure->get('id')) ?> una nueva revisión para finalizar esta primer etapa y así notificar finalmente este trámite al departamente de Obras Privadas.</p>
   </div>
@@ -68,3 +62,6 @@
 
 
 <?php include_partial('form', array('form' => $form, 'procedure' => $procedure)) ?>
+  <p class="note">
+    Usted debe crear una revisión cuando necesite enviar cambios en el proceso del trámite. Generalmente por cada revisión creada se suele adjuntar un archivo que contenga un plano, documento, etc.
+  </p>

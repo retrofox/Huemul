@@ -2,7 +2,7 @@
 
 <?php slot('sidebar') ?>
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
+  
   <nav>
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
@@ -10,7 +10,7 @@
     </ul>
   </nav>
 
-
+<?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
   <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
   <?php if($state == 1) : ?>
   <div class="tip">
@@ -20,7 +20,7 @@
   <?php elseif($state == 5) : ?>
   <div class="tip">
     <h2>Aviso</h2>
-    <p>El trámite ya ha sido informado. Debe esperar a que este sea controlado por personal resposable.</p>
+    <p>El trámite ya ha sido informado. Debe esperar a que este sea controlado por personal responsable.</p>
   </div>
 
   <?php elseif($state == 7) : ?>
@@ -40,11 +40,6 @@
 </section>
 
 <?php end_slot(); ?>
-
-<div class="head">
-  <h1><?php echo __('Revisions List'); ?></h1>
-  <p>Durante el proceso del trámite se irán creando 'revisiones'; tales son etapas necesarias que se deben ir completando hasta finalizarlo.</p>
-</div>
 
 <table class="orange">
   <caption><?php echo __('Revisions List'); ?></caption>
@@ -120,3 +115,5 @@
 <?php foreach ($procedure->getItemsGroups() as $group) : ?>
 <p><strong><?php echo $group->getGroup()->getNameAcronym() ?></strong>: <?php echo $group->getGroup() ?></p>
 <?php endforeach; ?>
+
+ <p class="note">Durante el proceso del trámite se irán creando 'revisiones'; tales son etapas necesarias que se deben ir completando hasta finalizarlo.</p>

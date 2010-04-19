@@ -1,17 +1,13 @@
 <?php use_helper('I18N') ?>
 
 <section>
-  <table class="orange">
-    <thead>
-      <tr>
-        <th colspan="2">
+  <table>
+    <caption>
           <?php echo __('Procedure Detail'); ?>
-        </th>
-      </tr>
-    </thead>
+    </caption>
     <tbody>
       <tr>
-        <td><?php echo __('Form type'); ?></td>
+        <th><?php echo __('Form type'); ?></th>
         <td><?php echo $procedure->getFormu() ?></td>
       </tr>
 
@@ -22,17 +18,17 @@
       <?php endforeach; ?>
 
       <tr>
-        <td><?php echo __('Dossier'); ?></td>
-        <td><?php echo $procedure->getDossier() ?></td>
+        <th><?php echo __('Dossier'); ?></th>
+        <td><?php echo __($procedure->getDossier()) ?></td>
       </tr>
 
       <tr>
-        <td><?php echo __('Current state'); ?></td>
+        <th><?php echo __('Current state'); ?></th>
         <td class="state_<?php echo $procedure->getLastRevision()->getRevisionStateId() ?>"><?php echo $procedure->getLastRevision()->getState() ?></td>
       </tr>
 
       <tr>
-        <td><?php echo __('Created at'); ?></td>
+        <th><?php echo __('Created at'); ?></th>
         <td><?php echo $procedure->getCreatedAt() ?></td>
       </tr>
 

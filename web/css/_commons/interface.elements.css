@@ -360,6 +360,7 @@ input[type=text], input[type=email], input[type=password] {
   position: relative;
 }
 input[type=email] { min-width: 200px; }
+input[type="file"] { background-color: #ffffff; }
 input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;

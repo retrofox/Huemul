@@ -72,7 +72,6 @@ table.orange > tbody tr.blanco {
 table.orange > tbody > tr > th {
   background-color: #eeeeee;
   color: #336699;
-  font-weight: normal;
   padding: 5px 10px;
 }
 table.orange > tbody > tr > th a {
@@ -87,7 +86,6 @@ table.orange > tbody > tr > td {
   border: 1px solid #cccccc;
   padding: 5px;
   line-height: 1.8em;
-  font-size: 1.2em;
   vertical-align: top;
 }
 table.orange > tbody > tr > td input[type=text] { width: 200px; }
@@ -98,7 +96,6 @@ table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
   line-height: 1.8em;
-  font-size: 1.2em;
   vertical-align: top;
 }
 table.orange > tbody > tr > th input[type=text] { width: 200px; }
