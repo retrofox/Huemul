@@ -5,14 +5,13 @@
 <form action="<?php echo url_for('revisions/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
-<?php endif; ?>
 <table class="orange">
+  <caption><?php echo __('Edit Revision') ?></caption>
+<?php else: ?>
+<table class="orange">
+  <caption><?php echo __('Add new revision') ?></caption>
+<?php endif; ?>
 
-  <thead>
-    <tr>
-      <th colspan="2" class="title"><?php echo __('Revision Form') ?></th>
-    </tr>
-  </thead>
     <tfoot>
       <tr>
         <td colspan="2">

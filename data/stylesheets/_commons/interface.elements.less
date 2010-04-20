@@ -64,7 +64,7 @@
 /*********/
 /* Forms */
 /*********/
-input[type=button], button, input[type=submit], .input {
+input[type=button], button, input[type=submit], .input{
    .button_base_style;
   cursor:pointer;
   color: #454545;
@@ -194,7 +194,7 @@ select.widget, .select_widget {
 
 
 /*** input text ***/
-input[type=text], input[type=email], input[type=password] {
+input[type=text], input[type=email], input[type=password]  {
   font-size: 14px;
   font-family: Verdana,Arial,Helvetica,sans-serif;
   .box-sizing;
@@ -203,14 +203,16 @@ input[type=text], input[type=email], input[type=password] {
   margin: 2px 0; padding: 3px 5px;
   border: 1px solid #adadad;
   .box-shadow(0px, 1px, 0px, #fff);
-
   .text-shadow(0px, 1px, 0px, #fff);
 }
 
 input[type=email] {
   min-width: 200px
 }
+input[type="file"]{
+  background-color: #FFF;
 
+}
 input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;

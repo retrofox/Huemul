@@ -48,9 +48,38 @@ table.orange {
     :hover {
       text-decoration: underline;
     }
-  }
+   }
 
-
+  a.messages{
+      display: block;
+      display: inline-block;
+      background:transparent url(/images/user_comment.png) no-repeat scroll 0 0;
+      padding:0 0 0 26px;
+      height: 16px;
+      :hover{
+       background:transparent url(/images/user_comment_h.png) no-repeat scroll 0 0;
+      }
+    }
+    a.action{
+      display: block;
+      display: inline-block;
+      background:transparent url(/images/actions.png) no-repeat scroll 0 0;
+      padding:0 0 0 26px;
+      height: 16px;
+      :hover{
+       background:transparent url(/images/actions.png) no-repeat scroll 0 -16px;
+      }
+    }
+    a.download{
+      display: block;
+      display: inline-block;
+      background:transparent url(/images/download.png) no-repeat scroll 0 0;
+      padding:0 0 0 26px;
+      height: 16px;
+      :hover{
+       background:transparent url(/images/download.png) no-repeat scroll 0 -16px;
+      }
+    }
   /*** thead ***/
   > thead {
     border: 1px solid #ccc;
@@ -104,7 +133,8 @@ table.orange {
       >th{
         background-color:#EEEEEE;
         color: #369;
-        font-weight: normal;
+       
+        /*font-weight: normal;*/
         padding: 5px 10px;
         a {
           color: #369;
@@ -120,7 +150,7 @@ table.orange {
         border: 1px solid #ccc;
         padding: 5px;
         line-height: 1.8em;
-        font-size: 1.2em;
+       /* font-size: 1.2em;*/
         vertical-align: top;
         input[type=text], input[type=email], input[type=password], select {
           width: 200px;

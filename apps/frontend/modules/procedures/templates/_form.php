@@ -10,8 +10,7 @@
 <?php else: ?>
 <table class="orange">
     <caption><?php echo __('New Procedure') ?></caption>
-
-    <?php endif; ?>
+<?php endif; ?>
     <tbody>
       <?php echo $form ?>
     </tbody>

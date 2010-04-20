@@ -5,16 +5,15 @@
 
 
 <?php slot('sidebar') ?>
-<hr />
-
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
+  
   <nav>
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
       <li><?php echo link_to(__('Show revisions'), 'procedures/show?procedure_id='.$revision->getProcedureId()) ?></li>
     </ul>
   </nav>
+  <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
 </section>
 
 <?php end_slot(); ?>

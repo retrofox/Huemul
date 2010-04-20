@@ -3,11 +3,7 @@
 <?php slot('sidebar') ?>
 <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
 
-
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
-
-
   <nav>
 
     <ul>
@@ -22,7 +18,8 @@
 
 
 
-  
+  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
+  <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
   <?php if($state == 1) : ?>
   <div class="tip">
     <h2>Aviso</h2>
@@ -37,7 +34,7 @@
   <?php elseif($state == 5) : ?>
   <div class="tip">
     <h2>Aviso</h2>
-    <p>El trámite ya ha sido informado. Debe esperar a que este sea controlado por personal resposable.</p>
+    <p>El trámite ya ha sido informado. Debe esperar a que este sea controlado por personal responsable.</p>
   </div>
 
   <?php elseif($state == 7) : ?>
@@ -58,11 +55,6 @@
 
 <?php end_slot(); ?>
 
-<div class="head">
-  <h1><?php echo __('Revisions List'); ?></h1>
-  <p>Durante el proceso del trámite se irán creando 'revisiones'; tales son etapas necesarias que se deben ir completando hasta finalizarlo.</p>
-</div>
-
 <table class="orange">
   <caption><?php echo __('Revisions List'); ?></caption>
   <thead>
@@ -71,8 +63,8 @@
       <th><?php echo __('State'); ?></th>
       <th><?php echo __('Created at'); ?></th>
       <th><?php echo __('Attach'); ?></th>
-      <th><?php echo __('Action'); ?></th>
-      <th><?php echo __('M.'); ?></th>
+      <th><?php echo __('Mjs'); ?></th>
+      <th><?php echo __('Items'); ?></th>
       <th colspan="<?php echo $procedure->getItemsGroups()->count() ?>">Control de items</th>
     </tr>
     <tr>
@@ -90,25 +82,25 @@
       <td class="timestamp"><?php echo format_date($revision->get('created_at'), 'MM/dd/yy - hh:mm') ?></td>
       <td>
           <?php if ($revision->getFile() != null) : ?>
-        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file"><?php echo __('Download'); ?></a>
+        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file" class="download"><?php echo __('Download'); ?></a>
           <?php else :  ?>
         &mdash;
           <?php endif; ?>
       </td>
 
       <td>
+          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id'), array('class'=>'messages')) ?>
+      </td>
+      <td>
           <?php if($revision->getRevisionStateId() == 7 || $revision->getRevisionStateId() == 8) : ?>
-            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id')) ?>
+            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id'), array('class'=>'action')) ?>
           <?php else : ?>
         &mdash;
           <?php endif; ?>
       </td>
-      <td>
-          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id')) ?>
-      </td>
 
-      <?php if($revision->getItemsGroups()->count() > 0) : ?>
-        <?php foreach ($revision->getItemsGroups() as $itemGroup) : ?>
+        <?php if($revision->getItemsGroups()->count() > 0) : ?>
+          <?php foreach ($revision->getItemsGroups() as $itemGroup) : ?>
       <td>
         <table class="items_control">
           <tbody>
@@ -121,10 +113,10 @@
         </table>
       </td>
 
-        <?php endforeach; ?>
-      <?php else: ?>
+          <?php endforeach; ?>
+        <?php else: ?>
       <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
-      <?php endif; ?>
+        <?php endif; ?>
 
     </tr>
     <?php endforeach; ?>
@@ -137,3 +129,5 @@
 <?php foreach ($procedure->getItemsGroups() as $group) : ?>
 <p><strong><?php echo $group->getGroup()->getNameAcronym() ?></strong>: <?php echo $group->getGroup() ?></p>
 <?php endforeach; ?>
+
+<p class="note">Durante el proceso del trámite se irán creando 'revisiones'; tales son etapas necesarias que se deben ir completando hasta finalizarlo.</p>
