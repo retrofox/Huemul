@@ -406,6 +406,10 @@
         <source>Edit Procedure</source>
         <target>Editar Trámite</target>
       </trans-unit>
+      <trans-unit id="84">
+        <source>Download</source>
+        <target>Descargar</target>
+      </trans-unit>
     </body>
   </file>
 

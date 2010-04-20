@@ -37,6 +37,30 @@ table.orange a {
   color: #ff6600;
 }
 table.orange a:hover { text-decoration: underline; }
+table.orange a.messages {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/user_comment.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+table.orange a.messages:hover { background: transparent url(/images/user_comment_h.png) no-repeat scroll 0 0; }
+table.orange a.action {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/actions.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+table.orange a.action:hover { background: transparent url(/images/actions.png) no-repeat scroll 0 -16px; }
+table.orange a.download {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/download.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+table.orange a.download:hover { background: transparent url(/images/download.png) no-repeat scroll 0 -16px; }
 table.orange > thead { border: 1px solid #cccccc; }
 table.orange > thead > tr > th {
   text-transform: uppercase;

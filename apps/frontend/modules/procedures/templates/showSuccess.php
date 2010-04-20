@@ -49,8 +49,8 @@
       <th><?php echo __('State'); ?></th>
       <th><?php echo __('Created at'); ?></th>
       <th><?php echo __('Attach'); ?></th>
-      <th><?php echo __('Action'); ?></th>
-      <th><?php echo __('M.'); ?></th>
+      <th><?php echo __('Mjs'); ?></th>
+      <th><?php echo __('Items'); ?></th>
       <th colspan="<?php echo $procedure->getItemsGroups()->count() ?>">Control de items</th>
     </tr>
     <tr>
@@ -68,21 +68,21 @@
       <td class="timestamp"><?php echo format_date($revision->get('created_at'), 'MM/dd/yy - hh:mm') ?></td>
       <td>
           <?php if ($revision->getFile() != null) : ?>
-        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file"><?php echo __('Download'); ?></a>
+        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file" class="download"><?php echo __('Download'); ?></a>
           <?php else :  ?>
         &mdash;
           <?php endif; ?>
       </td>
-
+ 
+      <td>
+          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id'), array('class'=>'messages')) ?>
+      </td>
       <td>
           <?php if($revision->getRevisionStateId() == 7 || $revision->getRevisionStateId() == 8) : ?>
-            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id')) ?>
+            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id'), array('class'=>'action')) ?>
           <?php else : ?>
         &mdash;
           <?php endif; ?>
-      </td>
-      <td>
-          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id')) ?>
       </td>
 
       <?php if($revision->getItemsGroups()->count() > 0) : ?>

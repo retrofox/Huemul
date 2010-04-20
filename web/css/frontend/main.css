@@ -614,6 +614,30 @@ div#container table.orange a {
   color: #ff6600;
 }
 div#container table.orange a:hover { text-decoration: underline; }
+div#container table.orange a.messages {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/user_comment.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+div#container table.orange a.messages:hover { background: transparent url(/images/user_comment_h.png) no-repeat scroll 0 0; }
+div#container table.orange a.action {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/actions.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+div#container table.orange a.action:hover { background: transparent url(/images/actions.png) no-repeat scroll 0 -16px; }
+div#container table.orange a.download {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/download.png) no-repeat scroll 0 0;
+  padding: 0 0 0 26px;
+  height: 16px;
+}
+div#container table.orange a.download:hover { background: transparent url(/images/download.png) no-repeat scroll 0 -16px; }
 div#container table.orange > thead { border: 1px solid #cccccc; }
 div#container table.orange > thead > tr > th {
   text-transform: uppercase;
@@ -713,19 +737,35 @@ div#container > section p.note {
   padding: 5px 0;
 }
 div#container div.tip {
-  font: normal 14px/20px Helvetica;
-  border: 2px solid #aaaa88;
-  background-color: #ffffee;
-  color: #aa2266;
-  margin-top: 5px;
-  padding: 5px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  font: normal 12px/20px Helvetica;
+  border: 1px solid #00aa00;
+  background-color: #eeffee;
+  color: #00aa00;
+  margin-top: 10px;
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
   behavior: url(ie-css3.htc);
   position: relative;
 }
-div#container div.tip h2 { font-size: 16px; }
+div#container div.tip h2 {
+  background-color: #00aa00;
+  color: #eeffee;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  behavior: url(ie-css3.htc);
+  position: relative;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 0;
+  padding: 5px 1px;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+div#container div.tip p { padding: 5px; }
 div#container .info {
   font: normal 12px/20px Helvetica;
   border: 1px solid #aabbbb;
@@ -758,9 +798,9 @@ div#container section#sidebar {
   position: relative;
 }
 div#container section#sidebar section.menu_sidebar table {
-  border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
   behavior: url(ie-css3.htc);
   position: relative;
   border-collapse: separate;
@@ -769,9 +809,9 @@ div#container section#sidebar section.menu_sidebar table {
 div#container section#sidebar section.menu_sidebar table caption {
   font-size: 1.2em;
   font-weight: bold;
-  border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
   behavior: url(ie-css3.htc);
   position: relative;
   text-transform: uppercase;
@@ -794,6 +834,7 @@ div#container section#sidebar section.menu_sidebar table tbody > tr > th {
   background-color: #ffecdf;
   color: #60001b;
   padding: 5px;
+  text-align: right;
   border-top: 1px solid #60001b;
   border-radius: 0 0 0 4px;
   -moz-border-radius: 0 0 0 4px;
@@ -844,7 +885,6 @@ div#container section#sidebar section.menu_sidebar nav ul li a:hover {
   color: #ddeeff;
 }
 div#container section#sidebar h1 { color: #002255; }
-div#container section#sidebar h2 { color: #002255; }
 div#container section#sidebar h3 { color: #002255; }
 div#container section#sidebar h4 { color: #002255; }
 div#container section#content {
