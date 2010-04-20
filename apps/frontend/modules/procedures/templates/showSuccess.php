@@ -82,18 +82,18 @@
       <td class="timestamp"><?php echo format_date($revision->get('created_at'), 'MM/dd/yy - hh:mm') ?></td>
       <td>
           <?php if ($revision->getFile() != null) : ?>
-        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file" class="download"><?php echo __('Download'); ?></a>
+        <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="<?php echo __('Descargar archivo adjunto') ?>" class="download"><?php echo __('Download'); ?></a>
           <?php else :  ?>
         &mdash;
           <?php endif; ?>
       </td>
 
       <td>
-          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id'), array('class'=>'messages')) ?>
+          <?php echo link_to($revision->getComunication()->count(), 'revisions/messages?id='.$revision->get('id'), array('class'=>'messages','title'=>__('Ver/Agregar mensajes a la revisión'))) ?>
       </td>
       <td>
           <?php if($revision->getRevisionStateId() == 7 || $revision->getRevisionStateId() == 8) : ?>
-            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id'), array('class'=>'action')) ?>
+            <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id'), array('class'=>'action', 'title'=>__('Ver listado de ítems de visado de la revisión'))) ?>
           <?php else : ?>
         &mdash;
           <?php endif; ?>

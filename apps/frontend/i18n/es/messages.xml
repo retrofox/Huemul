@@ -416,7 +416,22 @@
         <source>Edit Procedure</source>
         <target>Editar Trámite</target>
       </trans-unit>
-
+      <trans-unit id="86">
+        <source>Subject</source>
+        <target>Asunto</target>
+      </trans-unit>
+      <trans-unit id="87">
+        <source>Message</source>
+        <target>Mensaje</target>
+      </trans-unit>
+      <trans-unit id="88">
+        <source>Add Message</source>
+        <target>Agregar Mensaje</target>
+      </trans-unit>
+      <trans-unit id="89">
+        <source>Send</source>
+        <target>Enviar</target>
+      </trans-unit>
     </body>
   </file>
 

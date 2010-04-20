@@ -4,10 +4,7 @@
   outline: 0;
   outline: none;
 }
-#items-container table {
-  width: 100%;
-  margin-bottom: 40px !important;
-}
+#items-container table { width: 100%; }
 #items-container table th.title {
   font-size: 14px;
   height: 20px;

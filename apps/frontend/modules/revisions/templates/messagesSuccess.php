@@ -21,60 +21,52 @@
 <div class="sf_admin_list" id="item">
 
     <table class="orange">
-      <thead>
-        <tr>
-          <th class="title" colspan="2"><?php echo __('Messages'); ?></th>
-        </tr>
-      </thead>
+      <caption><?php echo __('Messages'); ?></caption>
 
       <tbody>
         <?php if($revision->getComunication()->count() > 0) : ?>
         <?php foreach ($revision->getComunication() as $msg) : ?>
-        <tr>
-          <td>
-            <strong><?php echo $msg ?></strong> |
-            <?php echo $msg->getAuthor() ?> |
-            <?php echo format_date($msg->getCreatedAt(), 'd') ?>
-            <br />
-            <?php echo $msg->getRawValue()->getMessage() ?>
-          </td>
+       
+        <tr><th colspan="2">Asunto</th><td class="asunto"> <?php echo $msg ?></td></tr>
+
+         <tr><th>Autor</th><td > <?php echo $msg->getAuthor() ?></td><td rowspan="2"><?php echo $msg->getRawValue()->getMessage() ?></td>  </tr>
+         <tr><th>Fecha</th><td > <?php echo format_date($msg->getCreatedAt(), 'd') ?></td>
+        
         </tr>
+     
         <?php endforeach; ?>
         <?php else : ?>
         <tr>
-          <td>No hay mensajes para esta revisión.</td>
+          <th>No hay mensajes para esta revisión.</th>
         </tr>
         <?php endif; ?>
       </tbody>
     </table>
 
+ 
 
-  <form id="msg-form" action="<?php echo url_for('revisions/revisionComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-    <?php echo $form->renderHiddenFields() ?>
-    <?php if (!$form->getObject()->isNew()): ?>
-    <input type="hidden" name="sf_method" value="put" />
-    <?php endif; ?>
-    <section id="form-msg">
-      <h2><?php echo __('Add message') ?></h2>
-      <section class="msg-container">
+    <form id="msg-form" action="<?php echo url_for('revisions/revisionComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+      <?php echo $form->renderHiddenFields() ?>
+      <?php if (!$form->getObject()->isNew()): ?>
+      <input type="hidden" name="sf_method" value="put" />
+      <?php endif; ?>
 
-        <div>
-          <h3>Asunto</h3>
-          <?php echo $form['subject']->renderError() ?>
-          <?php echo $form['subject'] ?>
-        </div>
+      <table class="orange">
+      <caption><?php echo __('Add Message'); ?></caption>
+      <tbody>
+      <tr><th><?php echo $form['subject']->renderlabel() ?></th><td><?php echo $form['subject']->renderError() ?>
+            <?php echo $form['subject'] ?></td></tr>
+         
+        
+      <tr><th><?php echo $form['message']->renderlabel() ?></th><td>
+            <?php echo $form['message']->renderError() ?>
+            <?php echo $form['message'] ?></td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="2"> <input type="submit" value="<?php echo __('Send'); ?>" /></td></tr>
+      </tfoot>
+      </table>
+    </form>
 
-        <div>
-          <h3>Mensaje</h3>
-          <?php echo $form['message']->renderError() ?>
-          <?php echo $form['message'] ?>
-        </div>
-
-        <br />
-        <input type="submit" value="<?php echo __('Save'); ?>" />
-      </section>
-
-    </section>
-
-  </form>
+ 
 </div>

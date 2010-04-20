@@ -585,7 +585,7 @@ div#container table.orange {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   color: #333333;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -617,38 +617,54 @@ div#container table.orange a:hover { text-decoration: underline; }
 div#container table.orange a.messages {
   display: block;
   display: inline-block;
-  background: transparent url(/images/user_comment.png) no-repeat scroll 0 0;
-  padding: 0 0 0 26px;
+  background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 0;
+  padding: 0 0 0 20px;
   height: 16px;
 }
-div#container table.orange a.messages:hover { background: transparent url(/images/user_comment_h.png) no-repeat scroll 0 0; }
+div#container table.orange a.messages:hover { background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -16px; }
 div#container table.orange a.action {
   display: block;
   display: inline-block;
-  background: transparent url(/images/actions.png) no-repeat scroll 0 0;
-  padding: 0 0 0 26px;
+  background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -96px;
+  padding: 0 0 0 20px;
   height: 16px;
 }
-div#container table.orange a.action:hover { background: transparent url(/images/actions.png) no-repeat scroll 0 -16px; }
+div#container table.orange a.action:hover { background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -112px; }
 div#container table.orange a.download {
   display: block;
   display: inline-block;
-  background: transparent url(/images/download.png) no-repeat scroll 0 0;
-  padding: 0 0 0 26px;
+  background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -48px;
+  padding: 0 0 0 20px;
   height: 16px;
 }
-div#container table.orange a.download:hover { background: transparent url(/images/download.png) no-repeat scroll 0 -16px; }
+div#container table.orange a.download:hover { background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -64px; }
+div#container table.orange a.revisiones {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -192px;
+  padding: 0 0 0 20px;
+  height: 16px;
+}
+div#container table.orange a.revisiones:hover { background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -208px; }
+div#container table.orange a.edit {
+  display: block;
+  display: inline-block;
+  background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -144px;
+  padding: 0 0 0 20px;
+  height: 16px;
+}
+div#container table.orange a.edit:hover { background: transparent url(/images/sprite-huemul.png) no-repeat scroll 0 -160px; }
 div#container table.orange > thead { border: 1px solid #cccccc; }
 div#container table.orange > thead > tr > th {
   text-transform: uppercase;
   background: #e2e2e2;
-  font: normal bold normal 10px/18px Helvetica;
+  font: normal bold normal 10px/18px Verdana, Arial, Helvetica, sans-serif;
   padding: 2px 10px;
 }
 div#container table.orange > thead > tr > th.title {
   text-align: center;
-  font: normal bold normal 16px/25px Helvetica;
-  color: #332222;
+  font: normal bold normal 14px/25px Verdana, Arial, Helvetica, sans-serif;
+  color: #666666;
 }
 div#container table.orange > tfoot { border-top: 1px solid #cccccc; }
 div#container table.orange > tfoot > tr > th {
@@ -670,6 +686,7 @@ div#container table.orange > tbody tr.blanco {
   background: #cccccc;
   border: none;
 }
+div#container table.orange > tbody tr.separator { border-bottom: 2px dotted #336699; }
 div#container table.orange > tbody > tr > th {
   background-color: #eeeeee;
   color: #336699;
@@ -689,20 +706,48 @@ div#container table.orange > tbody > tr > td {
   line-height: 1.8em;
   vertical-align: top;
 }
-div#container table.orange > tbody > tr > td input[type=text] { width: 200px; }
-div#container table.orange > tbody > tr > td input[type=email] { width: 200px; }
-div#container table.orange > tbody > tr > td input[type=password] { width: 200px; }
-div#container table.orange > tbody > tr > td select { width: 200px; }
+div#container table.orange > tbody > tr > td input[type=text] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > td input[type=email] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > td input[type=password] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > td select {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
 div#container table.orange > tbody > tr > th {
   border: 1px solid #cccccc;
   padding: 5px;
   line-height: 1.8em;
   vertical-align: top;
 }
-div#container table.orange > tbody > tr > th input[type=text] { width: 200px; }
-div#container table.orange > tbody > tr > th input[type=email] { width: 200px; }
-div#container table.orange > tbody > tr > th input[type=password] { width: 200px; }
-div#container table.orange > tbody > tr > th select { width: 200px; }
+div#container table.orange > tbody > tr > th input[type=text] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > th input[type=email] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > th input[type=password] {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr > th select {
+  width: 200px;
+  border: 1px solid #cccccc;
+}
+div#container table.orange > tbody > tr td.asunto {
+  font-weight: bold;
+  background-color: #ffeeff;
+}
 div#container form table.orange {
   border-radius: 8px;
   -moz-border-radius: 8px;

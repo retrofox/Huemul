@@ -6,10 +6,8 @@ use_stylesheet('frontend/items.css');
 
 <?php slot('sidebar') ?>
 
-<hr />
-
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
+  
   <nav>
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
@@ -18,6 +16,7 @@ use_stylesheet('frontend/items.css');
     </ul>
   </nav>
 
+  <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
   <?php $state = $revision->getRevisionStateId() ?>
   <?php if($state == 7) : ?>
   <div class="tip">
@@ -35,7 +34,6 @@ use_stylesheet('frontend/items.css');
 
 <?php end_slot(); ?>
 
-<h1><?php echo __('Items List'); ?></h1>
   <?php if($state == 8) : ?>
   <div class="info">
     <p><strong>Aviso</strong></p>
@@ -43,23 +41,24 @@ use_stylesheet('frontend/items.css');
   </div>
   <?php endif; ?>
 <div class="sf_admin_list" id="items-container">
-
   <section class="">
-
+    <table class="orange">
+      <caption><?php echo __('Items List'); ?></caption>
+   
     <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
     <?php foreach ($rev_itemsGroup as $group) : ?>
 
-    <table class="orange">
+    
       <thead>
         <tr>
-          <th class="title" colspan="4"><?php echo $group[0]->getItem()->getGroup() ?></th>
+          <th class="title" colspan="3"><?php echo $group[0]->getItem()->getGroup() ?></th>
         </tr>
       </thead>
 
 
       <tfoot>
         <tr>
-          <th colspan="4">
+          <th colspan="3">
             | <span class="ok"> ok: <?php echo ($revision->getItemsGroupOK($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupOK($group[0]->getItem()->getGroupId())->count : 0) ?></span>
             | <span class="error">error: <?php echo ($revision->getItemsGroupError($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupError($group[0]->getItem()->getGroupId())->count : 0) ?></span>
             | <span class="nc">s/c: <?php echo ($revision->getItemsGroupSC($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupSC($group[0]->getItem()->getGroupId())->count : 0) ?></span>
@@ -75,20 +74,19 @@ use_stylesheet('frontend/items.css');
           <?php $msg_count = count($rev_item->getComunication()) ?>
           <td <?php if($msg_count > 0) echo 'class="comment"' ?>>
             <?php if($msg_count > 0) : ?>
-            <?php echo link_to($msg_count, 'revisions/item?id='.$rev_item->get('id')) ?>
+            <?php echo link_to($msg_count, 'revisions/item?id='.$rev_item->get('id'), array('class'=>'messages','title'=>__('Ver/Agregar mensajes al ítem'))) ?>
             <?php else : ?>
             <?php echo $msg_count ?>
             <?php endif; ?>
           </td>
-          <td>
-            <?php echo link_to('&nbsp;', 'revisions/item?id='.$rev_item->get('id'), array('class' => 'comment')) ?>
-          </td>
+        
           <td class="<?php echo $state ?>"><?php echo $rev_item->getStateComplete() ?></td>
         </tr>
           <?php endforeach; ?>
       </tbody>
-    </table>
+  
 
     <?php endforeach; ?>
+        </table>
   </section>
 </div>
