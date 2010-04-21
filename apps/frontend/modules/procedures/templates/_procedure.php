@@ -7,6 +7,14 @@
     </caption>
     <tbody>
       <tr>
+        <th><?php echo __('Procedure number'); ?></th>
+        <td><?php echo $procedure ?></td>
+      </tr>
+      <tr>
+        <th><?php echo __('Cadastral data'); ?></th>
+        <td><?php echo $procedure->getCadastralData() ?></td>
+      </tr>
+      <tr>
         <th><?php echo __('Form type'); ?></th>
         <td><?php echo $procedure->getFormu() ?></td>
       </tr>

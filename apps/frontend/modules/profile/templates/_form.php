@@ -6,7 +6,8 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table>
+<table class="orange">
+  <caption><?php echo __('Edit Profile') ?></caption>
     <tfoot>
       <tr>
         <td colspan="2">
@@ -48,14 +49,14 @@
       </tr>
       <tr>
         <th><?php echo __($form['birth_date']->renderLabel()) ?></th>
-        <td>
+        <td class="date">
           <?php echo $form['birth_date']->renderError() ?>
           <?php echo $form['birth_date'] ?>
         </td>
       </tr>
       <tr>
-        <th><?php echo __($form['documment_type']->renderLabel()) ?></th>
-        <td>
+        <th class="date"><?php echo __($form['documment_type']->renderLabel()) ?></th>
+        <td class="dni">
           <?php echo $form['documment_type']->renderError() ?>
           <?php echo $form['documment_type'] ?>
         </td>

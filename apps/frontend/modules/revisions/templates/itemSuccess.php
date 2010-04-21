@@ -5,101 +5,72 @@
 
 
 <?php slot('sidebar') ?>
-<hr />
-
 <section class="menu_sidebar">
-  <?php include_partial('procedures/procedure', array('procedure' => $revItem->getRevision()->getProcedure())) ?>
+  
   <nav>
     <ul>
       <li><h2><?php echo __('OPTIONS'); ?></h2></li>
-      <li><?php echo link_to(__('Show revision'), 'revisions/showRevision?id='.$revItem->getRevisionId()) ?></li>
+      <li><?php echo link_to(__('Show revision items'), 'revisions/showRevision?id='.$revItem->getRevisionId()) ?></li>
       <li><?php echo link_to(__('Show revisions'), 'procedures/show?procedure_id='.$revItem->getRevision()->getProcedureId()) ?></li>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$revItem->getRevision()->getProcedureId()) ?></li>
     </ul>
   </nav>
+  <?php include_partial('procedures/procedure', array('procedure' => $revItem->getRevision()->getProcedure())) ?>
 </section>
 
 <?php end_slot(); ?>
 
 <div class="sf_admin_list" id="item">
 
-  <section class="col-left">
-
     <table class="orange">
-      <thead>
-        <tr>
-          <th class="title" colspan="2"><?php echo __('Items detail'); ?></th>
-        </tr>
-      </thead>
+      <caption><?php echo __('Items detail'); ?>: <?php echo $revItem->getItem() ?></caption>
 
-      <tbody>
+      <tbody> 
         <tr>
-          <td><?php echo __('State') ?></td>
+          <th><?php echo __('State') ?></th>
           <td class="<?php echo $revItem->getState() ?>"><?php echo $revItem->getStateComplete() ?></td>
+          <th><?php echo __('Description') ?></th>
         </tr>
         <tr>
-          <td><?php echo __('Revision') ?></td>
+          <th><?php echo __('Revision') ?></th>
           <td>
             <?php echo link_to($revItem->getRevision()->getNumber(), 'revisions/showRevision?id='.$revItem->getRevisionId()) ?>
           </td>
+          <td rowspan="3"><?php echo $revItem->getItem()->getDescription() ?></td>
         </tr>
         <tr>
-          <td><?php echo __('Procedure') ?></td><td>
+          <th><?php echo __('Procedure') ?></th>
+          <td>
             <?php echo link_to($revItem->getRevision()->getProcedure(), 'procedures/show?procedure_id='.$revItem->getRevision()->getProcedureId()) ?>
           </td>
         </tr>
 
         <tr>
-          <td><?php echo __('Controller') ?></td><td>
+          <th><?php echo __('Controller') ?></th>
+          <td>
             <?php echo $revItem->getUserController() ?>
           </td>
         </tr>
 
       </tbody>
     </table>
-  </section>
-
-  <section class="col-right">
+    
     <?php $count_msg = $revItem->getComunication()->count() ?>
+   
 
     <table class="orange">
-      <thead>
-        <tr>
-          <th class="title"><?php echo $revItem->getItem() ?></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><?php echo $revItem->getItem()->getDescription() ?></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="orange">
-      <thead>
-        <tr>
-          <th colspan="2"><?php echo __('Messages') ?></th>
-        </tr>
-      </thead>
-
-      <?php if($count_msg>0) : ?>
-      <tfoot>
-        <tr>
-          <th colspan="2"><?php echo $count_msg ?> <?php echo __('Messages') ?></th>
-        </tr>
-      </tfoot>
-      <?php endif; ?>
-
+      <caption><?php echo __('Messages') ?></caption>
       <tbody class="comments">
         <?php if($count_msg > 0 ) : ?>
           <?php foreach ($revItem->getComunication() as $msg) : ?>
-        <tr>
-          <td>
-            <h3><?php echo $msg ?></h3>&nbsp;<h4> por <?php echo $msg->getAuthor() ?></h4>
-            <p class="comment-date"><?php echo format_date($msg->getCreatedAt(), 'f') ?></p>
-            <div class="comment"><?php echo $msg->getRawValue()->getMessage() ?></div>
-          </td>
+
+        <tr><th colspan="2">Asunto</th><td class="asunto"> <?php echo $msg ?></td></tr>
+
+         <tr><th>Autor</th><td > <?php echo $msg->getAuthor() ?></td><td rowspan="2"><?php echo $msg->getRawValue()->getMessage() ?></td>  </tr>
+         <tr><th>Fecha</th><td > <?php echo format_date($msg->getCreatedAt(), 'd') ?></td>
+
         </tr>
+        
           <?php endforeach; ?>
         <?php else : ?>
         <tr>
@@ -108,35 +79,25 @@
         <?php endif; ?>
       </tbody>
     </table>
-  </section>
-
   <form id="msg-form" action="<?php echo url_for('revisions/comment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
     <?php echo $form->renderHiddenFields() ?>
     <?php if (!$form->getObject()->isNew()): ?>
     <input type="hidden" name="sf_method" value="put" />
     <?php endif; ?>
-    <section id="form-msg">
-      <h2><?php echo __('Add message') ?></h2>
-      <section class="msg-container">
+    <table class="orange">
+      <caption><?php echo __('Add message') ?></caption>
+      <tbody>
+      <tr><th><?php echo $form['subject']->renderlabel() ?></th><td><?php echo $form['subject']->renderError() ?>
+            <?php echo $form['subject'] ?></td></tr>
 
-        <div>
-          <h3>Asunto</h3>
-          <?php echo $form['subject']->renderError() ?>
-          <?php echo $form['subject'] ?>
-        </div>
 
-        <div>
-          <h3>Mensaje</h3>
-          <?php echo $form['message']->renderError() ?>
-          <?php echo $form['message'] ?>
-        </div>
-
-        <br />
-        <input type="submit" value="<?php echo __('Save'); ?>" />
-      </section>
-
-    </section>
-
-  </form>
-
+      <tr><th><?php echo $form['message']->renderlabel() ?></th><td>
+            <?php echo $form['message']->renderError() ?>
+            <?php echo $form['message'] ?></td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="2"> <input type="submit" value="<?php echo __('Send'); ?>" /></td></tr>
+      </tfoot>
+      </table>
+    </form>
 </div>

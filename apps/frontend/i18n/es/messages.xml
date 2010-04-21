@@ -432,6 +432,42 @@
         <source>Send</source>
         <target>Enviar</target>
       </trans-unit>
+      <trans-unit id="90">
+        <source>Show revision items</source>
+        <target>Mostrar ítems de la revisión</target>
+      </trans-unit>
+      <trans-unit id="91">
+        <source>Procedure number</source>
+        <target>Tramite número</target>
+      </trans-unit>
+      <trans-unit id="92">
+        <source>Edit Profile</source>
+        <target>Editar Perfil</target>
+      </trans-unit>
+      <trans-unit id="93">
+        <source>Documment</source>
+        <target>Documento</target>
+      </trans-unit>
+      <trans-unit id="94">
+        <source>Documment type</source>
+        <target>Tipo de documento</target>
+      </trans-unit>
+      <trans-unit id="95">
+        <source>Edit mugshot</source>
+        <target>Editar Foto</target>
+      </trans-unit>
+      <trans-unit id="96">
+        <source>remove the current file</source>
+        <target>Eliminar el archivo actual</target>
+      </trans-unit>
+      <trans-unit id="97">
+        <source>Save</source>
+        <target>Guardar</target>
+      </trans-unit>
+      <trans-unit id="98">
+        <source>Changue password</source>
+        <target>Cambiar contraseña</target>
+      </trans-unit>
     </body>
   </file>
 

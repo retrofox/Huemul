@@ -1,5 +1,5 @@
 <?php use_helper('I18N') ?>
-<?php use_stylesheet('simple_form') ?>
+
 
 <?php slot('sidebar') ?>
 <section class="menu_sidebar">
@@ -19,9 +19,5 @@
 <?php else : ?>
 <img src="/images/default-mugshot.png" alt="Mug shot!" />
 <?php endif; ?>
-
 <?php end_slot(); ?>
-
-<h1><?php echo __('Edit mugshot'); ?></h1>
-
 <?php include_partial('mugshotForm', array('form' => $form)) ?>

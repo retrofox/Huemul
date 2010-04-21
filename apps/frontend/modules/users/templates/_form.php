@@ -6,7 +6,8 @@
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
-  <table>
+  <table class="orange">
+    <caption><?php echo __('Changue password'); ?></caption>
     <tfoot>
       <tr>
         <td colspan="2">
@@ -20,7 +21,7 @@
       <tr>
         <th><label><?php echo __('Username') ?></label></th>
         <td>
-          <h3><?php echo $form->getObject()->get('username') ?></h3>
+          <h4><?php echo $form->getObject()->get('username') ?></h4>
         </td>
       </tr>
 
