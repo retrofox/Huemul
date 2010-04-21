@@ -81,4 +81,5 @@ class proceduresActions extends sfActions
   public function executeShow(sfWebRequest $request) {
     $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('procedure_id'));
   }
+  
 }
