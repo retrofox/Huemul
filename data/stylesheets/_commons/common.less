@@ -8,32 +8,31 @@
   box-shadow: @h @v @blur @color;
   -moz-box-shadow: @h @v @blur @color;
   -webkit-box-shadow: @h @v @blur @color;
-   position: relative;
+   /*position: relative;*/
 }
 
 .border-radius(@radius: 8px) {
   border-radius: @radius;
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
-  behavior: url(ie-css3.htc);
-  position: relative;
+  /*position: relative;*/
 }
 
 .text-shadow(@h: 1px, @v: 1px, @blur: 1px, @color: rgba(0, 0, 0, 0.2)) {
   text-shadow: @h @v @blur @color;
-  position: relative;
+  /*position: relative;*/
 }
 
 .box-sizing(@mode: border-box){
   -moz-box-sizing: @mode;
   -webkit-box-sizing: @mode;
-  position: relative;
+  /*position: relative;*/
 }
 
 .background-size(@params: 48px 48px) {
   -webkit-background-size: @params;
   -moz-background-size: @params;
-  position: relative;
+  /*position: relative;*/
 }
 
 /* Backgrounds */
@@ -41,5 +40,5 @@
   background-color: @from;
   background: -webkit-gradient(linear, @x1 @y1, @x2 @y2, from(@from), to(@to));
   background: -moz-linear-gradient(@x1 @y1, @from, @to );
-  position: relative;
+  /*position: relative;*/
 }

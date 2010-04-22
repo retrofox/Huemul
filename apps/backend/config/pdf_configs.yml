@@ -22,25 +22,25 @@ default:
   # page orientation (P=portrait, L=landscape)
   PDF_PAGE_ORIENTATION: "P"
   # document creator
-  PDF_CREATOR: "TCPDF"
+  PDF_CREATOR: "Municipalidad de Cipolletti"
   # document author
-  PDF_AUTHOR: "TCPDF"
+  PDF_AUTHOR: "Municipalidad de Cipolletti"
   # header title
-  PDF_HEADER_TITLE: "TCPDF Example"
+  PDF_HEADER_TITLE: "Municipalidad de Cipolletti"
   # header description string
-  PDF_HEADER_STRING: "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org - symfony plugin by Vernet Loïc (Aka COil) - http://www.symfony-project.org/plugins/sfTCPDFPlugin"
+  PDF_HEADER_STRING: "Rio Negro"
   # image logo
   PDF_HEADER_LOGO: "logo.png"
   # header logo image width [mm]
-  PDF_HEADER_LOGO_WIDTH: 30
+  PDF_HEADER_LOGO_WIDTH: 20
   # document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch]
   PDF_UNIT: "mm"
   # header margin
-  PDF_MARGIN_HEADER: "5"
+  PDF_MARGIN_HEADER: "10"
   # footer margin
   PDF_MARGIN_FOOTER: "10"
   # top margin
-  PDF_MARGIN_TOP: "27"
+  PDF_MARGIN_TOP: "50"
   # bottom margin
   PDF_MARGIN_BOTTOM: "25"
   # left margin
