@@ -8,29 +8,25 @@
  * @author     Damian Suarez
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class proceduresActions extends sfActions
-{
-  public function executeIndex(sfWebRequest $request)
-  {
+class proceduresActions extends sfActions {
+  public function executeIndex(sfWebRequest $request) {
     $this->getUser()->setCulture('es');
 
     $user_id = $this->getUser()->getGuardUser()->get('id');
 
     $q = Doctrine_Query::create()
-      ->from('Procedure p')
-      ->leftJoin('p.UserProcedure up')
-      ->where('up.user_id = ?', $user_id);
+            ->from('Procedure p')
+            ->leftJoin('p.UserProcedure up')
+            ->where('up.user_id = ?', $user_id);
 
-     $this->procedures = $q->execute();
+    $this->procedures = $q->execute();
   }
 
-  public function executeNew(sfWebRequest $request)
-  {
+  public function executeNew(sfWebRequest $request) {
     $this->form = new ProcedureFullForm();
   }
 
-  public function executeCreate(sfWebRequest $request)
-  {
+  public function executeCreate(sfWebRequest $request) {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new ProcedureFullForm();
@@ -40,14 +36,12 @@ class proceduresActions extends sfActions
     $this->setTemplate('new');
   }
 
-  public function executeEdit(sfWebRequest $request)
-  {
+  public function executeEdit(sfWebRequest $request) {
     $this->forward404Unless($procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id'))), sprintf('Object procedure does not exist (%s).', $request->getParameter('id')));
     $this->form = new ProcedureFullForm($procedure);
   }
 
-  public function executeUpdate(sfWebRequest $request)
-  {
+  public function executeUpdate(sfWebRequest $request) {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id'))), sprintf('Object procedure does not exist (%s).', $request->getParameter('id')));
     $this->form = new ProcedureFullForm($procedure);
@@ -57,8 +51,7 @@ class proceduresActions extends sfActions
     $this->setTemplate('edit');
   }
 
-  public function executeDelete(sfWebRequest $request)
-  {
+  public function executeDelete(sfWebRequest $request) {
     $request->checkCSRFProtection();
 
     $this->forward404Unless($procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id'))), sprintf('Object procedure does not exist (%s).', $request->getParameter('id')));
@@ -67,11 +60,9 @@ class proceduresActions extends sfActions
     $this->redirect('procedures/index');
   }
 
-  protected function processForm(sfWebRequest $request, sfForm $form)
-  {
+  protected function processForm(sfWebRequest $request, sfForm $form) {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
-    {
+    if ($form->isValid()) {
       $procedure = $form->save();
 
       $this->redirect('procedures/index');
@@ -81,5 +72,109 @@ class proceduresActions extends sfActions
   public function executeShow(sfWebRequest $request) {
     $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('procedure_id'));
   }
-  
+
+  /**
+   * action Comprobante
+   *
+   * @author Damian Suarez
+   */
+  public function executeComprobante(sfWebRequest $request) {
+
+    $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
+
+    $last_revision = $procedure->getLastRevision();
+
+    if($last_revision->getRevisionStateId() == 4) {
+
+      $config = sfTCPDFPluginConfigHandler::loadConfig();
+
+      // create new PDF document
+      $pdf = new MyPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+      // set default monospaced font
+      $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
+      //set margins
+      $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+      $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+      $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+      //set auto page breaks
+      $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+      //set image scale factor
+      $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+      //set some language-dependent strings
+      //$pdf->setLanguageArray($l);
+
+      // ---------------------------------------------------------
+
+      // add a page
+      $pdf->AddPage();
+
+      // print a line using Cell()
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B U', PDF_FONT_SIZE_MAIN+2);
+      $pdf->Cell(0, 20, 'PERMISO DE CONTRUCCION', 0, 1, 'C');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'EXPEDIENTE:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getDossier(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
+      $pdf->Cell(0, 0,'', 0, 1, 'L');
+      $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
+      $pdf->Cell(0, 0,'', 0, 1, 'L');
+      $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
+      $pdf->Cell(0, 0,'', 0, 1, 'L');
+      
+      $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getCadastralData(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Ln(3);
+      $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
+      $pdf->MultiCell(0, 0,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed nulla nibh. Etiam porta fermentum pellentesque.', 0, 1, 'L');
+      $pdf->Ln(10);
+      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'CALCULO:', 0, 1, 'L');
+      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'DIRECTOR DE OBRA:', 0, 1, 'L');
+      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'EJECUTOR:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->Ln(20);
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(150, 0,'Arq.Roberto A. Bianchi', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(147, 0,'Dep. Obras Privadas', 0, 1, 'R');
+      $pdf->Ln(5);
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN-2);
+      $pdf->Cell(0, 0,'NOTAS', 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
+      $pdf->MultiCell(0, 0,'-Es obligación colocar letrero sobre el frente de la obra con los datos que constan en este certificado.-
+-Recuerde mantener el espacio público (vereda y calle) en perfectas condiciones de orden y limpieza. El presente permiso no habilita la ocupación del mismo, en caso de ser necesaria debe tramitarlo por separado. Resguarde la seguridad de los bienes y personas en general y en particular en lo que respecta a los inmuebles linderos, y en la vía pública utilice de bandejas protectoras y demás elementos de seguridad y señalización.-
+-Si necesita deprimir napa prevea el asesoramiento municipal para la evacuación del agua sin volcado a la vía pública.
+-Prevea las condiciones necesarias y obligatorias de seguridad y sanitarias del personal afectado a la obra.
+-Concluida la obra deberá tramitar certificado parcial/final de obra, requisito necesario para la obtención del permiso de conexión de gas. Si surgieran ampliaciones o modificaciones en el transcurso de la ejecución de la misma deberá presentar planos previo a su inicio, caso contrario adjuntar planos conforme a obra para la obtención del certificado.-
+-El presente permiso exime del pago de impuesto al baldío y multas por falta de cerco y vereda durante la vigencia del mismo.-
+                          ', 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'b', PDF_FONT_SIZE_MAIN-1);
+      $pdf->MultiCell(0, 0,'Recibió:
+Firma:
+Aclaración:', 0, 1, 'L');
+
+      // ---------------------------------------------------------
+
+      //Close and output PDF document
+      $pdf->Output('comprobante_'.$procedure->getDossier().'.pdf', 'I');
+    }
+  }
 }

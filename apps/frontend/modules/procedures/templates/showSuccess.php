@@ -28,7 +28,7 @@
   <?php elseif($state == 4) : ?>
   <div class="tip">
     <h2>Aviso</h2>
-    <p>Este trámite ya ha sido autorizado. Puede descargar la documentación necesaria en esta sección.</p>
+    <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar el comprobante desde este <?php echo link_to('enlace', 'procedures/comprobante?id='.$procedure->get('id')) ?>.</p>
   </div>
 
   <?php elseif($state == 5) : ?>

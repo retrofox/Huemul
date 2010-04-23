@@ -41,7 +41,7 @@ class sfTCPDFActions extends sfActions
     $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
     //set some language-dependent strings
-    $pdf->setLanguageArray($l);
+    //$pdf->setLanguageArray($l);
 
     // ---------------------------------------------------------
 
@@ -106,7 +106,7 @@ class sfTCPDFActions extends sfActions
     $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
     //set some language-dependent strings
-    $pdf->setLanguageArray($l);
+    //$pdf->setLanguageArray($l);
 
     // ---------------------------------------------------------
 

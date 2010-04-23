@@ -11,9 +11,6 @@
  * @version    SVN: $Id: Builder.php 7200 2010-02-21 09:37:37Z beberlei $
  */
 class Procedure extends BaseProcedure {
-  public function getDossier() {
-    return 'In process';
-  }
 
   public function getPartida() {
     return $this->getCadastralData()->getPartidaNro();
