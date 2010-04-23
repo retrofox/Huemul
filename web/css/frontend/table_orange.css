@@ -4,6 +4,21 @@
   outline: 0;
   outline: none;
 }
+h6 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #efefef;
+  text-align: center;
+  color: #666666;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
 table.orange {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -12,7 +27,6 @@ table.orange {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  position: relative;
 }
 table.orange .mensaje { width: 90%; }
 table.orange caption {
@@ -25,12 +39,9 @@ table.orange caption {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  position: relative;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 table.orange a {
   text-decoration: none;
@@ -89,6 +100,7 @@ table.orange > thead > tr > th.title {
   font: normal bold normal 14px/25px Verdana, Arial, Helvetica, sans-serif;
   color: #666666;
 }
+table.orange > thead > tr > th.title span { font-size: 0.9em; }
 table.orange > tfoot { border-top: 1px solid #cccccc; }
 table.orange > tfoot > tr > th {
   text-transform: uppercase;
@@ -177,16 +189,12 @@ form table.orange {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
   border: none;
 }
 form table.orange > tbody {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 form table.orange > tbody > tr > td { border: none; }
 form table.orange > tbody > tr > th { border: none; }

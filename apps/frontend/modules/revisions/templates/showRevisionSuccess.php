@@ -42,12 +42,12 @@ use_stylesheet('frontend/items.css');
   <?php endif; ?>
 <div class="sf_admin_list" id="items-container">
   <section class="">
-    <table class="orange">
-      <caption><?php echo __('Items List'); ?></caption>
-   
+
+    <h6><?php echo __('Items List'); ?></h6>
+
     <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
     <?php foreach ($rev_itemsGroup as $group) : ?>
-
+      <table class="orange">
     
       <thead>
         <tr>
@@ -85,8 +85,7 @@ use_stylesheet('frontend/items.css');
           <?php endforeach; ?>
       </tbody>
   
-
+      </table>
     <?php endforeach; ?>
-        </table>
   </section>
 </div>
