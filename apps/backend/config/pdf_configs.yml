@@ -42,7 +42,7 @@ default:
   # top margin
   PDF_MARGIN_TOP: "50"
   # bottom margin
-  PDF_MARGIN_BOTTOM: "25"
+  PDF_MARGIN_BOTTOM: "15"
   # left margin
   PDF_MARGIN_LEFT: "15"
   # right margin
