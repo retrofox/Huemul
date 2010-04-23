@@ -8,10 +8,9 @@
 .col-left, .col-right {
   display: inline-block;
   vertical-align: top;
-  width: 60%;
+  width: 70%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  position: relative;
 }
 .col-left table tbody tr td { border-bottom: 1px solid #aaaaaa; }
 .col-left table tbody tr td .blk-revision {
@@ -31,8 +30,6 @@
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 .col-left table tbody tr td .blk-revision h3 {
   margin: 0 0 0 10px;
@@ -47,7 +44,7 @@
 }
 .col-left table tbody tr td .blk-revision p.info .date { font-weight: bold; }
 .col-left table tbody tr td .blk-revision .sidebar-right {
-  width: 150px;
+  width: 200px;
   position: absolute;
   right: 0;
   top: 0;
@@ -76,14 +73,12 @@
 }
 .col-left table tbody tr td .blk-revision .description {
   background-color: #ffffff;
-  margin: 5px 160px 0px 5px;
+  margin: 5px 220px 0px 5px;
   min-height: 50px;
   border: 1px solid #dddddd;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
 }
 .col-left table tbody tr td .blk-revision .description p {
   margin: 2px;
@@ -91,23 +86,19 @@
   font-size: 14px;
   color: #002255;
 }
-.col-right { width: 35%; }
+.col-right { width: 25%; }
 .board {
   border: 2px solid rgba(0, 0, 0, 0.1);
   background: #dddddd;
   padding: 10px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  position: relative;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
   margin-left: 2%;
 }
 .board h1 {
@@ -117,7 +108,6 @@
   font-size: 16px;
   font-family: sans-serif;
   text-shadow: 0 1px 0 #ffffff;
-  position: relative;
 }
 .board p { font: normal normal normal 14px/18px Helvetica; }
 .board .options {
@@ -134,8 +124,6 @@
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  behavior: url(ie-css3.htc);
-  position: relative;
   padding: 5px;
 }
 .board ul {

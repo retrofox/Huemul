@@ -1,5 +1,3 @@
-/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-
 *:focus {
   outline: 0;
   outline: none;
@@ -7,55 +5,6 @@
 *:focus {
   outline: 0;
   outline: none;
-}
-.button_base_style {
-  -khtml-appearance: none;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  color: #454545;
-  height: 24px;
-  line-height: 24px;
-  font-weight: bold;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  vertical-align: middle;
-  position: relative;
-}
-.button_base_style:active { top: 1px; }
-.link-button {
-  -khtml-appearance: none;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  color: #454545;
-  height: 24px;
-  line-height: 24px;
-  font-weight: bold;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  vertical-align: middle;
-  position: relative;
-  padding: 0 45px;
-  color: #6c6c6c;
-  display: inline-block;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
-  -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
-  -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
-  background-color: #f4f4f4;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
-  background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
-}
-.link-button:active { top: 1px; }
-.link-button:hover {
-  background-color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
-  background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
 }
 input[type=button] {
   -khtml-appearance: none;
@@ -64,19 +13,21 @@ input[type=button] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 24px;
-  line-height: 24px;
+  height: 25px;
+  line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -97,19 +48,21 @@ button {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 24px;
-  line-height: 24px;
+  height: 25px;
+  line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -130,19 +83,21 @@ input[type=submit] {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 24px;
-  line-height: 24px;
+  height: 25px;
+  line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -163,19 +118,21 @@ input[type=submit]:hover {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   color: #454545;
-  height: 24px;
-  line-height: 24px;
+  height: 25px;
+  line-height: 25px;
   font-weight: bold;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
   color: #454545;
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   padding: 0 32px;
   border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
   -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
@@ -209,38 +166,87 @@ input[type="radio"]:hover { cursor: pointer; }
 input[type="radio"]:checked { background-position: -20px 0px; }
 input[type="radio"] { background-position: 0 -20px; }
 input[type="radio"]:checked { background-position: -20px -20px; }
+select {
+  background-color: #ffffff;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+  color: #454545;
+  border: 1px solid #adadad;
+  margin: 2px 0;
+  padding: 3px 5px;
+  width: 250px;
+  height: 32px;
+  line-height: 32px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 select.widget {
   -khtml-appearance: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+  color: #454545;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 3px 3px 3px 12px;
   border: 0;
-  padding: 0 40px 0 12px;
+  box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  width: 250px;
   height: 25px;
-  line-height: 25px;
+  line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  background-color: #f4f4f4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
+  background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
-select.widget > option:last-child { background-color: #88ffaa; }
+select.widget:hover {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
+  background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
+}
 .select_widget {
   -khtml-appearance: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+  color: #454545;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 3px 3px 3px 12px;
   border: 0;
-  padding: 0 40px 0 12px;
+  box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  -moz-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  -webkit-box-shadow: 0 1px 2px rgba(100, 100, 100, 0.7);
+  width: 250px;
   height: 25px;
-  line-height: 25px;
+  line-height: 16px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  background-color: #f4f4f4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e0e0e0));
+  background: -moz-linear-gradient(left top, #f4f4f4, #e0e0e0);
   background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
 }
-.select_widget > option:last-child { background-color: #88ffaa; }
+.select_widget:hover {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeaea));
+  background: -moz-linear-gradient(left top, #ffffff, #eaeaea);
+  background: url(/images/form_select.png) no-repeat left 0px, url(/images/form_select.png) no-repeat right -60px, url(/images/form_select.png) repeat-x left -30px;
+}
 .widget_select-options_container {
   background-color: #f4f4f4;
   border-radius: 3px;
@@ -290,8 +296,10 @@ select.widget > option:last-child { background-color: #88ffaa; }
 }
 input[type=text], input[type=email], input[type=password] {
   font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  color: #454545;
   width: 300px;
   height: 32px;
   line-height: 26px;
@@ -304,15 +312,12 @@ input[type=text], input[type=email], input[type=password] {
   text-shadow: 0px 1px 0px #ffffff;
 }
 input[type=email] { min-width: 200px; }
+input[type="file"] { background-color: #ffffff; }
 input.error {
   background-color: #fee3e3;
   border: 1px solid #c3a0a0;
 }
-label {
-  display: inline-block;
-  font: normal bold normal 14px/1.6em Helvetica;
-  text-shadow: 0px 1px 0px #ffffff;
-}
+label { display: inline-block; }
 label:hover { cursor: pointer; }
 label.check {
   color: #454545;
