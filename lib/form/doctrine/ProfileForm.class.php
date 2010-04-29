@@ -26,8 +26,32 @@ class ProfileForm extends BaseProfileForm {
     $range  = range(date('Y'), date('Y')-100);
     $years = array_combine($range,$range);
 
-    $this->widgetSchema['birth_date'] = new sfWidgetFormDate(array(
-      'years' => $years
-    ));
+    $this->widgetSchema['profesion_id'] = new sfWidgetFormDoctrineChoice(
+      array(
+        'model' => $this->getRelatedModelName('Profession'),
+        'add_empty' => true
+      ),
+      array(
+        'class' => 'widget'
+      )
+    );
+    
+    $this->widgetSchema['documment_type'] = new sfWidgetFormChoice(
+      array(
+        'choices' => array('dni' => 'dni', 'le' => 'le')
+      ),
+      array(
+        'class' => 'widget'
+      )
+    );
+
+    $this->widgetSchema['birth_date'] = new sfWidgetFormInputText(
+      array(
+        //'years' => $years
+      ),
+      array(
+        'class' => 'input_date'
+      )
+    );
   }
 }

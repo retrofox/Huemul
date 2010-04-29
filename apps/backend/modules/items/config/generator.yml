@@ -13,9 +13,10 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        group_acronym:    { label: Grupo }
       list:
-        display:          [ group_acronym, title, description ]
+        display:          [ group_acronym, title ]
       filter:  ~
       form:    ~
       edit:    ~
