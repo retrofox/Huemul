@@ -1,6 +1,6 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php
-  use_stylesheet('mooDoo.2/generator.list.css');
+  use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
   use_stylesheet('frontend/item.css');
 ?>
 <?php use_javascript('tiny_mce/tiny_mce.js') ?>

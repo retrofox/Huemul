@@ -1,13 +1,12 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php
-use_stylesheet('mooDoo.2/generator.global.css');
-use_stylesheet('mooDoo.2/generator.default.css');
-use_stylesheet('mooDoo.2/generator.list.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.global.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.default.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/procedure.css');
 ?>
 
 <?php
-use_stylesheet('mooDoo.2/generator.list.css');
 use_stylesheet('frontend/item.css');
 ?>
 <?php use_javascript('tiny_mce/tiny_mce.js') ?>
@@ -55,37 +54,26 @@ use_stylesheet('frontend/item.css');
         <?php endforeach; ?>
       </tbody>
     </table>
+
+
+    <br />
+    <h2>Agregar observación</h2>
+    <form id="msg-form" action="<?php echo url_for('revisions/revisionComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+      <table>
+        <?php echo $form ?>
+        <?php if (!$form->getObject()->isNew()): ?>
+        <input type="hidden" name="sf_method" value="put" />
+        <?php endif; ?>
+        <tr>
+          <td colspan="2"><input type="submit" value="<?php echo __('Save'); ?>" /></td>
+        </tr>
+
+      </table>
+    </form>
+    
   </section>
 
   <section class="col-right">
-    <?php /*
-    <form id="msg-form" action="<?php echo url_for('revisions/addComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-      <?php echo $form->renderHiddenFields() ?>
-      <?php if (!$form->getObject()->isNew()): ?>
-      <input type="hidden" name="sf_method" value="put" />
-      <?php endif; ?>
-      <section id="form-msg">
-        <h2><?php echo __('Add message') ?></h2>
-
-        <div>
-          <h3>Asunto</h3>
-          <?php echo $form['subject']->renderError() ?>
-          <?php echo $form['subject'] ?>
-        </div>
-
-        <div>
-          <h3>Mensaje</h3>
-          <?php echo $form['message']->renderError() ?>
-          <?php echo $form['message'] ?>
-        </div>
-
-        <br />
-        <input type="submit" value="<?php echo __('Save'); ?>" />
-
-      </section>
-    </form>
-    */ ?>
-
     <div class="board">
       <section class="options">
         <h1><?php echo __('Options'); ?></h1>
@@ -100,20 +88,5 @@ use_stylesheet('frontend/item.css');
         </ul>
       </section>
     </div>
-
-    <h2>Agregar observación</h2>
-    <form id="msg-form" action="<?php echo url_for('revisions/revisionComment'.($form->getObject()->isNew() ? 'Create' : 'Update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-      <table>
-        <?php echo $form ?>
-        <?php if (!$form->getObject()->isNew()): ?>
-        <input type="hidden" name="sf_method" value="put" />
-        <?php endif; ?>
-        <tr>
-          <td colspan="2"><input type="submit" value="<?php echo __('Save'); ?>" /></td>
-        </tr>
-
-      </table>
-    </form>
-
   </section>
 </div>

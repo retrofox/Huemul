@@ -142,13 +142,8 @@ nav.menu > ul { display: inline-block; }
 html[xmlns] nav.menu > ul { display: block; }
 * html nav.menu > ul { height: 1%; }
 section, nav { display: block; }
-body {
-  background-color: #eeeeee;
-  font-size: 18px;
-  font: normal 62.5% sans-serif;
-}
+body { background-color: #eeeeee; }
 body #wrapper { padding: 5px; }
-body p { font-size: 1.4em; }
 body #header nav.menu {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -179,6 +174,12 @@ body #header section.mini-panel {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #sf_admin_content table tr td { height: 20px; }
+#sf_admin_content table tr td img.mugshot {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #aaaaaa;
+  display: block;
+}
 .state_1, .state_2, .state_3, .state_4, .state_5, .state_6, .state_7, .state_8 {
   display: block;
   color: #555555;
@@ -242,6 +243,6 @@ table.items_control tbody tr td.item_nc {
 table.items_control tbody tr th {
   background-color: #dddddd;
   border: 1px solid #cccccc;
-  font-weight: normal;
+  font-size: 0.8em;
 }
 table.items_control tbody tr th:hover { background-color: #dddddd; }

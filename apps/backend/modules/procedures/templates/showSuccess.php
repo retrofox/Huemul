@@ -1,8 +1,8 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php
-use_stylesheet('mooDoo.2/generator.global.css');
-use_stylesheet('mooDoo.2/generator.default.css');
-use_stylesheet('mooDoo.2/generator.list.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.global.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.default.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/procedure.css');
 ?>
 
