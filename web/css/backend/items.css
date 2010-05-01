@@ -1,86 +1,64 @@
-/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-
 *:focus {
   outline: 0;
   outline: none;
 }
-#items-container .col-left {
-  width: 70%;
-  display: inline-block;
-  vertical-align: top;
-}
-#items-container .col-left table { margin-bottom: 40px; }
-#items-container .col-left table th.title {
+#items-container table { margin-bottom: 10px; }
+#items-container table th.title {
   font-size: 14px;
   height: 20px;
 }
-#items-container .col-left tfoot tr th { text-aling: center; }
-#items-container .col-left tbody tr td:first-child { width: 90%; }
-#items-container .col-left tbody tr td input[type="radio"].opt-nc:checked { background-position: -60px -20px; }
-#items-container .col-left tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
-#items-container .col-right {
-  width: 24%;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 20px;
-}
-#items-container .col-right .board {
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  background: #dddddd;
-  padding: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  margin-left: 2%;
-}
-#items-container .col-right .board h1 {
-  color: #444444;
+#items-container tfoot tr th { text-aling: center; }
+#items-container tbody tr td:first-child { width: 90%; }
+#items-container tbody tr td input[type="radio"].opt-nc:checked { background-position: -60px -20px; }
+#items-container tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
+#items-container h1 {
+  color: #002255;
   margin: 0;
   padding: 1px 10px;
-  font-size: 16px;
+  font-size: 2em;
   font-family: sans-serif;
+  text-align: center;
   text-shadow: 0 1px 0 #ffffff;
 }
-#items-container .col-right .board p { font: normal normal normal 14px/18px Helvetica; }
-#items-container .col-right .board .options {
+#items-container p { font: normal normal normal 14px/18px Helvetica; }
+#items-container .options {
   padding: 0 0 10px 0;
   background-color: #eeeeee;
   margin: 20px 0;
 }
-#items-container .col-right .board .suggestions {
+#items-container .suggestions {
   padding: 0 0 10px 0;
   background-color: #eeeeee;
   margin: 20px 0;
 }
-#items-container .col-right .board .suggestions {
+#items-container .suggestions {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   padding: 5px;
 }
-#items-container .col-right .board ul {
+#items-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 24%;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
 }
-#items-container .col-right .board ul li {
+#items-container ul li {
   height: 20px;
   font: normal normal normal 14px/20px sans-serif;
 }
-#items-container .col-right .board ul li a {
+#items-container ul li a {
   display: block;
   background-color: #0088dd;
   color: #ffffff;
   padding: 0 10px;
   margin: 2px;
 }
-#items-container .col-right .board ul li a:hover { background-color: #00aaff; }
-#items-container .col-right .closed {
+#items-container ul li a:hover { background-color: #00aaff; }
+#items-container ul .closed {
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;

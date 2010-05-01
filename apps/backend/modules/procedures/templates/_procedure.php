@@ -1,4 +1,4 @@
-<?php use_helper('I18N') ?>
+<?php use_helper('I18N', 'Date') ?>
   <table>
     <caption>
           <?php echo __('Procedure Detail'); ?>

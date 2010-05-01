@@ -161,7 +161,7 @@ table.items_control {
   margin: 0px;
   position: absolute;
   top: 10px;
-  left: 440px;
+  right: 170px;
 }
 table.items_control tbody tr td {
   font-size: 1em;

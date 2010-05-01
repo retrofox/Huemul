@@ -1,23 +1,16 @@
 <?php use_helper('I18N') ?>
 <?php
-use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.global.css');
-use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.default.css');
+/*use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.global.css');
+use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.default.css');*/
 use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/items.css');
 ?>
-
-<h1><?php echo __('Items List'); ?></h1>
-
 <div class="sf_admin_list" id="items-container">
+  <h1><?php echo __('Items List'); ?></h1>
   <form action="<?php echo url_for('revisions/control') ?>" method="post">
-    <section class="col-left">
-
       <input type="hidden" name="id" value="<?php echo $revision->get('id') ?>" />
-
       <?php foreach ($rev_itemsGroup as $group) : ?>
-
         <?php $grupo = $group[0]->getItem()->getGroup()->getName(); ?>
-
       <table>
         <thead>
           <tr>
@@ -66,23 +59,12 @@ use_stylesheet('backend/items.css');
             <?php endforeach; ?>
         </tbody>
       </table>
-
-
       <?php endforeach; ?>
+      <?php slot('sidebar') ?>
+       
 
-
-
-    </section>
-
-    <section class="col-right">
-      <div class="board">
-
-        <section>
-          <p><?php echo __('Revision number') ?>: <strong><?php echo $revision->getNumber() ?></strong></p>
-          <p><?php echo __('Parent revision') ?>: <strong><?php echo $revision->getParentId() ?></strong></p>
-        </section>
-        <section class="options">
-          <h1><?php echo __('Options'); ?></h1>
+        <nav>
+          <h2><?php echo __('Options'); ?></h2>
 
           <ul>
             <li><?php echo link_to(__('go to procedure'), 'procedures/show?id='.$revision->getProcedureId()) ?></li>
@@ -101,19 +83,22 @@ use_stylesheet('backend/items.css');
               <?php endif; ?>
             <?php endif; ?>
           </ul>
+        </nav>
+
+        <section>
+          <p><?php echo __('Revision number') ?>: <strong><?php echo $revision->getNumber() ?></strong></p>
+          <p><?php echo __('Parent revision') ?>: <strong><?php echo $revision->getParentId() ?></strong></p>
         </section>
-
-
+  <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
+      <div class="tip">
         <?php if($revision->getBlock()) : ?>
-        <p class="closed"><?php echo __('Revision is blocked') ?></p>
-        <div>Esta revisión ha sido bloqueada e informada al responsable del trámite. Usted puede crear una nueva revisión de control si lo cree necesario; por ejemplo, si hay ítems que todavía no hayan sido controlados.</div>
+        <h2 class="closed"><?php echo __('Revision is blocked') ?></h2>
+        <p>Esta revisión ha sido bloqueada e informada al responsable del trámite. Usted puede crear una nueva revisión de control si lo cree necesario; por ejemplo, si hay ítems que todavía no hayan sido controlados.</p>
 
         <?php else : ?>
         <input type="submit" value="<?php echo __('Save') ?>" />
         <?php endif; ?>
       </div>
-
-
-    </section>
+    <?php end_slot(); ?>
   </form>
 </div>
