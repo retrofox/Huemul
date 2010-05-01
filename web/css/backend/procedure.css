@@ -1,27 +1,24 @@
-/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
-
 *:focus {
   outline: 0;
   outline: none;
 }
-.head h1 { color: #001155; }
-.col-left, .col-right {
+div#items-container {
   display: inline-block;
   vertical-align: top;
-  width: 70%;
+  width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-.col-left table tbody tr td { border-bottom: 1px solid #aaaaaa; }
-.col-left table tbody tr td .blk-revision {
-  min-height: 120px;
+div#items-container table tbody tr td { border-bottom: 1px solid #aaaaaa; }
+div#items-container table tbody tr td .blk-revision {
+  min-height: 100px;
   position: relative;
+  padding: 10px 5px;
 }
-.col-left table tbody tr td .blk-revision h2 {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  width: 30px;
+div#items-container table tbody tr td .blk-revision h2 {
+  margin: 0 10px 10px 0;
+  padding: 0 10px;
+  display: block;
   height: 30px;
   line-height: 30px;
   background-color: #333333;
@@ -30,60 +27,73 @@
   border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  float: left;
 }
-.col-left table tbody tr td .blk-revision h3 {
-  margin: 0 0 0 10px;
+div#items-container table tbody tr td .blk-revision h2.unlocked {
+  background-color: #ffddaa;
+  color: #60001b;
+}
+div#items-container table tbody tr td .blk-revision h3 {
+  margin: 0;
   padding: 0;
-  display: inline-block;
-  height: 30px;
-  line-height: 30px;
+  width: 50%;
 }
-.col-left table tbody tr td .blk-revision p.info {
+div#items-container table tbody tr td .blk-revision p.info {
+  width: 50%;
   margin: 0;
   font-size: 12px;
 }
-.col-left table tbody tr td .blk-revision p.info .date { font-weight: bold; }
-.col-left table tbody tr td .blk-revision .sidebar-right {
-  width: 200px;
+div#items-container table tbody tr td .blk-revision p.info .date { font-weight: bold; }
+div#items-container table tbody tr td .blk-revision .sidebar-right {
+  width: 160px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10px;
   font-size: 14px;
 }
-.col-left table tbody tr td .blk-revision .sidebar-right > div { margin: 5px 0; }
-.col-left table tbody tr td .blk-revision .sidebar-right .actions ul {
+div#items-container table tbody tr td .blk-revision .sidebar-right > div { margin: 0 0 5px; }
+div#items-container table tbody tr td .blk-revision .sidebar-right .actions ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid #336699;
+  background-color: #ddeeff;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
 }
-.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li { margin: 1px 0; }
-.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li a {
-  border: 1px solid #dddddd;
-  font-size: 12px;
+div#items-container table tbody tr td .blk-revision .sidebar-right .actions ul li {
+  margin: 0;
+  padding: 0;
+}
+div#items-container table tbody tr td .blk-revision .sidebar-right .actions ul li a {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #336699;
   display: block;
-  height: 18px;
-  line-height: 18px;
-  background-color: #ffffff;
-  padding: 0 4px;
+  font-size: 12px;
+  margin: 0;
+  padding: 5px;
+  text-decoration: none;
 }
-.col-left table tbody tr td .blk-revision .sidebar-right .actions ul li a:hover {
-  background-color: #0088bb;
-  color: #ffffff;
-  border-color: #0066aa;
+div#items-container table tbody tr td .blk-revision .sidebar-right .actions ul li a:hover {
+  background-color: #336699;
+  color: #ddeeff;
 }
-.col-left table tbody tr td .blk-revision .description {
+div#items-container table tbody tr td .blk-revision .description {
   background-color: #ffffff;
-  margin: 5px 220px 0px 5px;
+  margin: 5px 300px 0px 5px;
   min-height: 50px;
   border: 1px solid #dddddd;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
 }
-.col-left table tbody tr td .blk-revision .description p {
+div#items-container table tbody tr td .blk-revision .description p {
   margin: 2px;
   padding: 2px;
-  font-size: 14px;
+  font-size: 1em;
   color: #002255;
 }
 .col-right { width: 25%; }
@@ -143,16 +153,25 @@
 }
 .board ul li a:hover { background-color: #00aaff; }
 table.items_control {
-  width: 300px;
+  width: 130px;
   border-collapse: collapse;
-  margin: 10px;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  margin: 0px;
+  position: absolute;
+  top: 10px;
+  left: 440px;
 }
 table.items_control tbody tr td {
+  font-size: 1em;
   padding: 0 1px;
   text-align: center;
   border: 1px solid #cccccc;
   font-weight: normal;
   background-color: #eeeeee;
+  width: 22px;
+  height: auto;
 }
 table.items_control tbody tr td:hover { background-color: #eeeeee; }
 table.items_control tbody tr td.ok {
@@ -168,7 +187,10 @@ table.items_control tbody tr td.nc {
   background-color: #eeeeee;
 }
 table.items_control tbody tr th {
+  font-size: 0.9em;
+  font-weight: normal;
   background-color: #dddddd;
   border: 1px solid #cccccc;
+  width: auto;
 }
 table.items_control tbody tr th:hover { background-color: #dddddd; }

@@ -3,10 +3,9 @@
 <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
 
 <?php slot('sidebar') ?>
-<section class="menu_sidebar">
   <nav>
+    <h2><?php echo __('OPTIONS'); ?></h2>
     <ul>
-      <li><h2><?php echo __('OPTIONS'); ?></h2></li>
       <li><?php echo link_to(__('All revisions'), 'procedures/show?procedure_id='.$procedure->get('id')) ?></li>
       <?php if($state != 4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
@@ -49,8 +48,6 @@
 
 
   <?php endif; ?>
-</section>
-
 <?php end_slot(); ?>
 
 <div class="head">

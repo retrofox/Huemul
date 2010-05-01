@@ -22,15 +22,13 @@
 
         <section id="sidebar">
           <?php if (!include_slot('sidebar')) : ?>
-          <section class="menu_sidebar">
-            <nav>
+           <nav>
+              <h2><?php echo __('OPTIONS') ?></h2>
               <ul>
-                <li><h2><?php echo __('OPTIONS') ?></h2></li>
                 <li><?php echo link_to(__('Add new procedure'), 'procedures/new') ?></li>
                 <li><?php echo link_to(__('Procedures List'), 'procedures/index') ?></li>
               </ul>
             </nav>
-          </section>
           <?php endif; ?>
         </section>
 

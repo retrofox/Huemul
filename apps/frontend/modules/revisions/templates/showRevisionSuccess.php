@@ -5,12 +5,9 @@ use_stylesheet('frontend/items.css');
 <?php use_helper('I18N', 'Date') ?>
 
 <?php slot('sidebar') ?>
-
-<section class="menu_sidebar">
-  
   <nav>
+    <h2><?php echo __('OPTIONS'); ?></h2>
     <ul>
-      <li><h2><?php echo __('OPTIONS'); ?></h2></li>
       <li><?php echo link_to(__('Show revisions'), 'procedures/show?procedure_id='.$revision->getProcedureId()) ?></li>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$revision->getProcedureId()) ?></li>
     </ul>
@@ -29,9 +26,6 @@ use_stylesheet('frontend/items.css');
     <p>Esta es una revisión se encuentra en esta de 'Proceso'; lo cual implica que aún no se ha terminado su proceso de visado.</p>
   </div>
   <?php endif; ?>
-
-</section>
-
 <?php end_slot(); ?>
 
   <?php if($state == 8) : ?>

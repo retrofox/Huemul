@@ -3,11 +3,11 @@
 <?php slot('sidebar') ?>
 <?php $state = $procedure->getLastRevision()->get('revision_state_id') ?>
 
-<section class="menu_sidebar">
-  <nav>
 
+  <nav>
+    <h2><?php echo __('OPTIONS'); ?></h2>
     <ul>
-      <li><h2><?php echo __('OPTIONS'); ?></h2></li>
+    
       <?php if($state!=4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
       <?php else:  ?>
@@ -51,7 +51,6 @@
   </div>
 
   <?php endif; ?>
-</section>
 
 <?php end_slot(); ?>
 

@@ -1,32 +1,13 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php
-use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.global.css');
-use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.default.css');
 use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/procedure.css');
 ?>
 
-<div class="head">
-  <h1><?php echo '['.$procedure->getId().'] '.__('Procedure Detail'); ?></h1>
-  <p><?php echo __('User'); ?>: <strong><?php echo $procedure->getCreator() ?></strong></p>
-  <p><?php echo __('Created at'); ?>: <strong><?php echo format_date($procedure->getCreatedAt(), 'f') ?></strong></p>
-  <p>Formulario: <strong><?php echo $procedure->getFormu() ?></strong></p>
-  <p>Cantidad total de Items: <strong><?php echo $procedure->getFormu()->getItems()->count() ?></strong></p>
-  <?php foreach ($procedure->getItemsGroups() as $group) : ?>
-  <p><?php echo $group->getGroup() ?>: <strong><?php echo $group->count ?></strong></p>
 
-  <?php endforeach; ?>
-</div>
-
-
-<?php
-
-?>
 
 <div class="sf_admin_list" id="items-container">
-
-  <section class="col-left">
-    <table>
+   <table>
       <thead>
         <tr class="title">
           <th class="title"><?php echo __('Revisions') ?></th>
@@ -44,7 +25,7 @@ use_stylesheet('backend/procedure.css');
         <tr>
           <td>
             <div class="blk-revision">
-              <h2><?php echo $revision->getNumber() ?></h2>
+              <h2 class="<?php echo $revision->getBlock() ? 'blocked' : 'unlocked' ?>"><?php echo $revision->getNumber() ?></h2>
               <h3><?php echo $revision->getCreator() ?></h3>
               <p class="info">
                 <span class="date"><?php echo format_date($revision->getCreatedAt(), 'd') ?></span> | 
@@ -66,7 +47,7 @@ use_stylesheet('backend/procedure.css');
                   </tr>
                       <?php foreach ($revision->getGroups() as $itemGroup) : ?>
                   <tr>
-                    <td><?php echo $itemGroup->getGroup()->getNameAcronym() ?></td>
+                    <th><?php echo $itemGroup->getGroup()->getNameAcronym() ?></th>
                     <td class="ok"><?php echo ($revision->getItemsGroupOK($itemGroup->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->get('group_id'))->count : 0 )?></td>
                     <td class="error"><?php echo ($revision->getItemsGroupError($itemGroup->get('group_id')) ? $revision->getItemsGroupError($itemGroup->get('group_id'))->count : 0 )?></td>
                     <td class="nc"><?php echo ($revision->getItemsGroupSC($itemGroup->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->get('group_id'))->count : 0 )?></td>
@@ -115,14 +96,15 @@ use_stylesheet('backend/procedure.css');
         <?php endforeach; ?>
       </tbody>
     </table>
+</div>
+<?php slot('sidebar') ?>
 
 
-  </section>
 
-  <section class="col-right">
-    <div class="board">
-      <section class="options">
-        <h1><?php echo __('Options'); ?></h1>
+ <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
+ 
+      <nav>
+        <h2><?php echo __('Options'); ?></h2>
         <ul>
           <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
           <?php if($state == 5) : ?>
@@ -131,20 +113,17 @@ use_stylesheet('backend/procedure.css');
           <li><?php echo link_to('Controlar revisión', 'revisions/control?id='.$revision->getId()) ?></li>
           <?php endif; ?>
         </ul>
-      </section>
+      </nav>
+  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
 
-      <section class="suggestions">
-        <h1><?php echo __('Suggestions'); ?></h1>
+        
         <div class="tip">
+        <h2><?php echo __('Suggestions'); ?></h2>
           <?php if($state == 5) : ?>
           <p>El trámite actual cuenta con una revisión que requiere ser controlada. Es necesario <?php echo link_to('crear', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?> una revisión de control.</p>
           <?php elseif($state == 8) : ?>
           <p>El usuario <?php echo $revision->getCreator() ?> ha creado una revisión de control que todavía no ha sido cerrada. Es conventiente trabajar en la misma antes de realizar alguna otra acción.</p>
           <?php endif; ?>
         </div>
-      </section>
-    </div>
 
-  </section>
-
-</div>
+<?php end_slot(); ?>

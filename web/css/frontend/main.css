@@ -391,6 +391,122 @@ form fieldset > section > div { margin-bottom: 8px; }
   outline: 0;
   outline: none;
 }
+section#sidebar nav {
+  margin: 0 0 10px 0;
+  border: 1px solid #336699;
+  background-color: #ddeeff;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+section#sidebar nav h2 {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  font: normal normal bold 1.2em sans-serif;
+  color: #ddeeff;
+  background-color: #336699;
+}
+section#sidebar nav ul { padding: 0; }
+section#sidebar nav ul li h2 {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  font: normal normal bold 1.2em sans-serif;
+  color: #ddeeff;
+  background-color: #336699;
+}
+section#sidebar nav ul li a {
+  font-size: 12px;
+  line-height: 20px;
+  display: block;
+  color: #336699;
+  padding: 5px 5px;
+  margin: 0;
+  text-decoration: none;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+section#sidebar nav ul li a:hover {
+  background-color: #336699;
+  color: #ddeeff;
+}
+section#sidebar table {
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  border-collapse: separate;
+  border: 1px solid #60001b;
+}
+section#sidebar table caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  text-transform: uppercase;
+  background-color: #60001b;
+  color: #ffecdf;
+  margin: 0;
+  padding: 5px 1px;
+  line-height: 18px;
+  width: 100%;
+}
+section#sidebar table tbody > tr > td {
+  padding: 5px;
+  border-top: 1px solid #60001b;
+  color: #60001b;
+  font-size: 10px;
+  line-height: 20px;
+}
+section#sidebar table tbody > tr > th {
+  font-size: 10px;
+  background-color: #ffecdf;
+  color: #60001b;
+  padding: 5px;
+  text-align: right;
+  border-top: 1px solid #60001b;
+  border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  -webkit-border-radius: 0 0 0 4px;
+}
+section#sidebar div.tip {
+  font: normal 12px/20px Helvetica;
+  border: 1px solid #00aa00;
+  background-color: #eeffee;
+  color: #00aa00;
+  margin-top: 10px;
+  border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+}
+section#sidebar div.tip h2 {
+  background-color: #00aa00;
+  color: #eeffee;
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 0;
+  padding: 5px 1px;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+section#sidebar div.tip p { padding: 5px; }
+*:focus {
+  outline: 0;
+  outline: none;
+}
 body {
   background-color: #868686;
   font: normal 62.5% sans-serif;
@@ -732,32 +848,6 @@ div#container > section p.note {
   font-size: 12px;
   padding: 5px 0;
 }
-div#container div.tip {
-  font: normal 12px/20px Helvetica;
-  border: 1px solid #00aa00;
-  background-color: #eeffee;
-  color: #00aa00;
-  margin-top: 10px;
-  border-radius: 6px 6px 6px 6px;
-  -moz-border-radius: 6px 6px 6px 6px;
-  -webkit-border-radius: 6px 6px 6px 6px;
-}
-div#container div.tip h2 {
-  background-color: #00aa00;
-  color: #eeffee;
-  border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  line-height: 18px;
-  margin: 0;
-  padding: 5px 1px;
-  position: relative;
-  text-transform: uppercase;
-  text-align: center;
-}
-div#container div.tip p { padding: 5px; }
 div#container .info {
   font: normal 12px/20px Helvetica;
   border: 1px solid #aabbbb;
@@ -780,84 +870,6 @@ div#container section#sidebar {
   -moz-border-radius: 0 0 0 8px;
   -webkit-border-radius: 0 0 0 8px;
   border-right: 1px solid #bbbbbb;
-  box-shadow: -1px 0 0 #ffffff;
-  -moz-box-shadow: -1px 0 0 #ffffff;
-  -webkit-box-shadow: -1px 0 0 #ffffff;
-}
-div#container section#sidebar section.menu_sidebar table {
-  border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  -webkit-border-radius: 0 0 6px 6px;
-  border-collapse: separate;
-  border: 1px solid #60001b;
-}
-div#container section#sidebar section.menu_sidebar table caption {
-  font-size: 1.2em;
-  font-weight: bold;
-  border-radius: 6px 6px 0 0;
-  -moz-border-radius: 6px 6px 0 0;
-  -webkit-border-radius: 6px 6px 0 0;
-  text-transform: uppercase;
-  background-color: #60001b;
-  color: #ffecdf;
-  margin: 0;
-  padding: 5px 1px;
-  line-height: 18px;
-  width: 100%;
-}
-div#container section#sidebar section.menu_sidebar table tbody > tr > td {
-  padding: 5px;
-  border-top: 1px solid #60001b;
-  color: #60001b;
-  font-size: 10px;
-  line-height: 20px;
-}
-div#container section#sidebar section.menu_sidebar table tbody > tr > th {
-  font-size: 10px;
-  background-color: #ffecdf;
-  color: #60001b;
-  padding: 5px;
-  text-align: right;
-  border-top: 1px solid #60001b;
-  border-radius: 0 0 0 4px;
-  -moz-border-radius: 0 0 0 4px;
-  -webkit-border-radius: 0 0 0 4px;
-}
-div#container section#sidebar section.menu_sidebar nav {
-  margin: 0 0 10px 0;
-  border: 1px solid #336699;
-  background-color: #ddeeff;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-div#container section#sidebar section.menu_sidebar nav ul { padding: 0; }
-div#container section#sidebar section.menu_sidebar nav ul li h2 {
-  margin: 0;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  font: normal normal bold 1.2em sans-serif;
-  color: #ddeeff;
-  background-color: #336699;
-}
-div#container section#sidebar section.menu_sidebar nav ul li a {
-  font-size: 12px;
-  line-height: 20px;
-  display: block;
-  color: #336699;
-  padding: 5px 5px;
-  margin: 0;
-  text-decoration: none;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-div#container section#sidebar section.menu_sidebar nav ul li a:hover {
-  background-color: #336699;
-  color: #ddeeff;
 }
 div#container section#sidebar h1 { color: #002255; }
 div#container section#sidebar h3 { color: #002255; }

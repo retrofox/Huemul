@@ -17,11 +17,16 @@
         <?php include_partial('global/mini-panel') ?>
       </section>
 
-   
-      <section id="board">
+      <section id="sidebar">
+        <?php if (!include_slot('sidebar')) : ?>
+        sidebar
+        <?php endif; ?>
+      </section>
+      <section id="content">
         <?php echo $sf_content ?>
       </section>
-
+ 
+      <?php include_partial('global/footer') ?>
     </div>
     
   </body>

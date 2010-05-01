@@ -1,5 +1,6 @@
 @import "../_commons/clear";
 @import "../_commons/interface.elements";
+@import "../sidebar";
 @import "layout";
 
 
@@ -21,33 +22,6 @@ div#container {
       padding:5px 0;
     }
   }
-
-  div.tip {
-    h2 {
-      background-color: #00AA00;
-      color: #EEFFEE;
-      .border-radius(4px 4px 0 0);
-      font-size:1.2em;
-      font-weight:bold;
-      line-height:18px;
-      margin:0;
-      padding:5px 1px;
-      position:relative;
-      text-transform:uppercase;
-      text-align:center;
-    }
-
-    font: normal 12px/20px Helvetica;
-    border: 1px solid #00AA00;
-    background-color: #EEFFEE;
-    color: #00AA00;
-    margin-top: 10px;
-    .border-radius(6px 6px 6px 6px);
-    p {
-      padding:5px
-    }
-  }
-
   .info {
     font: normal 12px/20px Helvetica;
     border: 1px solid #Abb;
@@ -68,89 +42,9 @@ div#container {
     min-height: 600px;
     .border-radius(0 0 0 8px);
     border-right: 1px solid #bbb;
-    .box-shadow(-1px, 0, 0, #fff);
+   /* .box-shadow(-1px, 0, 0, #fff);*/
 
-    section.menu_sidebar {
-      table {
-          .border-radius(0 0 6px 6px);
-          border-collapse: separate;
-          border: 1px solid #60001B;
-       caption{
-        font-size:1.2em;
-        font-weight: bold;
-        .border-radius(6px 6px 0 0);
-        text-transform: uppercase;
-        background-color: #60001B;
-        color: #FFECDF;
-        margin:0;
-        padding: 5px 1px;
-        line-height:18px;
-        width:100%;
-        
-        }
-        tbody {
-          >tr {
-         
-          >td {
-          padding: 5px;
-          border-top: 1px solid #60001B;
-          color:#60001B;
-          font-size:10px;
-          line-height:20px
-
-            }
-          >th {
-            font-size:10px;
-            background-color: #FFECDF;
-            color:#60001B;
-            padding: 5px;
-            text-align:right;
-            border-top: 1px solid #60001B;
-            .border-radius(0 0 0 4px);
-          }
-
-          }
-        }
-      }
-
-      nav {
-        margin: 0 0 10px 0 ;
-        border: 1px solid #369;
-        background-color: #DEF;
-        .border-radius(6px);
-        
-        ul {
-          padding: 0;
-          li {
-            h2 {
-              margin: 0;
-              text-align: center;
-              padding: 5px 0;
-              .border-radius(4px 4px 0 0);
-              font: normal normal bold 1.2em sans-serif;
-              color: #DEF;
-              background-color: #369;
-            }
-            a {
-              font-size: 12px;
-              line-height: 20px;
-              display: block;
-
-              color: #369;
-              padding: 5px 5px;
-              margin: 0;
-              text-decoration: none;
-              .border-radius(4px);
-              
-              :hover {
-                background-color: #369;
-                color: #DEF;
-              }
-            }
-          }
-        }
-      }
-    }
+   
 
     h1, h3, h4 {
       color: #025;

@@ -1,5 +1,7 @@
+
 @import "../_commons/common";
 @import "../menu/default";
+@import "../sidebar";
 
 section, nav {
   display: block;
@@ -9,42 +11,77 @@ body {
   background-color: #eee;
 
   #wrapper {
-    padding: 5px;
-  }
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    #header {
+      margin: 10px;
+      nav.menu, section.mini-panel {
+        .box-sizing;
+        height: 50px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+      }
+      /* Menu */
+      nav.menu {
+        width: 80%;
+      }
+      section.mini-panel {
+        .box-sizing;
+        margin-left: 1%;
+        width: 18%;
+        padding: 5px;
+        .border-radius(6px);
+        background-color: #fff;
+        .box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+      }
+    }
+    #sidebar{
+      float: left;
+      width: 230px;
+      margin: 0 10px 40px;
 
-  p {
-
-  }
-
-  #header {
-    nav.menu, section.mini-panel {
+    }
+    #content{
+      margin: 0 10px 40px 250px;
+      
       .box-sizing;
-      height: 50px;
-      display: inline-block;
-      vertical-align: top;
-      font-size: 12px;
     }
-    /* Menu */
-    nav.menu {
-      width: 80%;
+    #footer {
+    bottom: 0;
+    position: absolute;
+    margin-top: 15px;
+    padding: 5px;
+    .box-sizing;
+    font: 10px Helvetica;
+    background: rgba(42,42,43,0.7);
+    color: #a4a4a4;
+    width: 100% !important;
 
+    p {
+      text-align: right;
+      margin: 0 30px;
+
+      a.xifox {
+        color:#0A0;
+        text-decoration:none;
+        :hover{
+          color:#FFF;
+          }
+        }
+      }
     }
-
-    section.mini-panel {
-      margin-left: 1%;
-      width: 17%;
-      padding: 5px;
-      .border-radius(6px);
-      background-color: #fff;
-      .box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+    #board{
+      margin:10px;
     }
-  }
-
-  #board {
-
   }
 }
-
 
 /* Tablas */
 #sf_admin_content table tr td {
@@ -80,6 +117,7 @@ body {
   font-weight: bold;
   color: #A00;
   background-color: #ffA;
+  border:1px solid #A00;
 }
 
 /* corregido */
@@ -92,8 +130,10 @@ body {
 
 /* en proceso */
 .state_8 {
-  color: #A60;
+  color:#60001B;
   background-color: #fda;
+  font-weight: bold;
+  border: 1px solid #60001B;
 }
 
 
@@ -102,16 +142,20 @@ body {
 table.items_control {
   border-collapse: collapse;
   .box-shadow(0, 0, 0, 0);
+  .border-radius(0);
 
 
   tbody {
     tr {
+      border-bottom: none;
       td {
         padding: 0 1px;
         text-align: center;
-        border: 1px solid #ccc;
         width: 20px;
         height: 20px;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: none;
         background-color: #e0e0e0;
         :hover {
           background-color: #e0e0e0;
@@ -137,8 +181,11 @@ table.items_control {
 
       th {
         background-color: #ddd;
-        border: 1px solid #ccc;
-        font-size: 0.8em;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        font-size: 0.7em;
+        width:40px;
         :hover {
           background-color: #ddd;
         }
