@@ -3,10 +3,8 @@
 use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/procedure.css');
 ?>
-
-
-
 <div class="sf_admin_list" id="items-container">
+  <h1><?php echo __('Procedure Revision List') ?></h1>
    <table>
       <thead>
         <tr class="title">

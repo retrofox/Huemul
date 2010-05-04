@@ -198,4 +198,9 @@ form table.orange > tbody {
 }
 form table.orange > tbody > tr > td { border: none; }
 form table.orange > tbody > tr > th { border: none; }
+form table.orange > tbody tr:first-of-type th {
+  border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+}
 .mceLayout { width: 100% !important; }

@@ -290,7 +290,7 @@
 
       <trans-unit id="59">
         <source>Procedure number</source>
-        <target>Nùmero de trámite</target>
+        <target>Número de trámite</target>
       </trans-unit>
 
       <trans-unit id="60">
@@ -483,6 +483,40 @@
         <target>Último login</target>
       </trans-unit>
 
+      <trans-unit id="98">
+        <source>Procedure Revision List</source>
+        <target>Listado de Revisiones del Trámite</target>
+      </trans-unit>
+
+      <trans-unit id="99">
+        <source>Current state</source>
+        <target>Estado Actual</target>
+      </trans-unit>
+
+      <trans-unit id="100">
+        <source>Form type</source>
+        <target>Tipo Fomulario</target>
+      </trans-unit>
+
+      <trans-unit id="101">
+        <source>Revision Observations</source>
+        <target>Observaciones de la Revisión</target>
+      </trans-unit>
+
+      <trans-unit id="102">
+        <source>Add Observation</source>
+        <target>Agregar Observación</target>
+      </trans-unit>
+      
+      <trans-unit id="103">
+        <source>Message</source>
+        <target>Mensaje</target>
+      </trans-unit>
+
+      <trans-unit id="104">
+        <source>Subject</source>
+        <target>Asunto</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

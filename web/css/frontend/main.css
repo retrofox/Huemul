@@ -40,6 +40,10 @@ table {
   border-spacing: 0;
 }
 section, nav { display: block; }
+.clear {
+  width: 100%;
+  clear: both;
+}
 *:focus {
   outline: 0;
   outline: none;
@@ -477,12 +481,19 @@ section#sidebar table tbody > tr > th {
   -moz-border-radius: 0 0 0 4px;
   -webkit-border-radius: 0 0 0 4px;
 }
+section#sidebar table tbody > tr td.stage {
+  border: 0;
+  border-top: 1px solid #60001b;
+  border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  -webkit-border-radius: 0 0 4px 0;
+}
 section#sidebar div.tip {
   font: normal 12px/20px Helvetica;
   border: 1px solid #00aa00;
   background-color: #eeffee;
   color: #00aa00;
-  margin-top: 10px;
+  margin: 10px 0 0 0;
   border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
@@ -832,6 +843,11 @@ div#container form table.orange > tbody {
 }
 div#container form table.orange > tbody > tr > td { border: none; }
 div#container form table.orange > tbody > tr > th { border: none; }
+div#container form table.orange > tbody tr:first-of-type th {
+  border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+}
 div#container .mceLayout { width: 100% !important; }
 div#container > section {
   -moz-box-sizing: border-box;

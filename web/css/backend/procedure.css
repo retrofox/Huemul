@@ -28,6 +28,7 @@ div#items-container table tbody tr td .blk-revision h2 {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   float: left;
+  font-size: 1em;
 }
 div#items-container table tbody tr td .blk-revision h2.unlocked {
   background-color: #ffddaa;
