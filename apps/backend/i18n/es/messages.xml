@@ -522,6 +522,11 @@
         <source>Revision Detail</source>
         <target>Detalle de Revisión</target>
       </trans-unit>
+      
+      <trans-unit id="106">
+        <source>Item Messages</source>
+        <target>Mensajes del Item</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

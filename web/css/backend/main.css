@@ -198,6 +198,7 @@ section#sidebar table {
   border-collapse: separate;
   border: 1px solid #60001b;
   margin: 0 0 10px 0;
+  width: 100%;
 }
 section#sidebar table caption {
   font-size: 1.2em;
