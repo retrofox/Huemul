@@ -2,3 +2,5 @@ controlSuccess:
   layout:           layout_2col
 observeSuccess:
   layout:           layout_2col
+itemSuccess:
+  layout:           layout_2col

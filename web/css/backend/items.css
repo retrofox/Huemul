@@ -11,15 +11,6 @@
 #items-container tbody tr td:first-child { width: 90%; }
 #items-container tbody tr td input[type="radio"].opt-nc:checked { background-position: -60px -20px; }
 #items-container tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
-#items-container h1 {
-  color: #002255;
-  margin: 0;
-  padding: 1px 10px;
-  font-size: 2em;
-  font-family: sans-serif;
-  text-align: center;
-  text-shadow: 0 1px 0 #ffffff;
-}
 #items-container p { font: normal normal normal 14px/18px Helvetica; }
 #items-container .options {
   padding: 0 0 10px 0;

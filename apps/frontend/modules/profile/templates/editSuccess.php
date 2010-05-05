@@ -7,7 +7,6 @@
   <nav>
     <h2><?php echo __('OPTIONS') ?></h2>
     <ul>
-      <li><h2><?php echo __('OPTIONS') ?></h2></li>
       <li><?php echo link_to(__('Edit profile'), 'profile/edit') ?></li>
       <li><?php echo link_to(__('Change password'), 'users/edit') ?></li>
       <li><?php echo link_to(__('Mugshot'), 'profile/editMugshot')?> </li>
