@@ -1,7 +1,7 @@
 cache/*
-lib/filter/doctrine/base/*
-lib/form/doctrine/base/*
-lib/model/doctrine/base/*
+#lib/filter/doctrine/base/*
+#lib/form/doctrine/base/*
+#lib/model/doctrine/base/*
 log/*
 _basurero/*
 web/uploads/revisions/*
