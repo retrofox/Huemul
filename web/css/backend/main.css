@@ -161,6 +161,7 @@ section#sidebar nav h2 {
   font: normal normal bold 1.2em sans-serif;
   color: #ddeeff;
   background-color: #336699;
+  text-transform: uppercase;
 }
 section#sidebar nav ul { padding: 0; }
 section#sidebar nav ul li h2 {
@@ -196,6 +197,7 @@ section#sidebar table {
   -webkit-border-radius: 0 0 6px 6px;
   border-collapse: separate;
   border: 1px solid #60001b;
+  margin: 0 0 10px 0;
 }
 section#sidebar table caption {
   font-size: 1.2em;
@@ -241,7 +243,7 @@ section#sidebar div.tip {
   border: 1px solid #00aa00;
   background-color: #eeffee;
   color: #00aa00;
-  margin: 10px 0 0 0;
+  margin: 0 0 10px 0;
   border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
@@ -377,6 +379,7 @@ body #wrapper #board { margin: 10px; }
   font-weight: bold;
   border: 1px solid #60001b;
 }
+.right { text-align: right; }
 table.items_control {
   border-collapse: collapse;
   box-shadow: 0 0 0 0;

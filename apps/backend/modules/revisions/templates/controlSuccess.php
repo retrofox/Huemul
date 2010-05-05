@@ -58,8 +58,16 @@ use_stylesheet('backend/items.css');
           </tr>
             <?php endforeach; ?>
         </tbody>
+
+
       </table>
+      
       <?php endforeach; ?>
+      
+      <?php if(!$revision->getBlock()) : ?>
+      <div class="right"><input type="submit" value="<?php echo __('Save') ?>" class="right" /></div> 
+      <?php endif; ?>
+
       <?php slot('sidebar') ?>
        
 
@@ -85,20 +93,16 @@ use_stylesheet('backend/items.css');
           </ul>
         </nav>
 
-        <section>
-          <p><?php echo __('Revision number') ?>: <strong><?php echo $revision->getNumber() ?></strong></p>
-          <p><?php echo __('Parent revision') ?>: <strong><?php echo $revision->getParentId() ?></strong></p>
-        </section>
+  <?php include_partial('revisions/revision', array('revision' => $revision)) ?>
   <?php include_partial('procedures/procedure', array('procedure' => $revision->getProcedure())) ?>
-      <div class="tip">
+      
         <?php if($revision->getBlock()) : ?>
+      <div class="tip">
         <h2 class="closed"><?php echo __('Revision is blocked') ?></h2>
         <p>Esta revisión ha sido bloqueada e informada al responsable del trámite. Usted puede crear una nueva revisión de control si lo cree necesario; por ejemplo, si hay ítems que todavía no hayan sido controlados.</p>
-
-        <?php else : ?>
-        <input type="submit" value="<?php echo __('Save') ?>" />
-        <?php endif; ?>
-      </div>
+</div>
+ <?php endif; ?>
+      
     <?php end_slot(); ?>
   </form>
 </div>

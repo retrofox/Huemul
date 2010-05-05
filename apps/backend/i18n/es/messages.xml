@@ -517,6 +517,11 @@
         <source>Subject</source>
         <target>Asunto</target>
       </trans-unit>
+      
+      <trans-unit id="105">
+        <source>Revision Detail</source>
+        <target>Detalle de Revisión</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -109,6 +109,7 @@ use_stylesheet('frontend/item.css');
           <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
         </ul>
       </nav>
+    <?php include_partial('revisions/revision', array('revision' => $revision)) ?>
     <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
   <?php end_slot(); ?>
 </div>

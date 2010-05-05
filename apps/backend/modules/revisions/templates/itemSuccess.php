@@ -7,10 +7,10 @@
 
 
 <div class="sf_admin_list" id="item">
-
-  <section class="col-left">
-
-    <table>
+ <?php slot('sidebar') ?>
+  <?php include_partial('revisions/revision', array('revision' => $revItem->getRevision())) ?>
+  <?php include_partial('procedures/procedure', array('procedure' => $revItem->getRevision()->getProcedure())) ?>
+  <table>
       <thead>
         <tr>
           <th class="title" colspan="2"><?php echo __('Items detail'); ?></th>
@@ -55,8 +55,8 @@
       </tbody>
     </table>
   </section>
-
-  <section class="col-right">
+    <?php end_slot(); ?>
+  
     <?php $count_msg = $revItem->getComunication()->count() ?>
     <table>
       <thead>
