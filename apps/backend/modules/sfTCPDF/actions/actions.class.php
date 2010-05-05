@@ -8,19 +8,16 @@
  * @author     Damian Suarez
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class sfTCPDFActions extends sfActions
-{
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
-  {
+class sfTCPDFActions extends sfActions {
+  /**
+   * Executes index action
+   *
+   * @param sfRequest $request A request object
+   */
+  public function executeIndex(sfWebRequest $request) {
     $this->forward('default', 'module');
   }
-  public function executeConstancia()
-  {
+  public function executeConstancia() {
     $config = sfTCPDFPluginConfigHandler::loadConfig();
 
     // create new PDF document
@@ -82,10 +79,9 @@ class sfTCPDFActions extends sfActions
     //Close and output PDF document
     $pdf->Output('constancia.pdf', 'I');
   }
-  
-  
-  public function executePermiso()
-  {
+
+
+  public function executePermiso() {
     $config = sfTCPDFPluginConfigHandler::loadConfig();
 
     // create new PDF document
@@ -147,7 +143,7 @@ class sfTCPDFActions extends sfActions
     $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
     $pdf->Ln(20);
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-  	$pdf->Cell(150, 0,'Arq.Roberto A. Bianchi', 0, 1, 'R');
+    $pdf->Cell(150, 0,'Arq.Roberto A. Bianchi', 0, 1, 'R');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(147, 0,'Dep. Obras Privadas', 0, 1, 'R');
     $pdf->Ln(5);
@@ -161,7 +157,7 @@ class sfTCPDFActions extends sfActions
 -Concluida la obra deberá tramitar certificado parcial/final de obra, requisito necesario para la obtención del permiso de conexión de gas. Si surgieran ampliaciones o modificaciones en el transcurso de la ejecución de la misma deberá presentar planos previo a su inicio, caso contrario adjuntar planos conforme a obra para la obtención del certificado.-
 -El presente permiso exime del pago de impuesto al baldío y multas por falta de cerco y vereda durante la vigencia del mismo.-
                           ', 0, 1, 'L');
-$pdf->SetFont(PDF_FONT_NAME_MAIN, 'b', PDF_FONT_SIZE_MAIN-1);
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'b', PDF_FONT_SIZE_MAIN-1);
     $pdf->MultiCell(0, 0,'Recibió:
 Firma:
 Aclaración:', 0, 1, 'L');

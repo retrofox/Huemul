@@ -30,18 +30,12 @@ class ProfileForm extends BaseProfileForm {
       array(
         'model' => $this->getRelatedModelName('Profession'),
         'add_empty' => true
-      ),
-      array(
-        'class' => 'widget'
       )
     );
     
     $this->widgetSchema['documment_type'] = new sfWidgetFormChoice(
       array(
         'choices' => array('dni' => 'dni', 'le' => 'le')
-      ),
-      array(
-        'class' => 'widget'
       )
     );
 

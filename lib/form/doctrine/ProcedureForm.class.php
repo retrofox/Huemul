@@ -12,6 +12,12 @@ class ProcedureForm extends BaseProcedureForm
 {
   public function configure()
   {
-    unset($this['created_at'], $this['updated_at'], $this['cadastral_data_id']);
+    unset(
+      $this['created_at'],
+      $this['updated_at'],
+      $this['revisions_count'],
+      $this['users_list'],
+      $this['cadastral_data_id']
+    );
   }
 }

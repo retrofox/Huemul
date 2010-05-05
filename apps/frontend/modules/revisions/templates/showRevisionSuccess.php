@@ -67,11 +67,11 @@ use_stylesheet('frontend/items.css');
           <td><?php echo $item ?></td>
           <?php $msg_count = count($rev_item->getComunication()) ?>
           <td <?php if($msg_count > 0) echo 'class="comment"' ?>>
-            <?php if($msg_count > 0) : ?>
+            <?php //if($msg_count > 0) : ?>
             <?php echo link_to($msg_count, 'revisions/item?id='.$rev_item->get('id'), array('class'=>'messages','title'=>__('Ver/Agregar mensajes al ítem'))) ?>
-            <?php else : ?>
-            <?php echo $msg_count ?>
-            <?php endif; ?>
+            <?php //else : ?>
+            <?php //echo $msg_count ?>
+            <?php //endif; ?>
           </td>
         
           <td class="<?php echo $state ?>"><?php echo $rev_item->getStateComplete() ?></td>

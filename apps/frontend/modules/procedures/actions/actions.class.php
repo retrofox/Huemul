@@ -78,7 +78,7 @@ class proceduresActions extends sfActions {
    *
    * @author Damian Suarez
    */
-  public function executeComprobante(sfWebRequest $request) {
+  public function executePermisoDeConstruccion(sfWebRequest $request) {
 
     $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
 
@@ -127,7 +127,7 @@ class proceduresActions extends sfActions {
       $pdf->Cell(0, 0,'', 0, 1, 'L');
       $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
       $pdf->Cell(0, 0,'', 0, 1, 'L');
-      
+
       $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(0, 0,$procedure->getCadastralData(), 0, 1, 'L');
@@ -176,5 +176,67 @@ Aclaración:', 0, 1, 'L');
       //Close and output PDF document
       $pdf->Output('comprobante_'.$procedure->getDossier().'.pdf', 'I');
     }
+  }
+  public function executeConstancia() {
+    $config = sfTCPDFPluginConfigHandler::loadConfig();
+
+    // create new PDF document
+    $pdf = new MyPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+    // set default monospaced font
+    $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
+    //set margins
+    $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+    //set auto page breaks
+    $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+    //set image scale factor
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+    //set some language-dependent strings
+    //$pdf->setLanguageArray($l);
+
+    // ---------------------------------------------------------
+
+    // add a page
+    $pdf->AddPage();
+
+    // print a line using Cell()
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B U', PDF_FONT_SIZE_MAIN+2);
+    $pdf->Cell(0, 20, 'CONSTANCIA', 0, 1, 'C');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+    $pdf->MultiCell(0, 0,'La presente constancia habilita al profesional actuante a iniciar el expediente municipal para el registro del plano de obra, en las condiciones descriptas y según los datos que a continuación se detallan.', 0, 1, 'L');
+    $pdf->Ln(1);
+    $pdf->Cell(70, 0,'EXPEDIENTE:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'EXPEDIENTE', 0, 1, 'L');
+    $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'PROPIETARIO', 0, 1, 'L');
+    $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'TIPO TRAMITE', 0, 1, 'L');
+    $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'DOMICILIO DEL INMUEBLE', 0, 1, 'L');
+    $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'BARRIO', 0, 1, 'L');
+    $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
+    $pdf->Cell(0, 0,'NOMECLATURA CATASTRAL', 0, 1, 'L');
+    $pdf->Ln(3);
+    $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
+    $pdf->MultiCell(0, 0,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed nulla nibh. Etiam porta fermentum pellentesque. Duis pretium erat vitae massa tristique eu luctus felis mattis. In felis erat, cursus sed suscipit nec, mollis a enim. Sed vulputate urna felis. Praesent vitae malesuada dolor. Praesent consequat bibendum purus ut egestas. In dui elit, gravida vitae vehicula nec, semper at lacus. Vivamus sed lorem at nisl consectetur lacinia ut eu magna. Suspendisse luctus mi ac velit congue id tempor felis pretium. Quisque sed mi vel elit ornare semper nec id massa. In hac habitasse platea dictumst. Vivamus iaculis, lacus eu ullamcorper faucibus, mauris nisi pellentesque augue, eu fringilla ipsum elit vel dolor. In eget faucibus sapien. Praesent orci augue, consequat nec vulputate sed, consequat et sapien. Aenean molestie congue fermentum. In eget ligula tortor, id euismod sem.', 0, 1, 'L');
+    $pdf->Ln(30);
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+    $pdf->Cell(40, 0,'FIRMA DEL PROPIETARIO', 0, 0, 'L');
+    $pdf->Cell(0, 0,'FIRMA DEL PROFESIONAL ACTUANTE', 0, 1, 'R');
+    $pdf->Ln(60);
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+    $pdf->Cell(0, 0,'DIRECCION DE DESARROLLO URBANO Y CATASTRO', 0, 1, 'C');
+    $pdf->Cell(0, 0,'MUNICIPALIDAD DE CIPOLLETTI', 0, 1, 'C');
+    // ---------------------------------------------------------
+
+    //Close and output PDF document
+    $pdf->Output('constancia.pdf', 'I');
   }
 }
