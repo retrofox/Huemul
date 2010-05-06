@@ -118,7 +118,10 @@ Procedure:
     dossier:                    { type: string(255) }
     is_finished:                { type: boolean, default: false }
     revisions_count:            { type: integer }
-
+    owner:                      { type: string(255) }
+    address:                    { type: string(255) }
+    neighborhood:               { type: string(255) }
+    
   relations:
     Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
     CadastralData:              { foreignAlias: Procedures, local: cadastral_data_id, foreign: id, class: CadastralData, foreignType: one }

@@ -177,7 +177,9 @@ Aclaración:', 0, 1, 'L');
       $pdf->Output('comprobante_'.$procedure->getDossier().'.pdf', 'I');
     }
   }
-  public function executeConstancia() {
+  public function executeConstancia(sfWebRequest $request) {
+    $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
+    
     $config = sfTCPDFPluginConfigHandler::loadConfig();
 
     // create new PDF document
@@ -212,17 +214,17 @@ Aclaración:', 0, 1, 'L');
     $pdf->MultiCell(0, 0,'La presente constancia habilita al profesional actuante a iniciar el expediente municipal para el registro del plano de obra, en las condiciones descriptas y según los datos que a continuación se detallan.', 0, 1, 'L');
     $pdf->Ln(1);
     $pdf->Cell(70, 0,'EXPEDIENTE:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'EXPEDIENTE', 0, 1, 'L');
+    $pdf->Cell(0, 0, $procedure->getDossier(), 0, 1, 'L');
     $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'PROPIETARIO', 0, 1, 'L');
+    $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
     $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'TIPO TRAMITE', 0, 1, 'L');
+    $pdf->Cell(0, 0, $procedure->getFormu(), 0, 1, 'L');
     $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'DOMICILIO DEL INMUEBLE', 0, 1, 'L');
+    $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
     $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'BARRIO', 0, 1, 'L');
+    $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
     $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
-    $pdf->Cell(0, 0,'NOMECLATURA CATASTRAL', 0, 1, 'L');
+    $pdf->Cell(0, 0, $procedure->getCadastralData() , 0, 1, 'L');
     $pdf->Ln(3);
     $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
     $pdf->MultiCell(0, 0,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed nulla nibh. Etiam porta fermentum pellentesque. Duis pretium erat vitae massa tristique eu luctus felis mattis. In felis erat, cursus sed suscipit nec, mollis a enim. Sed vulputate urna felis. Praesent vitae malesuada dolor. Praesent consequat bibendum purus ut egestas. In dui elit, gravida vitae vehicula nec, semper at lacus. Vivamus sed lorem at nisl consectetur lacinia ut eu magna. Suspendisse luctus mi ac velit congue id tempor felis pretium. Quisque sed mi vel elit ornare semper nec id massa. In hac habitasse platea dictumst. Vivamus iaculis, lacus eu ullamcorper faucibus, mauris nisi pellentesque augue, eu fringilla ipsum elit vel dolor. In eget faucibus sapien. Praesent orci augue, consequat nec vulputate sed, consequat et sapien. Aenean molestie congue fermentum. In eget ligula tortor, id euismod sem.', 0, 1, 'L');

@@ -30,7 +30,7 @@ use_stylesheet('backend/procedure.css');
                 <span class="block"><?php echo __($revision->getBlock() ? 'blocked' : 'unlocked' )?></span>
               </p>
 
-                <?php if($revision->getGroups()->count() > 0) : ?>
+              <?php if($revision->getGroups()->count() > 0) : ?>
               <table class="items_control">
                 <tbody>
                   <tr>

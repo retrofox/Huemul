@@ -25,7 +25,7 @@
       <td class="state_<?php echo $procedure->getLastRevision()->getRevisionStateId() ?>"><?php include_partial('procedures/state', array('revision' => $procedure->getLastRevision())) ?></td>
       <td><?php echo format_date($procedure->getCreatedAt(), 'f') ?></td>
       <td>
-        <?php echo link_to(__('Revisions'), 'procedures/show?procedure_id='.$procedure->get('id'), array('class'=>'revisiones', 'title'=>__('Ver/Agregar revisiones del trámite'))) ?> |
+        <?php echo link_to(__('Detail'), 'procedures/show?procedure_id='.$procedure->get('id'), array('class'=>'revisiones', 'title'=>__('Ver/Agregar revisiones del trámite'))) ?> |
         <?php echo link_to(__('Edit'), 'procedures/edit?id='.$procedure->get('id'), array('class'=>'edit', 'title'=>__('Editar información del trámite'))) ?>
       </td>
     </tr>
