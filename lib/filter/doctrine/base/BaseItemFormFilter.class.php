@@ -72,7 +72,7 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
     }
 
     $query->leftJoin('r.RevisionItem RevisionItem')
-          ->andWhereIn('RevisionItem.revission_id', $values);
+          ->andWhereIn('RevisionItem.revision_id', $values);
   }
 
   public function addRevisionListColumnQuery(Doctrine_Query $query, $field, $values)

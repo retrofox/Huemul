@@ -80,7 +80,7 @@ Item:
   relations:
     Formus:                     { class: Formu, local: item_id, foreign: form_id, refClass: ItemFormu }
     Group:                      { foreignAlias: Items, local: group_id, foreign: id, class: sfGuardGroup }
-    Revisions:                  { class: Revision, local: item_id, foreign: revission_id, refClass: RevisionItem }
+    Revisions:                  { class: Revision, local: item_id, foreign: revision_id, refClass: RevisionItem }
 
 # Formuulario <-> Visados
 ItemFormu:

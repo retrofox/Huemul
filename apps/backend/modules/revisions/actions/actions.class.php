@@ -189,6 +189,6 @@ class revisionsActions extends autoRevisionsActions {
    * @author Damian Suarez
    */
   public function executeGenerateDocumentation(sfWebRequest $request) {
-    die('aca fueste papa !');
+    die('pendiente ...');
   }
 }

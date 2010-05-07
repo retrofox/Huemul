@@ -19,6 +19,8 @@ class RevisionForm extends BaseRevisionForm
       $this['parent_id'],
       $this['revision_state_id'],
       $this['creator_id'],
+      $this['items_list'],
+      $this['item_list'],
       $this['block']
     );
 
@@ -30,5 +32,13 @@ class RevisionForm extends BaseRevisionForm
     ));
 
     $this->widgetSchema['procedure_id'] = new sfWidgetFormInputHidden();
+
+    /*
+    $this->widgetSchema['permissions_list'] = new sfWidgetFormDoctrineChoice(array(
+      'model' => 'sfGuardPermission',
+      'multiple' => 'true',
+      'expanded' => true
+    ));
+    */
   }
 }

@@ -162,7 +162,7 @@ abstract class BaseRevision extends sfDoctrineRecord
 
         $this->hasMany('Item', array(
              'refClass' => 'RevisionItem',
-             'local' => 'revission_id',
+             'local' => 'revision_id',
              'foreign' => 'item_id'));
 
         $this->hasMany('RevisionItem', array(

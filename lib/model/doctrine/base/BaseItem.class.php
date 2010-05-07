@@ -85,7 +85,7 @@ abstract class BaseItem extends sfDoctrineRecord
         $this->hasMany('Revision as Revisions', array(
              'refClass' => 'RevisionItem',
              'local' => 'item_id',
-             'foreign' => 'revission_id'));
+             'foreign' => 'revision_id'));
 
         $this->hasMany('Revision', array(
              'refClass' => 'RevisionItem',
