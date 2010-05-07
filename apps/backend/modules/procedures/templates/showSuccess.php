@@ -68,7 +68,14 @@ use_stylesheet('backend/procedure.css');
                     <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
 
                     <?php elseif($state == 4) : ?>
-                    <li><?php echo link_to('Generar documentación', 'revisions/generateDocumentation?id='.$revision->getId()) ?></li>
+                    <li><?php // echo link_to('Generar documentación', 'revisions/generateDocumentation?id='.$revision->getId()) ?>
+                    <?php if($procedure->getFormuId() == 1) : ?>
+                      <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+                    <?php elseif($procedure->getFormuId() == 2) : ?>
+                      <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+                    <?php endif; ?>
+
+                    </li>
 
                       <?php elseif($state == 8) : ?>
                     <li><?php echo link_to('Controlar', 'revisions/control?id='.$revision->getId()) ?></li>
@@ -109,6 +116,16 @@ use_stylesheet('backend/procedure.css');
           <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
           <?php elseif($state == 8) : ?>
           <li><?php echo link_to('Controlar revisión', 'revisions/control?id='.$revision->getId()) ?></li>
+          <?php endif; ?>
+
+          <?php if($state=4) : ?>
+          <li>
+            <?php if($procedure->getFormuId() == 1) : ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+            <?php elseif($procedure->getFormuId() == 2) : ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+            <?php endif; ?>
+          </li>
           <?php endif; ?>
         </ul>
       </nav>

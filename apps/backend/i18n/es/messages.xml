@@ -552,6 +552,11 @@
         <source>Edit Procedures</source>
         <target>Editar Trámite</target>
       </trans-unit>
+
+      <trans-unit id="112">
+        <source>Download documentation</source>
+        <target>Descargar documentación</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

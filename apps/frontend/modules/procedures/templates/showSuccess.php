@@ -11,7 +11,13 @@
       <?php if($state!=4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
       <?php else:  ?>
-      <li><?php echo link_to(__('Download documentation'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
+      <li>
+        <?php if($procedure->getFormuId() == 1) : ?>
+           <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+        <?php elseif($procedure->getFormuId() == 2) : ?>
+           <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+        <?php endif; ?>
+      </li>
       <?php endif; ?>
     </ul>
   </nav>
@@ -29,7 +35,7 @@
   <div class="tip">
     <h2>Aviso</h2>
     <?php if($procedure->getFormuId() == 1) : ?>
-      <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar el comprobante desde este <?php echo link_to('enlace', 'procedures/constancia?id='.$procedure->get('id')) ?>.</p>
+      <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar la constancia desde este <?php echo link_to('enlace', 'procedures/constancia?id='.$procedure->get('id')) ?>.</p>
     <?php elseif($procedure->getFormuId() == 2) : ?>
       <p>Este trámite ya ha sido <strong>autorizado</strong>. Ya puede descargar el <?php echo link_to('Permiso de construcción', 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>.</p>
     <?php endif; ?>
@@ -87,7 +93,7 @@
           <?php if ($revision->getFile() != null) : ?>
         <a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="<?php echo __('Descargar archivo adjunto') ?>" class="download"><?php echo __('Download'); ?></a>
           <?php else :  ?>
-        &mdash;
+            &mdash;
           <?php endif; ?>
       </td>
 
@@ -98,27 +104,26 @@
           <?php if($revision->getRevisionStateId() == 7 || $revision->getRevisionStateId() == 8) : ?>
             <?php echo link_to(__('show'), 'revisions/showRevision?id='.$revision->get('id'), array('class'=>'action', 'title'=>__('Ver listado de ítems de visado de la revisión'))) ?>
           <?php else : ?>
-        &mdash;
+             &mdash;
           <?php endif; ?>
       </td>
 
         <?php if($revision->getItemsGroups()->count() > 0) : ?>
           <?php foreach ($revision->getItemsGroups() as $itemGroup) : ?>
-      <td>
-        <table class="items_control">
-          <tbody>
-            <tr>
-              <td class="ok"><?php echo ($revision->getItemsGroupOK($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
-              <td class="error"><?php echo ($revision->getItemsGroupError($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupError($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
-              <td class="nc"><?php echo ($revision->getItemsGroupSC($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-
+            <td>
+              <table class="items_control">
+                <tbody>
+                  <tr>
+                    <td class="ok"><?php echo ($revision->getItemsGroupOK($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupOK($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+                    <td class="error"><?php echo ($revision->getItemsGroupError($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupError($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+                    <td class="nc"><?php echo ($revision->getItemsGroupSC($itemGroup->getItem()->get('group_id')) ? $revision->getItemsGroupSC($itemGroup->getItem()->get('group_id'))->count : 0 )?></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
           <?php endforeach; ?>
         <?php else: ?>
-      <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+          <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
         <?php endif; ?>
 
     </tr>

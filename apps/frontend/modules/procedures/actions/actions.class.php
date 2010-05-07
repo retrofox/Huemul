@@ -72,8 +72,7 @@ class proceduresActions extends sfActions {
   public function executeShow(sfWebRequest $request) {
     $this->procedure = Doctrine::getTable('Procedure')->find($request->getParameter('procedure_id'));
   }
-
-  /**
+/**
    * action Comprobante
    *
    * @author Damian Suarez
@@ -84,17 +83,34 @@ class proceduresActions extends sfActions {
 
     $last_revision = $procedure->getLastRevision();
 
-    if($last_revision->getRevisionStateId() == 4) {
+    $last_control_revision = $procedure->getLastControlRevision();
 
-      $config = sfTCPDFPluginConfigHandler::loadConfig();
+    $last_items = $last_control_revision->getRevisionItem();
+
+    $rev_itemsGroup = array ();
+    foreach ($last_items as $rev_item) {
+      if($rev_item->getState()=="error") {
+        if(!array_key_exists($rev_item->getItem()->getGroup()->getName(), $rev_itemsGroup))
+          $rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()] = array();
+          array_push($rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()], $rev_item);
+
+
+      }
+    }
+
+
+
+
+   if($last_revision->getRevisionStateId() == 4) {
+     $config = sfTCPDFPluginConfigHandler::loadConfig();
 
       // create new PDF document
       $pdf = new MyPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
       // set default monospaced font
-      $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+              $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
-      //set margins
+              //set margins
       $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
       $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
       $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
@@ -117,25 +133,54 @@ class proceduresActions extends sfActions {
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B U', PDF_FONT_SIZE_MAIN+2);
       $pdf->Cell(0, 20, 'PERMISO DE CONTRUCCION', 0, 1, 'C');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      //$pdf->Ln(1);
       $pdf->Cell(70, 0,'EXPEDIENTE:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getDossier(), 0, 1, 'L');
+      $pdf->Cell(0, 0, $procedure->getDossier(), 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
-      $pdf->Cell(0, 0,'', 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0, $procedure->getFormu(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
-      $pdf->Cell(0, 0,'', 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
-      $pdf->Cell(0, 0,'', 0, 1, 'L');
-
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getCadastralData(), 0, 1, 'L');
+      $pdf->Cell(0, 0, $procedure->getCadastralData() , 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+
+
       $pdf->Ln(3);
       $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
-      $pdf->MultiCell(0, 0,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed nulla nibh. Etiam porta fermentum pellentesque.', 0, 1, 'L');
-      $pdf->Ln(10);
+
+
+      foreach ($rev_itemsGroup as $key=>$group) {
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+        $pdf->Cell(70, 0, $key.': ', 0, 1, 'L');
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+        $observ='';
+        foreach ($group as $item) {
+          $observ.=$item->getItem().', ';
+                }
+        $observ = substr($observ,  0 ,  strlen($observ)-2);
+        $observ =ucfirst($observ).'. ';
+        $pdf->MultiCell(0, 0,$observ, 0, 1, 'L');
+      }
+
+
+
+
+      $pdf->Ln(5);
       $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
       $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
       $pdf->Cell(0, 0,'CALCULO:', 0, 1, 'L');
@@ -179,7 +224,21 @@ Aclaración:', 0, 1, 'L');
   }
   public function executeConstancia(sfWebRequest $request) {
     $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
-    
+
+    $last_control_revision = $procedure->getLastControlRevision();
+
+    $last_items = $last_control_revision->getRevisionItem();
+
+    $rev_itemsGroup = array ();
+    foreach ($last_items as $rev_item) {
+      if($rev_item->getState()=="error") {
+        if(!array_key_exists($rev_item->getItem()->getGroup()->getName(), $rev_itemsGroup))
+          $rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()] = array();
+          array_push($rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()], $rev_item);
+
+
+      }
+    }
     $config = sfTCPDFPluginConfigHandler::loadConfig();
 
     // create new PDF document
@@ -214,20 +273,43 @@ Aclaración:', 0, 1, 'L');
     $pdf->MultiCell(0, 0,'La presente constancia habilita al profesional actuante a iniciar el expediente municipal para el registro del plano de obra, en las condiciones descriptas y según los datos que a continuación se detallan.', 0, 1, 'L');
     $pdf->Ln(1);
     $pdf->Cell(70, 0,'EXPEDIENTE:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0, $procedure->getDossier(), 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0, $procedure->getFormu(), 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(0, 0, $procedure->getCadastralData() , 0, 1, 'L');
+    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Ln(3);
     $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
-    $pdf->MultiCell(0, 0,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed nulla nibh. Etiam porta fermentum pellentesque. Duis pretium erat vitae massa tristique eu luctus felis mattis. In felis erat, cursus sed suscipit nec, mollis a enim. Sed vulputate urna felis. Praesent vitae malesuada dolor. Praesent consequat bibendum purus ut egestas. In dui elit, gravida vitae vehicula nec, semper at lacus. Vivamus sed lorem at nisl consectetur lacinia ut eu magna. Suspendisse luctus mi ac velit congue id tempor felis pretium. Quisque sed mi vel elit ornare semper nec id massa. In hac habitasse platea dictumst. Vivamus iaculis, lacus eu ullamcorper faucibus, mauris nisi pellentesque augue, eu fringilla ipsum elit vel dolor. In eget faucibus sapien. Praesent orci augue, consequat nec vulputate sed, consequat et sapien. Aenean molestie congue fermentum. In eget ligula tortor, id euismod sem.', 0, 1, 'L');
+    foreach ($rev_itemsGroup as $key=>$group) {
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+        $pdf->Cell(70, 0, $key.': ', 0, 1, 'L');
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+        $observ='';
+        foreach ($group as $item) {
+          $observ.=$item->getItem().', ';
+                }
+        $observ = substr($observ,  0 ,  strlen($observ)-2);
+        $observ =ucfirst($observ).'. ';
+        $pdf->MultiCell(0, 0,$observ, 0, 1, 'L');
+      }
     $pdf->Ln(30);
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(40, 0,'FIRMA DEL PROPIETARIO', 0, 0, 'L');
