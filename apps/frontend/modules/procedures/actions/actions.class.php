@@ -181,20 +181,30 @@ class proceduresActions extends sfActions {
 
 
       $pdf->Ln(5);
+      $pdf->Cell(0, 0,'PROYECTO:', 0, 1, 'L');
+      $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
       $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(0, 0,'CALCULO:', 0, 1, 'L');
-      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
       $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(0, 0,'DIRECTOR DE OBRA:', 0, 1, 'L');
-      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
       $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(0, 0,'EJECUTOR:', 0, 1, 'L');
+      $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
       $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
       $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
-      $pdf->Cell(150, 0,'Firma: ', 0, 1, 'R');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Ln(20);
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(150, 0,'Arq.Roberto A. Bianchi', 0, 1, 'R');
