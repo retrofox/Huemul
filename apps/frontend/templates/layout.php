@@ -16,7 +16,7 @@
 
       <div id="container">
          <?php include_partial('global/header') ?>
-        <section id="content">
+        <section id="content_alone">
           <?php echo $sf_content ?>
         </section>
       </div>

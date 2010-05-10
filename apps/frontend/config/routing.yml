@@ -16,6 +16,12 @@ sf_guard_password:
   url:   /request_password
   param: { module: sfGuardAuth, action: password }
 
+#simpleUserRequest:
+#  url:   /simpleUser
+#  param: { module: simpleUser, action: new }
+
+
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

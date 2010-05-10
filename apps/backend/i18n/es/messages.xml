@@ -557,6 +557,21 @@
         <source>Download documentation</source>
         <target>Descargar documentación</target>
       </trans-unit>
+
+      <trans-unit id="113">
+        <source>Users List</source>
+        <target>Listado de Usuarios</target>
+      </trans-unit>
+
+      <trans-unit id="114">
+        <source>Complete name</source>
+        <target>Nombre completo</target>
+      </trans-unit>
+
+      <trans-unit id="115">
+        <source>Mugshot</source>
+        <target>Foto carnet</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

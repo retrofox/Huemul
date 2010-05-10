@@ -12,6 +12,7 @@
       <li><?php echo link_to(__('Logout'), '@sf_guard_signout')?> </li>
     <?php else: ?>
       <li><?php echo link_to('Entrar', '@sf_guard_signin')?></li>
+      <li><?php echo link_to('Solicitar Registro', 'simpleUser/new')?></li>
     <?php endif; ?>
     </ul>
 

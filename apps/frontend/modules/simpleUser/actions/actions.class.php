@@ -19,14 +19,14 @@ class simpleUserActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new sfGuardUserForm();
+    $this->form = new simpleUserForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new sfGuardUserForm();
+    $this->form = new simpleUserForm();
 
     $this->processForm($request, $this->form);
 
@@ -36,14 +36,14 @@ class simpleUserActions extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
-    $this->form = new sfGuardUserForm($sf_guard_user);
+    $this->form = new simpleUserForm($sf_guard_user);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($sf_guard_user = Doctrine::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
-    $this->form = new sfGuardUserForm($sf_guard_user);
+    $this->form = new simpleUserForm($sf_guard_user);
 
     $this->processForm($request, $this->form);
 
@@ -67,7 +67,13 @@ class simpleUserActions extends sfActions
     {
       $sf_guard_user = $form->save();
 
-      $this->redirect('simpleUser/edit?id='.$sf_guard_user->getId());
+      $this->redirect('simpleUser/addOk?id='.$sf_guard_user->getId());
     }
+  }
+  public function executeAddOk(sfWebRequest $request)
+  {
+
+    $this->addUser = Doctrine::getTable('sfGuardUser')->find($request->getParameter('id'));
+
   }
 }

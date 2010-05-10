@@ -37,5 +37,7 @@ class ProfileMugshotForm extends BaseProfileForm
 
     $this->getObject()->configureJCropWidgets($this);
     $this->getObject()->configureJCropValidators($this);
+    
   }
+
 }

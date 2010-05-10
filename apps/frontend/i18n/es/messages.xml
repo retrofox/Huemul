@@ -482,6 +482,11 @@
         <source>Address</source>
         <target>Dirección</target>
       </trans-unit>
+
+      <trans-unit id="110">
+        <source>User registration request</source>
+        <target>Solicitud de Alta de Usuario</target>
+      </trans-unit>
     </body>
   </file>
 

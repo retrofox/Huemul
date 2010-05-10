@@ -36,16 +36,26 @@ class ProfileForm extends BaseProfileForm {
     $this->widgetSchema['documment_type'] = new sfWidgetFormChoice(
       array(
         'choices' => array('dni' => 'dni', 'le' => 'le')
+      ),
+      array(
+        'class' => 'dni'
       )
     );
 
-    $this->widgetSchema['birth_date'] = new sfWidgetFormInputText(
+    $this->widgetSchema['birth_date'] = new sfWidgetFormDate(
       array(
-        //'years' => $years
+        'years' => $years
       ),
       array(
         'class' => 'input_date'
       )
     );
+    
+    $this->validatorSchema['email'] = new sfValidatorEmail(
+      array(
+        'required' => true
+        )
+     );
+
   }
 }
