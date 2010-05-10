@@ -1,471 +1,3 @@
-Profession:
-  Profession_1:
-    name: Agrimensor
-    description: ''
-  Profession_2:
-    name: Ingeniero
-    description: ''
-  Profession_3:
-    name: Arquitecto
-    description: ''
-  Profession_4:
-    name: 'Maestro Mayor de Obras'
-    description: ''
-  Profession_5:
-    name: 'Tecnico en Construcciones'
-    description: ''
-Profile:
-  Profile_1:
-    User: sfGuardUser_2
-    first_name: 'Roberto Damian'
-    last_name: Suarez
-    registration: null
-    birth_date: '0000-00-00'
-    documment_type: dni
-    documment: '26144030'
-    phone: '0299 4778030'
-    movil: null
-    email: damian.suarez@xifox.net
-    addres: 'Don Bosco 869'
-    country: Argentina
-    mugshot: null
-    mugshot_x1: null
-    mugshot_y1: null
-    mugshot_x2: null
-    mugshot_y2: null
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-    latitude: null
-    longitude: null
-  Profile_2:
-    User: sfGuardUser_3
-    first_name: 'Alex Claudio Andres'
-    last_name: Melo
-    registration: null
-    birth_date: '0000-00-00'
-    documment_type: dni
-    documment: '40123123'
-    phone: '0299 4790580'
-    movil: '299155155155'
-    email: alex.melo@xifox.net
-    addres: 'belgrano 365'
-    country: Argentina
-    mugshot: null
-    mugshot_x1: null
-    mugshot_y1: null
-    mugshot_x2: null
-    mugshot_y2: null
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-    latitude: null
-    longitude: null
-  Profile_3:
-    User: sfGuardUser_1
-    first_name: Admin
-    last_name: Admin
-    registration: ''
-    birth_date: null
-    documment_type: dni
-    documment: ''
-    phone: ''
-    movil: ''
-    email: ''
-    addres: ''
-    country: ''
-    mugshot: null
-    mugshot_x1: null
-    mugshot_y1: null
-    mugshot_x2: null
-    mugshot_y2: null
-    created_at: '2010-05-03 20:59:35'
-    updated_at: '2010-05-05 16:38:05'
-    latitude: null
-    longitude: null
-RevisionState:
-  RevisionState_1:
-    title: Inicial
-    description: 'Estado Inicial y único de un trámite. Se asigna automáticamente por le Responsable cuando el trámite se ha iniciado.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_2:
-    title: Aprobado
-    description: 'Estado Final y único de un trámite. Se asgina por un usuario Administrador cuando el trámita finalmente ha sido aprobado.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_3:
-    title: Anulado
-    description: null
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_4:
-    title: Autorizado
-    description: null
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_5:
-    title: 'A Revisar'
-    description: 'Estado pendiente a revisar por parte de la administración de Obras Privadas.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_6:
-    title: Visado
-    description: 'Estado visado por parte del Administrador.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_7:
-    title: Corregido
-    description: 'Estado creado por el Responsable en respuesta al estado de Visado.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  RevisionState_8:
-    title: 'En Proceso'
-    description: 'Este estado se produce en una revision cuando aún se encuentra en proceso de Visado.'
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-sfGuardGroup:
-  sfGuardGroup_1:
-    name: admin
-    description: 'Administrator group'
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-  sfGuardGroup_2:
-    name: 'Usuario común'
-    description: 'Los usuarios de la aplicación son los profesionales que utilizan esta herramienta para poder realizar los trámites.'
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-  sfGuardGroup_3:
-    name: 'Departamento de Catastro'
-    description: null
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-  sfGuardGroup_4:
-    name: 'Departamento de Desarrollo Urbano'
-    description: null
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-  sfGuardGroup_5:
-    name: 'Departamento de Obras Privadas'
-    description: null
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-sfGuardPermission:
-  sfGuardPermission_1:
-    name: admin
-    description: 'Administrator permission'
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-  sfGuardPermission_2:
-    name: User
-    description: 'User permission'
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
-  sfGuardPermission_3:
-    name: 'Responsable de cierre'
-    description: ''
-    created_at: '2010-05-05 16:24:48'
-    updated_at: '2010-05-05 16:24:48'
-sfGuardUserPermission:
-  sfGuardUserPermission_1_1:
-    sfGuardUser: sfGuardUser_1
-    sfGuardPermission: sfGuardPermission_1
-    created_at: '2010-05-05 16:38:05'
-    updated_at: '2010-05-05 16:38:05'
-  sfGuardUserPermission_1_2:
-    sfGuardUser: sfGuardUser_1
-    sfGuardPermission: sfGuardPermission_2
-    created_at: '2010-05-05 16:38:05'
-    updated_at: '2010-05-05 16:38:05'
-  sfGuardUserPermission_1_3:
-    sfGuardUser: sfGuardUser_1
-    sfGuardPermission: sfGuardPermission_3
-    created_at: '2010-05-05 16:24:48'
-    updated_at: '2010-05-05 16:24:48'
-  sfGuardUserPermission_4_1:
-    sfGuardUser: sfGuardUser_4
-    sfGuardPermission: sfGuardPermission_1
-    created_at: '2010-05-05 09:51:32'
-    updated_at: '2010-05-05 09:51:32'
-sfGuardGroupPermission:
-  sfGuardGroupPermission_1_1:
-    sfGuardGroup: sfGuardGroup_1
-    sfGuardPermission: sfGuardPermission_1
-    created_at: '2010-05-05 16:38:50'
-    updated_at: '2010-05-05 16:38:50'
-  sfGuardGroupPermission_1_2:
-    sfGuardGroup: sfGuardGroup_1
-    sfGuardPermission: sfGuardPermission_2
-    created_at: '2010-05-05 16:38:50'
-    updated_at: '2010-05-05 16:38:50'
-  sfGuardGroupPermission_1_3:
-    sfGuardGroup: sfGuardGroup_1
-    sfGuardPermission: sfGuardPermission_3
-    created_at: '2010-05-05 16:38:50'
-    updated_at: '2010-05-05 16:38:50'
-  sfGuardGroupPermission_2_2:
-    sfGuardGroup: sfGuardGroup_2
-    sfGuardPermission: sfGuardPermission_2
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  sfGuardGroupPermission_4_1:
-    sfGuardGroup: sfGuardGroup_4
-    sfGuardPermission: sfGuardPermission_1
-    created_at: '2010-05-05 09:51:32'
-    updated_at: '2010-05-05 09:51:32'
-  sfGuardGroupPermission_5_1:
-    sfGuardGroup: sfGuardGroup_5
-    sfGuardPermission: sfGuardPermission_1
-    created_at: '2010-05-05 09:51:32'
-    updated_at: '2010-05-05 09:51:32'
-sfGuardUser:
-  sfGuardUser_1:
-    username: admin
-    algorithm: sha1
-    salt: c41d093bc9e6f699ca39068784608717
-    password: admin
-    is_active: true
-    is_super_admin: true
-    last_login: '2010-05-05 15:55:25'
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-05 15:55:25'
-  sfGuardUser_2:
-    username: damian
-    algorithm: sha1
-    salt: 91e4266ee596b30d348463fe1b5ee932
-    password: damian
-    is_active: true
-    is_super_admin: true
-    last_login: null
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-  sfGuardUser_3:
-    username: alex
-    algorithm: sha1
-    salt: 0db5f48401ae1e7d46f93d24088ea2c9
-    password: alex
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-  sfGuardUser_4:
-    username: clau
-    algorithm: sha1
-    salt: 7cb4f9deccd7ff51352dbacbe0828ae5
-    password: clau
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2010-05-03 13:09:00'
-    updated_at: '2010-05-03 13:09:00'
-sfGuardUserGroup:
-  sfGuardUserGroup_1_1:
-    sfGuardUser: sfGuardUser_1
-    sfGuardGroup: sfGuardGroup_1
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-  sfGuardUserGroup_1_2:
-    sfGuardUser: sfGuardUser_1
-    sfGuardGroup: sfGuardGroup_2
-    created_at: '2010-05-05 16:38:05'
-    updated_at: '2010-05-05 16:38:05'
-  sfGuardUserGroup_1_3:
-    sfGuardUser: sfGuardUser_1
-    sfGuardGroup: sfGuardGroup_3
-    created_at: '2010-05-05 11:08:20'
-    updated_at: '2010-05-05 11:08:20'
-  sfGuardUserGroup_1_4:
-    sfGuardUser: sfGuardUser_1
-    sfGuardGroup: sfGuardGroup_4
-    created_at: '2010-05-05 11:08:20'
-    updated_at: '2010-05-05 11:08:20'
-  sfGuardUserGroup_1_5:
-    sfGuardUser: sfGuardUser_1
-    sfGuardGroup: sfGuardGroup_5
-    created_at: '2010-05-05 11:08:20'
-    updated_at: '2010-05-05 11:08:20'
-  sfGuardUserGroup_2_2:
-    sfGuardUser: sfGuardUser_2
-    sfGuardGroup: sfGuardGroup_2
-    created_at: '2010-05-03 13:09:05'
-    updated_at: '2010-05-03 13:09:05'
-ItemFormu:
-  ItemFormu_1_1:
-    form_id: '1'
-    item_id: '1'
-  ItemFormu_1_2:
-    form_id: '1'
-    item_id: '2'
-  ItemFormu_1_3:
-    form_id: '1'
-    item_id: '3'
-  ItemFormu_1_4:
-    form_id: '1'
-    item_id: '4'
-  ItemFormu_1_5:
-    form_id: '1'
-    item_id: '5'
-  ItemFormu_1_6:
-    form_id: '1'
-    item_id: '6'
-  ItemFormu_1_7:
-    form_id: '1'
-    item_id: '7'
-  ItemFormu_1_8:
-    form_id: '1'
-    item_id: '8'
-  ItemFormu_1_9:
-    form_id: '1'
-    item_id: '9'
-  ItemFormu_1_10:
-    form_id: '1'
-    item_id: '10'
-  ItemFormu_1_11:
-    form_id: '1'
-    item_id: '11'
-  ItemFormu_1_12:
-    form_id: '1'
-    item_id: '12'
-  ItemFormu_1_13:
-    form_id: '1'
-    item_id: '13'
-  ItemFormu_1_14:
-    form_id: '1'
-    item_id: '14'
-  ItemFormu_1_15:
-    form_id: '1'
-    item_id: '15'
-  ItemFormu_1_16:
-    form_id: '1'
-    item_id: '16'
-  ItemFormu_1_17:
-    form_id: '1'
-    item_id: '17'
-  ItemFormu_1_18:
-    form_id: '1'
-    item_id: '18'
-  ItemFormu_1_19:
-    form_id: '1'
-    item_id: '19'
-  ItemFormu_1_20:
-    form_id: '1'
-    item_id: '20'
-  ItemFormu_1_21:
-    form_id: '1'
-    item_id: '21'
-  ItemFormu_1_22:
-    form_id: '1'
-    item_id: '22'
-  ItemFormu_1_23:
-    form_id: '1'
-    item_id: '23'
-  ItemFormu_1_24:
-    form_id: '1'
-    item_id: '24'
-  ItemFormu_1_25:
-    form_id: '1'
-    item_id: '25'
-  ItemFormu_1_26:
-    form_id: '1'
-    item_id: '26'
-  ItemFormu_1_27:
-    form_id: '1'
-    item_id: '27'
-  ItemFormu_1_28:
-    form_id: '1'
-    item_id: '28'
-  ItemFormu_1_29:
-    form_id: '1'
-    item_id: '29'
-  ItemFormu_1_30:
-    form_id: '1'
-    item_id: '30'
-  ItemFormu_1_31:
-    form_id: '1'
-    item_id: '31'
-  ItemFormu_1_32:
-    form_id: '1'
-    item_id: '32'
-  ItemFormu_1_33:
-    form_id: '1'
-    item_id: '33'
-  ItemFormu_1_34:
-    form_id: '1'
-    item_id: '34'
-  ItemFormu_1_35:
-    form_id: '1'
-    item_id: '35'
-  ItemFormu_1_36:
-    form_id: '1'
-    item_id: '36'
-  ItemFormu_1_37:
-    form_id: '1'
-    item_id: '37'
-  ItemFormu_1_38:
-    form_id: '1'
-    item_id: '38'
-  ItemFormu_1_39:
-    form_id: '1'
-    item_id: '39'
-  ItemFormu_1_40:
-    form_id: '1'
-    item_id: '40'
-  ItemFormu_1_41:
-    form_id: '1'
-    item_id: '41'
-  ItemFormu_1_42:
-    form_id: '1'
-    item_id: '42'
-  ItemFormu_1_43:
-    form_id: '1'
-    item_id: '43'
-  ItemFormu_1_44:
-    form_id: '1'
-    item_id: '44'
-  ItemFormu_1_45:
-    form_id: '1'
-    item_id: '45'
-  ItemFormu_1_46:
-    form_id: '1'
-    item_id: '46'
-  ItemFormu_1_47:
-    form_id: '1'
-    item_id: '47'
-  ItemFormu_1_48:
-    form_id: '1'
-    item_id: '48'
-  ItemFormu_1_49:
-    form_id: '1'
-    item_id: '49'
-  ItemFormu_1_50:
-    form_id: '1'
-    item_id: '50'
-  ItemFormu_1_51:
-    form_id: '1'
-    item_id: '51'
-  ItemFormu_1_52:
-    form_id: '1'
-    item_id: '52'
-  ItemFormu_1_53:
-    form_id: '1'
-    item_id: '53'
-  ItemFormu_1_54:
-    form_id: '1'
-    item_id: '54'
-  ItemFormu_1_55:
-    form_id: '1'
-    item_id: '55'
-  ItemFormu_1_56:
-    form_id: '1'
-    item_id: '56'
-  ItemFormu_1_57:
-    form_id: '1'
-    item_id: '57'
-Formu:
-  Formu_1:
-    name: 'Type A'
-    description: 'Formulario Base.'
-    created_at: '2010-05-03 13:09:01'
-    updated_at: '2010-05-03 13:09:01'
 Item:
   Item_1:
     Group: sfGuardGroup_3
@@ -809,3 +341,587 @@ Item:
     description: ''
     created_at: '2010-05-03 13:09:03'
     updated_at: '2010-05-03 13:09:03'
+  Item_58:
+    Group: sfGuardGroup_6
+    title: 'Información adicional'
+    description: 'Información adicional'
+    created_at: '2010-05-10 10:25:14'
+    updated_at: '2010-05-10 10:25:14'
+ItemFormu:
+  ItemFormu_1_1:
+    form_id: '1'
+    Item: Item_1
+  ItemFormu_1_2:
+    form_id: '1'
+    Item: Item_2
+  ItemFormu_1_3:
+    form_id: '1'
+    Item: Item_3
+  ItemFormu_1_4:
+    form_id: '1'
+    Item: Item_4
+  ItemFormu_3_4:
+    form_id: '3'
+    Item: Item_4
+  ItemFormu_1_5:
+    form_id: '1'
+    Item: Item_5
+  ItemFormu_3_5:
+    form_id: '3'
+    Item: Item_5
+  ItemFormu_1_6:
+    form_id: '1'
+    Item: Item_6
+  ItemFormu_1_7:
+    form_id: '1'
+    Item: Item_7
+  ItemFormu_1_8:
+    form_id: '1'
+    Item: Item_8
+  ItemFormu_1_9:
+    form_id: '1'
+    Item: Item_9
+  ItemFormu_1_10:
+    form_id: '1'
+    Item: Item_10
+  ItemFormu_1_11:
+    form_id: '1'
+    Item: Item_11
+  ItemFormu_1_12:
+    form_id: '1'
+    Item: Item_12
+  ItemFormu_1_13:
+    form_id: '1'
+    Item: Item_13
+  ItemFormu_1_14:
+    form_id: '1'
+    Item: Item_14
+  ItemFormu_1_15:
+    form_id: '1'
+    Item: Item_15
+  ItemFormu_1_16:
+    form_id: '1'
+    Item: Item_16
+  ItemFormu_1_17:
+    form_id: '1'
+    Item: Item_17
+  ItemFormu_3_17:
+    form_id: '3'
+    Item: Item_17
+  ItemFormu_1_18:
+    form_id: '1'
+    Item: Item_18
+  ItemFormu_2_18:
+    form_id: '2'
+    Item: Item_18
+  ItemFormu_1_19:
+    form_id: '1'
+    Item: Item_19
+  ItemFormu_3_19:
+    form_id: '3'
+    Item: Item_19
+  ItemFormu_1_20:
+    form_id: '1'
+    Item: Item_20
+  ItemFormu_1_21:
+    form_id: '1'
+    Item: Item_21
+  ItemFormu_3_21:
+    form_id: '3'
+    Item: Item_21
+  ItemFormu_1_22:
+    form_id: '1'
+    Item: Item_22
+  ItemFormu_1_23:
+    form_id: '1'
+    Item: Item_23
+  ItemFormu_3_23:
+    form_id: '3'
+    Item: Item_23
+  ItemFormu_1_24:
+    form_id: '1'
+    Item: Item_24
+  ItemFormu_1_25:
+    form_id: '1'
+    Item: Item_25
+  ItemFormu_1_26:
+    form_id: '1'
+    Item: Item_26
+  ItemFormu_1_27:
+    form_id: '1'
+    Item: Item_27
+  ItemFormu_1_28:
+    form_id: '1'
+    Item: Item_28
+  ItemFormu_1_29:
+    form_id: '1'
+    Item: Item_29
+  ItemFormu_1_30:
+    form_id: '1'
+    Item: Item_30
+  ItemFormu_1_31:
+    form_id: '1'
+    Item: Item_31
+  ItemFormu_1_32:
+    form_id: '1'
+    Item: Item_32
+  ItemFormu_1_33:
+    form_id: '1'
+    Item: Item_33
+  ItemFormu_3_33:
+    form_id: '3'
+    Item: Item_33
+  ItemFormu_1_34:
+    form_id: '1'
+    Item: Item_34
+  ItemFormu_2_34:
+    form_id: '2'
+    Item: Item_34
+  ItemFormu_3_34:
+    form_id: '3'
+    Item: Item_34
+  ItemFormu_1_35:
+    form_id: '1'
+    Item: Item_35
+  ItemFormu_1_36:
+    form_id: '1'
+    Item: Item_36
+  ItemFormu_1_37:
+    form_id: '1'
+    Item: Item_37
+  ItemFormu_2_37:
+    form_id: '2'
+    Item: Item_37
+  ItemFormu_1_38:
+    form_id: '1'
+    Item: Item_38
+  ItemFormu_3_38:
+    form_id: '3'
+    Item: Item_38
+  ItemFormu_1_39:
+    form_id: '1'
+    Item: Item_39
+  ItemFormu_1_40:
+    form_id: '1'
+    Item: Item_40
+  ItemFormu_1_41:
+    form_id: '1'
+    Item: Item_41
+  ItemFormu_1_42:
+    form_id: '1'
+    Item: Item_42
+  ItemFormu_1_43:
+    form_id: '1'
+    Item: Item_43
+  ItemFormu_2_43:
+    form_id: '2'
+    Item: Item_43
+  ItemFormu_1_44:
+    form_id: '1'
+    Item: Item_44
+  ItemFormu_1_45:
+    form_id: '1'
+    Item: Item_45
+  ItemFormu_1_46:
+    form_id: '1'
+    Item: Item_46
+  ItemFormu_1_47:
+    form_id: '1'
+    Item: Item_47
+  ItemFormu_1_48:
+    form_id: '1'
+    Item: Item_48
+  ItemFormu_2_48:
+    form_id: '2'
+    Item: Item_48
+  ItemFormu_3_48:
+    form_id: '3'
+    Item: Item_48
+  ItemFormu_1_49:
+    form_id: '1'
+    Item: Item_49
+  ItemFormu_2_49:
+    form_id: '2'
+    Item: Item_49
+  ItemFormu_3_49:
+    form_id: '3'
+    Item: Item_49
+  ItemFormu_1_50:
+    form_id: '1'
+    Item: Item_50
+  ItemFormu_2_50:
+    form_id: '2'
+    Item: Item_50
+  ItemFormu_3_50:
+    form_id: '3'
+    Item: Item_50
+  ItemFormu_1_51:
+    form_id: '1'
+    Item: Item_51
+  ItemFormu_1_52:
+    form_id: '1'
+    Item: Item_52
+  ItemFormu_1_53:
+    form_id: '1'
+    Item: Item_53
+  ItemFormu_1_54:
+    form_id: '1'
+    Item: Item_54
+  ItemFormu_3_54:
+    form_id: '3'
+    Item: Item_54
+  ItemFormu_1_55:
+    form_id: '1'
+    Item: Item_55
+  ItemFormu_1_56:
+    form_id: '1'
+    Item: Item_56
+  ItemFormu_3_56:
+    form_id: '3'
+    Item: Item_56
+  ItemFormu_1_57:
+    form_id: '1'
+    Item: Item_57
+  ItemFormu_2_58:
+    form_id: '2'
+    Item: Item_58
+CadastralData:
+  CadastralData_1:
+    circunscripcion: '85'
+    seccion: '63'
+    tipo: manzana
+    tipo_numero: '47'
+    partida_nro: '41'
+    parcela: '52'
+    uf: '41'
+    created_at: '2010-05-07 11:43:38'
+    updated_at: '2010-05-07 11:43:38'
+  CadastralData_2:
+    circunscripcion: '58'
+    seccion: '74'
+    tipo: manzana
+    tipo_numero: '52'
+    partida_nro: '41'
+    parcela: '20'
+    uf: '4'
+    created_at: '2010-05-10 10:06:33'
+    updated_at: '2010-05-10 10:06:33'
+  CadastralData_3:
+    circunscripcion: '41'
+    seccion: '4'
+    tipo: manzana
+    tipo_numero: '41'
+    partida_nro: '52'
+    parcela: '41'
+    uf: '41'
+    created_at: '2010-05-10 10:21:30'
+    updated_at: '2010-05-10 10:21:30'
+  CadastralData_4:
+    circunscripcion: '78'
+    seccion: '52'
+    tipo: manzana
+    tipo_numero: '41'
+    partida_nro: '52'
+    parcela: '63'
+    uf: '41'
+    created_at: '2010-05-10 10:25:43'
+    updated_at: '2010-05-10 10:25:43'
+  CadastralData_5:
+    circunscripcion: '52'
+    seccion: '41'
+    tipo: manzana
+    tipo_numero: '5'
+    partida_nro: '41'
+    parcela: '52'
+    uf: '12'
+    created_at: '2010-05-10 10:42:24'
+    updated_at: '2010-05-10 10:42:24'
+RevisionState:
+  RevisionState_1:
+    title: Inicial
+    description: 'Estado Inicial y único de un trámite. Se asigna automáticamente por le Responsable cuando el trámite se ha iniciado.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_2:
+    title: Aprobado
+    description: 'Estado Final y único de un trámite. Se asgina por un usuario Administrador cuando el trámita finalmente ha sido aprobado.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_3:
+    title: Anulado
+    description: null
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_4:
+    title: Autorizado
+    description: null
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_5:
+    title: 'A Revisar'
+    description: 'Estado pendiente a revisar por parte de la administración de Obras Privadas.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_6:
+    title: Visado
+    description: 'Estado visado por parte del Administrador.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_7:
+    title: Corregido
+    description: 'Estado creado por el Responsable en respuesta al estado de Visado.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  RevisionState_8:
+    title: 'En Proceso'
+    description: 'Este estado se produce en una revision cuando aún se encuentra en proceso de Visado.'
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+Profile:
+  Profile_1:
+    User: sfGuardUser_2
+    first_name: 'Roberto Damian'
+    last_name: Suarez
+    registration: ''
+    birth_date: '0000-00-00'
+    documment_type: dni
+    documment: '26144030'
+    phone: '0299 4778030'
+    movil: ''
+    email: damian.suarez@xifox.net
+    addres: 'Don Bosco 869'
+    country: Argentina
+    mugshot: null
+    mugshot_x1: null
+    mugshot_y1: null
+    mugshot_x2: null
+    mugshot_y2: null
+    created_at: '2010-05-03 13:09:00'
+    updated_at: '2010-05-10 10:16:39'
+    latitude: null
+    longitude: null
+  Profile_3:
+    User: sfGuardUser_1
+    first_name: Admin
+    last_name: Admin
+    registration: ''
+    birth_date: null
+    documment_type: dni
+    documment: ''
+    phone: ''
+    movil: ''
+    email: ''
+    addres: ''
+    country: ''
+    mugshot: null
+    mugshot_x1: null
+    mugshot_y1: null
+    mugshot_x2: null
+    mugshot_y2: null
+    created_at: '2010-05-03 20:59:35'
+    updated_at: '2010-05-05 16:38:05'
+    latitude: null
+    longitude: null
+Formu:
+  Formu_1:
+    name: 'Type A'
+    description: 'Formulario Base.'
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  Formu_2:
+    name: 'Permiso de Construcción'
+    description: 'Permiso de Construcción'
+    created_at: '2010-05-10 10:18:32'
+    updated_at: '2010-05-10 10:18:32'
+  Formu_3:
+    name: 'Permiso de Instalación de gas'
+    description: 'Permiso de Instalación de gas'
+    created_at: '2010-05-10 10:32:31'
+    updated_at: '2010-05-10 10:32:31'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardPermission_2:
+    name: User
+    description: 'User permission'
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardPermission_3:
+    name: 'Responsable de cierre'
+    description: ''
+    created_at: '2010-05-05 16:24:48'
+    updated_at: '2010-05-05 16:24:48'
+sfGuardUserPermission:
+  sfGuardUserPermission_1_1:
+    sfGuardUser: sfGuardUser_1
+    sfGuardPermission: sfGuardPermission_1
+    created_at: '2010-05-05 16:38:05'
+    updated_at: '2010-05-05 16:38:05'
+  sfGuardUserPermission_1_2:
+    sfGuardUser: sfGuardUser_1
+    sfGuardPermission: sfGuardPermission_2
+    created_at: '2010-05-05 16:38:05'
+    updated_at: '2010-05-05 16:38:05'
+  sfGuardUserPermission_1_3:
+    sfGuardUser: sfGuardUser_1
+    sfGuardPermission: sfGuardPermission_3
+    created_at: '2010-05-05 16:24:48'
+    updated_at: '2010-05-05 16:24:48'
+  sfGuardUserPermission_2_3:
+    sfGuardUser: sfGuardUser_2
+    sfGuardPermission: sfGuardPermission_3
+    created_at: '2010-05-10 10:16:39'
+    updated_at: '2010-05-10 10:16:39'
+sfGuardUser:
+  sfGuardUser_1:
+    username: admin
+    algorithm: sha1
+    salt: c41d093bc9e6f699ca39068784608717
+    password: admin
+    is_active: true
+    is_super_admin: true
+    last_login: '2010-05-10 11:41:08'
+    created_at: '2010-05-03 13:09:00'
+    updated_at: '2010-05-10 11:41:08'
+  sfGuardUser_2:
+    username: damian
+    algorithm: sha1
+    salt: 91e4266ee596b30d348463fe1b5ee932
+    password: damian
+    is_active: true
+    is_super_admin: true
+    last_login: '2010-05-10 10:06:08'
+    created_at: '2010-05-03 13:09:00'
+    updated_at: '2010-05-10 10:06:08'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    sfGuardGroup: sfGuardGroup_1
+    sfGuardPermission: sfGuardPermission_1
+    created_at: '2010-05-05 16:38:50'
+    updated_at: '2010-05-05 16:38:50'
+  sfGuardGroupPermission_1_2:
+    sfGuardGroup: sfGuardGroup_1
+    sfGuardPermission: sfGuardPermission_2
+    created_at: '2010-05-05 16:38:50'
+    updated_at: '2010-05-05 16:38:50'
+  sfGuardGroupPermission_1_3:
+    sfGuardGroup: sfGuardGroup_1
+    sfGuardPermission: sfGuardPermission_3
+    created_at: '2010-05-05 16:38:50'
+    updated_at: '2010-05-05 16:38:50'
+  sfGuardGroupPermission_2_2:
+    sfGuardGroup: sfGuardGroup_2
+    sfGuardPermission: sfGuardPermission_2
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  sfGuardGroupPermission_4_1:
+    sfGuardGroup: sfGuardGroup_4
+    sfGuardPermission: sfGuardPermission_1
+    created_at: '2010-05-05 09:51:32'
+    updated_at: '2010-05-05 09:51:32'
+  sfGuardGroupPermission_5_1:
+    sfGuardGroup: sfGuardGroup_5
+    sfGuardPermission: sfGuardPermission_1
+    created_at: '2010-05-05 09:51:32'
+    updated_at: '2010-05-05 09:51:32'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_1
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  sfGuardUserGroup_1_2:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_2
+    created_at: '2010-05-05 16:38:05'
+    updated_at: '2010-05-05 16:38:05'
+  sfGuardUserGroup_1_3:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_3
+    created_at: '2010-05-05 11:08:20'
+    updated_at: '2010-05-05 11:08:20'
+  sfGuardUserGroup_1_4:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_4
+    created_at: '2010-05-05 11:08:20'
+    updated_at: '2010-05-05 11:08:20'
+  sfGuardUserGroup_1_5:
+    sfGuardUser: sfGuardUser_1
+    sfGuardGroup: sfGuardGroup_5
+    created_at: '2010-05-05 11:08:20'
+    updated_at: '2010-05-05 11:08:20'
+  sfGuardUserGroup_2_2:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_2
+    created_at: '2010-05-03 13:09:05'
+    updated_at: '2010-05-03 13:09:05'
+  sfGuardUserGroup_2_3:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_3
+    created_at: '2010-05-10 10:16:39'
+    updated_at: '2010-05-10 10:16:39'
+  sfGuardUserGroup_2_4:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_4
+    created_at: '2010-05-10 10:16:39'
+    updated_at: '2010-05-10 10:16:39'
+  sfGuardUserGroup_2_5:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_5
+    created_at: '2010-05-10 10:16:39'
+    updated_at: '2010-05-10 10:16:39'
+  sfGuardUserGroup_2_6:
+    sfGuardUser: sfGuardUser_2
+    sfGuardGroup: sfGuardGroup_6
+    created_at: '2010-05-10 10:19:37'
+    updated_at: '2010-05-10 10:19:37'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2010-05-03 13:09:00'
+    updated_at: '2010-05-03 13:09:00'
+  sfGuardGroup_2:
+    name: 'Usuario común'
+    description: 'Los usuarios de la aplicación son los profesionales que utilizan esta herramienta para poder realizar los trámites.'
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardGroup_3:
+    name: 'Departamento de Catastro'
+    description: null
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardGroup_4:
+    name: 'Departamento de Desarrollo Urbano'
+    description: null
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardGroup_5:
+    name: 'Departamento de Obras Privadas'
+    description: null
+    created_at: '2010-05-03 13:09:01'
+    updated_at: '2010-05-03 13:09:01'
+  sfGuardGroup_6:
+    name: Pendientes
+    description: 'Ítems pendientes a adjuntar al trámite una vez autorizado.'
+    created_at: '2010-05-10 10:19:37'
+    updated_at: '2010-05-10 11:41:31'
+Profession:
+  Profession_1:
+    name: Agrimensor
+    description: ''
+  Profession_2:
+    name: Ingeniero
+    description: ''
+  Profession_3:
+    name: Arquitecto
+    description: ''
+  Profession_4:
+    name: 'Maestro Mayor de Obras'
+    description: ''
+  Profession_5:
+    name: 'Tecnico en Construcciones'
+    description: ''
