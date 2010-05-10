@@ -7,15 +7,18 @@
  * 
  * @property integer $user_id
  * @property integer $procedure_id
+ * @property enum $type
  * @property sfGuardUser $sfGuardUser
  * @property Procedure $Procedure
  * 
  * @method integer       getUserId()       Returns the current record's "user_id" value
  * @method integer       getProcedureId()  Returns the current record's "procedure_id" value
+ * @method enum          getType()         Returns the current record's "type" value
  * @method sfGuardUser   getSfGuardUser()  Returns the current record's "sfGuardUser" value
  * @method Procedure     getProcedure()    Returns the current record's "Procedure" value
  * @method UserProcedure setUserId()       Sets the current record's "user_id" value
  * @method UserProcedure setProcedureId()  Sets the current record's "procedure_id" value
+ * @method UserProcedure setType()         Sets the current record's "type" value
  * @method UserProcedure setSfGuardUser()  Sets the current record's "sfGuardUser" value
  * @method UserProcedure setProcedure()    Sets the current record's "Procedure" value
  * 
@@ -37,6 +40,17 @@ abstract class BaseUserProcedure extends sfDoctrineRecord
         $this->hasColumn('procedure_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
+             ));
+        $this->hasColumn('type', 'enum', null, array(
+             'type' => 'enum',
+             'values' => 
+             array(
+              0 => 'propietario',
+              1 => 'calculo',
+              2 => 'dt',
+              3 => 'ejecucion',
+              4 => 'proyecto',
+             ),
              ));
 
 
