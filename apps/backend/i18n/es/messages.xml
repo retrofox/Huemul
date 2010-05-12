@@ -572,6 +572,15 @@
         <source>Mugshot</source>
         <target>Foto carnet</target>
       </trans-unit>
+
+      <trans-unit id="116">
+        <source>Revision states List</source>
+        <target>Listado de estados de revisión</target>
+      </trans-unit>
+       <trans-unit id="116">
+        <source>Edit Revision states</source>
+        <target>Editar estados de revisión</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

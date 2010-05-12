@@ -18,6 +18,7 @@ generator:
       list:
         fields:
           creator:                  { label: Professional }
+          formu:                    { label: Formulario }
           revisions_count:          { label: R }
           mugshot:                  { label: Photo }
 

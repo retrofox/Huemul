@@ -47,7 +47,8 @@ Profile:
   relations:
     User:
       class:            sfGuardUser
-      foreignType:      one
+      foreignType:      one 
+      onDelete:         CASCADE
 
     Profession:                 { foreignAlias: Users, local: profesion_id, foreign: id, class: Profession }
 
@@ -118,9 +119,9 @@ Procedure:
     dossier:                    { type: string(255) }
     is_finished:                { type: boolean, default: false }
     revisions_count:            { type: integer }
-    owner:                      { type: string(255) }
-    address:                    { type: string(255) }
-    neighborhood:               { type: string(255) }
+    #owner:                      { type: string(255) }
+    #address:                    { type: string(255) }
+    #neighborhood:               { type: string(255) }
     
   relations:
     Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
@@ -131,7 +132,7 @@ UserProcedure:
   columns:
     user_id:                    { type: integer(4), primary: true }
     procedure_id:               { type: integer, primary: true }
-    type:                       { type: enum, values: [ propietario, calculo, dt, ejecucion, proyecto ]}
+    type:                       { type: enum, values: [ propietario, calculo, director de obra, ejecutor, proyecto ]}
 
   relations:
     sfGuardUser:                { local: user_id, onDelete: CASCADE }

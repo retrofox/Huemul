@@ -17,7 +17,12 @@
     </ul>
 
     <div class="user">
-      <?php echo $sf_user->getGuardUser() ?>
+      <?php 
+      if($sf_user->getGuardUser() && $sf_user->getGuardUser()->hasPermission('Usuario Interno'))
+       echo link_to($sf_user->getGuardUser(), '/backend.php');       
+              else
+      echo $sf_user->getGuardUser();
+      ?>
     </div>
   </nav>
 </div>
