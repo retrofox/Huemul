@@ -39,6 +39,15 @@
             </li>
           </ul>
         </li>
+        <li>
+          <a href="#"><?php echo __('Professions'); ?></a>
+          <ul>
+            <li>
+              <li><?php echo link_to(__('List'), 'profession/index') ?></li>
+              <li><?php echo link_to(__('New'), 'profession/new') ?></li>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

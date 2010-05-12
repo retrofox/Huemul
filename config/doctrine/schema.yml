@@ -132,7 +132,7 @@ UserProcedure:
   columns:
     user_id:                    { type: integer(4), primary: true }
     procedure_id:               { type: integer, primary: true }
-    type:                       { type: enum, values: [ propietario, calculo, director de obra, ejecutor, proyecto ]}
+    type:                       { type: enum, values: [ propietario, calculo, director de obra, ejecutor, proyecto ], primary: true }
 
   relations:
     sfGuardUser:                { local: user_id, onDelete: CASCADE }

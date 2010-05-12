@@ -11,9 +11,6 @@
  * @property string $dossier
  * @property boolean $is_finished
  * @property integer $revisions_count
- * @property string $owner
- * @property string $address
- * @property string $neighborhood
  * @property Formu $Formu
  * @property CadastralData $CadastralData
  * @property Doctrine_Collection $Users
@@ -26,9 +23,6 @@
  * @method string              getDossier()           Returns the current record's "dossier" value
  * @method boolean             getIsFinished()        Returns the current record's "is_finished" value
  * @method integer             getRevisionsCount()    Returns the current record's "revisions_count" value
- * @method string              getOwner()             Returns the current record's "owner" value
- * @method string              getAddress()           Returns the current record's "address" value
- * @method string              getNeighborhood()      Returns the current record's "neighborhood" value
  * @method Formu               getFormu()             Returns the current record's "Formu" value
  * @method CadastralData       getCadastralData()     Returns the current record's "CadastralData" value
  * @method Doctrine_Collection getUsers()             Returns the current record's "Users" collection
@@ -40,9 +34,6 @@
  * @method Procedure           setDossier()           Sets the current record's "dossier" value
  * @method Procedure           setIsFinished()        Sets the current record's "is_finished" value
  * @method Procedure           setRevisionsCount()    Sets the current record's "revisions_count" value
- * @method Procedure           setOwner()             Sets the current record's "owner" value
- * @method Procedure           setAddress()           Sets the current record's "address" value
- * @method Procedure           setNeighborhood()      Sets the current record's "neighborhood" value
  * @method Procedure           setFormu()             Sets the current record's "Formu" value
  * @method Procedure           setCadastralData()     Sets the current record's "CadastralData" value
  * @method Procedure           setUsers()             Sets the current record's "Users" collection
@@ -80,18 +71,6 @@ abstract class BaseProcedure extends sfDoctrineRecord
              ));
         $this->hasColumn('revisions_count', 'integer', null, array(
              'type' => 'integer',
-             ));
-        $this->hasColumn('owner', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('address', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('neighborhood', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
              ));
 
 

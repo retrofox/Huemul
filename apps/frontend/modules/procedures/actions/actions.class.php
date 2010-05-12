@@ -37,6 +37,8 @@ class proceduresActions extends sfActions {
   }
 
   public function executeEdit(sfWebRequest $request) {
+    $this->procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id')));
+    $this->procedureId = $request->getParameter('id');
     $this->forward404Unless($procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id'))), sprintf('Object procedure does not exist (%s).', $request->getParameter('id')));
     $this->form = new ProcedureFullForm($procedure);
   }
@@ -148,11 +150,11 @@ class proceduresActions extends sfActions {
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
+      //$pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
+      //$pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
@@ -288,7 +290,7 @@ Aclaración:', 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
+    //$pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
@@ -296,11 +298,11 @@ Aclaración:', 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
+    //$pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
+    //$pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);

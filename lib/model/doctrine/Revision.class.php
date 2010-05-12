@@ -43,6 +43,7 @@ class Revision extends BaseRevision {
   /*
    * El numero de revision siempre se incrementa automaticamente.
   */
+  
   public function save(Doctrine_Connection $conn = null) {
     if ($this->isNew()) {
       $singleton = sfContext::getInstance();
@@ -196,5 +197,10 @@ class Revision extends BaseRevision {
 
     return ($state_error) ? 'error' : ($state_nc ? 'nc' : 'ok');
   }
+
+  public function getParent(){
+    return Doctrine::getTable('Revision')->find($this->getParentId());
+  }
+
 }
 

@@ -7,7 +7,7 @@
   <nav>
     <h2><?php echo __('OPTIONS'); ?></h2>
     <ul>
-    
+      <li><?php echo link_to(__('Edit procedure'), 'procedures/edit?id='.$procedure->get('id')) ?> </li>
       <?php if($state!=4) : ?>
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
       <?php else:  ?>
@@ -19,6 +19,7 @@
         <?php endif; ?>
       </li>
       <?php endif; ?>
+      <li><?php echo link_to(__('Add responsible'), 'userProcedure/index?procedure_id='.$procedure->get('id'));  ?></li>
     </ul>
   </nav>
 
@@ -74,13 +75,17 @@
       <th><?php echo __('Attach'); ?></th>
       <th><?php echo __('Mjs'); ?></th>
       <th><?php echo __('Items'); ?></th>
+    <?php if($procedure->getItemsGroups()->count() > 0): ?>
       <th colspan="<?php echo $procedure->getItemsGroups()->count() ?>">Control de items</th>
     </tr>
+  
     <tr>
       <th colspan="6"></th>
       <?php foreach ($procedure->getItemsGroups() as $group) : ?>
       <th><?php echo $group->getGroup()->getNameAcronym() ?></th>
       <?php endforeach; ?>
+   
+    <?php endif; ?>
     </tr>
   </thead>
   <tbody>
@@ -123,7 +128,11 @@
             </td>
           <?php endforeach; ?>
         <?php else: ?>
-          <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+            <?php foreach ($procedure->getItemsGroups() as $group) : ?>
+             <td>&mdash;</td>
+            <?php endforeach; ?>
+
+
         <?php endif; ?>
 
     </tr>

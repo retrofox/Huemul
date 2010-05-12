@@ -450,6 +450,12 @@ div#wrapper div#header nav#menu div.user {
   top: 0;
   text-align: right;
 }
+div#wrapper div#header nav#menu div.user a {
+  color: #ffffff;
+  text-decoration: none;
+}
+div#wrapper div#header nav#menu div.user a:hover { text-decoration: underline; }
+div#wrapper div#header nav#menu div.user a:visited { color: #ffffff; }
 div#wrapper div#header nav#menu ul li {
   float: left;
   margin: 0px;

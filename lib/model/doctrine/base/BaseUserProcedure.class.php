@@ -47,10 +47,11 @@ abstract class BaseUserProcedure extends sfDoctrineRecord
              array(
               0 => 'propietario',
               1 => 'calculo',
-              2 => 'dt',
-              3 => 'ejecucion',
+              2 => 'director de obra',
+              3 => 'ejecutor',
               4 => 'proyecto',
              ),
+             'primary' => true,
              ));
 
 

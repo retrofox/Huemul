@@ -107,7 +107,7 @@ use_stylesheet('backend/procedure.css');
 
 
  <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
- 
+
       <nav>
         <h2><?php echo __('Options'); ?></h2>
         <ul>
@@ -115,7 +115,9 @@ use_stylesheet('backend/procedure.css');
           <?php if($state == 5) : ?>
           <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
           <?php elseif($state == 8) : ?>
-          <li><?php echo link_to('Controlar revisión', 'revisions/control?id='.$revision->getId()) ?></li>
+          <li><?php 
+              $revControl= $procedure->getLastRevision()->getId();
+              echo link_to('Controlar revisión', 'revisions/control?id='.$revControl) ?></li>
           <?php endif; ?>
 
           <?php if($state=4) : ?>
@@ -127,6 +129,9 @@ use_stylesheet('backend/procedure.css');
             <?php endif; ?>
           </li>
           <?php endif; ?>
+             <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre')) : ?>
+            <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
+                <?php endif; ?>
         </ul>
       </nav>
   <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
