@@ -36,7 +36,7 @@
     <h2>Aviso</h2>
     <?php if($procedure->getFormuId() == 1) : ?>
       <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar la constancia desde este <?php echo link_to('enlace', 'procedures/constancia?id='.$procedure->get('id')) ?>.</p>
-    <?php elseif($procedure->getFormuId() == 2) : ?>
+    <?php else : ?>
       <p>Este trámite ya ha sido <strong>autorizado</strong>. Ya puede descargar el <?php echo link_to('Permiso de construcción', 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>.</p>
     <?php endif; ?>
   </div>

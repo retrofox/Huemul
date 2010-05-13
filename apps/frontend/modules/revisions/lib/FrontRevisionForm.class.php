@@ -27,6 +27,8 @@ class FrontRevisionForm extends BaseRevisionForm
       'required' => false,
       'path' => sfConfig::get('sf_upload_dir').'/revisions',
       'mime_types' => array(
+        'application/x-rar',
+        'application/zip',
         'application/pdf',
         'image/jpeg',
         'image/pjpeg',

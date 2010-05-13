@@ -18,5 +18,11 @@ class ItemForm extends BaseItemForm
       $this['revisions_list'],
       $this['revision_list']
     );
+
+    $this->widgetSchema['formus_list'] = new sfWidgetFormDoctrineChoice(array(
+      'model' => 'Formu',
+      'multiple' => 'true',
+      'expanded' => true
+    ));
   }
 }
