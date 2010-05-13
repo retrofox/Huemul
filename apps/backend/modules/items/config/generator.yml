@@ -15,9 +15,13 @@ generator:
       actions: ~
       fields:
         group_acronym:    { label: Grupo }
+        formus_list:      { label: Formularios al que pertenece }
       list:
         display:          [ group_acronym, title ]
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title: Editar Item
+      new:
+        title: Nuevo Item
+        

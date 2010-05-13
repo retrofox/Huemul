@@ -106,6 +106,7 @@ use_stylesheet('backend/procedure.css');
 
 
 
+<<<<<<< HEAD:apps/backend/modules/procedures/templates/showSuccess.php
 <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
 
 <nav>
@@ -141,3 +142,46 @@ use_stylesheet('backend/procedure.css');
 </div>
 
 <?php end_slot(); ?>
+=======
+ <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
+
+      <nav>
+        <h2><?php echo __('Options'); ?></h2>
+        <ul>
+          <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
+          <?php if($state == 5) : ?>
+          <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
+          <?php elseif($state == 8) : ?>
+          <li><?php 
+              $revControl= $procedure->getLastRevision()->getId();
+              echo link_to('Controlar revisión', 'revisions/control?id='.$revControl) ?></li>
+          <?php endif; ?>
+
+          <?php if($state=4) : ?>
+          <li>
+            <?php if($procedure->getFormuId() == 1) : ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+            <?php elseif($procedure->getFormuId() == 2) : ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+            <?php endif; ?>
+          </li>
+          <?php endif; ?>
+             <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre')) : ?>
+            <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
+                <?php endif; ?>
+        </ul>
+      </nav>
+  <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
+
+        
+        <div class="tip">
+        <h2><?php echo __('Suggestions'); ?></h2>
+          <?php if($state == 5) : ?>
+          <p>El trámite actual cuenta con una revisión que requiere ser controlada. Es necesario <?php echo link_to('crear', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?> una revisión de control.</p>
+          <?php elseif($state == 8) : ?>
+          <p>El usuario <?php echo $revision->getCreator() ?> ha creado una revisión de control que todavía no ha sido cerrada. Es conventiente trabajar en la misma antes de realizar alguna otra acción.</p>
+          <?php endif; ?>
+        </div>
+
+<?php end_slot(); ?>
+>>>>>>> ec67e56528b889cf68162f8e042c9a612ff11a5c:apps/backend/modules/procedures/templates/showSuccess.php

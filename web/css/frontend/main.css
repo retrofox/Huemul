@@ -413,6 +413,7 @@ section#sidebar nav h2 {
   font: normal normal bold 1.2em sans-serif;
   color: #ddeeff;
   background-color: #336699;
+  text-transform: uppercase;
 }
 section#sidebar nav ul { padding: 0; }
 section#sidebar nav ul li h2 {
@@ -448,6 +449,8 @@ section#sidebar table {
   -webkit-border-radius: 0 0 6px 6px;
   border-collapse: separate;
   border: 1px solid #60001b;
+  margin: 0 0 10px 0;
+  width: 100%;
 }
 section#sidebar table caption {
   font-size: 1.2em;
@@ -493,7 +496,7 @@ section#sidebar div.tip {
   border: 1px solid #00aa00;
   background-color: #eeffee;
   color: #00aa00;
-  margin: 10px 0 0 0;
+  margin: 0 0 10px 0;
   border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   -webkit-border-radius: 6px 6px 6px 6px;
@@ -569,6 +572,11 @@ div#wrapper div#header nav#menu div.user {
   top: 0;
   text-align: right;
 }
+div#wrapper div#header nav#menu div.user a {
+  color: #ffffff;
+  text-decoration: none;
+}
+div#wrapper div#header nav#menu div.user a:hover { text-decoration: underline; }
 div#wrapper div#header nav#menu ul li {
   float: left;
   margin: 0px;
@@ -830,6 +838,8 @@ div#container table.orange > tbody > tr td.asunto {
 }
 div#container table.orange > tbody > tr td.date select { width: auto; }
 div#container table.orange > tbody > tr td.dni select { width: auto; }
+div#container table.orange > tbody > tr select.input_date { width: auto; }
+div#container table.orange > tbody > tr select.dni { width: auto; }
 div#container form table.orange {
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -900,6 +910,10 @@ div#container section#content .head p {
   padding: 5px 0;
   margin-bottom: 5px;
   font-size: 12px;
+}
+div#container section#content_alone {
+  margin: 0 auto;
+  display: block;
 }
 ul.options {
   display: block;

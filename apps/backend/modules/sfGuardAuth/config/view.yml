@@ -4,3 +4,9 @@ all:
     - backend/login.css
 
   layout:           layout_login
+secureSuccess:
+  stylesheets:
+    - -*
+    - backend/main.css
+
+  layout:           layout

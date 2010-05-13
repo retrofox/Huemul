@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <th><?php echo __('Parent revision'); ?></th>
-        <td><?php echo $revision->getParentId() ?></td>
+        <td><?php echo $revision->getParent()->getNumber() ?></td>
       </tr>
       <tr>
         <th><?php echo __('Created at'); ?></th>

@@ -17,11 +17,13 @@ abstract class BaseUserProcedureForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'user_id'      => new sfWidgetFormInputHidden(),
       'procedure_id' => new sfWidgetFormInputHidden(),
+      'type'         => new sfWidgetFormInputHidden(),
     ));
 
     $this->setValidators(array(
       'user_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'user_id', 'required' => false)),
       'procedure_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'procedure_id', 'required' => false)),
+      'type'         => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'type', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('user_procedure[%s]');

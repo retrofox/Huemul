@@ -16,9 +16,11 @@ generator:
       fields:  ~
 
       list:
-        #title:                    { label: Form }
+        title:                    Lista de Formularios
 
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        title:                    Editar Formulario
+      new:
+        title:                    Nuevo Formulario

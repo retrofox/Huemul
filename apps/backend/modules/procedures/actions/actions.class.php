@@ -26,7 +26,7 @@ class proceduresActions extends autoProceduresActions {
    *
    * @author Damian Suarez
    */
-  public function executePermisoDeConstruccion(sfWebRequest $request) {
+    public function executePermisoDeConstruccion(sfWebRequest $request) {
 
     $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
 
@@ -43,7 +43,7 @@ class proceduresActions extends autoProceduresActions {
           $rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()] = array();
           array_push($rev_itemsGroup[$rev_item->getItem()->getGroup()->getName()], $rev_item);
 
-        
+
       }
     }
 
@@ -89,7 +89,17 @@ class proceduresActions extends autoProceduresActions {
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
+
+      $propietarios=$procedure->getOwner();
+      $string="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+      }
+      $string= substr($string,  0 ,  strlen($string)-2);
+      $string =ucfirst($string).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
@@ -97,11 +107,11 @@ class proceduresActions extends autoProceduresActions {
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
+      $pdf->Cell(0, 0,$procedure->getCadastralData()->getAddress(), 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
+      $pdf->Cell(0, 0,$procedure->getCadastralData()->getNeighborhood(), 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
@@ -112,7 +122,7 @@ class proceduresActions extends autoProceduresActions {
       $pdf->Ln(3);
       $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
 
-       
+
       foreach ($rev_itemsGroup as $key=>$group) {
         $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
         $pdf->Cell(70, 0, $key.': ', 0, 1, 'L');
@@ -125,31 +135,101 @@ class proceduresActions extends autoProceduresActions {
         $observ =ucfirst($observ).'. ';
         $pdf->MultiCell(0, 0,$observ, 0, 1, 'L');
       }
-   
+
+
+
       $pdf->Ln(5);
-      $pdf->Cell(0, 0,'PROYECTO:', 0, 1, 'L');
+      $pdf->Cell(40, 0,'PROYECTO:', 0, 0, 'L');
+
+      $propietarios=$procedure->getProyecto();
+      $string="";$address="";$reg ="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+        $address .= $propietario->getProfile()->getAddres().' - '.$propietario->getProfile()->getPhone().', ';
+        $reg .= $propietario->getProfile()->getRegistration().', ';
+      }
+      $string = substr($string,  0 ,  strlen($string)-2).'. ';
+      $address = substr($address,  0 ,  strlen($address)-2).'. ';
+      $reg = substr($reg,  0 ,  strlen($reg)-2).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
       $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
-      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+      $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $address, 0, 1, 'L');
+      $pdf->Cell(40, 0,'MATRICULA:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $reg, 0, 1, 'L');
+      $pdf->Ln(5);
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,'CALCULO:', 0, 1, 'L');
+      $pdf->Cell(40, 0,'CALCULO:', 0, 0, 'L');
+
+      $propietarios=$procedure->getCalculo();
+      $string="";$address="";$reg ="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+        $address .= $propietario->getProfile()->getAddres().' - '.$propietario->getProfile()->getPhone().', ';
+        $reg .= $propietario->getProfile()->getRegistration().', ';
+      }
+      $string= substr($string,  0 ,  strlen($string)-2).'. ';
+      $address = substr($address,  0 ,  strlen($address)-2).'. ';
+      $reg = substr($reg,  0 ,  strlen($reg)-2).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
       $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
-      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+     $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $address, 0, 1, 'L');
+      $pdf->Cell(40, 0,'MATRICULA:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $reg, 0, 1, 'L');
+      $pdf->Ln(5);
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,'DIRECTOR DE OBRA:', 0, 1, 'L');
+      $pdf->Cell(40, 0,'DIRECTOR DE OBRA:', 0, 0, 'L');
+
+      $propietarios=$procedure->getDirectorDeObra();
+      $string="";$address="";$reg ="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+        $address .= $propietario->getProfile()->getAddres().' - '.$propietario->getProfile()->getPhone().', ';
+        $reg .= $propietario->getProfile()->getRegistration().', ';
+      }
+      $string= substr($string,  0 ,  strlen($string)-2).'. ';
+      $address = substr($address,  0 ,  strlen($address)-2).'. ';
+      $reg = substr($reg,  0 ,  strlen($reg)-2).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
+
       $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
-      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');$pdf->Ln(5);
+      $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $address, 0, 1, 'L');
+      $pdf->Cell(40, 0,'MATRICULA:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $reg, 0, 1, 'L');
+      $pdf->Ln(5);
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-      $pdf->Cell(0, 0,'EJECUTOR:', 0, 1, 'L');
+      $pdf->Cell(40, 0,'EJECUTOR:', 0, 0, 'L');
+
+      $propietarios=$procedure->getEjecutor();
+      $string="";$address="";$reg ="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+        $address .= $propietario->getProfile()->getAddres().' - '.$propietario->getProfile()->getPhone().', ';
+        $reg .= $propietario->getProfile()->getRegistration().', ';
+      }
+      $string= substr($string,  0 ,  strlen($string)-2).'. ';
+      $address = substr($address,  0 ,  strlen($address)-2).'. ';
+      $reg = substr($reg,  0 ,  strlen($reg)-2).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
       $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
-      $pdf->Cell(0, 0,'DOMICILIO Y TELEFONO:', 0, 1, 'L');
-      $pdf->Cell(0, 0,'MATRICULA:', 0, 1, 'L');
+      $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
+      $pdf->Cell(200, 0, $address, 0, 1, 'L');
+      $pdf->Cell(40, 0,'MATRICULA:', 0, 0, 'L');
+      $pdf->Cell(0, 0, $reg, 0, 1, 'L');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
       $pdf->Ln(20);
       $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
@@ -180,7 +260,7 @@ Aclaración:', 0, 1, 'L');
   }
   public function executeConstancia(sfWebRequest $request) {
     $procedure = Doctrine::getTable('Procedure')->find($request->getParameter('id'));
-    
+
     $last_control_revision = $procedure->getLastControlRevision();
 
     $last_items = $last_control_revision->getRevisionItem();
@@ -233,25 +313,36 @@ Aclaración:', 0, 1, 'L');
     $pdf->Cell(0, 0, $procedure->getDossier(), 0, 1, 'L');
     $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(70, 0,'PROPIETARIO:', 0, 0, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0, $procedure->getOwner(), 0, 1, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0, $procedure->getFormu(), 0, 1, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0,$procedure->getAddress(), 0, 1, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0,$procedure->getNeighborhood(), 0, 1, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
-    $pdf->Cell(0, 0, $procedure->getCadastralData() , 0, 1, 'L');
-    $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $propietarios=$procedure->getOwner();
+      $string="";
+      foreach ($propietarios as $propietario){
+        $string .= $propietario.', ';
+      }
+      $string= substr($string,  0 ,  strlen($string)-2);
+      $string =ucfirst($string).'. ';
+
+      $pdf->Cell(0, 0, $string, 0, 1, 'L');
+
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'TIPO TRAMITE:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0, $procedure->getFormu(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'DOMICILIO DEL INMUEBLE:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getCadastralData()->getAddress(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'BARRIO:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0,$procedure->getCadastralData()->getNeighborhood(), 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(70, 0,'NOMECLATURA CATASTRAL:', 0, 0, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+      $pdf->Cell(0, 0, $procedure->getCadastralData() , 0, 1, 'L');
+      $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+
+
     $pdf->Ln(3);
     $pdf->Cell(0, 0,'OBSERVACIONES PENDIENTES/DOCUMENTACION A ANEXAR CON EL PLANO:', 0, 1, 'L');
     foreach ($rev_itemsGroup as $key=>$group) {

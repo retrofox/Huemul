@@ -482,6 +482,47 @@
         <source>Address</source>
         <target>Dirección</target>
       </trans-unit>
+
+      <trans-unit id="110">
+        <source>User registration request</source>
+        <target>Solicitud de Alta de Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="111">
+        <source>Procedure detail</source>
+        <target>Detalle del Trámite</target>
+      </trans-unit>
+
+      <trans-unit id="112">
+        <source>Edit procedure</source>
+        <target>Editar trámite</target>
+      </trans-unit>
+
+      <trans-unit id="113">
+        <source>Add responsible</source>
+        <target>Agregar responsables</target>
+      </trans-unit>
+
+      <trans-unit id="114">
+        <source>Procedure responsible list</source>
+        <target>Listado de responsables del trámite</target>
+      </trans-unit>
+
+      <trans-unit id="115">
+        <source>Relation</source>
+        <target>Relación</target>
+      </trans-unit>
+
+      <trans-unit id="116">
+        <source>Responsible</source>
+        <target>Responsable</target>
+      </trans-unit>
+
+      <trans-unit id="117">
+        <source>delete</source>
+        <target>eliminar</target>
+      </trans-unit>
+
     </body>
   </file>
 

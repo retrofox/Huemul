@@ -185,6 +185,8 @@ table.orange > tbody > tr td.asunto {
 }
 table.orange > tbody > tr td.date select { width: auto; }
 table.orange > tbody > tr td.dni select { width: auto; }
+table.orange > tbody > tr select.input_date { width: auto; }
+table.orange > tbody > tr select.dni { width: auto; }
 form table.orange {
   border-radius: 8px;
   -moz-border-radius: 8px;

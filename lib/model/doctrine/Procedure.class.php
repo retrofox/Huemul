@@ -195,9 +195,57 @@ class Procedure extends BaseProcedure {
       ->select('Count(i.id) as count, *')
       ->from('Item i')
       ->leftJoin('i.Group g')
+      ->leftJoin('i.RevisionItem ri' )
+      ->leftJoin('ri.Revision r')
+      ->where('r.procedure_id = ?', $this->get('id'))
       ->groupBy('g.id');
 
     $request = $q->execute();
     return $request;
   }
+
+  public function getOwner() {
+    $q = Doctrine_Query::create()
+      ->from('sfGuardUser u')
+      ->leftJoin('u.UserProcedure up')
+      ->where('up.type = ? and up.procedure_id = ? ', array('propietario', $this->get('id')));
+    $results = $q->execute();
+
+    return $results;
+ 
+
+  }
+ public function getProyecto() {
+    $q = Doctrine_Query::create()
+      ->from('sfGuardUser u')
+      ->leftJoin('u.UserProcedure up')
+      ->where('up.type = ? and up.procedure_id = ? ', array('proyecto', $this->get('id')));
+    $results = $q->execute();
+    return $results;
+  }
+ public function getCalculo() {
+    $q = Doctrine_Query::create()
+      ->from('sfGuardUser u')
+      ->leftJoin('u.UserProcedure up')
+      ->where('up.type = ? and up.procedure_id = ? ', array('calculo', $this->get('id')));
+    $results = $q->execute();
+    return $results;
+  }
+ public function getEjecutor() {
+    $q = Doctrine_Query::create()
+      ->from('sfGuardUser u')
+      ->leftJoin('u.UserProcedure up')
+      ->where('up.type = ? and up.procedure_id = ? ', array('ejecutor', $this->get('id')));
+    $results = $q->execute();
+    return $results;
+  }
+ public function getDirectorDeObra() {
+    $q = Doctrine_Query::create()
+      ->from('sfGuardUser u')
+      ->leftJoin('u.UserProcedure up')
+      ->where('up.type = ? and up.procedure_id = ? ', array('director de obra', $this->get('id')));
+    $results = $q->execute();
+    return $results;
+  }
+
 }

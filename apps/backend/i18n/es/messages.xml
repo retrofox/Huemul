@@ -557,6 +557,62 @@
         <source>Download documentation</source>
         <target>Descargar documentación</target>
       </trans-unit>
+
+      <trans-unit id="113">
+        <source>Users List</source>
+        <target>Listado de Usuarios</target>
+      </trans-unit>
+
+      <trans-unit id="114">
+        <source>Complete name</source>
+        <target>Nombre completo</target>
+      </trans-unit>
+
+      <trans-unit id="115">
+        <source>Mugshot</source>
+        <target>Foto carnet</target>
+      </trans-unit>
+
+      <trans-unit id="116">
+        <source>Revision states List</source>
+        <target>Listado de estados de revisión</target>
+      </trans-unit>
+
+      <trans-unit id="117">
+        <source>Edit Revision states</source>
+        <target>Editar estados de revisión</target>
+      </trans-unit>
+
+       <trans-unit id="118">
+        <source>Edit Users</source>
+        <target>Editar Usuarios</target>
+      </trans-unit>
+
+       <trans-unit id="119">
+        <source>Account</source>
+        <target>Cuenta</target>
+      </trans-unit>
+
+       <trans-unit id="120">
+        <source>Groups list</source>
+        <target>Lista de Grupos</target>
+      </trans-unit>
+
+       <trans-unit id="121">
+        <source>New Users</source>
+        <target>Nuevos Usuarios</target>
+      </trans-unit>
+
+      <trans-unit id="122">
+        <source>Profession List</source>
+        <target>Lista de profesiones</target>
+      </trans-unit>
+
+      <trans-unit id="123">
+        <source>Professions</source>
+        <target>Profesiones</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

@@ -29,5 +29,11 @@ class ProfileFrontendForm extends BaseProfileForm
     $this->widgetSchema['birth_date'] = new sfWidgetFormDate(array(
       'years' => $years
     ));
+
+    $this->validatorSchema['email'] = new sfValidatorEmail(
+      array(
+        'required' => true
+        )
+     );
   }
 }

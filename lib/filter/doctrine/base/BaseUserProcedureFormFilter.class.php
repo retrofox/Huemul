@@ -37,6 +37,7 @@ abstract class BaseUserProcedureFormFilter extends BaseFormFilterDoctrine
     return array(
       'user_id'      => 'Number',
       'procedure_id' => 'Number',
+      'type'         => 'Enum',
     );
   }
 }

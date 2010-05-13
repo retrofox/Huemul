@@ -22,7 +22,7 @@ generator:
       form:
         class:                        sfGuardUserAdminForm
         display:
-          "Account":                    [ username, password, password_again ]
+          "Account":                  [ username, password, password_again ]
           "Profile":                  [ Profile ]
           "Permissions and groups":   [ is_active, is_super_admin, groups_list, permissions_list ]
 
