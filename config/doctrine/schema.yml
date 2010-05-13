@@ -103,6 +103,8 @@ CadastralData:
     partida_nro:                { type: string(10) }
     parcela:                    { type: string(10), notnull: true }
     uf:                         { type: string(10) }
+    address:                    { type: string(255) }
+    neighborhood:               { type: string(255) }
   relations:
     Procedure:                  { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
 
