@@ -18,7 +18,6 @@
  * @property Procedure $Procedure
  * @property RevisionState $State
  * @property Doctrine_Collection $Items
- * @property Doctrine_Collection $Item
  * @property Doctrine_Collection $Revision
  * 
  * @method integer             getId()                Returns the current record's "id" value
@@ -34,7 +33,6 @@
  * @method Procedure           getProcedure()         Returns the current record's "Procedure" value
  * @method RevisionState       getState()             Returns the current record's "State" value
  * @method Doctrine_Collection getItems()             Returns the current record's "Items" collection
- * @method Doctrine_Collection getItem()              Returns the current record's "Item" collection
  * @method Doctrine_Collection getRevisionItem()      Returns the current record's "RevisionItem" collection
  * @method Doctrine_Collection getRevision()          Returns the current record's "Revision" collection
  * @method Revision            setId()                Sets the current record's "id" value
@@ -50,7 +48,6 @@
  * @method Revision            setProcedure()         Sets the current record's "Procedure" value
  * @method Revision            setState()             Sets the current record's "State" value
  * @method Revision            setItems()             Sets the current record's "Items" collection
- * @method Revision            setItem()              Sets the current record's "Item" collection
  * @method Revision            setRevisionItem()      Sets the current record's "RevisionItem" collection
  * @method Revision            setRevision()          Sets the current record's "Revision" collectionItem
  * @property Doctrine_Collection $Revision
@@ -68,7 +65,6 @@
  * @method Procedure           getProcedure()         Returns the current record's "Procedure" value
  * @method RevisionState       getState()             Returns the current record's "State" value
  * @method Doctrine_Collection getItems()             Returns the current record's "Items" collection
- * @method Doctrine_Collection getItem()              Returns the current record's "Item" collection
  * @method Doctrine_Collection getRevisionItem()      Returns the current record's "RevisionItem" collection
  * @method Doctrine_Collection getRevision()          Returns the current record's "Revision" collection
  * @method Revision            setId()                Sets the current record's "id" value
@@ -84,7 +80,6 @@
  * @method Revision            setProcedure()         Sets the current record's "Procedure" value
  * @method Revision            setState()             Sets the current record's "State" value
  * @method Revision            setItems()             Sets the current record's "Items" collection
- * @method Revision            setItem()              Sets the current record's "Item" collection
  * @method Revision            setRevisionItem()      Sets the current record's "RevisionItem" collection
  * @method Revision            setRevision()          Sets the current record's "Revision" collection
  * 
@@ -156,11 +151,6 @@ abstract class BaseRevision extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasMany('Item as Items', array(
-             'refClass' => 'RevisionItem',
-             'local' => 'revision_id',
-             'foreign' => 'item_id'));
-
-        $this->hasMany('Item', array(
              'refClass' => 'RevisionItem',
              'local' => 'revision_id',
              'foreign' => 'item_id'));

@@ -468,6 +468,20 @@
         <source>Changue password</source>
         <target>Cambiar contraseña</target>
       </trans-unit>
+      <trans-unit id="107">
+        <source>Owner</source>
+        <target>Propietario</target>
+      </trans-unit>
+
+      <trans-unit id="108">
+        <source>Neighborhood</source>
+        <target>Barrio</target>
+      </trans-unit>
+
+      <trans-unit id="109">
+        <source>Address</source>
+        <target>Dirección</target>
+      </trans-unit>
     </body>
   </file>
 

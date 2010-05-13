@@ -23,7 +23,6 @@ abstract class BaseItemForm extends BaseFormDoctrine
       'updated_at'     => new sfWidgetFormDateTime(),
       'formus_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Formu')),
       'revisions_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Revision')),
-      'revision_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Revision')),
     ));
 
     $this->setValidators(array(
@@ -35,7 +34,6 @@ abstract class BaseItemForm extends BaseFormDoctrine
       'updated_at'     => new sfValidatorDateTime(),
       'formus_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Formu', 'required' => false)),
       'revisions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Revision', 'required' => false)),
-      'revision_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Revision', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('item[%s]');
@@ -66,18 +64,12 @@ abstract class BaseItemForm extends BaseFormDoctrine
       $this->setDefault('revisions_list', $this->object->Revisions->getPrimaryKeys());
     }
 
-    if (isset($this->widgetSchema['revision_list']))
-    {
-      $this->setDefault('revision_list', $this->object->Revision->getPrimaryKeys());
-    }
-
   }
 
   protected function doSave($con = null)
   {
     $this->saveFormusList($con);
     $this->saveRevisionsList($con);
-    $this->saveRevisionList($con);
 
     parent::doSave($con);
   }
@@ -155,44 +147,6 @@ abstract class BaseItemForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('Revisions', array_values($link));
-    }
-  }
-
-  public function saveRevisionList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['revision_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->Revision->getPrimaryKeys();
-    $values = $this->getValue('revision_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('Revision', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('Revision', array_values($link));
     }
   }
 

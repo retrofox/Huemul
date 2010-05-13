@@ -46,7 +46,7 @@ div#items-container table tbody tr td .blk-revision p.info {
 }
 div#items-container table tbody tr td .blk-revision p.info .date { font-weight: bold; }
 div#items-container table tbody tr td .blk-revision .sidebar-right {
-  width: 160px;
+  width: 180px;
   position: absolute;
   right: 0;
   top: 10px;
@@ -84,7 +84,7 @@ div#items-container table tbody tr td .blk-revision .sidebar-right .actions ul l
 }
 div#items-container table tbody tr td .blk-revision .description {
   background-color: #ffffff;
-  margin: 5px 300px 0px 5px;
+  margin: 5px 330px 0px 5px;
   min-height: 50px;
   border: 1px solid #dddddd;
   border-radius: 8px;
@@ -162,7 +162,7 @@ table.items_control {
   margin: 0px;
   position: absolute;
   top: 10px;
-  right: 170px;
+  right: 190px;
 }
 table.items_control tbody tr td {
   font-size: 1em;

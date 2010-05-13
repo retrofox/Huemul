@@ -27,7 +27,6 @@ abstract class BaseRevisionForm extends BaseFormDoctrine
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
       'items_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Item')),
-      'item_list'         => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Item')),
     ));
 
     $this->setValidators(array(
@@ -43,7 +42,6 @@ abstract class BaseRevisionForm extends BaseFormDoctrine
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
       'items_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Item', 'required' => false)),
-      'item_list'         => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Item', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('revision[%s]');
@@ -69,17 +67,11 @@ abstract class BaseRevisionForm extends BaseFormDoctrine
       $this->setDefault('items_list', $this->object->Items->getPrimaryKeys());
     }
 
-    if (isset($this->widgetSchema['item_list']))
-    {
-      $this->setDefault('item_list', $this->object->Item->getPrimaryKeys());
-    }
-
   }
 
   protected function doSave($con = null)
   {
     $this->saveItemsList($con);
-    $this->saveItemList($con);
 
     parent::doSave($con);
   }
@@ -119,44 +111,6 @@ abstract class BaseRevisionForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('Items', array_values($link));
-    }
-  }
-
-  public function saveItemList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['item_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->Item->getPrimaryKeys();
-    $values = $this->getValue('item_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('Item', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('Item', array_values($link));
     }
   }
 

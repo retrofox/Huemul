@@ -20,7 +20,6 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
       'updated_at'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'formus_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Formu')),
       'revisions_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Revision')),
-      'revision_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Revision')),
     ));
 
     $this->setValidators(array(
@@ -31,7 +30,6 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
       'updated_at'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'formus_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Formu', 'required' => false)),
       'revisions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Revision', 'required' => false)),
-      'revision_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Revision', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('item_filters[%s]');
@@ -75,22 +73,6 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
           ->andWhereIn('RevisionItem.revision_id', $values);
   }
 
-  public function addRevisionListColumnQuery(Doctrine_Query $query, $field, $values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
-    }
-
-    if (!count($values))
-    {
-      return;
-    }
-
-    $query->leftJoin('r.RevisionItem RevisionItem')
-          ->andWhereIn('RevisionItem.revision_id', $values);
-  }
-
   public function getModelName()
   {
     return 'Item';
@@ -107,7 +89,6 @@ abstract class BaseItemFormFilter extends BaseFormFilterDoctrine
       'updated_at'     => 'Date',
       'formus_list'    => 'ManyKey',
       'revisions_list' => 'ManyKey',
-      'revision_list'  => 'ManyKey',
     );
   }
 }

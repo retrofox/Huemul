@@ -12,7 +12,6 @@
  * @property Doctrine_Collection $Formus
  * @property sfGuardGroup $Group
  * @property Doctrine_Collection $Revisions
- * @property Doctrine_Collection $Revision
  * @property Doctrine_Collection $RevisionItem
  * 
  * @method integer             getId()           Returns the current record's "id" value
@@ -22,7 +21,6 @@
  * @method Doctrine_Collection getFormus()       Returns the current record's "Formus" collection
  * @method sfGuardGroup        getGroup()        Returns the current record's "Group" value
  * @method Doctrine_Collection getRevisions()    Returns the current record's "Revisions" collection
- * @method Doctrine_Collection getRevision()     Returns the current record's "Revision" collection
  * @method Doctrine_Collection getRevisionItem() Returns the current record's "RevisionItem" collection
  * @method Item                setId()           Sets the current record's "id" value
  * @method Item                setGroupId()      Sets the current record's "group_id" value
@@ -31,7 +29,6 @@
  * @method Item                setFormus()       Sets the current record's "Formus" collection
  * @method Item                setGroup()        Sets the current record's "Group" value
  * @method Item                setRevisions()    Sets the current record's "Revisions" collection
- * @method Item                setRevision()     Sets the current record's "Revision" collection
  * @method Item                setRevisionItem() Sets the current record's "RevisionItem" collection
  * 
  * @package    Huemul
@@ -83,11 +80,6 @@ abstract class BaseItem extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasMany('Revision as Revisions', array(
-             'refClass' => 'RevisionItem',
-             'local' => 'item_id',
-             'foreign' => 'revision_id'));
-
-        $this->hasMany('Revision', array(
              'refClass' => 'RevisionItem',
              'local' => 'item_id',
              'foreign' => 'revision_id'));

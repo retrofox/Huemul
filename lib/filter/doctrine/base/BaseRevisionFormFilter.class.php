@@ -24,7 +24,6 @@ abstract class BaseRevisionFormFilter extends BaseFormFilterDoctrine
       'created_at'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'items_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Item')),
-      'item_list'         => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Item')),
     ));
 
     $this->setValidators(array(
@@ -39,7 +38,6 @@ abstract class BaseRevisionFormFilter extends BaseFormFilterDoctrine
       'created_at'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'items_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Item', 'required' => false)),
-      'item_list'         => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Item', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('revision_filters[%s]');
@@ -52,22 +50,6 @@ abstract class BaseRevisionFormFilter extends BaseFormFilterDoctrine
   }
 
   public function addItemsListColumnQuery(Doctrine_Query $query, $field, $values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
-    }
-
-    if (!count($values))
-    {
-      return;
-    }
-
-    $query->leftJoin('r.RevisionItem RevisionItem')
-          ->andWhereIn('RevisionItem.item_id', $values);
-  }
-
-  public function addItemListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {
@@ -103,7 +85,6 @@ abstract class BaseRevisionFormFilter extends BaseFormFilterDoctrine
       'created_at'        => 'Date',
       'updated_at'        => 'Date',
       'items_list'        => 'ManyKey',
-      'item_list'         => 'ManyKey',
     );
   }
 }
