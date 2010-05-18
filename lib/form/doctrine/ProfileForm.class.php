@@ -44,6 +44,7 @@ class ProfileForm extends BaseProfileForm {
 
     $this->widgetSchema['birth_date'] = new sfWidgetFormDate(
       array(
+        'format'=> '%day%/%month%/%year%',
         'years' => $years
       ),
       array(

@@ -13,6 +13,8 @@
  * @property string $partida_nro
  * @property string $parcela
  * @property string $uf
+ * @property string $address
+ * @property string $neighborhood
  * @property Procedure $Procedure
  * 
  * @method integer       getId()              Returns the current record's "id" value
@@ -23,6 +25,8 @@
  * @method string        getPartidaNro()      Returns the current record's "partida_nro" value
  * @method string        getParcela()         Returns the current record's "parcela" value
  * @method string        getUf()              Returns the current record's "uf" value
+ * @method string        getAddress()         Returns the current record's "address" value
+ * @method string        getNeighborhood()    Returns the current record's "neighborhood" value
  * @method Procedure     getProcedure()       Returns the current record's "Procedure" value
  * @method CadastralData setId()              Sets the current record's "id" value
  * @method CadastralData setCircunscripcion() Sets the current record's "circunscripcion" value
@@ -32,6 +36,8 @@
  * @method CadastralData setPartidaNro()      Sets the current record's "partida_nro" value
  * @method CadastralData setParcela()         Sets the current record's "parcela" value
  * @method CadastralData setUf()              Sets the current record's "uf" value
+ * @method CadastralData setAddress()         Sets the current record's "address" value
+ * @method CadastralData setNeighborhood()    Sets the current record's "neighborhood" value
  * @method CadastralData setProcedure()       Sets the current record's "Procedure" value
  * 
  * @package    Huemul
@@ -86,6 +92,14 @@ abstract class BaseCadastralData extends sfDoctrineRecord
         $this->hasColumn('uf', 'string', 10, array(
              'type' => 'string',
              'length' => 10,
+             ));
+        $this->hasColumn('address', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('neighborhood', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
 
 

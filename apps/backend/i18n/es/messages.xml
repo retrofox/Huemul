@@ -613,6 +613,27 @@
         <target>Profesiones</target>
       </trans-unit>
 
+      <trans-unit id="124">
+        <source>Edit Permissions</source>
+        <target>Editar permisos</target>
+      </trans-unit>
+
+      <trans-unit id="125">
+        <source>Permissions List</source>
+        <target>Listado de permisos</target>
+      </trans-unit>
+
+      <trans-unit id="126">
+        <source>Edit Groups</source>
+        <target>Editar Grupos</target>
+      </trans-unit>
+
+      <trans-unit id="127">
+        <source>Groups List</source>
+        <target>Listado de Grupos</target>
+      </trans-unit>
+
+
     </body>
   </file>
 </xliff>
