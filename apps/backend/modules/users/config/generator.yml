@@ -16,7 +16,7 @@ generator:
       fields:  ~
 
       list:
-        display:                      [ _mugshot, username, complete_name, is_active, created_at, last_login ]
+        display:                      [ _mugshot, username, complete_name, is_active, _created_at, _last_login, _tipo ]
 
       filter:  ~
       form:

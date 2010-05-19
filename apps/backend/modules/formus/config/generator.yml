@@ -17,6 +17,7 @@ generator:
 
       list:
         title:                    Lista de Formularios
+        display:                  [ name, description, created_at ]
 
       filter:  ~
       form:    ~
