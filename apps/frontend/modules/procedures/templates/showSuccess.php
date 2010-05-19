@@ -12,10 +12,10 @@
       <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure->get('id')) ?></li>
       <?php else:  ?>
       <li>
-        <?php if($procedure->getFormuId() == 1) : ?>
-           <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
-        <?php elseif($procedure->getFormuId() == 2) : ?>
+        <?php if($procedure->getFormuId() == 2) : ?>
            <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+        <?php else: ?>
+           <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
         <?php endif; ?>
       </li>
       <?php endif; ?>
@@ -35,10 +35,10 @@
   <?php elseif($state == 4) : ?>
   <div class="tip">
     <h2>Aviso</h2>
-    <?php if($procedure->getFormuId() == 1) : ?>
-      <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar la constancia desde este <?php echo link_to('enlace', 'procedures/constancia?id='.$procedure->get('id')) ?>.</p>
+    <?php if($procedure->getFormuId() == 2) : ?>
+       <p>Este trámite ya ha sido <strong>autorizado</strong>. Ya puede descargar el <?php echo link_to('Permiso de construcción', 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>.</p>
     <?php else : ?>
-      <p>Este trámite ya ha sido <strong>autorizado</strong>. Ya puede descargar el <?php echo link_to('Permiso de construcción', 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>.</p>
+       <p>Este trámite ya ha sido <strong>autorizado</strong>. Puede descargar la constancia desde este <?php echo link_to('enlace', 'procedures/constancia?id='.$procedure->get('id')) ?>.</p>
     <?php endif; ?>
   </div>
 

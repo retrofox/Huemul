@@ -1,3 +1,8 @@
 all:
-  is_secure:  on
-  credentials: [[administrador, Usuario Interno]]
+  is_secure:  true
+  credentials: admin
+index:
+  credentials: [[Usuario Interno, admin]]
+
+
+

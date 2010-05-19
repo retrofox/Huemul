@@ -1,11 +1,10 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/08-Security
 all:
-  is_secure: on
-  credentials: Responsable de trámite
-
-default:
   is_secure: true
+  credentials: Responsable de trámite
 
 simpleUserSuccess:
   is_secure: false
+  
+

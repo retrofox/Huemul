@@ -13,8 +13,8 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-
+      fields:
+        formu:                      { label: Formulario }
       list:
         fields:
           creator:                  { label: Professional }
@@ -30,5 +30,7 @@ generator:
 
       filter:  ~
       form:    ~
-      edit:    ~
+      edit:
+        fields:
+          formu:                    { label: Formulario }
       new:     ~

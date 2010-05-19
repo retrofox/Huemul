@@ -1,3 +1,7 @@
 all:
-  is_secure:  on
-  credentials: [[administrador, Usuario Interno]]
+  is_secure:  true
+  credentials: [[admin, Usuario Interno]]
+delete:
+  credentials: admin
+edit:
+  credentials: [[admin, Responsable de cierre]]
