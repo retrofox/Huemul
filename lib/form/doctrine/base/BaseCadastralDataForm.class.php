@@ -23,6 +23,8 @@ abstract class BaseCadastralDataForm extends BaseFormDoctrine
       'partida_nro'     => new sfWidgetFormInputText(),
       'parcela'         => new sfWidgetFormInputText(),
       'uf'              => new sfWidgetFormInputText(),
+      'address'         => new sfWidgetFormInputText(),
+      'neighborhood'    => new sfWidgetFormInputText(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
     ));
@@ -36,6 +38,8 @@ abstract class BaseCadastralDataForm extends BaseFormDoctrine
       'partida_nro'     => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'parcela'         => new sfValidatorString(array('max_length' => 10)),
       'uf'              => new sfValidatorString(array('max_length' => 10, 'required' => false)),
+      'address'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'neighborhood'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));

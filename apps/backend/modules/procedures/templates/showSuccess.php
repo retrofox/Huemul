@@ -106,7 +106,7 @@ use_stylesheet('backend/procedure.css');
 
 
 
-<<<<<<< HEAD:apps/backend/modules/procedures/templates/showSuccess.php
+<?php /* ?>
 <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
 
 <nav>
@@ -143,6 +143,9 @@ use_stylesheet('backend/procedure.css');
 
 <?php end_slot(); ?>
 =======
+ *
+ */
+?>
  <?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
 
       <nav>
@@ -184,4 +187,3 @@ use_stylesheet('backend/procedure.css');
         </div>
 
 <?php end_slot(); ?>
->>>>>>> ec67e56528b889cf68162f8e042c9a612ff11a5c:apps/backend/modules/procedures/templates/showSuccess.php
