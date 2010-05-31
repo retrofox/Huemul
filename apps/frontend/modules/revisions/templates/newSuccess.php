@@ -81,8 +81,8 @@
 
 
 
-
-
 <p class="note">
-  Usted debe crear una revisión cuando necesite enviar cambios en el proceso del trámite. Generalmente por cada revisión creada se suele adjuntar un archivo que contenga un plano, documento, etc.
+Usted debe crear una revisión cuando necesite enviar cambios en el proceso del trámite. Generalmente por cada revisión creada se suele adjuntar un archivo que contenga un plano, documento, etc.<br />
+Los tipos de archivos que usted puede adjuntar son imágenes (<strong>.png, .jpg y .gif</strong>), documentos <strong>.pdf</strong> y finalmente cualquier tipo de archivo comprimido <strong>.zip</strong> o <strong>.rar</strong>.<br />
+Para la mayoría de los trámites se sugiere adjuntar planos en formato <strong>.dwf</strong> comprimidos.
 </p>
