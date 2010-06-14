@@ -17,7 +17,8 @@ class proceduresActions extends sfActions {
     $q = Doctrine_Query::create()
             ->from('Procedure p')
             ->leftJoin('p.UserProcedure up')
-            ->where('up.user_id = ?', $user_id);
+            ->where('up.user_id = ?', $user_id)
+            ->orderBy('p.created_at Desc');
 
     $this->procedures = $q->execute();
   }
