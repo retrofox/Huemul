@@ -76,9 +76,7 @@ use_stylesheet('backend/items.css');
 
           <ul>
             <li><?php echo link_to(__('go to procedure'), 'procedures/show?id='.$revision->getProcedureId()) ?></li>
-            <?php if($revision->getBlock()) : ?>
-            <li><?php echo link_to('Crear nueva revisión', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
-            <?php endif; ?>
+            
 
             <?php if(!$revision->getBlock()) : ?>
             <li><?php echo link_to(__('Close revision'), 'revisions/close?id='.$revision->get('id')) ?></li>

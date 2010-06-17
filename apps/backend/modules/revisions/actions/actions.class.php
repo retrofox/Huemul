@@ -21,11 +21,22 @@ class revisionsActions extends autoRevisionsActions {
 
     $revision = Doctrine::getTable('Revision')->find($request->getParameter('revision_id'));
     $procedure = $revision->getProcedure();
+    /*echo 'rev: '.$revision->getState().'<br />';
+    die($revision->getBlock());
+    /*
+    if(!$revision->getBlock()) {
+      $revision->setBlock('true')->save();
+      $new_revision = $procedure->addControlRevision($revision->get('id'));
+      return $this->redirect('revisions/control?id='.$new_revision->get('id'));
+    }
+     *
+     */
 
+    if($new_revision = $procedure->addControlRevision($revision->get('id'))) {
+      return $this->redirect('revisions/control?id='.$new_revision->get('id'));
+    }
 
-    $new_revision = $procedure->addControlRevision($revision->get('id'));
-
-    return $this->redirect('revisions/control?id='.$new_revision->get('id'));
+    return $this->redirect('procedures/show?id='.$procedure->get('id'));
   }
 
   /**
@@ -70,6 +81,11 @@ class revisionsActions extends autoRevisionsActions {
     $this->revision->setRevisionStateId(7);
     $this->revision->setBlock(true);
     $this->revision->save();
+
+    $parent_rev = $this->revision->getParent();
+    //die('Revision Padre:'.$parent_rev->getNumber());
+    $parent_rev->setBlock(false);
+    $parent_rev->save();
 
     return $this->redirect('revisions/control?id='.$this->revision->get('id'));
   }

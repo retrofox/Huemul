@@ -64,7 +64,7 @@ use_stylesheet('backend/procedure.css');
                   <li><a href="/uploads/revisions/<?php echo $revision->getFile() ?>" title="view file"><?php echo __('Download'); ?></a></li>
                     <?php endif; ?>
 
-                    <?php if($state == 5) : ?>
+                    <?php if($state == 5 && !$revision->getBlock()) : ?>
                   <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
 
                     <?php elseif($state == 4) : ?>

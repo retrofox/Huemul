@@ -8,10 +8,12 @@
         <th><?php echo __('Revision number'); ?></th>
         <td><?php echo $revision->getNumber() ?></td>
       </tr>
+      <?php if($revision->getParent()): ?>
       <tr>
         <th><?php echo __('Parent revision'); ?></th>
         <td><?php echo $revision->getParent()->getNumber() ?></td>
       </tr>
+      <?php endif; ?>
       <tr>
         <th><?php echo __('Created at'); ?></th>
         <td><?php echo format_date($revision->getCreatedAt(), 'f') ?></td>

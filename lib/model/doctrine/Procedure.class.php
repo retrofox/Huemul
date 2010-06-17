@@ -18,6 +18,9 @@ class Procedure extends BaseProcedure {
 
   public function addControlRevision($parent_id) {
 
+    $parent_rev = Doctrine::getTable('Revision')->find($parent_id); 
+    if($parent_rev->getBlock()) return false;
+
     $singleton = sfContext::getInstance();
     $last_revision = $this->getLastRevision();
 

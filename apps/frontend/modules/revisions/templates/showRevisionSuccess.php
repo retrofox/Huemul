@@ -8,8 +8,12 @@ use_stylesheet('frontend/items.css');
   <nav>
     <h2><?php echo __('OPTIONS'); ?></h2>
     <ul>
-      <li><?php echo link_to(__('Show revisions'), 'procedures/show?procedure_id='.$revision->getProcedureId()) ?></li>
-      <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$revision->getProcedureId()) ?></li>
+      <li><?php echo link_to(__('Show revisions'), 'procedures/show?procedure_id='.$procedure) ?></li>
+     <?php if(!($lastRevisionState==4)): ?>
+      <li><?php echo link_to(__('Add new revision'), 'revisions/new?procedure_id='.$procedure) ?></li>
+     <?php endif; ?>
+
+      
     </ul>
   </nav>
 
@@ -18,7 +22,11 @@ use_stylesheet('frontend/items.css');
   <?php if($state == 7) : ?>
   <div class="tip">
     <h2>Aviso</h2>
-    <p>Esta es una revisión de estado 'Corregido'. Usted debe <?php echo link_to('controlar ', 'revisions/showRevision?id='.$revision->get('id')) ?>los distintos ítems o requisitos del trámite para poder continuar con el proceso.<br />Muy posiblemente <?php echo link_to('deba crear', 'revisions/new?procedure_id='.$revision->getProcedureId()) ?> una nueva revisión en respuesta con las correcciones notadas.</p>
+    <p>Esta es una revisión de estado 'Corregido'. Usted debe <?php echo link_to('controlar ', 'revisions/showRevision?id='.$revision->get('id')) ?>los distintos ítems o requisitos del trámite para poder continuar con el proceso.</p>
+  <?php if(!($lastRevisionState == 4)): ?>
+    <p>Muy posiblemente <?php echo link_to('deba crear', 'revisions/new?procedure_id='.$revision->getProcedureId()) ?> una nueva revisión en respuesta con las correcciones notadas.</p>
+  <?php endif; ?>
+
   </div>
   <?php elseif($state == 8) : ?>
   <div class="tip">

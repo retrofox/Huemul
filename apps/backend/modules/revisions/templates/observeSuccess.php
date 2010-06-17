@@ -100,7 +100,7 @@ use_stylesheet('frontend/item.css');
   <nav>
         <h2><?php echo __('Options'); ?></h2>
         <ul>
-          <?php if($state == 5) : ?>
+          <?php if($state == 5 && !$revision->getBlock()) : ?>
           <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
           <?php elseif($state == 8) : ?>
           <li><?php echo link_to('Controlar revisión', 'revisions/control?id='.$revision->getId()) ?></li>

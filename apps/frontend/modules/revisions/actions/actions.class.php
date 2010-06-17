@@ -88,6 +88,10 @@ class revisionsActions extends sfActions {
       if(!array_key_exists($rev_item->getItem()->getGroup()->getId(), $this->rev_itemsGroup)) $this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()] = array();
       array_push($this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()], $rev_item);
     }
+    
+    $this->procedure = Doctrine::getTable('Procedure')->find($this->revision->getProcedureId());
+    $this->lastRevisionState = $this->procedure->getLastRevision()->getRevisionStateId();
+    //die('estado ultima revision: '. $this->lastRevisionState);
   }
 
   /**
