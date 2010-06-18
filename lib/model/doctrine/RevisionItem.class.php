@@ -20,9 +20,20 @@ class RevisionItem extends BaseRevisionItem {
 
 
   public function getComunication() {
+   /* SELECT * FROM comunication_item c, revision_item r, revision r1
+WHERE c.revision_item_id=r.id AND r.revision_id=r1.id and r1.procedure_id=11 and r.item_id=1*/
+
+
+    $procedure=$this->getRevision()->getProcedureId();
+    $item=$this->getItemId();
     $q = Doctrine_Query::create()
       ->from('ComunicationItem ci')
-      ->where('ci.revision_item_id = ?', $this->get('id'));
+      ->innerjoin('ci.RevisionItem ri')
+      ->innerjoin('ri.Revision r')
+      //->where('ci.revision_item_id=ri.id AND ri.revision_id=r.id and r.procedure_id='.$procedure.' AND ri.item_id='.$item);
+      ->where('r.procedure_id= ? AND ri.item_id= ?', array( $procedure, $item));
+              
+        /*      'ci.revision_item_id = ?', $this->get('id'));*/
 
     return $q->execute();
   }
