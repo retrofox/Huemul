@@ -20,10 +20,10 @@ generator:
 
       filter:  ~
       form:
-        class:                        sfGuardUserAdminForm
+        class:                        sfMooDooUserForm
         display:
           "Account":                  [ username, password, password_again ]
-          "Profile":                  [ Profile ]
+          #"Profile":                  [ Profile ]
           "Permissions and groups":   [ is_active, is_super_admin, groups_list, permissions_list ]
 
       edit:    ~

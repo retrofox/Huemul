@@ -12,5 +12,10 @@ class sfGuardUserForm extends PluginsfGuardUserForm
 {
   public function configure()
   {
+    $this->widgetSchema['permissions_list'] = new sfWidgetFormDoctrineChoice(array(
+      'model' => 'sfGuardPermission',
+      'multiple' => 'true',
+      'expanded' => true
+    ));
   }
 }
