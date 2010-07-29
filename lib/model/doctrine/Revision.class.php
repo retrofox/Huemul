@@ -91,6 +91,9 @@ class Revision extends BaseRevision {
     $procedure = $this->getProcedure();
     $procedure->setRevisionsCount($procedure->getRevisions()->count());
     $procedure->save();
+    $lastRevision = $procedure->getLastRevision();
+    $lastRevision->setBlock(false);
+    $lastRevision->save();
   }
 
   public function getComunication() {
