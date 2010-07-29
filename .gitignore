@@ -7,4 +7,5 @@ log/*
 web/uploads/revisions/*
 web/uploads/mugshots/*
 web/css/*
+web/pma/*
 config/databases.yml
