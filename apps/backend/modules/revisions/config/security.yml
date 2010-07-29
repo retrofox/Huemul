@@ -1,7 +1,9 @@
 index:
   is_secure:  on
   credentials: admin
-
+delete:
+  is_secure:  on
+  credentials: super_admin
 all:
   is_secure:  on
   credentials: [[admin, Usuario Interno]]
