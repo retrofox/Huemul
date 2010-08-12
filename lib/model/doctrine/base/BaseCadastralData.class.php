@@ -15,6 +15,7 @@
  * @property string $uf
  * @property string $address
  * @property string $neighborhood
+ * @property string $address_number
  * @property Procedure $Procedure
  * 
  * @method integer       getId()              Returns the current record's "id" value
@@ -27,6 +28,7 @@
  * @method string        getUf()              Returns the current record's "uf" value
  * @method string        getAddress()         Returns the current record's "address" value
  * @method string        getNeighborhood()    Returns the current record's "neighborhood" value
+ * @method string        getAddressNumber()   Returns the current record's "address_number" value
  * @method Procedure     getProcedure()       Returns the current record's "Procedure" value
  * @method CadastralData setId()              Sets the current record's "id" value
  * @method CadastralData setCircunscripcion() Sets the current record's "circunscripcion" value
@@ -38,6 +40,7 @@
  * @method CadastralData setUf()              Sets the current record's "uf" value
  * @method CadastralData setAddress()         Sets the current record's "address" value
  * @method CadastralData setNeighborhood()    Sets the current record's "neighborhood" value
+ * @method CadastralData setAddressNumber()   Sets the current record's "address_number" value
  * @method CadastralData setProcedure()       Sets the current record's "Procedure" value
  * 
  * @package    Huemul
@@ -98,6 +101,10 @@ abstract class BaseCadastralData extends sfDoctrineRecord
              'length' => 255,
              ));
         $this->hasColumn('neighborhood', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('address_number', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              ));

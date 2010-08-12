@@ -4,7 +4,6 @@ options:
 attributes:
   export: all
 
-
 Profession:
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
@@ -20,7 +19,6 @@ Location:
   columns:
     id:                         { type: integer, primary: true, autoincrement: true}
     name:                       { type: string(100), notnull: true }
-
 
 Profile:
   actAs:
@@ -49,12 +47,8 @@ Profile:
       class:            sfGuardUser
       foreignType:      one 
       onDelete:         CASCADE
-
     Profession:                 { foreignAlias: Users, local: profesion_id, foreign: id, class: Profession }
 
-
-
-# Formuulario
 Formu:
   actAs:
     - Timestampable
@@ -89,7 +83,6 @@ ItemFormu:
     form_id:                    { type: integer, primary: true }
     item_id:                    { type: integer, primary: true }
 
-
 CadastralData:
   tableName:                    cadastral_data
   actAs:
@@ -105,9 +98,9 @@ CadastralData:
     uf:                         { type: string(10) }
     address:                    { type: string(255) }
     neighborhood:               { type: string(255) }
+    address_number:             { type: string(255) }
   relations:
     Procedure:                  { foreignAlias: CadastralData, local: id, foreign: cadastral_data_id, class: Procedure, foreignType: one }
-
 
 Procedure:
   tableName:                    _procedure
@@ -124,7 +117,6 @@ Procedure:
     #owner:                      { type: string(255) }
     #address:                    { type: string(255) }
     #neighborhood:               { type: string(255) }
-    
   relations:
     Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
     CadastralData:              { foreignAlias: Procedures, local: cadastral_data_id, foreign: id, class: CadastralData, foreignType: one }
@@ -135,11 +127,9 @@ UserProcedure:
     user_id:                    { type: integer(4), primary: true }
     procedure_id:               { type: integer, primary: true }
     type:                       { type: enum, values: [ propietario, calculo, director de obra, ejecutor, proyecto ], primary: true }
-
   relations:
     sfGuardUser:                { local: user_id, onDelete: CASCADE }
     Procedure:                  { local: procedure_id, onDelete: CASCADE }
-
 
 Revision:
   tableName:                    revision
@@ -155,13 +145,11 @@ Revision:
     block:                      { type: boolean, default: false }
     description:                { type: clob }
     file:                       { type: string(255) }
-
   relations:
     Creator:                    { local: creator_id, class: sfGuardUser }
     Procedure:                  { local: procedure_id, foreignAlias: Revisions, onDelete: CASCADE }
     State:                      { local: revision_state_id, class: RevisionState }
     Items:                      { class: Item, local: revision_id, foreign: item_id, refClass: RevisionItem }
-
 
 RevisionState:
   tableName:                    revision_state
@@ -184,7 +172,6 @@ RevisionItem:
     Item:                       { local: item_id, onDelete: CASCADE }
     Revision:                   { local: revision_id, onDelete: CASCADE }
     UserController:             { local: user_id, foreign: id, class: sfGuardUser }
-    
   indexes:
     myIndexs:
       fields:                   [ item_id, revision_id ]
