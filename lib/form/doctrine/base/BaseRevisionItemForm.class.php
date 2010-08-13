@@ -19,7 +19,7 @@ abstract class BaseRevisionItemForm extends BaseFormDoctrine
       'item_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Item'), 'add_empty' => true)),
       'revision_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Revision'), 'add_empty' => true)),
       'user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('UserController'), 'add_empty' => true)),
-      'state'       => new sfWidgetFormChoice(array('choices' => array('ok' => 'ok', 'error' => 'error', 'nc' => 'nc'))),
+      'state'       => new sfWidgetFormChoice(array('choices' => array('ok' => 'ok', 'error' => 'error', 'nc' => 'nc', 'sc' => 'sc'))),
     ));
 
     $this->setValidators(array(
@@ -27,7 +27,7 @@ abstract class BaseRevisionItemForm extends BaseFormDoctrine
       'item_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Item'), 'required' => false)),
       'revision_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Revision'), 'required' => false)),
       'user_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('UserController'), 'required' => false)),
-      'state'       => new sfValidatorChoice(array('choices' => array(0 => 'ok', 1 => 'error', 2 => 'nc'), 'required' => false)),
+      'state'       => new sfValidatorChoice(array('choices' => array(0 => 'ok', 1 => 'error', 2 => 'nc', 3 => 'sc'), 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(

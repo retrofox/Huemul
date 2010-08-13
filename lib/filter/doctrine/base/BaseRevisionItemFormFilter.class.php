@@ -16,14 +16,14 @@ abstract class BaseRevisionItemFormFilter extends BaseFormFilterDoctrine
       'item_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Item'), 'add_empty' => true)),
       'revision_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Revision'), 'add_empty' => true)),
       'user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('UserController'), 'add_empty' => true)),
-      'state'       => new sfWidgetFormChoice(array('choices' => array('' => '', 'ok' => 'ok', 'error' => 'error', 'nc' => 'nc'))),
+      'state'       => new sfWidgetFormChoice(array('choices' => array('' => '', 'ok' => 'ok', 'error' => 'error', 'nc' => 'nc', 'sc' => 'sc'))),
     ));
 
     $this->setValidators(array(
       'item_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Item'), 'column' => 'id')),
       'revision_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Revision'), 'column' => 'id')),
       'user_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('UserController'), 'column' => 'id')),
-      'state'       => new sfValidatorChoice(array('required' => false, 'choices' => array('ok' => 'ok', 'error' => 'error', 'nc' => 'nc'))),
+      'state'       => new sfValidatorChoice(array('required' => false, 'choices' => array('ok' => 'ok', 'error' => 'error', 'nc' => 'nc', 'sc' => 'sc'))),
     ));
 
     $this->widgetSchema->setNameFormat('revision_item_filters[%s]');

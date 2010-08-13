@@ -165,7 +165,7 @@ class Revision extends BaseRevision {
     return $request;
   }
 
-  public function getItemsGroupSC($group_id) {
+  public function getItemsGroupNC($group_id) {
     $q = Doctrine_Query::create()
             ->select('Count(ri.id) as count, *')
             ->from('RevisionItem ri')
@@ -180,37 +180,61 @@ class Revision extends BaseRevision {
     return $request;
   }
 
-  public function getGroupState($group_id) {
+  public function getItemsGroupSC($group_id) {
     $q = Doctrine_Query::create()
-            ->select('Count(ri.id) as count, ri.state')
+            ->select('Count(ri.id) as count, *')
             ->from('RevisionItem ri')
             ->leftJoin('ri.Item i')
             ->where('ri.revision_id = ?', $this->get('id'))
+            ->andWhere('ri.state = ?', 'sc')
             ->andWhere('i.group_id = ?', $group_id)
             ->groupBy('ri.state');
 
-    $request = $q->execute();
+    $request = $q->fetchOne();
 
-    $state_error = false;
-    $state_nc = false;
-    $state_ok = false;
+    return $request;
+  }
 
-    foreach ($request as $value) {
-      if ($value->state == 'error') {
-        $state_error = true;
+  public function getGroupState($group_id) {
+     $cierre = Doctrine::getTable('item')->findOneByGroupIdAndTitle($group_id, 'Cierre parcial');
+     
+     if ($cierre==''){
+     $item = $cierre->get('id');
+     $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
+     return $revision->getState();
+     }
+     else {
+      $q = Doctrine_Query::create()
+              ->select('Count(ri.id) as count, ri.state')
+              ->from('RevisionItem ri')
+              ->leftJoin('ri.Item i')
+              ->where('ri.revision_id = ?', $this->get('id'))
+              ->andWhere('i.group_id = ?', $group_id)
+              ->groupBy('ri.state');
+
+      $request = $q->execute();
+
+      $state_error = false;
+      $state_nc = false;
+      $state_ok = false;
+      $state_sc = false;
+      foreach ($request as $value) {
+        if ($value->state == 'error') {
+          $state_error = true;
+        }
+        if ($value->state == 'sc') {
+          $state_sc = true;
+        }
+        if ($value->state == 'nc') {
+          $state_nc = true;
+        }
+        if ($value->state == 'ok') {
+          $state_ok = true;
+        }
       }
 
-      if ($value->state == 'nc') {
-        $state_nc = true;
-      }
-
-      if ($value->state == 'ok') {
-        $state_ok = true;
-      }
-    }
-
-
-    return ($state_error) ? 'error' : ($state_nc ? 'nc' : 'ok');
+      return ($state_error) ? 'error' : ($state_sc ? 'sc' : 'ok');
+     }
   }
 
   public function getParent(){

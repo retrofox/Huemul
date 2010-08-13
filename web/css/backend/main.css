@@ -1,3 +1,5 @@
+/* This CSS is autocompiled by LESS parser. Don't edit it manually. */
+
 *:focus {
   outline: 0;
   outline: none;
@@ -406,18 +408,43 @@ table.items_control tbody tr td input[type="radio"].opt-nc:checked { background-
 table.items_control tbody tr td input[type="radio"].opt-error:checked { background-position: -40px -20px; }
 table.items_control tbody tr td input[type="radio"]:hover { cursor: default; }
 table.items_control tbody tr td.item_ok {
-  color: #008800;
   background-color: #eeffee;
+  color: #008800;
+  text-align: center;
+}
+table.items_control tbody tr td.item_ok span {
+  background: #eeffee url('../../images/form.png') no-repeat -20px -40px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
 }
 table.items_control tbody tr td.item_error {
-  color: #880000;
   background-color: #ffeeee;
+  color: #880000;
+  text-align: center;
 }
-table.items_control tbody tr td.item_nc {
-  color: #444444;
+table.items_control tbody tr td.item_error span {
+  background: #ffeeee url('../../images/form.png') no-repeat -40px -40px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+table.items_control tbody tr td.item_sc {
   background-color: #eeeeee;
+  color: #444444;
+  text-align: center;
+}
+table.items_control tbody tr td.item_sc span {
+  background: #eeeeee url('../../images/form.png') no-repeat -60px -40px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
 }
 table.items_control tbody tr th {
+  white-space: nowrap;
   background-color: #dddddd;
   border-bottom: 1px solid #cccccc;
   border-left: 1px solid #cccccc;

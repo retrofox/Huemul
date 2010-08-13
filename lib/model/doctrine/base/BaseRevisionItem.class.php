@@ -66,8 +66,9 @@ abstract class BaseRevisionItem extends sfDoctrineRecord
               0 => 'ok',
               1 => 'error',
               2 => 'nc',
+              3 => 'sc',
              ),
-             'default' => 'nc',
+             'default' => 'sc',
              ));
 
 

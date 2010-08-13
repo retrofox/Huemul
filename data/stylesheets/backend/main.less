@@ -173,13 +173,44 @@ table.items_control {
             cursor: default;
           }
         }
+
       }
 
-      td.item_ok     { color: #080; background-color: #efe}
-      td.item_error  { color: #800; background-color: #fee}
-      td.item_nc     { color: #444; background-color: #eee}
-
+      td.item_ok     {
+        background-color: #efe;
+        color: #080;
+        text-align:center;
+        span {
+          background: #efe url('../../images/form.png') no-repeat -20px -40px;
+          display:block;
+          width:20px; height:20px;
+          margin: 0 auto;
+        }
+        }
+      td.item_error {
+        background-color: #fee;
+        color: #800;
+        text-align:center;
+        span { 
+          background: #fee url('../../images/form.png') no-repeat -40px -40px;
+          display:block;
+          width:20px; height:20px;
+          margin: 0 auto;
+        }
+      }
+      td.item_sc     {
+        background-color: #eee;
+        color: #444;
+        text-align:center;
+        span { 
+          background: #eee url('../../images/form.png') no-repeat -60px -40px;
+          display:block;
+          width:20px; height:20px;
+          margin: 0 auto;
+        }
+      }
       th {
+        white-space: nowrap;
         background-color: #ddd;
         border-bottom: 1px solid #ccc;
         border-left: 1px solid #ccc;

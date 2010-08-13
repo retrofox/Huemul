@@ -22,7 +22,8 @@ use_stylesheet('backend/items.css');
             <th>M</th>
             <th><?php echo __('Ok') ?></th>
             <th><?php echo __('Er') ?></th>
-            <th><?php echo __('nc') ?></th>
+            <th><?php echo __('n/c') ?></th>
+            <th><?php echo __('s/c') ?></th>
           </tr>
         </thead>
 
@@ -31,7 +32,8 @@ use_stylesheet('backend/items.css');
             <th colspan="4">
               | <span class="ok"> ok: <?php echo ($revision->getItemsGroupOK($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupOK($group[0]->getItem()->getGroupId())->count : 0) ?></span>
               | <span class="error">error: <?php echo ($revision->getItemsGroupError($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupError($group[0]->getItem()->getGroupId())->count : 0) ?></span>
-              | <span class="nc">s/c: <?php echo ($revision->getItemsGroupSC($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupSC($group[0]->getItem()->getGroupId())->count : 0) ?></span>
+              | <span class="no-corresponde">no corresponde: <?php echo ($revision->getItemsGroupNC($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupNC($group[0]->getItem()->getGroupId())->count : 0) ?></span>
+              | <span class="sin-controlar">sin controlar: <?php echo ($revision->getItemsGroupSC($group[0]->getItem()->getGroupId()) ? $revision->getItemsGroupSC($group[0]->getItem()->getGroupId())->count : 0) ?></span>
               | total: <?php echo $group->count() ?> |</th>
           </tr>
         </tfoot>
@@ -50,10 +52,12 @@ use_stylesheet('backend/items.css');
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'ok') echo 'checked' ?> class="opt-ok" type="radio" name="items[<?php echo $item->get('id') ?>]" value="ok" /></td>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'error') echo 'checked' ?> class="opt-error" type="radio" name="items[<?php echo $item->get('id') ?>]" value="error"/></td>
             <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'nc') echo 'checked' ?> class="opt-nc" type="radio" name="items[<?php echo $item->get('id') ?>]" value="nc"/></td>
+            <td><input <?php if($revision->getBlock()) echo 'disabled' ?> <?php if($state == 'sc') echo 'checked' ?> class="opt-sc" type="radio" name="items[<?php echo $item->get('id') ?>]" value="sc"/></td>
                 <?php else: ?>
             <td><?php if($state == 'ok') echo '*' ?></td>
             <td><?php if($state == 'error') echo '*' ?></td>
             <td><?php if($state == 'nc') echo '*' ?></td>
+            <td><?php if($state == 'sc') echo '*' ?></td>
                 <?php endif; ?>
           </tr>
             <?php endforeach; ?>
