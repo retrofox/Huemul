@@ -20,9 +20,8 @@ generator:
           creator:                  { label: Professional }
           formu:                    { label: Formulario }
           revisions_count:          { label: R }
-          mugshot:                  { label: Photo }
-
-        display:                    [ _mugshot, creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at ]
+      
+        display:                    [ creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at, _updated_at ]
         object_actions:
           _detail:                  ~
           _delete:                  ~

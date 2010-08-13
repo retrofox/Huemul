@@ -25,7 +25,7 @@
 
     <tr>
       <?php foreach ($revision->getGroups() as $itemGroup) : ?>
-      <td class="item_<?php echo $revision->getGroupState($itemGroup->get('group_id')) ?>  "><span></span>
+      <td class="item_<?php echo $revision->getGroupState($itemGroup->get('group_id')) ?>"><span></span>
         <!-- input type="radio" checked class="opt-<?php //echo $revision->getGroupState($itemGroup->get('group_id')) ?>" /-->
 
 
