@@ -26,7 +26,6 @@ class accountForm extends BasesfGuardUserAdminForm
       $this['is_active'],
       $this['permissions_list'],
       $this['procedures_list'],
-      $this['procedures_list'],
       $this['groups_list'],
       $this['username']
     );

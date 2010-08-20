@@ -1,6 +1,6 @@
 <nav class="menu">
   <ul>
-    <li class="current"><a href="#">Inicio</a></li>
+    <li><?php echo link_to('Portal', '/') ?></li>
     <li>
       <a href="#"><?php echo __('Procedures'); ?></a>
       <ul>

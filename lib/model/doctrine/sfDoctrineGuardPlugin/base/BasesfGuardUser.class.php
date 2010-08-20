@@ -16,10 +16,10 @@
  * @property Doctrine_Collection $groups
  * @property Doctrine_Collection $permissions
  * @property Doctrine_Collection $procedures
+ * @property Profile $profile
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
- * @property Profile $Profile
  * @property Doctrine_Collection $Formu
  * @property Doctrine_Collection $UserProcedure
  * @property Doctrine_Collection $Revision
@@ -38,10 +38,10 @@
  * @method Doctrine_Collection getGroups()                Returns the current record's "groups" collection
  * @method Doctrine_Collection getPermissions()           Returns the current record's "permissions" collection
  * @method Doctrine_Collection getProcedures()            Returns the current record's "procedures" collection
+ * @method Profile             getProfile()               Returns the current record's "profile" value
  * @method Doctrine_Collection getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
  * @method Doctrine_Collection getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey  getRememberKeys()          Returns the current record's "RememberKeys" value
- * @method Profile             getProfile()               Returns the current record's "Profile" value
  * @method Doctrine_Collection getFormu()                 Returns the current record's "Formu" collection
  * @method Doctrine_Collection getUserProcedure()         Returns the current record's "UserProcedure" collection
  * @method Doctrine_Collection getRevision()              Returns the current record's "Revision" collection
@@ -59,10 +59,10 @@
  * @method sfGuardUser         setGroups()                Sets the current record's "groups" collection
  * @method sfGuardUser         setPermissions()           Sets the current record's "permissions" collection
  * @method sfGuardUser         setProcedures()            Sets the current record's "procedures" collection
+ * @method sfGuardUser         setProfile()               Sets the current record's "profile" value
  * @method sfGuardUser         setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
- * @method sfGuardUser         setProfile()               Sets the current record's "Profile" value
  * @method sfGuardUser         setFormu()                 Sets the current record's "Formu" collection
  * @method sfGuardUser         setUserProcedure()         Sets the current record's "UserProcedure" collection
  * @method sfGuardUser         setRevision()              Sets the current record's "Revision" collection
@@ -145,6 +145,11 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'procedure_id'));
 
+        $this->hasOne('Profile as profile', array(
+             'local' => 'id',
+             'foreign' => 'sf_guard_user_id',
+             'onDelete' => 'CASCADE'));
+
         $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',
              'foreign' => 'user_id'));
@@ -156,10 +161,6 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasOne('sfGuardRememberKey as RememberKeys', array(
              'local' => 'id',
              'foreign' => 'user_id'));
-
-        $this->hasOne('Profile', array(
-             'local' => 'id',
-             'foreign' => 'sf_guard_user_id'));
 
         $this->hasMany('Formu', array(
              'local' => 'id',

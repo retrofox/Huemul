@@ -97,13 +97,18 @@ sfGuardUser:
       foreign: permission_id
       refClass: sfGuardUserPermission
       foreignAlias: Users
-
     procedures:
       class: Procedure
       local: user_id
       foreign: procedure_id
       refClass: UserProcedure
       foreignAlias: Users
+    profile:
+      local: id
+      foreign: sf_guard_user_id
+      class:            Profile
+      foreignType:      one
+      onDelete:         CASCADE
 
 sfGuardUserPermission:
   options:

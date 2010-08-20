@@ -15,6 +15,7 @@ class sfMooDooUserForm extends sfGuardUserAdminForm
    */
   public function configure()
   {
+    unset( $this['procedures_list']);
 
     $this->widgetSchema['groups_list'] = new sfWidgetFormDoctrineChoice(array(
       'model' => 'sfGuardGroup',
@@ -27,6 +28,9 @@ class sfMooDooUserForm extends sfGuardUserAdminForm
       'multiple' => 'true',
       'expanded' => true
     ));
+
+
+    $this->embedRelation('profile');
     parent::configure();
   }
 }

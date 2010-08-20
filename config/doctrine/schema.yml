@@ -120,7 +120,7 @@ Procedure:
   relations:
     Formu:                      { foreignAlias: Procedures, local: formu_id, foreign: id, class: Formu }
     CadastralData:              { foreignAlias: Procedures, local: cadastral_data_id, foreign: id, class: CadastralData, foreignType: one }
-    Users:                      { class: sfGuardUser, local: procedure_id, foreign: user_id, refClass: UserProcedure, foreignAlias: Procedures }
+    Users:                      { class: sfGuardUser, local: procedure_id, foreign: user_id, refClass: UserProcedure, foreignAlias: procedures }
 
 UserProcedure:
   columns:
@@ -128,8 +128,8 @@ UserProcedure:
     procedure_id:               { type: integer, primary: true }
     type:                       { type: enum, values: [ propietario, calculo, director de obra, ejecutor, proyecto ], primary: true }
   relations:
-    sfGuardUser:                { local: user_id, onDelete: CASCADE }
-    Procedure:                  { local: procedure_id, onDelete: CASCADE }
+    sfGuardUser:                { local: user_id, foreign: id, onDelete: CASCADE }
+    Procedure:                  { local: procedure_id, foreign: id, onDelete: CASCADE }
 
 Revision:
   tableName:                    revision

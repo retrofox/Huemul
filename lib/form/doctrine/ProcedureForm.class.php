@@ -19,5 +19,9 @@ class ProcedureForm extends BaseProcedureForm
       $this['users_list'],
       $this['cadastral_data_id']
     );
+    
+    $this->embedRelation('CadastralData');
+
+ 
   }
 }
