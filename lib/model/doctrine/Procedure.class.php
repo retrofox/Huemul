@@ -62,7 +62,7 @@ class Procedure extends BaseProcedure {
           $rev = new RevisionItem();
           $rev->setRevisionId($new_control_revision->get('id'));
           $rev->setItemId($item->get('id'));
-          $rev->setState('nc');
+          $rev->setState('sc');
           $rev->save();
         }
       }

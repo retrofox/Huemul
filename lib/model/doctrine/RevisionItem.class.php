@@ -15,7 +15,8 @@ class RevisionItem extends BaseRevisionItem {
   public $states = array(
     'ok' => 'Aceptado',
     'error' => 'Rechazado',
-    'nc' => 'Sin Controlar'
+    'nc' => 'No Corresponde',
+    'sc' => 'Sin Controlar'
   );
 
 

@@ -4,4 +4,4 @@ all:
 delete:
   credentials: admin
 edit:
-  credentials: [[admin, Responsable de cierre]]
+  credentials: [[admin, Responsable de cierre, Responsable de datos dominiales]]
