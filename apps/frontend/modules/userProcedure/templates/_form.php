@@ -14,7 +14,7 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-           <input type="submit" value="<?php echo __('Save') ?>" />
+           <input type="submit" value="<?php echo __('Add') ?>" />
         </td>
       </tr>
     </tfoot>
