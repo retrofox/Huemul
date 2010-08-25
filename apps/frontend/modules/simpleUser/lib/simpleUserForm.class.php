@@ -22,9 +22,9 @@ class simpleUserForm extends sfGuardUserAdminForm {
     );
 
     //parent::configure();
-    $profileForm = new ProfileForm($this->object->Profile);
+    $profileForm = new ProfileForm($this->object->profile);
     unset($profileForm['id'], $profileForm['sf_guard_user_id']);
-    $this->embedForm('Profile', $profileForm);
+    $this->embedForm('profile', $profileForm);
    
   }
 
