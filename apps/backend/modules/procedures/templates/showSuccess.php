@@ -3,6 +3,7 @@
 use_stylesheet('/sfDoctrineMooDooPlugin/css/generator.list.css');
 use_stylesheet('backend/procedure.css');
 ?>
+
 <div class="sf_admin_list" id="items-container">
   <h1><?php echo __('Procedure Revision List') ?></h1>
   <table>
@@ -105,18 +106,23 @@ use_stylesheet('backend/procedure.css');
 </div>
 <?php slot('sidebar') ?>
 
-<?php $state = $procedure->getLastRevision()->getRevisionStateId() ?>
 
+<?php $lastRev = $procedure->getLastRevision() ?>
+<?php $state = $lastRev->getRevisionStateId() ?>
+<?php $block = $lastRev->getBlock() ?>
+<?php $lastControlRev = $procedure->getLastControlRevision() ?>
+
+<?php include_partial('procedures/tip', array('procedure' => $procedure)) ?>
 <nav>
   <h2><?php echo __('Options'); ?></h2>
   <ul>
     <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
-    <?php if($state == 5) : ?>
-    <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?></li>
-    <?php elseif($state == 8) : ?>
+    <?php if($state == 5 && !$block) : ?>
+    <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$lastRev->getId()) ?></li>
+    <?php elseif($state == 8 || ($state == 5 && $block)) : ?>
     <li><?php
         $revControl= $procedure->getLastRevision()->getId();
-        echo link_to('Controlar revisión', 'revisions/control?id='.$revControl) ?></li>
+        echo link_to('Controlar revisión', 'revisions/control?id='.$lastControlRev->getId()) ?></li>
     <?php endif; ?>
 
     <?php if($state == 4) : ?>
@@ -139,13 +145,5 @@ use_stylesheet('backend/procedure.css');
 <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
 
 
-<div class="tip">
-  <h2><?php echo __('Suggestions'); ?></h2>
-  <?php if($state == 5) : ?>
-  <p>El trámite actual cuenta con una revisión que requiere ser controlada. Es necesario <?php echo link_to('crear', 'revisions/createControlRevision?revision_id='.$revision->getId()) ?> una revisión de control.</p>
-  <?php elseif($state == 8) : ?>
-  <p>El usuario <?php echo $revision->getCreator() ?> ha creado una revisión de control que todavía no ha sido cerrada. Es conventiente trabajar en la misma antes de realizar alguna otra acción.</p>
-  <?php endif; ?>
-</div>
 
 <?php end_slot(); ?>

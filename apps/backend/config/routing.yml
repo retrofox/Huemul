@@ -1,3 +1,12 @@
+user_procedure:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                userProcedure
+    module:               user_procedure
+    prefix_path:          /user_procedure
+    column:               Array
+    with_wildcard_routes: true
+
 profession:
   class: sfDoctrineRouteCollection
   options:

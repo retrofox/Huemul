@@ -22,11 +22,7 @@ generator:
           revisions_count:          { label: R }
       
         display:                    [ creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at, _updated_at ]
-        object_actions:
-          _detail:                  ~
-          _delete:                  ~
-          _edit:                    ~
-
+   
       filter:  ~
       form:    ~
       edit:

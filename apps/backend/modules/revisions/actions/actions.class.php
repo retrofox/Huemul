@@ -20,17 +20,8 @@ class revisionsActions extends autoRevisionsActions {
   public function executeCreateControlRevision(sfWebRequest $request) {
 
     $revision = Doctrine::getTable('Revision')->find($request->getParameter('revision_id'));
+
     $procedure = $revision->getProcedure();
-    /*echo 'rev: '.$revision->getState().'<br />';
-    die($revision->getBlock());
-    /*
-    if(!$revision->getBlock()) {
-      $revision->setBlock('true')->save();
-      $new_revision = $procedure->addControlRevision($revision->get('id'));
-      return $this->redirect('revisions/control?id='.$new_revision->get('id'));
-    }
-     *
-     */
 
     if($new_revision = $procedure->addControlRevision($revision->get('id'))) {
       return $this->redirect('revisions/control?id='.$new_revision->get('id'));
@@ -53,9 +44,8 @@ class revisionsActions extends autoRevisionsActions {
 
       if(!empty($params)) {
         foreach ($params as $key => $value) {
-
-          if($value != 'nc') {
             $rev_item = RevisionItemTable::retrieveByRevisionAndItem($this->revision->get('id'), $key);
+            if($value !=  $rev_item->getState()){
             $rev_item->setState($value);
             $rev_item->save();
           }
@@ -68,7 +58,9 @@ class revisionsActions extends autoRevisionsActions {
       if(!array_key_exists($rev_item->getItem()->getGroup()->getId(), $this->rev_itemsGroup)) $this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()] = array();
       array_push($this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()], $rev_item);
     }
-
+ $this->revision->setRevisionStateId(8);
+ $this->revision->setBlock(false);
+$this->revision->save();
   }
 
   /**
@@ -82,11 +74,18 @@ class revisionsActions extends autoRevisionsActions {
     $this->revision->setBlock(true);
     $this->revision->save();
 
+
+
+
+    $lastRevision = $this->revision->getProcedure()->getLastRevision();
+    $lastRevision->setBlock(false);
+    $lastRevision->save();
+    /*
     $parent_rev = $this->revision->getParent();
     //die('Revision Padre:'.$parent_rev->getNumber());
     $parent_rev->setBlock(false);
     $parent_rev->save();
-
+    */
     return $this->redirect('revisions/control?id='.$this->revision->get('id'));
   }
 
