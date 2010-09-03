@@ -50,6 +50,8 @@ class revisionsActions extends autoRevisionsActions {
             $rev_item->save();
           }
         }
+       $this->revision->setBlock(false);
+       $this->revision->save();
       }
     }
 
@@ -58,9 +60,7 @@ class revisionsActions extends autoRevisionsActions {
       if(!array_key_exists($rev_item->getItem()->getGroup()->getId(), $this->rev_itemsGroup)) $this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()] = array();
       array_push($this->rev_itemsGroup[$rev_item->getItem()->getGroup()->getId()], $rev_item);
     }
- $this->revision->setRevisionStateId(8);
- $this->revision->setBlock(false);
-$this->revision->save();
+
   }
 
   /**
@@ -69,15 +69,15 @@ $this->revision->save();
    * @author Damian Suarez
    */
   public function executeClose(sfWebRequest $request) {
+
     $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
     $this->revision->setRevisionStateId(7);
+   
     $this->revision->setBlock(true);
+    
     $this->revision->save();
 
-
-
-
-    $lastRevision = $this->revision->getProcedure()->getLastRevision();
+    $lastRevision = $this->revision->getProcedure()->getLastToCheckRevision();
     $lastRevision->setBlock(false);
     $lastRevision->save();
     /*

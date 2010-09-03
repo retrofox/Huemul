@@ -1,2 +1,4 @@
 showSuccess:
   layout:           layout_2col
+editSuccess:
+  layout:           layout_2col

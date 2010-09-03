@@ -19,9 +19,14 @@ class ProcedureForm extends BaseProcedureForm
       $this['users_list'],
       $this['cadastral_data_id']
     );
+
     
     $this->embedRelation('CadastralData');
 
- 
+    $this->widgetSchema->setLabels(array(
+      'Formu'  => 'Formulario',
+      'CadastralData'  => 'Datos Catastrales'
+    ));
+   // $this->widgetSchema['formu_id'] = new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Formu'), 'add_empty' => false), array('disabled' => 'true'));
   }
 }

@@ -53,6 +53,7 @@ class Revision extends BaseRevision {
   */
   
   public function save(Doctrine_Connection $conn = null) {
+
     if ($this->isNew()) {
       $singleton = sfContext::getInstance();
       $this->setCreatorId($singleton->getUser()->getGuardUser()->getId());
@@ -87,9 +88,8 @@ class Revision extends BaseRevision {
       $procedure->setRevisionsCount($procedure->getRevisions()->count() + 1);
       $procedure->save();
     }
-
     parent::save($conn);
-  }
+   }
 
   public function delete(Doctrine_Connection $conn = null) {
     parent::delete($conn);
@@ -204,13 +204,12 @@ class Revision extends BaseRevision {
   public function getGroupState($group_id) {
      $cierre = Doctrine::getTable('item')->findOneByGroupIdAndTitle($group_id, 'Cierre parcial');
      
-     if (!isset($cierre)){
-     $item = $cierre->get('id');
-     $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
-     return $revision->getState();
+     if (isset($cierre)){
+       $item = $cierre->get('id');
+       $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
+       if ($revision->getState() != 'nc') return $revision->getState();
      }
-     else {
-      $q = Doctrine_Query::create()
+     $q = Doctrine_Query::create()
               ->select('Count(ri.id) as count, ri.state')
               ->from('RevisionItem ri')
               ->leftJoin('ri.Item i')
@@ -241,8 +240,7 @@ class Revision extends BaseRevision {
 
       return ($state_error) ? 'error' : ($state_sc ? 'sc' : 'ok');
      }
-  }
-
+  
   public function getParent(){
     return Doctrine::getTable('Revision')->find($this->getParentId());
   }

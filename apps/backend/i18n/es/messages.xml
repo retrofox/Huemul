@@ -638,6 +638,49 @@
         <target>Número Domiciliario</target>
       </trans-unit>
 
+      <trans-unit id="129">
+        <source>Responsibles</source>
+        <target>Responsables</target>
+      </trans-unit>
+
+      <trans-unit id="130">
+        <source>Procedure responsible list</source>
+        <target>Listado de responsables de procedimiento</target>
+      </trans-unit>
+
+      <trans-unit id="131">
+        <source>Responsible</source>
+        <target>Responsable</target>
+      </trans-unit>
+
+      <trans-unit id="132">
+        <source>Relation</source>
+        <target>Relación</target>
+      </trans-unit>
+
+      <trans-unit id="133">
+        <source>Actions</source>
+        <target>Acciones</target>
+      </trans-unit>
+
+      <trans-unit id="134">
+        <source>Add</source>
+        <target>Agregar</target>
+      </trans-unit>
+
+      <trans-unit id="135">
+        <source>Edit procedure</source>
+        <target>Modificar trámite</target>
+      </trans-unit>
+
+      <trans-unit id="136">
+        <source>Procedure responsibles</source>
+        <target>Responsables del trámite</target>
+      </trans-unit>
+      <trans-unit id="137">
+        <source>Formu</source>
+        <target>Formulario</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

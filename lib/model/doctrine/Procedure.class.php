@@ -129,7 +129,15 @@ class Procedure extends BaseProcedure {
 
     return $q->fetchOne();
   }
+  public function getLastToCheckRevision() {
+    $q = Doctrine_Query::create()
+            ->from('Revision r')
+            ->leftJoin('r.State s')
+            ->where('r.procedure_id = ? AND r.revision_state_id = ?',  array ($this->get('id'), 5))
+            ->orderBy('r.number Desc');
 
+    return $q->fetchOne();
+  }
   public function getLastControlRevision() {
     $q = Doctrine_Query::create()
             ->from('Revision r')

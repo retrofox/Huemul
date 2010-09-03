@@ -1,12 +1,9 @@
-user_procedure:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                userProcedure
-    module:               user_procedure
-    prefix_path:          /user_procedure
-    column:               Array
-    with_wildcard_routes: true
-
+userProcedure:
+  url:   /userProcedure
+  param: { module: userProcedure, action: index }
+userProcedure_delete:
+  url:   /userProcedure/delete
+  param: { module: userProcedure, action: delete }
 profession:
   class: sfDoctrineRouteCollection
   options:

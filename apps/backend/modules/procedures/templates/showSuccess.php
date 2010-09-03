@@ -106,44 +106,48 @@ use_stylesheet('backend/procedure.css');
 </div>
 <?php slot('sidebar') ?>
 
+    <?php $lastRev = $procedure->getLastRevision() ?>
+    <?php $state = $lastRev->getRevisionStateId() ?>
+    <?php $block = $lastRev->getBlock() ?>
+    <?php $lastControlRev = $procedure->getLastControlRevision() ?>
 
-<?php $lastRev = $procedure->getLastRevision() ?>
-<?php $state = $lastRev->getRevisionStateId() ?>
-<?php $block = $lastRev->getBlock() ?>
-<?php $lastControlRev = $procedure->getLastControlRevision() ?>
-
-<?php include_partial('procedures/tip', array('procedure' => $procedure)) ?>
-<nav>
-  <h2><?php echo __('Options'); ?></h2>
-  <ul>
-    <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
-    <?php if($state == 5 && !$block) : ?>
-    <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$lastRev->getId()) ?></li>
-    <?php elseif($state == 8 || ($state == 5 && $block)) : ?>
-    <li><?php
-        $revControl= $procedure->getLastRevision()->getId();
-        echo link_to('Controlar revisión', 'revisions/control?id='.$lastControlRev->getId()) ?></li>
-    <?php endif; ?>
-
-    <?php if($state == 4) : ?>
-    <li>
-        <?php if($procedure->getFormuId() == 2) : ?>
-          <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
-        <?php else: ?>
-          <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+    <?php include_partial('procedures/tip', array('procedure' => $procedure)) ?>
+    <nav>
+      <h2><?php echo __('Options'); ?></h2>
+      <ul>
+        <li><?php echo link_to('Ver todos los trámites', 'procedures/index') ?></li>
+        <?php if($state == 5 && !$block) : ?>
+        <li><?php echo link_to('Crear revisión de control', 'revisions/createControlRevision?revision_id='.$lastRev->getId()) ?></li>
+        <?php elseif($state == 8 || ($state == 5 && $block)) : ?>
+        <li><?php
+            $revControl= $procedure->getLastRevision()->getId();
+            echo link_to('Controlar revisión', 'revisions/control?id='.$lastControlRev->getId()) ?></li>
         <?php endif; ?>
-    </li>
-    <?php endif; ?>
 
-    <?php if($state == 7) : ?>
-    <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre')) : ?>
-    <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
-    <?php endif; ?>
-    <?php endif; ?>
-  </ul>
-</nav>
-<?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
+        <?php if($state == 4) : ?>
+        <li>
+            <?php if($procedure->getFormuId() == 2) : ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/permisoDeConstruccion?id='.$procedure->get('id')) ?>
+            <?php else: ?>
+              <?php echo link_to(__('Download documentation'), 'procedures/constancia?id='.$procedure->get('id')) ?>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
 
+        <?php if($state == 7) : ?>
+          <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre')) : ?>
+             <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
+          <?php endif; ?>
+        <?php endif; ?>
+        <li>
+          <?php echo link_to(__('Edit procedure', array()), 'procedures/edit?id='.$procedure->getId(), array()) ?>
+        </li>
+        <li>
+          <?php echo link_to(__('Procedure responsibles', array()), 'userProcedure/index?procedure_id='.$procedure->getId(), array()) ?>
+        </li>
 
+      </ul>
+    </nav>
+    <?php include_partial('procedures/procedure', array('procedure' => $procedure)) ?>
 
 <?php end_slot(); ?>

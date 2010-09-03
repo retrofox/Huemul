@@ -15,17 +15,15 @@ generator:
       actions: ~
       fields:
         formu:                      { label: Formulario }
+        
       list:
         fields:
           creator:                  { label: Professional }
           formu:                    { label: Formulario }
           revisions_count:          { label: R }
-      
         display:                    [ creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at, _updated_at ]
    
       filter:  ~
-      form:    ~
-      edit:
-        fields:
-          formu:                    { label: Formulario }
+      form: ~
+      edit: ~ 
       new:     ~
