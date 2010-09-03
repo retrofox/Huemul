@@ -202,13 +202,17 @@ class Revision extends BaseRevision {
   }
 
   public function getGroupState($group_id) {
-     $cierre = Doctrine::getTable('item')->findOneByGroupIdAndTitle($group_id, 'Cierre parcial');
-     
-     if (isset($cierre)){
+    $cierre = Doctrine::getTable('item')->findOneByGroupIdAndTitle($group_id, 'Cierre parcial');
+    //return($cierre);
+    
+    if($cierre =='Cierre parcial' ){
        $item = $cierre->get('id');
-       $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
+       if($revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'))){
+
        if ($revision->getState() != 'nc') return $revision->getState();
-     }
+    }
+    
+    }
      $q = Doctrine_Query::create()
               ->select('Count(ri.id) as count, ri.state')
               ->from('RevisionItem ri')
