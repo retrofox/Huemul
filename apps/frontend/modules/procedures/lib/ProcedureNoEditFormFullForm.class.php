@@ -8,7 +8,7 @@
  * @author     Damian Suarez
  * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class ProcedureFullForm extends ProcedureForm
+class ProcedureNoEditFormFullForm extends ProcedureForm
 {
   public function configure()
   {
@@ -24,6 +24,8 @@ class ProcedureFullForm extends ProcedureForm
     );
 
     $procedureForm = new CadastralDataForm($this->object->CadastralData);
+
+    $this->widgetSchema['formu_id']->setAttribute('disabled', 'disabled');
 
 // $procedureForm['procedure_formu_id']->renderLabel('Formulario');
 

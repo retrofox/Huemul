@@ -31,7 +31,7 @@ class Procedure extends BaseProcedure {
 
       $new_control_revision->setProcedureId($this->get('id'));
       $new_control_revision->setParentId($parent_id);
-      $new_control_revision->setRevisionStateId(8);
+      $new_control_revision->setRevisionStateId(1);
       $new_control_revision->setBlock(false);
       $new_control_revision->setCreatorId($singleton->getUser()->getGuardUser()->getId());
 
@@ -66,7 +66,9 @@ class Procedure extends BaseProcedure {
           $rev->save();
         }
       }
-
+      $new_control_revision->setRevisionStateId(8);
+      $new_control_revision->save();
+      
       return $new_control_revision;
     //}
   }
@@ -127,15 +129,22 @@ class Procedure extends BaseProcedure {
 
     return $q->fetchOne();
   }
+  public function getLastToCheckRevision() {
+    $q = Doctrine_Query::create()
+            ->from('Revision r')
+            ->leftJoin('r.State s')
+            ->where('r.procedure_id = ? AND r.revision_state_id = ?',  array ($this->get('id'), 5))
+            ->orderBy('r.number Desc');
 
+    return $q->fetchOne();
+  }
   public function getLastControlRevision() {
     $q = Doctrine_Query::create()
             ->from('Revision r')
             ->leftJoin('r.State s')
-            ->where('r.procedure_id = ?', $this->get('id'))
-            ->andWhere('r.revision_state_id = ?', 7)
+            ->where('r.procedure_id = ? AND (r.revision_state_id = ? OR r.revision_state_id = ?) ', array ($this->get('id'), 7 ,8))
             ->orderBy('r.number Desc');
-
+            //die($q);
     return $q->fetchOne();
   }
 

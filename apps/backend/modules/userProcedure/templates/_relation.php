@@ -1,0 +1,1 @@
+<?php if ($user_procedure->getType() == '') echo "Responsable principal"; else echo $user_procedure->getType() ?>

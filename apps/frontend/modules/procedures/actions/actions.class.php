@@ -41,7 +41,14 @@ class proceduresActions extends sfActions {
     $this->procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id')));
     $this->procedureId = $request->getParameter('id');
     $this->forward404Unless($procedure = Doctrine::getTable('Procedure')->find(array($request->getParameter('id'))), sprintf('Object procedure does not exist (%s).', $request->getParameter('id')));
-    $this->form = new ProcedureFullForm($procedure);
+    $controled = $this->procedure->getLastControlRevision();
+
+    
+    if ($controled)
+       $this->form = new ProcedureNoEditFormFullForm($procedure);
+    else
+        $this->form = new ProcedureFullForm($procedure);
+
   }
 
   public function executeUpdate(sfWebRequest $request) {

@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           userProcedure
+    theme:                 mooDoo.2
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          userProcedure
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        sfGuardUser:                      { label: Nombre y Apellido }
+      list:
+        display: [sfGuardUser, _address, _registration, _relation]
+        object_actions:
+          _delete:                    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

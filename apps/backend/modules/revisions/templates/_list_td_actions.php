@@ -7,7 +7,7 @@
         <?php echo link_to(__('Control', array(), 'messages'), 'revisions/control?id='.$revision->getId(), array()) ?>
       </li>
 
-      <?php elseif ($revision->getRevisionStateId() == 5) : ?>
+      <?php elseif ($revision->getRevisionStateId() == 5 && !$revision->getBlock() ) : ?>
       <li class="sf_admin_action_revisions">
         <?php echo link_to(__('Create control revision', array(), 'messages'), 'revisions/createControlRevision?revision_id='.$revision->getId(), array()) ?>
       </li>

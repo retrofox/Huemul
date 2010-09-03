@@ -1,3 +1,9 @@
+userProcedure:
+  url:   /userProcedure
+  param: { module: userProcedure, action: index }
+userProcedure_delete:
+  url:   /userProcedure/delete
+  param: { module: userProcedure, action: delete }
 profession:
   class: sfDoctrineRouteCollection
   options:

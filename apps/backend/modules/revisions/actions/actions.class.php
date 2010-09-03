@@ -20,17 +20,8 @@ class revisionsActions extends autoRevisionsActions {
   public function executeCreateControlRevision(sfWebRequest $request) {
 
     $revision = Doctrine::getTable('Revision')->find($request->getParameter('revision_id'));
+
     $procedure = $revision->getProcedure();
-    /*echo 'rev: '.$revision->getState().'<br />';
-    die($revision->getBlock());
-    /*
-    if(!$revision->getBlock()) {
-      $revision->setBlock('true')->save();
-      $new_revision = $procedure->addControlRevision($revision->get('id'));
-      return $this->redirect('revisions/control?id='.$new_revision->get('id'));
-    }
-     *
-     */
 
     if($new_revision = $procedure->addControlRevision($revision->get('id'))) {
       return $this->redirect('revisions/control?id='.$new_revision->get('id'));
@@ -53,13 +44,14 @@ class revisionsActions extends autoRevisionsActions {
 
       if(!empty($params)) {
         foreach ($params as $key => $value) {
-
-          if($value != 'nc') {
             $rev_item = RevisionItemTable::retrieveByRevisionAndItem($this->revision->get('id'), $key);
+            if($value !=  $rev_item->getState()){
             $rev_item->setState($value);
             $rev_item->save();
           }
         }
+       $this->revision->setBlock(false);
+       $this->revision->save();
       }
     }
 
@@ -77,16 +69,23 @@ class revisionsActions extends autoRevisionsActions {
    * @author Damian Suarez
    */
   public function executeClose(sfWebRequest $request) {
+
     $this->revision = Doctrine::getTable('Revision')->find($request->getParameter('id'));
     $this->revision->setRevisionStateId(7);
+   
     $this->revision->setBlock(true);
+    
     $this->revision->save();
 
+    $lastRevision = $this->revision->getProcedure()->getLastToCheckRevision();
+    $lastRevision->setBlock(false);
+    $lastRevision->save();
+    /*
     $parent_rev = $this->revision->getParent();
     //die('Revision Padre:'.$parent_rev->getNumber());
     $parent_rev->setBlock(false);
     $parent_rev->save();
-
+    */
     return $this->redirect('revisions/control?id='.$this->revision->get('id'));
   }
 

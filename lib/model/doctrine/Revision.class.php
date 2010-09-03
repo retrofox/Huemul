@@ -39,58 +39,64 @@ class Revision extends BaseRevision {
 
     return $q->fetchOne();
   }
-
+  
+  public function getUnblockedRev(){
+    $q = Doctrine_Query::create()
+            ->from('revision r')
+            ->where('r.procedure_id = ?', $this->get('procedure_id'))
+            ->andwhere('r.block = false')
+            ->orderBy('r.number Desc');
+    return $q->execute();
+  }
   /*
    * El numero de revision siempre se incrementa automaticamente.
   */
   
   public function save(Doctrine_Connection $conn = null) {
+
     if ($this->isNew()) {
       $singleton = sfContext::getInstance();
       $this->setCreatorId($singleton->getUser()->getGuardUser()->getId());
 
-      // control de revision padre 'A Revisar'
-      $parent_rev = $this->getParent();
-
-      if($parent_rev) {
-        // es 'A revisar ?'
-        if($parent_rev->getRevisionStateId() == 5 && !$parent_rev->getBlock())
-        {
-         $parent_rev->setBlock(true);
-         $parent_rev->save();
-        }
-        elseif ($parent_rev->getRevisionStateId() == 5 && $parent_rev->getBlock()) {
-          return false;
-        }
-      }
-
+      //controla que no haya una revision anterior desbloqueada
+      $this->setBlock(false);
+      $unblockedrev = $this->getUnblockedRev();
+       if($unblockedrev){
+         //die($unblockedrev->getRevisionStateId());
+         foreach ($unblockedrev as $rev){
+           if($rev->getRevisionStateId() == 8)
+             {
+              $this->setBlock(true);
+             }
+           else
+             {
+             $rev->setBlock(true);
+             $rev->save();
+             }
+           }
+         }
+      //controla que la revision anterior no sea una tramite autorizado.
       $previous_rev = $this->getPrevious();
+
       if($previous_rev) {
         $this->setNumber($previous_rev->getNumber() + 1);
         if ($previous_rev->getRevisionStateId()==4) return false;
-        /*$state = $previous_rev->getRevisionStateId();
-        // seteamos el estado de la revision actual en funcion del estado de la revision anterior
-        if($state == 1) $this->setRevisionStateId(5);
-        elseif($state == 7) $this->setRevisionStateId(5);
-        // block previous revision
-       $previous_rev->setBlock(true);
-        $previous_rev->save();*/
       }
 
-      // revisions count
+      //cambia el campo de cantidad de revisiones del procedimiento
       $procedure = $this->getProcedure();
       $procedure->setRevisionsCount($procedure->getRevisions()->count() + 1);
       $procedure->save();
     }
-
     parent::save($conn);
-  }
+   }
 
   public function delete(Doctrine_Connection $conn = null) {
     parent::delete($conn);
     $procedure = $this->getProcedure();
     $procedure->setRevisionsCount($procedure->getRevisions()->count());
     $procedure->save();
+
     $lastRevision = $procedure->getLastRevision();
     $lastRevision->setBlock(false);
     $lastRevision->save();
@@ -198,13 +204,12 @@ class Revision extends BaseRevision {
   public function getGroupState($group_id) {
      $cierre = Doctrine::getTable('item')->findOneByGroupIdAndTitle($group_id, 'Cierre parcial');
      
-     if (!isset($cierre)){
-     $item = $cierre->get('id');
-     $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
-     return $revision->getState();
+     if (isset($cierre)){
+       $item = $cierre->get('id');
+       $revision = Doctrine::getTable('RevisionItem')->findOneByItemIdAndRevisionId($item,  $this->get('id'));
+       if ($revision->getState() != 'nc') return $revision->getState();
      }
-     else {
-      $q = Doctrine_Query::create()
+     $q = Doctrine_Query::create()
               ->select('Count(ri.id) as count, ri.state')
               ->from('RevisionItem ri')
               ->leftJoin('ri.Item i')
@@ -235,11 +240,11 @@ class Revision extends BaseRevision {
 
       return ($state_error) ? 'error' : ($state_sc ? 'sc' : 'ok');
      }
-  }
-
+  
   public function getParent(){
     return Doctrine::getTable('Revision')->find($this->getParentId());
   }
+
 
 }
 
