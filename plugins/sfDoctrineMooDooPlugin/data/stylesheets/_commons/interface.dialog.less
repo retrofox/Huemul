@@ -1,0 +1,87 @@
+@import "common";
+
+/**********
+ * Dialog *
+ **********/
+
+.dialog {
+
+  background-color: rgba(0,0,0, 0.3);
+  .border-radius(12px);
+  .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.2));
+
+  padding: 23px;
+  .wrap {
+    .border-radius(12px);
+    .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.4));
+
+    .dialog_head {
+      height: 58px; line-height: 59px;
+      color: #fff;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4f4f4f), to(#3a3a3a));
+      .box-sizing;
+
+      -webkit-box-shadow: 0 -1px 0 #999, 0 1px 0 #ebf8fd;
+
+      border-bottom: 1px solid #000;
+      .border-radius(14px 14px 0 0);
+      position: relative;
+
+      div.btn_blose {
+        position: absolute;
+        background: transparent url('/images/img/x.png') repeat left top;
+        width: 18px; height: 20px;
+        right: 18px; top: 17px;
+
+        :hover {
+          cursor: pointer;
+          background-position: -18px top;
+        }
+      }
+      
+      h1 {
+        margin: 0;
+        padding: 0 18px;
+        font-size: 26px;
+        .text-shadow(0, 3px, 3px, rgba(0, 0, 0, 0.6));
+      }
+    }
+
+    .dialog_content {
+      font: 14px "DINPro";
+      line-height: 22px;
+
+      .text-shadow(0px, 1px, 0px, #fff);
+      color: #000;
+
+      background: #ABDEE9 url('/images/bg/pattern.png') repeat left top;
+      .border-radius(0 0 12px 12px);
+      padding: 22px 36px 27px;
+
+      h3 {
+        font: normal bold normal 14px Helvetica;
+        margin: 0 0 2px;
+      }
+
+      section.box_col_0, section.box_col_1 {
+        margin: 0;
+        .box-sizing;
+        width: 47%;
+        display: inline-block;
+        vertical-align: top;
+
+        p {
+          margin: 0 0 30px;
+        }
+
+      }
+
+      section.box_col_0 {
+        margin-right: 3%;
+        padding-right: 3%;
+        border-right: 1px solid #d7f4ff;
+        .box-shadow(1px, 0, 0, #9ecbde);
+      }
+    }
+  }
+}

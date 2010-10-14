@@ -1,0 +1,179 @@
+@import "common";
+
+.calendar {
+  /*text-shadow: rgba(0,0,0,.01) 0 0 1px;  /* hack */
+  -webkit-user-select: none;
+
+  color: #424242;
+  
+  /*.box-shadow(-1px, 1px, 3px, rgba(255, 0, 0, 0.4));*/
+
+  > .header {
+    position: relative;
+    .border-radius(4px 4px 0 0);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edf1f4), to(#eaeef2));
+    -webkit-box-shadow: 0 -1px 0 #828282, 1px -1px 0 #828282, -1px -1px 0 #828282;
+    border: 1px solid #000;
+    border-bottom: 0;
+    height: 26px;
+    nav {
+      a {
+        top: 10px;
+        text-decoration: none;
+        display: inline-block;
+        background: transparent url(images/calendar.arrows.png) no-repeat left top;
+        width: 8px;
+        height: 9px;
+      }
+
+      a.previous {
+        position: absolute;
+        left: 10px;
+      }
+
+      a.next {
+        position: absolute;
+        right: 10px;
+        background-position: right top;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p.title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 26px;
+      text-align: center !important;
+    }
+  }
+
+  > section.content {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e9edf1), to(#cbd1d8));
+    -webkit-box-shadow: 0 1px 0 #828282, 1px 1px 0 #828282, -1px 1px 0 #828282;
+    border: 1px solid #000;
+    border-top: 0;
+    padding: 0 1px 2px;
+    background-color: transparent;
+    .border-radius(0 0 4px 4px);
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td, th {
+        text-align: center;
+      }
+
+      thead {
+        tr {
+          th {
+            /*background: #f2f2f2;*/
+            font-size: 10px;
+            color: #626262;
+            padding: 0;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          /*background-color: #fafafa;*/
+          :hover {
+            /*background-color: #ecfaff;*/
+          }
+        }
+        td {
+          padding: 0; margin: 0;
+          font-weight: bold;
+          font-size: 13px;
+          color: #424242;
+          border-top: 1px solid #b9c6d5;
+          border-right: 1px solid #b9c6d5;
+          width: 22px; height: 18px;
+
+          div {
+            border-left: 1px solid #e6eaeb;
+            border-top: 1px solid #e6eaeb;
+            height: 100%;
+            line-height: 20px;
+            text-align: center;
+          }
+
+          /*background-color: #fafafa;*/
+
+          /*
+          :nth-child(6) {
+            background-color: #f2f2f2;
+            color: #444;
+          }
+          */
+          /*
+          :nth-child(7) {
+            background-color: #e0e0e0;
+            color: #888;
+          }*/
+
+          :hover {
+            background-color: #c0ecff;
+            color: #007ee4;
+            cursor: pointer;
+          }
+        }
+
+        td.notInMonth {
+          cursor: default;
+          /*background-color: #f0f0f0;*/
+          color: #a9a9a9
+        }
+
+        td.active {
+          
+          div {
+            border: 0;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#90c7f3), to(#348ee9));
+            .text-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.4));
+            color: #FFF;
+          }
+        }
+
+        td.today {
+          background: #FFA;
+          color: #040;
+        }
+      }
+    }
+  }
+
+  > section.footer {
+    height: 30px;
+   
+    nav {
+      text-align: center;
+      margin-top: 8px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        width: 70px;
+        height: 19px;
+        line-height: 16px;
+        .text-shadow(0, 0, 1px, rgba(50, 50, 50, 0.8));
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#656565), to(#474747));
+        -webkit-box-shadow: 0 -1px 0 #8c8c8c, 0 -2px 0 #6a6a6a, 0 -3px 1px #000, 0 1px 1px rgba(0,0,0,0.5);
+        .box-sizing;
+        display: inline-block;
+        .border-radius;
+      }
+
+      a:first-child {
+        margin-right:10px;
+      }
+      a:last-child {
+        margin-left:10px;
+      }
+    }
+  }
+}

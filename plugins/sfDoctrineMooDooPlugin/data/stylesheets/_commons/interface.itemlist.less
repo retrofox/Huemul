@@ -1,0 +1,44 @@
+@import "../_commons/common";
+
+ul {
+  list-style: none;
+  margin: 0; padding: 0;
+
+  li {
+
+    .box-sizing;
+
+    border-bottom: 1px solid #bebdbd;
+    border-top: 1px solid #fff;
+
+    padding: 4px 2px;
+
+    font-size: 12px; line-height: 18px;
+    font-family: Helvetica;
+
+    color: #454545;
+
+    img {
+      float: left;
+      margin: 0 6px 0 4px;
+      width: 36px; height: 36px;
+      .background-size(36px 36px);
+      border: 3px solid #d6d7d7;
+      .border-radius(4px);
+    }
+
+    a {
+      color: #ef8f1d;
+      font-weight: bold;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  li:first-child        { border-top: 0; }
+  li:nth-child(odd)     { background-color: #eceded; }
+  li:nth-child(even)    { background-color: #effbff; }
+}
