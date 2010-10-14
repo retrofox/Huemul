@@ -20,7 +20,8 @@ class ProcedureNoEditFormFullForm extends ProcedureForm
       $this['is_finished'],
       $this['cadastral_data_id'],
       $this['number'],
-      $this['users_list']
+      $this['users_list'],
+      $this['comments']
     );
 
     $procedureForm = new CadastralDataForm($this->object->CadastralData);

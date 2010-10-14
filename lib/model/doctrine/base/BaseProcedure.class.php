@@ -11,6 +11,7 @@
  * @property string $dossier
  * @property boolean $is_finished
  * @property integer $revisions_count
+ * @property clob $comments
  * @property Formu $Formu
  * @property CadastralData $CadastralData
  * @property Doctrine_Collection $Users
@@ -23,6 +24,7 @@
  * @method string              getDossier()           Returns the current record's "dossier" value
  * @method boolean             getIsFinished()        Returns the current record's "is_finished" value
  * @method integer             getRevisionsCount()    Returns the current record's "revisions_count" value
+ * @method clob                getComments()          Returns the current record's "comments" value
  * @method Formu               getFormu()             Returns the current record's "Formu" value
  * @method CadastralData       getCadastralData()     Returns the current record's "CadastralData" value
  * @method Doctrine_Collection getUsers()             Returns the current record's "Users" collection
@@ -34,6 +36,7 @@
  * @method Procedure           setDossier()           Sets the current record's "dossier" value
  * @method Procedure           setIsFinished()        Sets the current record's "is_finished" value
  * @method Procedure           setRevisionsCount()    Sets the current record's "revisions_count" value
+ * @method Procedure           setComments()          Sets the current record's "comments" value
  * @method Procedure           setFormu()             Sets the current record's "Formu" value
  * @method Procedure           setCadastralData()     Sets the current record's "CadastralData" value
  * @method Procedure           setUsers()             Sets the current record's "Users" collection
@@ -71,6 +74,9 @@ abstract class BaseProcedure extends sfDoctrineRecord
              ));
         $this->hasColumn('revisions_count', 'integer', null, array(
              'type' => 'integer',
+             ));
+        $this->hasColumn('comments', 'clob', null, array(
+             'type' => 'clob',
              ));
 
 

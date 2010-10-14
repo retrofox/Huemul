@@ -681,6 +681,22 @@
         <source>Formu</source>
         <target>Formulario</target>
       </trans-unit>
+      <trans-unit id="138">
+        <source>is empty</source>
+        <target>es vacio</target>
+      </trans-unit>
+      <trans-unit id="139">
+        <source>from </source>
+        <target>desde</target>
+      </trans-unit>
+      <trans-unit id="140">
+        <source>to</source>
+        <target>hasta</target>
+      </trans-unit>
+      <trans-unit id="141">
+        <source>Comments</source>
+        <target>Observaciones</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

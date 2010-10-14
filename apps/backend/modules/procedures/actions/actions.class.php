@@ -135,9 +135,12 @@ class proceduresActions extends autoProceduresActions {
         $observ =ucfirst($observ).'. ';
         $pdf->MultiCell(0, 0,$observ, 0, 1, 'L');
       }
-
-
-
+      if($procedure->getComments() != "" && !is_null($procedure->getComments())){
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+        $pdf->Cell(40, 0,'Observaciones generales:', 0, 1, 'L');
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+        $pdf->MultiCell(0, 0,$procedure->getComments(), 0, 1, 'L');
+      }
       $pdf->Ln(5);
       $pdf->Cell(40, 0,'PROYECTO:', 0, 0, 'L');
 
@@ -179,7 +182,7 @@ class proceduresActions extends autoProceduresActions {
 
       $pdf->Cell(120, 0,'Firma: ', 0, 1, 'R');
       $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN-2);
-     $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
+      $pdf->Cell(40, 0,'DOMICILIO Y TELEFONO:', 0, 0, 'L');
       $pdf->Cell(0, 0, $address, 0, 1, 'L');
       $pdf->Cell(40, 0,'MATRICULA:', 0, 0, 'L');
       $pdf->Cell(0, 0, $reg, 0, 1, 'L');
@@ -357,6 +360,14 @@ Aclaración:', 0, 1, 'L');
         $observ =ucfirst($observ).'. ';
         $pdf->MultiCell(0, 0,$observ, 0, 1, 'L');
       }
+    if($procedure->getComments() != "" && !is_null($procedure->getComments())){
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
+        $pdf->Cell(40, 0,'Observaciones generales:', 0, 1, 'L');
+        $pdf->SetFont(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN);
+        $pdf->MultiCell(0, 0,$procedure->getComments(), 0, 1, 'L');
+    }
+
+
     $pdf->Ln(30);
     $pdf->SetFont(PDF_FONT_NAME_MAIN, 'B', PDF_FONT_SIZE_MAIN);
     $pdf->Cell(40, 0,'FIRMA DEL PROPIETARIO', 0, 0, 'L');
