@@ -342,6 +342,25 @@ body #wrapper #footer p a.xifox {
 }
 body #wrapper #footer p a.xifox:hover { color: #ffffff; }
 body #wrapper #board { margin: 10px; }
+body #wrapper #board ul.menu {
+  height: 30px;
+  width: 100%;
+}
+body #wrapper #board ul.menu li {
+  margin: 5px 10px;
+  float: left;
+}
+body #wrapper #board ul.menu li a {
+  color: #555555;
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+body #wrapper #board ul.menu li a.opt_filter {
+  background: transparent url('/images/down_up_16x10.png') no-repeat 45px 2px;
+  padding-right: 20px;
+}
+body #wrapper #board ul.menu li a.opt_filter.uparrow { background: transparent url('/images/down_up_16x10.png') no-repeat 45px -28px; }
 #sf_admin_content table tr td { height: 20px; }
 #sf_admin_content table tr td img.mugshot {
   margin: 0;

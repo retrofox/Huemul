@@ -25,7 +25,6 @@ generator:
    
       filter:
         display:                    [ creator, formu_id, cadastral_data_id, dossier, state, created_at, updated_at ]
-
       form: ~
       edit: ~ 
       new:     ~

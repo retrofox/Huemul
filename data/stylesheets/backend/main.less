@@ -28,10 +28,10 @@ body {
         vertical-align: top;
         font-size: 12px;
       }
-      /* Menu */
-      nav.menu {
-        width: 80%;
+      nav.menu{
+       width: 80%;
       }
+
       section.mini-panel {
         .box-sizing;
         margin-left: 1%;
@@ -79,6 +79,31 @@ body {
     }
     #board{
       margin:10px;
+            /* Menu filtros */
+      ul.menu {
+
+        height:30px;
+        width: 100%;
+        li {
+          margin: 5px 10px;
+          float:left;
+          a {
+            color:#555555;
+            font-weight: bold;
+            font-family:Verdana,Arial,Helvetica,sans-serif;
+            font-size:14px;
+          }
+
+        }
+
+        li.filters {
+          padding-right: 20px
+          background: transparent url('/images/down_up_16x10.png') no-repeat 45px 2px;
+          }
+        li.uparrow {
+          background: transparent url('/images/down_up_16x10.png') no-repeat 45px -28px;
+        }
+      }
     }
   }
 }

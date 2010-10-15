@@ -11,7 +11,7 @@
       <tfoot>
         <tr>
           <td colspan="2">
-            <a class="filter_cancel">[?php echo __('Cancel') ?]</a>
+            
             [?php echo $form->renderHiddenFields() ?]
             [?php echo link_to(__('Reset', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?]
             <input type="submit" value="[?php echo __('Filter', array(), 'sf_admin') ?]" />

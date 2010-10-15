@@ -2,9 +2,9 @@ window.addEvent('domready', function () {
 
   var  
     admin_bar = $('sf_admin_bar')
-    ,  menu = admin_bar.getElement('nav.menu')
+    ,  menu = admin_bar.getElement('ul.menu')
     ,  sf_admin_filter = admin_bar.getElement('.sf_admin_filter')
-    ,  opts = menu.getElements('a').addEvents({
+    ,  opts = menu.getElements('a.opt_filter').addEvents({
     click: function (ev) {
       ev.preventDefault();
 
@@ -19,10 +19,16 @@ window.addEvent('domready', function () {
      * option filter
      */
     filter: function(el) {
-      console.debug ("sf_admin_filter -> ", sf_admin_filter);
-      
-      if(sf_admin_filter.getStyle('display') == 'block') sf_admin_filter.setStyle('display', 'none');
-      else  sf_admin_filter.setStyle('display', 'block');
+      //console.debug ("sf_admin_filter -> ", sf_admin_filter);
+      if(sf_admin_filter.getStyle('display') == 'block') {
+        el.getParent().removeClass('uparrow');
+        sf_admin_filter.setStyle('display', 'none');
+      }
+      else  {
+        /**console.log(el);*/
+        el.getParent().addClass('uparrow');
+        sf_admin_filter.setStyle('display', 'block');
+      }
     }
     // *** end filter *** //
 

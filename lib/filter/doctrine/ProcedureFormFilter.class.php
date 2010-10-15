@@ -19,6 +19,18 @@ class ProcedureFormFilter extends BaseProcedureFormFilter
 
     $this->setWidget('state', new sfWidgetFormDoctrineChoice(array('model' => 'RevisionState', 'add_empty' => true)));
     $this->setValidator('state', new sfValidatorDoctrineChoice(array('required' => false, 'model' => 'RevisionState', 'column' => 'id')));
+
+    $this->setWidget('created_at', new sfWidgetFormFilterDate(array(
+            'from_date' => new sfWidgetFormDate(array( 'format'=> '%day%/%month%/%year%')),
+            'to_date' => new sfWidgetFormDate(array( 'format'=> '%day%/%month%/%year%')),
+            'with_empty' => false,
+            'template' => 'desde %from_date%<br />hasta %to_date%')));
+
+    $this->setWidget('updated_at', new sfWidgetFormFilterDate(array(
+            'from_date' => new sfWidgetFormDate(array( 'format'=> '%day%/%month%/%year%')),
+            'to_date' => new sfWidgetFormDate(array( 'format'=> '%day%/%month%/%year%')),
+            'with_empty' => false,
+            'template' => 'desde %from_date%<br />hasta %to_date%')));
   }
 
    public function getFields()
@@ -53,8 +65,9 @@ class ProcedureFormFilter extends BaseProcedureFormFilter
     //SELECT * FROM _procedure p JOIN (SELECT max(number), revision_state_id, procedure_id FROM revision) j ON j.procedure_id = p.id where j.revision_state_id=1
     $text = $value['text'];
     if($text)
-      $query->addSelect('(SELECT revision_state_id,  max(number) FROM revision) j WHERE j.procedure_id = _procedure.id) as rv')->andWhere(
-              '(rv.revision_state_id= ?
+       $query->leftJoin($query->getRootAlias().'.Revisions rv')->andWhere('(
+         rv.revision_state_id LIKE ?
+         AND rv.id = (SELECT MAX(rv2.id) FROM revision rv2 WHERE rv2.procedure_id = '.$query->getRootAlias().'.id )
       )', array("%$text%"));
     return $query;
   }
