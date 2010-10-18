@@ -12,9 +12,12 @@ class ProcedureFormFilter extends BaseProcedureFormFilter
 {
   public function configure()
   {
+    $this->disableLocalCSRFProtection();
+
+    $this->setWidget('pendientes', new sfWidgetFormInputCheckbox());
+    $this->setValidator('pendientes', new sfValidatorString(array('required' => false)));
 
     $this->setWidget('creator', new sfWidgetFormFilterInput(array('with_empty' => false)));
-
     $this->setValidator('creator', new sfValidatorPass(array('required' => false)));
 
     $this->setWidget('state', new sfWidgetFormDoctrineChoice(array('model' => 'RevisionState', 'add_empty' => true)));
@@ -38,6 +41,7 @@ class ProcedureFormFilter extends BaseProcedureFormFilter
     $fields = parent::getFields();
     $fields['creator'] = 'custom';
     $fields['state'] = 'custom';
+    $fields['pendientes'] = 'custom';
     return $fields;
   }
 
@@ -69,6 +73,27 @@ class ProcedureFormFilter extends BaseProcedureFormFilter
          rv.revision_state_id LIKE ?
          AND rv.id = (SELECT MAX(rv2.id) FROM revision rv2 WHERE rv2.procedure_id = '.$query->getRootAlias().'.id )
       )', array("%$text%"));
+    return $query;
+  }
+
+public function addPendientesColumnQuery($query, $field, $value)
+  {
+    $single = sfContext::getInstance();
+    $user = $single->getUser()->getGroups();
+    $sql = "";
+    foreach ($user as $u) $sql .= ' OR "'.$u.'"';
+      
+   /*   echo '<p>$user: <b>'.$sql.'</b></p>';
+    die();*/
+
+
+    $text = $value['text'];
+    if($text){
+      $query->leftJoin($query->getRootAlias().'.Revisions rv')->andWhere('(
+         rv.revision_state_id <> ?
+         AND rv.id = (SELECT MAX(rv2.id) FROM revision rv2 WHERE rv2.procedure_id = '.$query->getRootAlias().'.id )
+      )', array(4));
+    }
     return $query;
   }
 }

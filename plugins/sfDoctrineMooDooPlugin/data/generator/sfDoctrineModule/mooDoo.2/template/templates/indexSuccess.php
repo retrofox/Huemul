@@ -14,14 +14,7 @@
 
 <?php if ($this->configuration->hasFilterForm()): ?>
   <div id="sf_admin_bar">
-    <ul class="menu">
-      <li class="filters"><a class="opt_filter">[?php echo __('Filter'); ?]</a></li>
-      <li><a>[?php echo __('Pendientes'); ?]</a></li>
-      <li><a>[?php echo __('Nuevos'); ?]</a></li>
-      <li><a>[?php echo __('Para Autorizar'); ?]</a></li>
-      <li><a>[?php echo __('Autorizados'); ?]</a></li>
-      <li>[?php echo link_to(__('Sacar filtros', array(), 'sf_admin'), '<?php echo $this->getUrlForAction('collection') ?>', array('action' => 'filter'), array('query_string' => '_reset', 'method' => 'post')) ?]</li>
-    </ul>
+
 
     [?php include_partial('<?php echo $this->getModuleName() ?>/filters', array('form' => $filters, 'configuration' => $configuration)) ?]
   </div>

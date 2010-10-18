@@ -9,7 +9,7 @@ window.addEvent('domready', function () {
       ev.preventDefault();
 
       var method = this.get('class').substring(4);
-      
+
       options[method](this);
 
     }

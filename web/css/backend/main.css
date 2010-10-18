@@ -356,11 +356,11 @@ body #wrapper #board ul.menu li a {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-body #wrapper #board ul.menu li a.opt_filter {
-  background: transparent url('/images/down_up_16x10.png') no-repeat 45px 2px;
+body #wrapper #board ul.menu li.filters {
   padding-right: 20px;
+  background: transparent url('/images/down_up_16x10.png') no-repeat 45px 2px;
 }
-body #wrapper #board ul.menu li a.opt_filter.uparrow { background: transparent url('/images/down_up_16x10.png') no-repeat 45px -28px; }
+body #wrapper #board ul.menu li.uparrow { background: transparent url('/images/down_up_16x10.png') no-repeat 45px -28px; }
 #sf_admin_content table tr td { height: 20px; }
 #sf_admin_content table tr td img.mugshot {
   margin: 0;
@@ -445,6 +445,18 @@ table.items_control tbody tr td.item_error {
 }
 table.items_control tbody tr td.item_error span {
   background: #ffeeee url('../../images/form.png') no-repeat -40px -40px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+table.items_control tbody tr td.item_nc {
+  background-color: #eeeeee;
+  color: #444444;
+  text-align: center;
+}
+table.items_control tbody tr td.item_nc span {
+  background: #eeeeee url('../../images/form.png') no-repeat -60px -40px;
   display: block;
   width: 20px;
   height: 20px;
