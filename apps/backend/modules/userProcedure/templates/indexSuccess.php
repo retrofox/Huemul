@@ -33,12 +33,6 @@ use_stylesheet('backend/procedure.css');
         <?php endif; ?>
     </li>
     <?php endif; ?>
-
-    <?php if($state == 7) : ?>
-      <?php if($sf_user->getGuardUser()->hasPermission('Responsable de cierre')) : ?>
-        <li><?php echo link_to('Finalizar Trámite', 'revisions/complete?id='.$revision->get('id')) ?></li>
-      <?php endif; ?>
-    <?php endif; ?>
     <li>
       <?php echo link_to(__('Edit procedure', array()), 'procedures/edit?id='.$procedure->getId(), array()) ?>
     </li>
