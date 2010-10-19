@@ -697,6 +697,10 @@
         <source>Comments</source>
         <target>Observaciones</target>
       </trans-unit>
+      <trans-unit id="142">
+        <source>Filter</source>
+        <target>Filtros</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -24,8 +24,7 @@ generator:
         display:                    [ creator, formu, cadastral_data, partida, revisions_count, _items, _state, dossier, _created_at, _updated_at ]
    
       filter:
-        display:                    [ creator, formu_id, cadastral_data_id, dossier, state, created_at, updated_at ]
-
+        display:                    [ creator, formu_id, cadastral_data_id, dossier, state, revisions_count, created_at, updated_at, pendientes ]
       form: ~
       edit: ~ 
       new:     ~
