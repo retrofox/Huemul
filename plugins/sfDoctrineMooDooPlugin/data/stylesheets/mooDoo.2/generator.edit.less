@@ -1,0 +1,77 @@
+@import "../_commons/clear";
+@import "../_commons/interface.tip";
+@import "../_commons/interface.elements";
+@import "../_commons/interface.elements.calendar";
+
+@import "generator.global";
+@import "generator.default";
+
+
+/* Styles primarily to form EDIT */
+.sf_admin_form {
+  width: 100%;
+
+  h2 {
+    .text-shadow;
+    margin: 0 0 5px 0; padding: 0;
+    color: rgba(50, 60, 90, 0.8);
+  }
+
+  fieldset {
+    .box-sizing;
+    margin-bottom: 5px;
+    position: relative;
+
+    > div {
+      margin: 5px 1px;
+      border: 1px solid rgba(200, 200, 200, 0.2);
+      background-color: #f8f8f8;
+      padding: 2px;
+      .border-radius(4px);
+
+      label {
+        color: #444;
+      }
+    }
+  }
+}
+
+/* Actions */
+ul.sf_admin_actions, ul.sf_admin_td_actions {
+  list-style: none;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: rgba(200, 200, 200, 0.7);
+  .border-radius;
+
+  li {
+    display: inline-block;
+    a {
+      .link-button;
+    }
+  }
+}
+
+ul.sf_admin_td_actions {
+  margin: 0; padding: 0;
+  li {
+    a {
+      font-size: 9px;
+      .border-radius(4px);
+      padding: 2px 5px;
+      background-color: #4Ac;
+      color: #FFF;
+    }
+    a:hover {
+      background-color: #4DF;
+      color: #234;
+    }
+  }
+}
+
+.sf_admin_batch_actions_choice {
+  -webkit-border-radius: 6px;
+  padding: 1px 3px;
+  background-color: #f2f2f2;
+}
